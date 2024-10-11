@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `elementary_types` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `Name` tinytext NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `elementary_types`
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `has_type` (
   `ID_type` int NOT NULL,
   KEY `FK_ID_Lander_1` (`ID_lander`),
   KEY `FK_ID_Type_1` (`ID_type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `has_type`
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `landers` (
   `Name` tinytext NOT NULL,
   `Description` text NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `landers`
