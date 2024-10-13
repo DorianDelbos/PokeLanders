@@ -2,5 +2,7 @@ public enum ElementaryType
 {
     Water,
     Fire,
-    Grass
+    Grass,
+    Light,
+    Dark
 }
