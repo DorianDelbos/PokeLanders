@@ -1,7 +1,5 @@
-using UnityEngine;
-
 [System.Serializable]
-public class LanderDataNFC /*: ScriptableObject*/
+public class LanderDataNFC
 {
     public ushort id = 0;
     public string customName = string.Empty;

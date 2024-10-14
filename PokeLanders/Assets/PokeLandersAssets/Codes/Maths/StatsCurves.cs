@@ -19,6 +19,6 @@ public static class StatsCurves
 
     public static int GetMaxHpByLevel(int level)
     {
-        return (50 + 5 * (level - 1));
+        return (20 + 2 * (level - 1));
     }
 }

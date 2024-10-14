@@ -2298,7 +2298,7 @@ GameObject:
   - component: {fileID: 1530897770}
   - component: {fileID: 1530897771}
   m_Layer: 0
-  m_Name: ArduinoCOM5
+  m_Name: Arduino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2331,7 +2331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b3d69f3491bc2340b2689aad46f5b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: COM5
+  portName: COM4
   parity: 0
   baudRate: 9600
   dataBits: 8

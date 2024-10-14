@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.IO.Ports;
 using System.Threading;
 using UnityEngine;
@@ -15,6 +16,9 @@ public class ArduinoReader : MonoBehaviour
     [SerializeField] private int dataBits = 8;
     [SerializeField] private StopBits stopBits = StopBits.One;
     [SerializeField] private int readTimeout = 100;
+
+    private ConcurrentQueue<LanderDataNFC> dataQueue = new ConcurrentQueue<LanderDataNFC>();
+    private Lander lander;
 
     public SerialPort Stream => stream;
 
@@ -40,6 +44,19 @@ public class ArduinoReader : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        lander = FindAnyObjectByType<Lander>();
+    }
+
+    void Update()
+    {
+        while (dataQueue.TryDequeue(out LanderDataNFC receivedData))
+        {
+            lander.Data = receivedData;
+        }
+    }
+
     private void ReadSerialData()
     {
         while (keepReading)
@@ -48,19 +65,23 @@ public class ArduinoReader : MonoBehaviour
             {
                 if (stream.IsOpen)
                 {
-                    // Lire les données du port série
                     string data = stream.ReadLine();
-                    int value = int.Parse(data); // Convertir la chaîne en entier
-                    Debug.Log("Valeur reçue : " + value); // Afficher la valeur dans la console
+                    Debug.Log("Valeur reçue : " + data);
+
+                    if (data != "-1")
+                    {
+                        var receivedData = (LanderDataNFC)JsonUtility.FromJson(data, typeof(LanderDataNFC));
+                        dataQueue.Enqueue(receivedData);
+                    }
                 }
             }
             catch (TimeoutException)
             {
-                // Gérer le cas où le délai d'attente se produit
+
             }
             catch (FormatException)
             {
-                // Gérer le cas où la conversion échoue
+
             }
         }
     }
