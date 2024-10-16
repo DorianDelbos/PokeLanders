@@ -4,6 +4,7 @@ using UnityEngine;
 public class AutoRotateAround : MonoBehaviour
 {
     [SerializeField] private Transform target;
+    [SerializeField] private Vector3 offset;
     [SerializeField] private float angle = 1.0f;
     [SerializeField] private float time = 1.0f;
 
@@ -32,18 +33,7 @@ public class AutoRotateAround : MonoBehaviour
 
         transform.position = new Vector3(x, transform.position.y, z);
 
-        transform.LookAt(target);
+        Vector3 targetPositionWithOffset = target.position + offset;
+        transform.LookAt(targetPositionWithOffset);
     }
-
-//#if UNITY_EDITOR
-//    private void OnDrawGizmos()
-//    {
-//        Vector3 directionToCamera = transform.position - target.position;
-//        float radius = Vector3.Distance(transform.position, target.position);
-
-//        Handles.color = Color.red;
-//        Handles.DrawWireArc(target.position, Vector3.up, directionToCamera, angle / 2.0f, radius);
-//        Handles.DrawWireArc(target.position, -Vector3.up, directionToCamera, angle / 2.0f, radius);
-//    }
-//#endif
 }

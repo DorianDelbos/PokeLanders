@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Ports;
-using System.Linq;
 using System.Threading;
 using UnityEngine;
 
 public class NfcModule : MonoBehaviour
 {
+	public static NfcModule instance;
+
 	// Port and thread
 	private SerialPort stream;
 	private Thread readThread;
@@ -33,6 +34,18 @@ public class NfcModule : MonoBehaviour
 
 	void Awake()
 	{
+		if (instance == null)
+		{
+			instance = this;
+			transform.SetParent(null);
+			DontDestroyOnLoad(gameObject);
+        }
+		else
+		{
+			Destroy(gameObject);
+			return;
+		}
+
 		stream = new SerialPort(portName, baudRate, parity, dataBits, stopBits)
 		{
 			ReadTimeout = readTimeout

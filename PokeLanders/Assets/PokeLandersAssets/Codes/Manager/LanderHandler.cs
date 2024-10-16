@@ -3,10 +3,18 @@ using UnityEngine.Playables;
 
 public class LanderHandler : MonoBehaviour
 {
-	[SerializeField] private BattleState landerState;
-	[SerializeField] private PlayableDirector playableDirector;
+	private enum LanderId
+	{
+		Lander1,
+		Lander2
+	}
 
-	private void OnEnable()
+	[SerializeField] private LanderId landerId;
+	[SerializeField] private BattleState landerState;
+    [SerializeField] private PlayableDirector playableDirector;
+	[SerializeField] private LanderDisplayHandler landerDisplayHandler;
+
+    private void OnEnable()
 	{
 		BattleSystem.enterBattleEvents[(int)landerState] += StartTurn;
 		BattleSystem.exitBattleEvents[(int)landerState] += EndTurn;
@@ -18,7 +26,12 @@ public class LanderHandler : MonoBehaviour
 		BattleSystem.exitBattleEvents[(int)landerState] -= EndTurn;
 	}
 
-	private void StartTurn()
+    private void Start()
+    {
+        landerDisplayHandler.SetMesh(GameManager.instance.Landers[(int)landerId].mesh);
+    }
+
+    private void StartTurn()
 	{
 		playableDirector.Play();
 	}

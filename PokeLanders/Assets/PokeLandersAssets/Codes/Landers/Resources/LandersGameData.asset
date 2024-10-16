@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LandersGameData
   m_EditorClassIdentifier: 
   landersMesh:
-  - {fileID: -5495902117074765545, guid: a5caf8f03a4a5dd49b9854e0c7ff148b, type: 3}
-  - {fileID: 289301614986012343, guid: 86e04f612964ae246ae6d4d20914b871, type: 3}
+  - {fileID: -7240233339166210719, guid: a5caf8f03a4a5dd49b9854e0c7ff148b, type: 3}
+  - {fileID: 8205925948288416748, guid: 86e04f612964ae246ae6d4d20914b871, type: 3}
   - {fileID: 5390269015627057409, guid: 14afb1167010e5f48b1f40c3eef304b4, type: 3}
   landersSprites: []
