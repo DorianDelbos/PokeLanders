@@ -2,19 +2,23 @@ using UnityEngine;
 
 public static class StatsCurves
 {
-    private static float GetConstantLevels(int levelMax, int xpMax)
+    private static int levelMax = 99;
+    private static int xpMax = 100000;
+
+	private static float GetConstantLevels()
     {
         return levelMax / Mathf.Sqrt(xpMax - 1);
     }
 
-    public static int GetLevelByXp(int xp, int levelMax, int xpMax)
+    public static int GetLevelByXp(int xp)
     {
-        return Mathf.FloorToInt(GetConstantLevels(levelMax, xpMax) * Mathf.Sqrt(xp) + 1);
+        return Mathf.FloorToInt(GetConstantLevels() * Mathf.Sqrt(xp) + 1);
     }
 
-    public static int GetXpByLevel(int level, int levelMax, int xpMax)
+    public static int GetXpByLevel(int level)
     {
-        return Mathf.FloorToInt((xpMax - 1) / GetConstantLevels(level, xpMax));
+        int v = Mathf.FloorToInt((level - 1) / GetConstantLevels());
+		return v * v;
     }
 
     public static int GetMaxHpByLevel(int level)

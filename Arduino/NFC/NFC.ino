@@ -1,4 +1,4 @@
-//#define DebugMode
+#define DebugMode
 //#define WritingMode
 
 #include <SoftwareSerial.h>
