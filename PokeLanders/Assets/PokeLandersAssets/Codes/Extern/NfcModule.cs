@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO.Ports;
+using System.Linq;
+using System.Text;
 using System.Threading;
 using UnityEngine;
 
@@ -30,8 +33,6 @@ public class NfcModule : MonoBehaviour
 	// Queue for thread-safe communication
 	private Queue<LanderDataNFC> nfcDataQueue = new Queue<LanderDataNFC>();
 	private object queueLock = new object();
-
-	//public string debugDataToSend = $"{{\"tag\": \"00 00 00 00\",\"id\": 3,\"customName\": \"Barnard\",\"currentHp\": 12,\"currentLevel\": 2,\"currentXp\": 20,\"height\": 124,\"weight\": 62}}";
 
 	void Awake()
 	{
@@ -72,9 +73,7 @@ public class NfcModule : MonoBehaviour
 			{
 				if (nfcDataQueue.Count <= 0)
 				{
-					string data = stream.ReadLine();
-					//string data = debugDataToSend;
-					ProcessData(data);
+					ProcessData(stream.ReadLine());
 				}
 			}
 			catch (TimeoutException) { }
@@ -88,14 +87,14 @@ public class NfcModule : MonoBehaviour
 		{
 			lock (queueLock)
 			{
-				nfcDataQueue.Enqueue(null); // Use null to signal NFC removal
+				nfcDataQueue.Enqueue(null);
 			}
 			return;
 		}
 
 		try
-		{
-			var receivedData = JsonUtility.FromJson<LanderDataNFC>(data);
+        {
+            LanderDataNFC receivedData = LanderDataNFC.FromByteArray(StringToByteArray(data));
 			lock (queueLock)
 			{
 				nfcDataQueue.Enqueue(receivedData);
@@ -103,13 +102,22 @@ public class NfcModule : MonoBehaviour
 		}
 		catch (Exception e)
 		{
-			Debug.LogWarning("Card data corrupted !");
+			Debug.LogWarning($"Card data corrupted !\n{e}");
 		}
-	}
+    }
+    public static byte[] StringToByteArray(string hex)
+    {
+        hex = hex.Replace(" ", "");
+        byte[] bytes = new byte[hex.Length / 2];
 
-	void Update()
+        for (int i = 0; i < hex.Length; i += 2)
+            bytes[i / 2] = byte.Parse(hex.Substring(i, 2), NumberStyles.HexNumber);
+
+        return bytes;
+    }
+
+    void Update()
 	{
-		// Process queued NFC data on the main thread
 		while (nfcDataQueue.Count > 0)
 		{
 			LanderDataNFC nfcData;
@@ -118,7 +126,7 @@ public class NfcModule : MonoBehaviour
 				nfcData = nfcDataQueue.Dequeue();
 			}
 
-			if (nfcData == null) // Handle NFC removal
+			if (nfcData == null)
 			{
 				if (lastTagRegister != null)
 				{
@@ -126,7 +134,7 @@ public class NfcModule : MonoBehaviour
 					onNfcRemove?.Invoke(lastDataRegister);
 				}
 			}
-			else // Handle new NFC detection
+			else
 			{
 				if (lastTagRegister != nfcData.tag)
 				{
