@@ -23,8 +23,9 @@ public class NfcModule : MonoBehaviour
 
 	// Events variables
 	public static event Action<LanderDataNFC> onNewNfcDetect;
-	public static event Action onNfcRemove;
+	public static event Action<LanderDataNFC> onNfcRemove;
 	private string lastTagRegister = null;
+	private LanderDataNFC lastDataRegister = null;
 
 	// Queue for thread-safe communication
 	private Queue<LanderDataNFC> nfcDataQueue = new Queue<LanderDataNFC>();
@@ -115,7 +116,7 @@ public class NfcModule : MonoBehaviour
 				if (lastTagRegister != null)
 				{
 					lastTagRegister = null;
-					onNfcRemove?.Invoke();
+					onNfcRemove?.Invoke(lastDataRegister);
 				}
 			}
 			else // Handle new NFC detection
@@ -123,6 +124,8 @@ public class NfcModule : MonoBehaviour
 				if (lastTagRegister != nfcData.tag)
 				{
 					lastTagRegister = nfcData.tag;
+					lastDataRegister = nfcData;
+
 					onNewNfcDetect?.Invoke(nfcData);
 				}
 			}

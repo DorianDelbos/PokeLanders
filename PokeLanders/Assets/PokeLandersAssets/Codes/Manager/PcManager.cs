@@ -9,14 +9,14 @@ public class PcManager : MonoBehaviour
 
     private void OnEnable()
     {
-        NfcModule.onNewNfcDetect += data => SetData(data);
-        NfcModule.onNfcRemove += () => ResetData();
+        NfcModule.onNewNfcDetect += SetData;
+        NfcModule.onNfcRemove += ResetData;
     }
 
     private void OnDisable()
     {
-        NfcModule.onNewNfcDetect -= data => SetData(data);
-        NfcModule.onNfcRemove -= () => ResetData();
+        NfcModule.onNewNfcDetect -= SetData;
+        NfcModule.onNfcRemove -= ResetData;
     }
 
     private void SetData(LanderDataNFC data)
@@ -25,7 +25,7 @@ public class PcManager : MonoBehaviour
         landerDisplayHandler.SetMesh(LanderData.mesh);
     }
 
-    private void ResetData()
+    private void ResetData(LanderDataNFC data)
     {
         LanderData.Nfc = null;
         LanderData.name = string.Empty;

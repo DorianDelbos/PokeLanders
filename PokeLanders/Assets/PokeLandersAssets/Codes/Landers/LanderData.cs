@@ -24,7 +24,7 @@ public class LanderData
 
     public void SetRandom()
     {
-        nfc.tag = $"{Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)}";
+        nfc.tag = "-1";
         nfc.id = (ushort)Random.Range(0, 3);
         nfc.currentLevel = (ushort)Random.Range(0, 100);
         nfc.currentXp = (ushort)StatsCurves.GetXpByLevel(nfc.currentLevel);
@@ -35,8 +35,8 @@ public class LanderData
 
     public void SetRandom(ushort level)
     {
-        nfc.tag = $"{Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)} {Random.Range(0, 99)}";
-        nfc.id = (ushort)Random.Range(0, 3);
+		nfc.tag = "-1";
+		nfc.id = (ushort)Random.Range(0, 3);
         nfc.currentLevel = (ushort)Mathf.Clamp(level + (ushort)Random.Range(-5, 5), 0, 99);
         nfc.currentXp = (ushort)StatsCurves.GetXpByLevel(nfc.currentLevel);
         nfc.currentHp = (ushort)StatsCurves.GetMaxHpByLevel(nfc.currentLevel);

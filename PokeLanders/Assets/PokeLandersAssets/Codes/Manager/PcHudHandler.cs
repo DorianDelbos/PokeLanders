@@ -26,15 +26,17 @@ public class PcHudHandler : MonoBehaviour
 
     private void OnEnable()
 	{
-		NfcModule.onNewNfcDetect += data => UpdatePc(data);
-		NfcModule.onNfcRemove += () => ActivePc(false);
+		NfcModule.onNewNfcDetect += UpdatePc;
+		NfcModule.onNfcRemove += DisablePc;
     }
 
 	private void OnDisable()
 	{
-		NfcModule.onNewNfcDetect -= data => UpdatePc(data);
-		NfcModule.onNfcRemove -= () => ActivePc(false);
+		NfcModule.onNewNfcDetect -= UpdatePc;
+		NfcModule.onNfcRemove -= DisablePc;
     }
+
+	private void DisablePc(LanderDataNFC data) => ActivePc(false);
 
 	private void ActivePc(bool active)
 	{
