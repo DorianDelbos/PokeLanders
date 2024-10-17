@@ -31,7 +31,7 @@ public class NfcModule : MonoBehaviour
 	private Queue<LanderDataNFC> nfcDataQueue = new Queue<LanderDataNFC>();
 	private object queueLock = new object();
 
-	public string debugDataToSend = $"{{\"tag\": \"00 00 00 00\",\"id\": 3,\"customName\": \"Barnard\",\"currentHp\": 12,\"currentLevel\": 2,\"currentXp\": 20,\"height\": 124,\"weight\": 62}}";
+	//public string debugDataToSend = $"{{\"tag\": \"00 00 00 00\",\"id\": 3,\"customName\": \"Barnard\",\"currentHp\": 12,\"currentLevel\": 2,\"currentXp\": 20,\"height\": 124,\"weight\": 62}}";
 
 	void Awake()
 	{
@@ -54,7 +54,7 @@ public class NfcModule : MonoBehaviour
 
 		try
 		{
-			//stream.Open();
+			stream.Open();
 			readThread = new Thread(UpdateSerialData);
 			readThread.Start();
 		}
@@ -66,14 +66,14 @@ public class NfcModule : MonoBehaviour
 
 	private void UpdateSerialData()
 	{
-		while (keepReading /*&& stream.IsOpen*/)
+		while (keepReading && stream.IsOpen)
 		{
 			try
 			{
 				if (nfcDataQueue.Count <= 0)
 				{
-					//string data = stream.ReadLine();
-					string data = debugDataToSend;
+					string data = stream.ReadLine();
+					//string data = debugDataToSend;
 					ProcessData(data);
 				}
 			}
@@ -93,10 +93,17 @@ public class NfcModule : MonoBehaviour
 			return;
 		}
 
-		var receivedData = JsonUtility.FromJson<LanderDataNFC>(data);
-		lock (queueLock)
+		try
 		{
-			nfcDataQueue.Enqueue(receivedData);
+			var receivedData = JsonUtility.FromJson<LanderDataNFC>(data);
+			lock (queueLock)
+			{
+				nfcDataQueue.Enqueue(receivedData);
+			}
+		}
+		catch (Exception e)
+		{
+			Debug.LogWarning("Card data corrupted !");
 		}
 	}
 

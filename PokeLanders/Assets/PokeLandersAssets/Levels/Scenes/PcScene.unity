@@ -2433,8 +2433,6 @@ MonoBehaviour:
   dataBits: 8
   stopBits: 1
   readTimeout: 100
-  debugDataToSend: '{"tag": "00 00 00 00","id": 3,"customName": "Barnard","currentHp":
-    12,"currentLevel": 2,"currentXp": 20,"height": 124,"weight": 62}'
 --- !u!1 &1646614022
 GameObject:
   m_ObjectHideFlags: 0

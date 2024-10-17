@@ -1,4 +1,4 @@
-#define DebugMode
+//#define DebugMode
 //#define WritingMode
 
 #include <SoftwareSerial.h>
@@ -42,33 +42,40 @@ void setup(void)
 
 void loop() 
 {
-  if (tagIsDetect())
-  {    
-    delay(1000);
+  // Essayer de détecter un tag avec 3 tentatives
+  bool tagDetected = false;
+  for (int attempts = 0; attempts < 3; attempts++) {
+    if (tagIsDetect()) {
+      tagDetected = true;
+      break; // Sortir de la boucle si le tag est détecté
+    } else {
+      delay(500); // Délai avant de réessayer
+    }
+  }
 
+  if (tagDetected)
+  {
 #ifdef WritingMode
     // ID, Custom name (x8), Current HP, Current Level, Current XP, Height, Weight
-    //uint8_t data[16] = { 1, 'K', 'a', 'r', 'o', 't', ' ', ' ', ' ', 47, 6, 241, 102, 14, 0x00, 0x00};
     uint8_t data[16] = { 2, 'M', 'a', 'r', 'i', 'o', 'B', 'r', 'o', 12, 65, 125, 23, 255, 0x00, 0x00};
-    if (WriteBlock(1, data))
-    {
-      Serial.println("Data correctly write");
-    }
     
+    WriteBlock(1, data);
+
     delay(1000);
 #endif
 
+    // Réinitialiser blocksData
     for (int j = 0; j < 16; j++) {
         blocksData[j] = 0x00;
     }
+    
     ReadBlock(1);
-
     SendData();
 
     delay(1000);
     
 #ifdef DebugMode
-    Serial.println("Waiting a card ...");
+    Serial.println("Waiting for a card ...");
 #endif
   }
 #ifndef DebugMode
@@ -81,7 +88,14 @@ void loop()
 
 bool tagIsDetect() 
 {
-  bool readSuccess = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, &uid[0], &uidLength);
+  uint8_t uidRead[8] = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
+  bool readSuccess = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, &uidRead[0], &uidLength);
+
+  if (memcmp(uidRead, uid, sizeof(uid)) == 0) {
+    return false;
+  }
+
+  memcpy(uid, uidRead, sizeof(uid));
 
 #ifdef DebugMode
   if (readSuccess) 
