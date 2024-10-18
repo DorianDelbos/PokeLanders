@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &766197199
@@ -2431,12 +2431,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b3d69f3491bc2340b2689aad46f5b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: COM5
   parity: 0
   baudRate: 9600
   dataBits: 8
   stopBits: 1
-  readTimeout: 100
+  timeout: 100
+  DebugNfc: -1
 --- !u!1 &1646614022
 GameObject:
   m_ObjectHideFlags: 0

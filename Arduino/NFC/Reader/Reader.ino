@@ -33,28 +33,43 @@ void setup(void)
 
 void loop() 
 {
+  // Data send from Unity to Arduino
+  ProcessMessage();
+
   // If tag is detect, and stock it in data to send
   if (nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, dataToSend, &uidLength))
   {
     // Read 16 bytes of data
+    delay(100);
     nfc.mifareclassic_AuthenticateBlock(dataToSend, uidLength, BlockToRead, 1, keya);
+    delay(100);
     nfc.mifareclassic_ReadDataBlock(BlockToRead, &dataToSend[TagCount]);
     // Send data to Unity
-    SendMessage(uint8ArrayToString(dataToSend, DataToSendCount));
+    SendMessage(uint8ArrayToString(dataToSend, DataToSendCount), true);
   }
   else
-    SendMessage("-1");
+    SendMessage("-1", true);
   
   delay(500);
 }
 
-void SendMessage(String messageToSend)
+//////////////////////////////////////////
+// Send a message from Arduino to Unity //
+//////////////////////////////////////////
+void SendMessage(String messageToSend, bool registerLastMessage)
 {
+  if (registerLastMessage)
+  {
     if (lastMessageSend != messageToSend)
     {
       Serial.println(messageToSend);
+      Serial.flush();
       lastMessageSend = messageToSend;
     }
+  }
+  else
+    Serial.println(messageToSend);
+    Serial.flush();
 }
 
 String uint8ArrayToString(uint8_t* data, size_t length) 
@@ -69,4 +84,19 @@ String uint8ArrayToString(uint8_t* data, size_t length)
         result += String(data[i], HEX);
     }
     return result;
+}
+
+//////////////////////////////////////////
+// Send a message from Unity to Arduino //
+//////////////////////////////////////////
+void ProcessMessage()
+{
+  if (Serial.available() > 0) 
+  {
+    String message = Serial.readStringUntil('\n');
+    //SendMessage(message, false);
+
+    if (message.equals("IsArduino"))
+      SendMessage("TRUE", false);
+  }
 }
