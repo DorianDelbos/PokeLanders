@@ -13,7 +13,7 @@ public class FightManager : MonoBehaviour
 		tagRegisters = new string[lenghtLander];
 		for (int i = 0; i < lenghtLander; i++)
 		{
-			tagRegisters[i] = landerData[i].Nfc.tag;
+			tagRegisters[i] = landerData[i].Tag;
 		}
 	}
 

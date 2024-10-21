@@ -53,8 +53,9 @@ public class PcHudHandler : MonoBehaviour
 	private void UpdatePc(LanderDataNFC data)
 	{
 		ActivePc(true);
+		LanderData landerData = new LanderData(data);
 
-		WebRequests.instance.DoRequest($"GetLandersById.php?ID={data.id}", fetch =>
+		WebRequests.instance.DoRequestAsync($"GetLandersById.php?ID={landerData.ID}", (fetch, e) =>
 		{
 			speciesNameMesh.text = fetch["Name"];
 			descriptionMesh.text = fetch["Description"];
@@ -77,14 +78,14 @@ public class PcHudHandler : MonoBehaviour
 			}
 		});
 
-		landopediaNumberMesh.text = $"Landopedia No. {data.id.ToString("D3")}";
-		heightWeightMesh.text = $"Height \t {GetHeightDisplay(data.height)}\nWeight \t {GetWeightDisplay(data.weight)} lbs";
-		customNameMesh.text = data.customName;
-		lifeBar.maxValue = StatsCurves.GetMaxHpByLevel(data.currentLevel);
-		lifeBar.value = data.currentHp;
-		xpBar.maxValue = StatsCurves.GetXpByLevel(data.currentLevel + 1);
-		xpBar.value = data.currentXp;
-		levelMesh.text = $"Lvl.{data.currentLevel}";
+		landopediaNumberMesh.text = $"Landopedia No. {landerData.ID.ToString("D3")}";
+		heightWeightMesh.text = $"Height \t {GetHeightDisplay(landerData.Height)}\nWeight \t {GetWeightDisplay(landerData.Weight)} lbs";
+		customNameMesh.text = landerData.CustomName;
+		lifeBar.maxValue = landerData.MaxHp;
+		lifeBar.value = landerData.Hp;
+		xpBar.maxValue = StatsCurves.GetXpByLevel(landerData.Level + 1);
+		xpBar.value = landerData.Xp;
+		levelMesh.text = $"Lvl.{landerData.Level}";
 	}
 
 	private string GetHeightDisplay(ushort height)

@@ -28,7 +28,7 @@ public class LanderHandler : MonoBehaviour
 
     private void Start()
     {
-        landerDisplayHandler.SetMesh(GameManager.instance.Landers[(int)landerId].mesh);
+        landerDisplayHandler.SetMesh(GameManager.instance.Landers[(int)landerId].Mesh);
     }
 
     private void StartTurn()

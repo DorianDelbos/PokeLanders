@@ -134,7 +134,7 @@ public class NfcModule : MonoBehaviour
 
 		try
 		{
-			LanderDataNFC receivedData = LanderDataNFC.FromByteArray(StringToByteArray(data));
+			LanderDataNFC receivedData = new LanderDataNFC(StringToByteArray(data));
 			nfcDataQueue.Enqueue(receivedData);
 		}
 		catch (Exception e)

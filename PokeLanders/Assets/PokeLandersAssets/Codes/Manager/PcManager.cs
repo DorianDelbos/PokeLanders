@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PcManager : MonoBehaviour
 {
-    private LanderData LanderData => GameManager.instance.Landers[0];
+    private LanderData LanderData { get => GameManager.instance.Landers[0]; set => GameManager.instance.Landers[0] = value; }
 
     [SerializeField] LanderDisplayHandler landerDisplayHandler;
 
@@ -21,22 +21,19 @@ public class PcManager : MonoBehaviour
 
     private void SetData(LanderDataNFC data)
     {
-        LanderData.Nfc = data;
-        landerDisplayHandler.SetMesh(LanderData.mesh);
+        LanderData = new LanderData(data);
+        landerDisplayHandler.SetMesh(LanderData.Mesh);
     }
 
     private void ResetData(LanderDataNFC data)
     {
-        LanderData.Nfc = null;
-        LanderData.name = string.Empty;
-        LanderData.description = string.Empty;
-        LanderData.types.Clear();
-        landerDisplayHandler.SetMesh(null);
+        LanderData = null;
+		landerDisplayHandler.SetMesh(null);
     }
 
     public void StartTrainLander()
     {
-        GameManager.instance.Landers[1].SetRandom(LanderData.Nfc.currentLevel);
+        GameManager.instance.Landers[1] = LanderData.CreateRandomLander(LanderData.Level);
         SceneManager.LoadScene("FightScene");
     }
 }

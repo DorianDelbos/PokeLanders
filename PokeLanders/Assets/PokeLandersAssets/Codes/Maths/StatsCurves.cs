@@ -20,9 +20,4 @@ public static class StatsCurves
         int v = Mathf.FloorToInt((level - 1) / GetConstantLevels());
 		return v * v;
     }
-
-    public static int GetMaxHpByLevel(int level)
-    {
-        return (20 + 2 * (level - 1));
-    }
 }

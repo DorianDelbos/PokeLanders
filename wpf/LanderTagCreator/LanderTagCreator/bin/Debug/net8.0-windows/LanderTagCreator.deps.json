@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "LanderTagCreator/1.0.0": {
+        "runtime": {
+          "LanderTagCreator.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LanderTagCreator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

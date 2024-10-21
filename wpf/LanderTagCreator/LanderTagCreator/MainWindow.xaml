@@ -1,0 +1,68 @@
+﻿<Window x:Class="LanderTagCreator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LanderTagCreator"
+        mc:Ignorable="d"
+        Title="Lander creator" Height="400" Width="400"
+        MinHeight="300" MinWidth="300"
+        ResizeMode="CanResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <!-- 8 rows, one for each data entry -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <!-- 2 columns: labels and textboxes -->
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Tag -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Tag" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TagTextBox" Grid.Row="0" Grid.Column="1" Text="00 00 00 00" Margin="5"/>
+
+        <!-- Id -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Id" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="IdTextBox" Grid.Row="1" Grid.Column="1" Text="1" Margin="5"/>
+
+        <!-- Name -->
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Name" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="NameTextBox" Grid.Row="2" Grid.Column="1" Text="Abcdefgh" Margin="5"/>
+
+        <!-- Hp -->
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Hp" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="HpTextBox"  Grid.Row="3" Grid.Column="1" Text="0" Margin="5"/>
+
+        <!-- Level -->
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Level" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="LevelTextBox" Grid.Row="4" Grid.Column="1" Text="0" Margin="5"/>
+
+        <!-- Xp -->
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Xp" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="XpTextBox" Grid.Row="5" Grid.Column="1" Text="0" Margin="5"/>
+
+        <!-- Height -->
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Height" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="HeightTextBox" Grid.Row="6" Grid.Column="1" Text="0" Margin="5"/>
+
+        <!-- Weight -->
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="Weight" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="WeightTextBox" Grid.Row="7" Grid.Column="1" Text="0" Margin="5"/>
+
+        <!-- Result -->
+        <Button Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" Margin="0" Click="Button_Click" >
+            <TextBlock Text="Result" Margin="0" Width="38"/>
+        </Button>
+        <TextBox x:Name="ResultTextBox" Grid.Row="8" Grid.Column="1" Text="0" Margin="5"/>
+    </Grid>
+</Window>

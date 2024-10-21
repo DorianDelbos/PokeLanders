@@ -1,44 +1,56 @@
-using UnityEngine;
-
 [System.Serializable]
 public class LanderDataNFC
 {
     public string tag = string.Empty;
     public ushort id = 0;
 	public string customName = string.Empty;
-    public ushort currentHp = 0;
-    public ushort currentLevel = 0;
-    public ushort currentXp = 0;
+    public ushort hp = 0;
+    public ushort level = 0;
+    public ushort xp = 0;
     public ushort height = 0;
     public ushort weight = 0;
 
-    public static LanderDataNFC FromByteArray(byte[] data)
+    public LanderDataNFC()
     {
-        if (data.Length < 18)
-        {
-            Debug.LogError("Bytes not enough !");
-            return null;
-        }
+        tag = string.Empty;
+        id = 0;
+		customName = string.Empty;
+		hp = 0;
+        level = 0;
+        xp = 0;
+        height = 0;
+        weight = 0;
+    }
 
-        LanderDataNFC landerData = new LanderDataNFC();
+	public LanderDataNFC(string tag, ushort id, string customName, ushort hp, ushort level, ushort xp, ushort height, ushort weight)
+	{
+		this.tag = tag;
+		this.id = id;
+		this.customName = customName;
+		this.hp = hp;
+		this.level = level;
+		this.xp = xp;
+		this.height = height;
+		this.weight = weight;
+	}
 
+	public LanderDataNFC(byte[] nfcData)
+    {
         // Bytes 1-4
-        landerData.tag = string.Format("{0:X2} {1:X2} {2:X2} {3:X2}", data[0], data[1], data[2], data[3]);
+        tag = string.Format("{0:X2} {1:X2} {2:X2} {3:X2}", nfcData[0], nfcData[1], nfcData[2], nfcData[3]);
         // Byte 5
-        landerData.id = data[4];
+        id = nfcData[4];
         // Bytes 6-13
-        landerData.customName = System.Text.Encoding.ASCII.GetString(data, 5, 8).Trim();
+        customName = System.Text.Encoding.ASCII.GetString(nfcData, 5, 8).Trim();
         // Byte 14
-        landerData.currentHp = data[13];
+        hp = nfcData[13];
         // Byte 15
-        landerData.currentLevel = data[14];
+        level = nfcData[14];
         // Byte 16
-        landerData.currentXp = data[15];
+        xp = nfcData[15];
         // Byte 17
-        landerData.height = data[16];
+        height = nfcData[16];
         // Byte 18
-        landerData.weight = data[17];
-
-        return landerData;
+        weight = nfcData[17];
     }
 }
