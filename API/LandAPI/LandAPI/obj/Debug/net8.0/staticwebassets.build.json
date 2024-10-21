@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "gkwDD5/rAyfAW8+zgln7bFwbiL9mWhJqErn4bnuvP04=",
+  "Source": "LandAPI",
+  "BasePath": "_content/LandAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "LandAPI\\wwwroot",
+      "Source": "LandAPI",
+      "ContentRoot": "C:\\Users\\Dorian\\source\\repos\\LandAPI\\LandAPI\\wwwroot\\",
+      "BasePath": "_content/LandAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
