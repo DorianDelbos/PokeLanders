@@ -86,7 +86,7 @@ public ushort Height => nfc.height;
 		Dictionary<string, string> fetch = LanderWebRequest(id);
 		ushort nfcLevel = (ushort)Mathf.Clamp(level + (ushort)UnityEngine.Random.Range(-5, 5), 0, 99);
 		ushort xp = (ushort)StatsCurves.GetXpByLevel(nfcLevel);
-		ushort hp = ushort.Parse(fetch["MaxHp"]);
+		ushort hp = ushort.Parse(fetch["Hp"]);
 
 		return new LanderData(
 			"-1",
@@ -143,9 +143,9 @@ public ushort Height => nfc.height;
 
 	private void SetLanderBaseData(Dictionary<string, string> fetch) => SetLanderBaseData(fetch["Name"], fetch["Description"], ushort.Parse(fetch["Hp"]), ushort.Parse(fetch["PhysicalAttack"]), ushort.Parse(fetch["SpecialAttack"]), ushort.Parse(fetch["PhysicalDefense"]), ushort.Parse(fetch["SpecialDefense"]), ushort.Parse(fetch["Speed"]), ElementaryTypeUtils.StringsToTypes(fetch["Types"].Split(",")).ToList(), LandersGameData.GetLanderMeshAtId(ID));
 	
-	private void TakeDamage(ushort damage)
+	public void TakeDamage(int damage)
 	{
-		Hp -= damage;
+		Hp -= (ushort)Mathf.Min(damage, 255);
 		onHpChange?.Invoke(Hp, maxHp);
 	}
 	#endregion
