@@ -30,7 +30,7 @@ namespace LandAPI.Data
                 {
                     ID = 1,
                     Name = "Aquapix",
-                    Description = "Aquapix est un Pokémon farceur qui vit au bord des rivières et des lacs. Grâce à sa queue en forme de fontaine, il peut projeter de fines gouttelettes scintillantes, capables de calmer les esprits agités. Les marins racontent que les arcs-en-ciel apparaissent souvent après le passage d'un Aquapix.",
+                    Description = "Aquapix is a mischievous Pokémon that lives by rivers and lakes. Thanks to its fountain-shaped tail, it can spray fine, shimmering droplets that have the power to calm restless minds. Sailors often say that rainbows appear after an Aquapix passes by.",
                     PV = 44,
                     PhysicalAttack = 48,
                     PhysicalDefense = 65,
@@ -43,7 +43,7 @@ namespace LandAPI.Data
                 {
                     ID = 2,
                     Name = "Luminorine",
-                    Description = "Luminorine est vénérée dans certaines cultures côtières comme le gardien des océans. Grâce à sa danse aquatique, elle est capable de calmer même les tempêtes les plus furieuses. Ses chants, portés par le vent marin, inspirent espoir et courage à ceux qui les entendent.",
+                    Description = "\r\nLuminorine is revered in certain coastal cultures as the guardian of the oceans. Through its aquatic dance, it can calm even the fiercest storms. Its songs, carried by the sea breeze, inspire hope and courage in those who hear them.",
                     PV = 59,
                     PhysicalAttack = 63,
                     PhysicalDefense = 80,
@@ -56,7 +56,7 @@ namespace LandAPI.Data
                 {
                     ID = 3,
                     Name = "Ocealythe",
-                    Description = "Ocealythe est vénéré comme un protecteur divin des océans et des créatures marines. Ses pouvoirs mystiques sont capables d'influencer les courants océaniques et même de contrôler le climat. Les légendes racontent que lorsque Ocealythe apparaît, les tempêtes s'apaisent et les eaux deviennent claires et lumineuses.",
+                    Description = "Ocealythe is revered as a divine protector of the oceans and marine creatures. Its mystical powers can influence ocean currents and even control the weather. Legends say that when Ocealythe appears, storms subside, and the waters become clear and luminous.",
                     PV = 79,
                     PhysicalAttack = 83,
                     PhysicalDefense = 83,

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gkwDD5/rAyfAW8+zgln7bFwbiL9mWhJqErn4bnuvP04=",
+  "Hash": "HWhRf6aJRCPAv+HOMlG0dyPKWoaQngCdu9EFTLxi7+o=",
   "Source": "LandAPI",
   "BasePath": "_content/LandAPI",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "LandAPI\\wwwroot",
       "Source": "LandAPI",
-      "ContentRoot": "C:\\Users\\Dorian\\source\\repos\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "Pattern": "**"
     }
