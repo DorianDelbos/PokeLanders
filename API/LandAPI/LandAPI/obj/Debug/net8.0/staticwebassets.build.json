@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HWhRf6aJRCPAv+HOMlG0dyPKWoaQngCdu9EFTLxi7+o=",
+  "Hash": "zX1NZVXbPPCBzFyqJ0I87kPcHArKosTSJPAN6r1M5aQ=",
   "Source": "LandAPI",
   "BasePath": "_content/LandAPI",
   "Mode": "Default",
@@ -10,10 +10,68 @@
     {
       "Name": "LandAPI\\wwwroot",
       "Source": "LandAPI",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\1.glb",
+      "SourceId": "LandAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "BasePath": "_content/LandAPI",
+      "RelativePath": "Assets/Models/1.glb",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Models\\1.glb"
+    },
+    {
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\2.glb",
+      "SourceId": "LandAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "BasePath": "_content/LandAPI",
+      "RelativePath": "Assets/Models/2.glb",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Models\\2.glb"
+    },
+    {
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\3.glb",
+      "SourceId": "LandAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "BasePath": "_content/LandAPI",
+      "RelativePath": "Assets/Models/3.glb",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Models\\3.glb"
+    }
+  ]
 }

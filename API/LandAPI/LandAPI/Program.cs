@@ -17,6 +17,8 @@ builder.Services.AddScoped<TypeRepository>();
 builder.Services.AddScoped<TypeService>();
 builder.Services.AddScoped<StatRepository>();
 builder.Services.AddScoped<StatService>();
+builder.Services.AddScoped<EvolutionChainRepository>();
+builder.Services.AddScoped<EvolutionChainService>();
 
 var app = builder.Build();
 
@@ -27,13 +29,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseSwagger();
-
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "LandAPI V1");
     c.RoutePrefix = string.Empty;
 });
 
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();

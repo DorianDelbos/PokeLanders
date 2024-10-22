@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "LandAPI.Models.ModelController",
+    "Method": "GetModel",
+    "RelativePath": "api/Model/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LandAPI.Controllers.LanderController",
     "Method": "GetAllLanders",
     "RelativePath": "api/v1/Lander",

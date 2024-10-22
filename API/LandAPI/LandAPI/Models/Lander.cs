@@ -16,5 +16,6 @@
         public int Base_Height { get; set; }
         public int Base_Weight { get; set; }
 		public List<string> Types { get; set; }
+        public string Model { get; set; }
 	}
 }

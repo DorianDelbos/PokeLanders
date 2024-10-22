@@ -32,7 +32,8 @@ namespace LandAPI.Data
                     Base_Experience = 63,
                     Base_Height = 5,
                     Base_Weight = 90,
-                    Types = new List<string> { "water" }
+                    Types = new List<string> { "water" },
+                    Model = "https://localhost:7041/api/model/1.glb"
                 },
                 new Lander
                 {
@@ -51,7 +52,8 @@ namespace LandAPI.Data
 					Base_Experience = 142,
 					Base_Height = 10,
 					Base_Weight = 225,
-					Types = new List<string> { "water", "light" }
+					Types = new List<string> { "water", "light" },
+                    Model = "https://localhost:7041/api/model/2.glb"
                 },
                 new Lander
                 {
@@ -70,7 +72,8 @@ namespace LandAPI.Data
 					Base_Experience = 265,
 					Base_Height = 16,
 					Base_Weight = 855,
-					Types = new List<string> { "water", "light" }
+					Types = new List<string> { "water", "light" },
+                    Model = "https://localhost:7041/api/model/3.glb"
                 }
             };
         }

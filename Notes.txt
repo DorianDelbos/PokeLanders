@@ -1,0 +1,3 @@
+calcul pv:
+(((2 * baseHP + iv + (ev / 4)) * level) / 100) + level + 10	// AVEC IV ET EV
+2 * baseHP * level / 100 + level + 10				// SANS IV ET EV
