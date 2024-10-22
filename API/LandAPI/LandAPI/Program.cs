@@ -15,6 +15,8 @@ builder.Services.AddScoped<LanderRepository>();
 builder.Services.AddScoped<LanderService>();
 builder.Services.AddScoped<TypeRepository>();
 builder.Services.AddScoped<TypeService>();
+builder.Services.AddScoped<StatRepository>();
+builder.Services.AddScoped<StatService>();
 
 var app = builder.Build();
 

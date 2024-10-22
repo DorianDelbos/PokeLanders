@@ -17,7 +17,7 @@ namespace LandAPI.Services
             return _typeRepository.GetAllTypes();
         }
 
-        public Models.Type GetLanderById(int id)
+        public Models.Type GetTypeById(int id)
         {
             return _typeRepository.GetTypeById(id);
         }

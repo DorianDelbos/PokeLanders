@@ -23,15 +23,15 @@ namespace LandAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Lander> GetLanderById(int id)
+        public ActionResult<Models.Type> GetTypeById(int id)
         {
-            var Lander = _typeService.GetLanderById(id);
-            if (Lander == null) return NotFound();
-            return Ok(Lander);
+            var Stat = _typeService.GetTypeById(id);
+            if (Stat == null) return NotFound();
+            return Ok(Stat);
         }
 
         [HttpGet("name/{name}")]
-        public ActionResult<IEnumerable<Models.Type>> GetLanderByType(string name)
+        public ActionResult<IEnumerable<Models.Type>> GetStatByType(string name)
         {
             return Ok(_typeService.GetTypeByName(name));
         }
