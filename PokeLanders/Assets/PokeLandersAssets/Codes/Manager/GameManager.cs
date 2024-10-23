@@ -1,23 +1,26 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace Lander.Gameplay
 {
-    public static GameManager instance;
-
-    public LanderData[] Landers = new LanderData[2];
-
-    private void Awake()
+    public class GameManager : MonoBehaviour
     {
-        if (instance == null)
+        public static GameManager instance;
+
+        public LanderData[] Landers = new LanderData[2];
+
+        private void Awake()
         {
-            instance = this;
-            transform.SetParent(null);
-            DontDestroyOnLoad(gameObject);
+            if (instance == null)
+            {
+                instance = this;
+                transform.SetParent(null);
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
         }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-    }
+	}
 }

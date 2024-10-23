@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class LanderDisplayHandler : MonoBehaviour
+namespace Lander.Gameplay
 {
-    [SerializeField] private MeshFilter landerMeshFilter;
-
-    public void SetMesh(Mesh mesh)
+    public class LanderDisplayHandler : MonoBehaviour
     {
-        landerMeshFilter.mesh = mesh;
+        [SerializeField] private MeshFilter landerMeshFilter;
+
+        public void SetMesh(Mesh mesh)
+        {
+            landerMeshFilter.mesh = mesh;
+        }
     }
 }

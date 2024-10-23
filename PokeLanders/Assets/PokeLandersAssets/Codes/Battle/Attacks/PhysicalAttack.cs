@@ -1,14 +1,17 @@
 using UnityEngine;
 
-public class PhysicalAttack : Attack
+namespace Lander.Gameplay.Attack
 {
-	public override void Use(LanderData attacker, LanderData defenser)
+	public class PhysicalAttack : Attack
 	{
-		throw new System.NotImplementedException();
-	}
+		public override void Use(LanderData attacker, LanderData defenser)
+		{
+			throw new System.NotImplementedException();
+		}
 
-	protected override int CalculDamage(LanderData attacker, LanderData defenser)
-	{
-		return Mathf.FloorToInt(((2 * attacker.Level + 10) / 250 * attacker.PhysicalAttack / defenser.PhysicalDefense * Power + 2) * Random.Range(0.85f, 1.0f));
+		protected override int CalculDamage(LanderData attacker, LanderData defenser)
+		{
+			return Mathf.FloorToInt(((2 * attacker.Level + 10) / 250 * attacker.PhysicalAttack / defenser.PhysicalDefense * Power + 2) * Random.Range(0.85f, 1.0f));
+		}
 	}
 }

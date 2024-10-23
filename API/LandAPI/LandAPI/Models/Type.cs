@@ -5,17 +5,17 @@ namespace LandAPI.Models
 	public class DamageRelations
 	{
 		[JsonPropertyName("double_damage_from")]
-		public String[] DoubleDamageFrom { get; set; }
+		public string[] DoubleDamageFrom { get; set; }
 		[JsonPropertyName("double_damage_to")]
-		public String[] DoubleDamageTo { get; set; }
+		public string[] DoubleDamageTo { get; set; }
 		[JsonPropertyName("half_damage_from")]
-		public String[] HalfDamageFrom { get; set; }
+		public string[] HalfDamageFrom { get; set; }
 		[JsonPropertyName("half_damage_to")]
-		public String[] HalfDamageTo { get; set; }
+		public string[] HalfDamageTo { get; set; }
 		[JsonPropertyName("none_damage_from")]
-		public String[] NoneDamageFrom { get; set; }
+		public string[] NoneDamageFrom { get; set; }
 		[JsonPropertyName("none_damage_to")]
-		public String[] NoneDamageTo { get; set; }
+		public string[] NoneDamageTo { get; set; }
 	}
 
 	public class Type

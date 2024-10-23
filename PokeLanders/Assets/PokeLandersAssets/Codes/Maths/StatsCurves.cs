@@ -1,23 +1,26 @@
 using UnityEngine;
 
-public static class StatsCurves
+namespace Lander.Maths
 {
-    private static int levelMax = 99;
-    private static int xpMax = 100000;
-
-	private static float GetConstantLevels()
+    public static class StatsCurves
     {
-        return levelMax / Mathf.Sqrt(xpMax - 1);
-    }
+        private static int levelMax = 99;
+        private static int xpMax = 100000;
 
-    public static int GetLevelByXp(int xp)
-    {
-        return Mathf.FloorToInt(GetConstantLevels() * Mathf.Sqrt(xp) + 1);
-    }
+        private static float GetConstantLevels()
+        {
+            return levelMax / Mathf.Sqrt(xpMax - 1);
+        }
 
-    public static int GetXpByLevel(int level)
-    {
-        int v = Mathf.FloorToInt((level - 1) / GetConstantLevels());
-		return v * v;
+        public static int GetLevelByXp(int xp)
+        {
+            return Mathf.FloorToInt(GetConstantLevels() * Mathf.Sqrt(xp) + 1);
+        }
+
+        public static int GetXpByLevel(int level)
+        {
+            int v = Mathf.FloorToInt((level - 1) / GetConstantLevels());
+            return v * v;
+        }
     }
 }

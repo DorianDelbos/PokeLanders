@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "LandAPI.Models.ModelController",
+    "ContainingType": "LandAPI.Controllers.ModelController",
     "Method": "GetModel",
     "RelativePath": "api/Model/{fileName}",
     "HttpMethod": "GET",

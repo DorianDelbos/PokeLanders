@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace LandAPI.Models
+namespace LandAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ModelController: ControllerBase
+    public class ModelController : ControllerBase
     {
         [HttpGet("{fileName}")]
         public IActionResult GetModel(string fileName)
