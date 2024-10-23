@@ -13,13 +13,9 @@ namespace LandAPI.Services
 		}
 
 		public List<EvolutionChain> GetAllEvolutionChains()
-		{
-			return _evolutionChainRepository.GetAllEvolutionChain();
-		}
+			=> _evolutionChainRepository.EvolutionChain;
 
 		public EvolutionChain GetEvolutionChainById(int id)
-		{
-			return _evolutionChainRepository.GetEvolutionChainById(id);
-		}
+			=> _evolutionChainRepository.EvolutionChain.FirstOrDefault(p => p.ID == id);
 	}
 }

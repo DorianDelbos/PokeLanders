@@ -1,60 +1,26 @@
 ﻿using LandAPI.Models;
+using System.Text.Json;
 
 namespace LandAPI.Data
 {
 	public class StatRepository
 	{
+		private readonly string _filePath = "wwwroot/Assets/Data/stats.json";
 		private List<Stat> _stats;
+
+		public List<Stat> Stats => _stats;
 
 		public StatRepository()
 		{
-			InitializeStat();
-		}
-
-		private void InitializeStat()
-		{
-			_stats = new List<Stat>
+			if (File.Exists(_filePath))
 			{
-				new Stat
-				{
-					ID = 1,
-					Name = "pv"
-				},
-				new Stat
-				{
-					ID = 2,
-					Name = "attack"
-				},
-				new Stat
-				{
-					ID = 3,
-					Name = "defense"
-				},
-				new Stat
-				{
-					ID = 4,
-					Name = "special-attack"
-				},
-				new Stat
-				{
-					ID = 5,
-					Name = "special-defense"
-				},
-				new Stat
-				{
-					ID = 6,
-					Name = "speed"
-				}
-			};
-		}
-
-		public List<Stat> GetAllStats() => _stats;
-
-		public Stat GetStatById(int id) => _stats.FirstOrDefault(p => p.ID == id);
-
-		public IEnumerable<Stat> GetStatByName(string name)
-		{
-			return _stats.Where(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+				string jsonData = File.ReadAllText(_filePath);
+				_stats = JsonSerializer.Deserialize<List<Stat>>(jsonData);
+			}
+			else
+			{
+				_stats = new List<Stat>();
+			}
 		}
 	}
 }

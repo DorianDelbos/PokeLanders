@@ -1,20 +1,28 @@
-﻿namespace LandAPI.Models
+﻿using System.Text.Json.Serialization;
+
+namespace LandAPI.Models
 {
     public class EvolutionDetails
-    {
-        public int? Min_Level { get; set; }
+	{
+		[JsonPropertyName("min_level")]
+		public int? MinLevel { get; set; }
     }
 
     public class Chain
-    {
-        public string Species { get; set; }
-        public List<EvolutionDetails> Evolution_Details { get; set; }
-        public List<Chain> Evolves_To { get; set; }
+	{
+		[JsonPropertyName("species")]
+		public string Species { get; set; }
+		[JsonPropertyName("evolution_details")]
+		public List<EvolutionDetails> EvolutionDetails { get; set; }
+		[JsonPropertyName("evolves_to")]
+		public List<Chain> EvolvesTo { get; set; }
     }
 
     public class EvolutionChain
-    {
-        public int ID { get; set; }
-        public Chain Chain { get; set; }
+	{
+		[JsonPropertyName("id")]
+		public int ID { get; set; }
+		[JsonPropertyName("chain")]
+		public Chain Chain { get; set; }
     }
 }

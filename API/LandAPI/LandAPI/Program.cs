@@ -19,6 +19,10 @@ builder.Services.AddScoped<StatRepository>();
 builder.Services.AddScoped<StatService>();
 builder.Services.AddScoped<EvolutionChainRepository>();
 builder.Services.AddScoped<EvolutionChainService>();
+builder.Services.AddScoped<AilementRepository>();
+builder.Services.AddScoped<AilementService>();
+builder.Services.AddScoped<MoveRepository>();
+builder.Services.AddScoped<MoveService>();
 
 var app = builder.Build();
 

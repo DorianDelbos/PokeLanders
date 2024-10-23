@@ -13,18 +13,14 @@ namespace LandAPI.Services
         }
 
         public List<Models.Type> GetAllTypes()
-        {
-            return _typeRepository.GetAllTypes();
-        }
+            => _typeRepository.Types;
 
         public Models.Type GetTypeById(int id)
-        {
-            return _typeRepository.GetTypeById(id);
-        }
+            => _typeRepository.Types.FirstOrDefault(p => p.ID == id);
 
-        public IEnumerable<Models.Type> GetTypeByName(string name)
-        {
-            return _typeRepository.GetTypeByName(name);
-        }
-    }
+
+		public IEnumerable<Models.Type> GetTypeByName(string name)
+            => _typeRepository.Types.Where(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+
+	}
 }

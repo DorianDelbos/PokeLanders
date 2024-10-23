@@ -13,18 +13,12 @@ namespace LandAPI.Services
 		}
 
 		public List<Stat> GetAllStats()
-		{
-			return _statRepository.GetAllStats();
-		}
+			=> _statRepository.Stats;
 
 		public Stat GetStatById(int id)
-		{
-			return _statRepository.GetStatById(id);
-		}
+			=> _statRepository.Stats.FirstOrDefault(p => p.ID == id);
 
 		public IEnumerable<Stat> GetStatByName(string name)
-		{
-			return _statRepository.GetStatByName(name);
-		}
+			=> _statRepository.Stats.Where(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
 	}
 }

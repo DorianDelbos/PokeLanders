@@ -13,18 +13,13 @@ namespace LandAPI.Services
         }
 
         public List<Lander> GetAllLanders()
-        {
-            return _landerRepository.GetAllLanders();
-        }
+            => _landerRepository.Landers;
 
         public Lander GetLanderById(int id)
-        {
-            return _landerRepository.GetLanderById(id);
-        }
+            => _landerRepository.Landers.FirstOrDefault(p => p.ID == id);
 
-        public IEnumerable<Lander> GetLanderByType(string type)
-        {
-            return _landerRepository.GetLanderByType(type);
-        }
-    }
+
+		public IEnumerable<Lander> GetLanderByType(string type) 
+            => _landerRepository.Landers.Where(p => p.Types.Any(t => t.Equals(type, StringComparison.OrdinalIgnoreCase)));
+	}
 }

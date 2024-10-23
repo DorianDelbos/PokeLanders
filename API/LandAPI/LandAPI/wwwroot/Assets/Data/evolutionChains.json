@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "chain": {
+      "species": "Aquapix",
+      "evolution_details": null,
+      "evolves_to": [
+        {
+          "species": "Luminorine",
+          "evolution_details": [
+            {
+              "min_level": 16
+            }
+          ],
+          "evolves_to": [
+            {
+              "species": "Ocealythe",
+              "evolution_details": [
+                {
+                  "min_level": 36
+                }
+              ],
+              "evolves_to": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
