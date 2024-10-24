@@ -12,20 +12,20 @@ namespace Lander.Extern.API
 	[System.Serializable]
 	public class Stats
 	{
-		public int base_stat;
+		public byte base_stat;
 		public string stat;
 	}
 
 	[System.Serializable]
 	public class Lander : IBaseModel
 	{
-		public int id;
+		public ushort id;
 		public string name;
 		public string description;
 		public List<Stats> stats;
-		public int base_experience;
-		public int base_height;
-		public int base_weight;
+		public ushort base_experience;
+		public ushort base_height;
+		public ushort base_weight;
 		public List<string> types;
 		public List<Moves> moves;
 		public string model;

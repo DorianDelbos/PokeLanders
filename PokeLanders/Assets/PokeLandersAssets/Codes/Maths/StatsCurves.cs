@@ -4,28 +4,19 @@ namespace Lander.Maths
 {
     public static class StatsCurves
     {
-        private static int levelMax = 99;
-        private static int xpMax = 100000;
-
-        private static float GetConstantLevels()
+        public static byte GetLevelByXp(int xp, ushort baseXp)
         {
-            return levelMax / Mathf.Sqrt(xpMax - 1);
+            return (byte)Mathf.FloorToInt(Mathf.Pow(xp / (int)baseXp, 1 / 3));
+		}
+
+		public static int GetXpByLevel(byte level, ushort baseXp)
+        {
+            return Mathf.FloorToInt((int)baseXp * Mathf.Pow((int)level, 3));
         }
 
-        public static int GetLevelByXp(int xp)
-        {
-            return Mathf.FloorToInt(GetConstantLevels() * Mathf.Sqrt(xp) + 1);
-		}
-
-		public static int GetXpByLevel(int level)
+		public static ushort GetMaxHp(byte baseHp, byte level, byte iv, byte ev)
 		{
-			int v = Mathf.FloorToInt((level - 1) / GetConstantLevels());
-			return v * v;
-		}
-
-		public static int GetMaxHp(int baseHp, int level)
-		{
-			return 2 * baseHp * level / 100 + level + 10;
+            return (ushort)((((2 * baseHp + iv + (ev / 4)) * level) / 100) + level + 10);
 		}
 	}
 }

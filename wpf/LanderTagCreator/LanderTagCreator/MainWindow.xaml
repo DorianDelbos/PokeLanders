@@ -5,12 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LanderTagCreator"
         mc:Ignorable="d"
-        Title="Lander creator" Height="400" Width="400"
+        Title="Lander Creator" Height="600" Width="400"
         MinHeight="300" MinWidth="300"
         ResizeMode="CanResize">
     <Grid Margin="10">
         <Grid.RowDefinitions>
-            <!-- 8 rows, one for each data entry -->
+            <!-- 23 rows for each data entry -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -31,38 +47,85 @@
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Tag" VerticalAlignment="Center" Margin="5"/>
         <TextBox x:Name="TagTextBox" Grid.Row="0" Grid.Column="1" Text="00 00 00 00" Margin="5"/>
 
-        <!-- Id -->
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Id" VerticalAlignment="Center" Margin="5"/>
-        <TextBox x:Name="IdTextBox" Grid.Row="1" Grid.Column="1" Text="1" Margin="5"/>
-
         <!-- Name -->
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Name" VerticalAlignment="Center" Margin="5"/>
-        <TextBox x:Name="NameTextBox" Grid.Row="2" Grid.Column="1" Text="Abcdefgh" Margin="5"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Name" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="NameTextBox" Grid.Row="1" Grid.Column="1" Text="Abcdefghijkl" Margin="5"/>
 
-        <!-- Hp -->
-        <TextBlock Grid.Row="3" Grid.Column="0" Text="Hp" VerticalAlignment="Center" Margin="5"/>
+        <!-- Id -->
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="ID" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="IdTextBox" Grid.Row="2" Grid.Column="1" Text="0" Margin="5"/>
+
+        <!-- HP -->
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="HP" VerticalAlignment="Center" Margin="5"/>
         <TextBox x:Name="HpTextBox"  Grid.Row="3" Grid.Column="1" Text="0" Margin="5"/>
 
-        <!-- Level -->
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="Level" VerticalAlignment="Center" Margin="5"/>
-        <TextBox x:Name="LevelTextBox" Grid.Row="4" Grid.Column="1" Text="0" Margin="5"/>
-
-        <!-- Xp -->
-        <TextBlock Grid.Row="5" Grid.Column="0" Text="Xp" VerticalAlignment="Center" Margin="5"/>
-        <TextBox x:Name="XpTextBox" Grid.Row="5" Grid.Column="1" Text="0" Margin="5"/>
+        <!-- XP -->
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="XP" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="XpTextBox" Grid.Row="4" Grid.Column="1" Text="0" Margin="5"/>
 
         <!-- Height -->
-        <TextBlock Grid.Row="6" Grid.Column="0" Text="Height" VerticalAlignment="Center" Margin="5"/>
-        <TextBox x:Name="HeightTextBox" Grid.Row="6" Grid.Column="1" Text="0" Margin="5"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Height" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="HeightTextBox" Grid.Row="5" Grid.Column="1" Text="0" Margin="5"/>
 
         <!-- Weight -->
-        <TextBlock Grid.Row="7" Grid.Column="0" Text="Weight" VerticalAlignment="Center" Margin="5"/>
-        <TextBox x:Name="WeightTextBox" Grid.Row="7" Grid.Column="1" Text="0" Margin="5"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Weight" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="WeightTextBox" Grid.Row="6" Grid.Column="1" Text="0" Margin="5"/>
+
+        <!-- Attack IDs -->
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="Attack 1 ID" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="Attack1IdTextBox" Grid.Row="7" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="Attack 2 ID" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="Attack2IdTextBox" Grid.Row="8" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="9" Grid.Column="0" Text="Attack 3 ID" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="Attack3IdTextBox" Grid.Row="9" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="10" Grid.Column="0" Text="Attack 4 ID" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="Attack4IdTextBox" Grid.Row="10" Grid.Column="1" Text="0" Margin="5"/>
+
+        <!-- IVs -->
+        <TextBlock Grid.Row="11" Grid.Column="0" Text="IV HP" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="IvPvTextBox" Grid.Row="11" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="12" Grid.Column="0" Text="IV Atk" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="IvAtkTextBox" Grid.Row="12" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="13" Grid.Column="0" Text="IV Def" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="IvDefTextBox" Grid.Row="13" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="14" Grid.Column="0" Text="IV Atk" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="IvAtkSpeTextBox" Grid.Row="14" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="15" Grid.Column="0" Text="IV Def" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="IvDefSpeTextBox" Grid.Row="15" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="16" Grid.Column="0" Text="IV Speed" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="IvSpeedTextBox" Grid.Row="16" Grid.Column="1" Text="0" Margin="5"/>
+
+        <!-- EVs -->
+        <TextBlock Grid.Row="17" Grid.Column="0" Text="EV HP" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="EvPvTextBox" Grid.Row="17" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="18" Grid.Column="0" Text="EV Atk" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="EvAtkTextBox" Grid.Row="18" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="19" Grid.Column="0" Text="EV Def" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="EvDefTextBox" Grid.Row="19" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="20" Grid.Column="0" Text="EV Sp. Atk" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="EvAtkSpeTextBox" Grid.Row="20" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="21" Grid.Column="0" Text="EV Sp. Def" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="EvDefSpeTextBox" Grid.Row="21" Grid.Column="1" Text="0" Margin="5"/>
+
+        <TextBlock Grid.Row="22" Grid.Column="0" Text="EV Speed" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="EvSpeedTextBox" Grid.Row="22" Grid.Column="1" Text="0" Margin="5"/>
 
         <!-- Result -->
-        <Button Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" Margin="0" Click="Button_Click" >
-            <TextBlock Text="Result" Margin="0" Width="38"/>
+        <Button Grid.Row="23" Grid.Column="0" VerticalAlignment="Center" Margin="0" Click="Button_Click">
+            <TextBlock Text="Generate Result" Margin="0" Width="100"/>
         </Button>
-        <TextBox x:Name="ResultTextBox" Grid.Row="8" Grid.Column="1" Text="0" Margin="5"/>
+        <TextBox x:Name="ResultTextBox" Grid.Row="23" Grid.Column="1" Text="Result" Margin="5" IsReadOnly="True"/>
     </Grid>
 </Window>

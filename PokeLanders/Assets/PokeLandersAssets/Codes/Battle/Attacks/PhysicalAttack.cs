@@ -9,9 +9,9 @@ namespace Lander.Gameplay.Attack
 			throw new System.NotImplementedException();
 		}
 
-		protected override int CalculDamage(LanderData attacker, LanderData defenser)
+		protected override ushort CalculDamage(LanderData attacker, LanderData defenser)
 		{
-			return Mathf.FloorToInt(((2 * attacker.Level + 10) / 250 * attacker.Attack / defenser.Defense * Power + 2) * Random.Range(0.85f, 1.0f));
+			return (ushort)Mathf.FloorToInt(((2 * attacker.Level + 10) / 250 * attacker.Attack / defenser.Defense * Power + 2) * Random.Range(0.85f, 1.0f));
 		}
 	}
 }

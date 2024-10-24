@@ -53,7 +53,7 @@ namespace Lander.Gameplay
 			customNameMesh.text = data.Name;
 			lifeBar.maxValue = data.MaxHp;
 			lifeBar.value = data.Hp;
-			xpBar.maxValue = StatsCurves.GetXpByLevel(data.Level + 1);
+			xpBar.maxValue = StatsCurves.GetXpByLevel((byte)(data.Level + 1), data.BaseXp);
 			xpBar.value = data.Xp;
 			levelMesh.text = $"Lvl.{data.Level}";
 

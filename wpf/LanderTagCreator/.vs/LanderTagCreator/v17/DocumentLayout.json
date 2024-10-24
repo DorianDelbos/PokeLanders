@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\wpf\\LanderTagCreator\\",
+  "WorkspaceRootPath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\wpf\\LanderTagCreator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F5CF01E-6278-4957-ABB3-675DF1B110A7}|LanderTagCreator\\LanderTagCreator.csproj|c:\\users\\etudiant1\\documents\\unity\\pokelanders\\wpf\\landertagcreator\\landertagcreator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3F5CF01E-6278-4957-ABB3-675DF1B110A7}|LanderTagCreator\\LanderTagCreator.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\wpf\\landertagcreator\\landertagcreator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F5CF01E-6278-4957-ABB3-675DF1B110A7}|LanderTagCreator\\LanderTagCreator.csproj|solutionrelative:landertagcreator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F5CF01E-6278-4957-ABB3-675DF1B110A7}|LanderTagCreator\\LanderTagCreator.csproj|c:\\users\\etudiant1\\documents\\unity\\pokelanders\\wpf\\landertagcreator\\landertagcreator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3F5CF01E-6278-4957-ABB3-675DF1B110A7}|LanderTagCreator\\LanderTagCreator.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\wpf\\landertagcreator\\landertagcreator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3F5CF01E-6278-4957-ABB3-675DF1B110A7}|LanderTagCreator\\LanderTagCreator.csproj|solutionrelative:landertagcreator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -24,23 +24,22 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\MainWindow.xaml",
               "RelativeDocumentMoniker": "LanderTagCreator\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\MainWindow.xaml",
               "RelativeToolTip": "LanderTagCreator\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-21T09:51:31.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T09:51:31.147Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "LanderTagCreator\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\MainWindow.xaml.cs",
               "RelativeToolTip": "LanderTagCreator\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAADAAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAQwFUAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T09:51:30.786Z",
               "EditorCaption": ""

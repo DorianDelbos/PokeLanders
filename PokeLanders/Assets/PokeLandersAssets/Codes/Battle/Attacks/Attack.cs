@@ -19,6 +19,6 @@ namespace Lander.Gameplay.Attack
 		public ushort Pp => pp;
 
 		public abstract void Use(LanderData attacker, LanderData defenser);
-		protected abstract int CalculDamage(LanderData attacker, LanderData defenser);
+		protected abstract ushort CalculDamage(LanderData attacker, LanderData defenser);
 	}
 }
