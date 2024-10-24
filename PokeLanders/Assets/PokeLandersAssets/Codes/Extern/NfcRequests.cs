@@ -6,11 +6,11 @@ using System.IO.Ports;
 using System.Threading;
 using UnityEngine;
 
-namespace Lander.NFC
+namespace Lander.Extern
 {
-	public class NfcModule : MonoBehaviour
+	public class NfcRequests : MonoBehaviour
 	{
-		public static NfcModule instance;
+		public static NfcRequests instance;
 
 		// Port and thread
 		private SerialPort stream;

@@ -4,31 +4,19 @@ namespace Lander.Gameplay
     public class LanderDataNFC
     {
         public string tag = string.Empty;
-        public ushort id = 0;
-        public string customName = string.Empty;
-        public ushort hp = 0;
-        public ushort level = 0;
-        public ushort xp = 0;
-        public ushort height = 0;
-        public ushort weight = 0;
+        public int id = 0;
+        public string name = string.Empty;
+        public int hp = 0;
+        public int level = 0;
+        public int xp = 0;
+        public int height = 0;
+        public int weight = 0;
 
-        public LanderDataNFC()
-        {
-            tag = string.Empty;
-            id = 0;
-            customName = string.Empty;
-            hp = 0;
-            level = 0;
-            xp = 0;
-            height = 0;
-            weight = 0;
-        }
-
-        public LanderDataNFC(string tag, ushort id, string customName, ushort hp, ushort level, ushort xp, ushort height, ushort weight)
+        public LanderDataNFC(string tag, int id, string name, int hp, int level, int xp, int height, int weight)
         {
             this.tag = tag;
             this.id = id;
-            this.customName = customName;
+            this.name = name;
             this.hp = hp;
             this.level = level;
             this.xp = xp;
@@ -43,7 +31,7 @@ namespace Lander.Gameplay
             // Byte 5
             id = nfcData[4];
             // Bytes 6-13
-            customName = System.Text.Encoding.ASCII.GetString(nfcData, 5, 8).Trim();
+            name = System.Text.Encoding.ASCII.GetString(nfcData, 5, 8).Trim();
             // Byte 14
             hp = nfcData[13];
             // Byte 15

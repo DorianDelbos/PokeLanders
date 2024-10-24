@@ -1,4 +1,4 @@
-namespace Lander.API
+namespace Lander.Extern.API
 {
 	[System.Serializable]
 	public class Ailement : IBaseModel

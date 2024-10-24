@@ -11,7 +11,7 @@ namespace Lander.Gameplay.Attack
 
 		protected override int CalculDamage(LanderData attacker, LanderData defenser)
 		{
-			return Mathf.FloorToInt(((2 * attacker.Level + 10) / 250 * attacker.PhysicalAttack / defenser.PhysicalDefense * Power + 2) * Random.Range(0.85f, 1.0f));
+			return Mathf.FloorToInt(((2 * attacker.Level + 10) / 250 * attacker.Attack / defenser.Defense * Power + 2) * Random.Range(0.85f, 1.0f));
 		}
 	}
 }

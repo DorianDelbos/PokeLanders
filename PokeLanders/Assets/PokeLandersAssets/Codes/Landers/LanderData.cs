@@ -1,5 +1,5 @@
+using Lander.Extern;
 using Lander.Gameplay.Type;
-using Lander.Gameplay.Web;
 using Lander.Maths;
 using System;
 using System.Collections.Generic;
@@ -8,150 +8,118 @@ using UnityEngine;
 
 namespace Lander.Gameplay
 {
-	[System.Serializable]
+	[Serializable]
 	public class LanderData
 	{
 		#region ATTRIBUTS
-		private LanderDataNFC nfc = null;
+		// Main
+		private string tag = string.Empty;
+		private int id = 0;
+		private string species = string.Empty;
 		private string name = string.Empty;
 		private string description = string.Empty;
-		private ushort maxHp = 0;
-		private ushort physicalAttack = 0;
-		private ushort specialAttack = 0;
-		private ushort physicalDefense = 0;
-		private ushort specialDefense = 0;
-		private ushort speed = 0;
+		// Stats
+		private int level = 0;
+		private int xp = 0;
+		private int hp = 0;
+		private LanderStats stats;
+		// Others
+		private int height = 0;
+		private int weight = 0;
 		private List<ElementaryType> types = null;
 		private Mesh mesh = null;
 		#endregion
 
 		#region EVENTS
-		public Action<ushort, ushort> onHpChange;
+		public Action<int, int> onHpChange;
 		#endregion
 
 		#region GETTERS/SETTERS
-		public string Tag => nfc.tag;
-		public ushort ID => nfc.id;
+		// Main
+		public string Tag => tag;
+		public int ID => id;
+		public string Species => species;
 		public string Name => name;
-		public string CustomName => nfc.customName;
 		public string Description => description;
-		public ushort MaxHp => maxHp;
-		public ushort PhysicalAttack => physicalAttack;
-		public ushort SpecialAttack => specialAttack;
-		public ushort PhysicalDefense => physicalDefense;
-		public ushort SpecialDefense => specialDefense;
-		public ushort Speed => speed;
+		// Levels
+		public int Level => level;
+		public int Xp => xp;
+		// States
+		public int Hp => hp;
+		public int MaxHp => StatsCurves.GetMaxHp(stats.baseHp, level);
+		public int BaseHp => stats.baseHp;
+		public int Attack => stats.attack;
+		public int SpecialAttack => stats.specialAttack;
+		public int Defense => stats.defense;
+		public int SpecialDefense => stats.specialDefense;
+		public int Speed => stats.speed;
+		// Others
 		public List<ElementaryType> Types => types;
 		public Mesh Mesh => mesh;
-		public ushort Hp { get => nfc.hp; private set => nfc.hp = value; }
-		public ushort Level { get => nfc.level; private set => nfc.level = value; }
-		public ushort Xp { get => nfc.xp; private set => nfc.xp = value; }
-		public ushort Height => nfc.height;
-		public ushort Weight => nfc.weight;
+		public int Height => height;
+		public int Weight => weight;
 		#endregion
 
 		#region CONSTRUCTORS
-		public LanderData()
-		{
-			nfc = null;
-			SetLanderBaseData(string.Empty, string.Empty, 0, 0, 0, 0, 0, 0, null, null);
-		}
+		public LanderData(LanderDataNFC nfcData, Extern.API.Lander landerModel)
+			=> SetLanderBaseData(nfcData.tag, nfcData.id, landerModel.name, nfcData.name, landerModel.description, nfcData.level, nfcData.xp, nfcData.hp, new LanderStats(landerModel.stats), nfcData.height, nfcData.weight, ElementaryTypeUtils.StringsToTypes(landerModel.types), null /*todo*/);
 
-		public LanderData(byte[] nfcData)
-		{
-			nfc = new LanderDataNFC(nfcData);
-			SetLanderBaseData(LanderWebRequest(ID));
-		}
+		public LanderData(string tag, int id, string species, string name, string description, int level, int xp, int hp, int baseHp, int attack, int specialAttack, int defense, int specialDefense, int speed, int height, int weight, List<ElementaryType> types, Mesh mesh)
+			=> SetLanderBaseData(tag, id, species, name, description, level, xp, hp, new LanderStats(baseHp, attack, defense, specialAttack, specialDefense, speed), height, weight, types, mesh);
 
-		public LanderData(LanderDataNFC nfcData)
-		{
-			nfc = nfcData;
-			SetLanderBaseData(LanderWebRequest(ID));
-		}
-
-		public LanderData(byte[] nfcData, string name, string description, ushort maxHp, ushort physicalAttack, ushort specialAttack, ushort physicalDefense, ushort specialDefense, ushort speed, List<ElementaryType> types, Mesh mesh)
-		{
-			nfc = new LanderDataNFC(nfcData);
-			SetLanderBaseData(name, description, maxHp, physicalAttack, specialAttack, physicalDefense, specialDefense, speed, types, mesh);
-		}
-
-		public LanderData(string tag, ushort id, string customName, ushort hp, ushort level, ushort xp, ushort height, ushort weight, string name, string description, ushort maxHp, ushort physicalAttack, ushort specialAttack, ushort physicalDefense, ushort specialDefense, ushort speed, List<ElementaryType> types, Mesh mesh)
-		{
-			nfc = new LanderDataNFC(tag, id, customName, hp, level, xp, height, weight);
-			SetLanderBaseData(name, description, maxHp, physicalAttack, specialAttack, physicalDefense, specialDefense, speed, types, mesh);
-		}
+		public LanderData(string tag, int id, string species, string name, string description, int level, int xp, int hp, LanderStats stats, int height, int weight, List<ElementaryType> types, Mesh mesh)
+	=> SetLanderBaseData(tag, id, species, name, description, level, xp, hp, stats, height, weight, types, mesh);
 		#endregion
 
 		#region STATICS
-		public static LanderData CreateRandomLander() => CreateRandomLander((ushort)UnityEngine.Random.Range(1, 100));
+		public static LanderData CreateRandomLander() => CreateRandomLander(UnityEngine.Random.Range(1, 100));
 
-		public static LanderData CreateRandomLander(ushort level)
+		public static LanderData CreateRandomLander(int level)
 		{
-			ushort id = (ushort)UnityEngine.Random.Range(0, 3);
-			Dictionary<string, string> fetch = LanderWebRequest(id);
-			ushort nfcLevel = (ushort)Mathf.Clamp(level + (ushort)UnityEngine.Random.Range(-5, 5), 0, 99);
-			ushort xp = (ushort)StatsCurves.GetXpByLevel(nfcLevel);
-			ushort hp = ushort.Parse(fetch["Hp"]);
+			Extern.API.Lander[] allLanders = APIDataFetcher<Extern.API.Lander>.FetchArrayData("api/v1/lander");
+			Extern.API.Lander landerModel = allLanders.Where(x => x.id == UnityEngine.Random.Range(0, allLanders.Length)).First();
+			int maxHp = StatsCurves.GetMaxHp(landerModel.stats.Where(x => x.stat == "pv").First().base_stat, level);
 
 			return new LanderData(
 				"-1",
-				id,
-				fetch["Name"],
-				hp,
+				landerModel.id,
+				landerModel.name,
+				landerModel.name,
+				landerModel.description,
 				level,
-				xp,
-				0,
-				0,
-				fetch["Name"],
-				fetch["Description"],
-				hp,
-				ushort.Parse(fetch["PhysicalAttack"]),
-				ushort.Parse(fetch["SpecialAttack"]),
-				ushort.Parse(fetch["PhysicalDefense"]),
-				ushort.Parse(fetch["SpecialDefense"]),
-				ushort.Parse(fetch["Speed"]),
-				ElementaryTypeUtils.StringsToTypes(fetch["Types"].Split(',')).ToList(),
-				LandersGameData.GetLanderMeshAtId(id)
+				landerModel.base_experience,
+				maxHp,
+				new LanderStats(landerModel.stats),
+				landerModel.base_height,
+				landerModel.base_weight,
+				ElementaryTypeUtils.StringsToTypes(landerModel.types),
+				null // TODO
 			);
-		}
-
-		private static Dictionary<string, string> LanderWebRequest(int id)
-		{
-			Dictionary<string, string> result = null;
-			WebRequests.instance.DoRequest($"GetLandersById.php?ID={id}", (fetch, e) =>
-			{
-				if (e != null)
-				{
-					Debug.LogError($"Request failed: {e}");
-				}
-
-				result = fetch;
-			});
-			return result;
 		}
 		#endregion
 
 		#region METHODS
-		private void SetLanderBaseData(string name, string description, ushort maxHp, ushort physicalAttack, ushort specialAttack, ushort physicalDefense, ushort specialDefense, ushort speed, List<ElementaryType> types, Mesh mesh)
+		private void SetLanderBaseData(string tag, int id, string species, string name, string description, int level, int xp, int hp, LanderStats stats, int height, int weight, List<ElementaryType> types, Mesh mesh)
 		{
+			this.tag = tag;
+			this.id = id;
+			this.species = species;
 			this.name = name;
 			this.description = description;
-			this.maxHp = maxHp;
-			this.physicalAttack = physicalAttack;
-			this.specialAttack = specialAttack;
-			this.physicalDefense = physicalDefense;
-			this.specialDefense = specialDefense;
-			this.speed = speed;
+			this.level = level;
+			this.xp = xp;
+			this.hp = hp;
+			this.stats = stats;
+			this.height = height;
+			this.weight = weight;
 			this.types = types;
 			this.mesh = mesh;
 		}
 
-		private void SetLanderBaseData(Dictionary<string, string> fetch) => SetLanderBaseData(fetch["Name"], fetch["Description"], ushort.Parse(fetch["Hp"]), ushort.Parse(fetch["PhysicalAttack"]), ushort.Parse(fetch["SpecialAttack"]), ushort.Parse(fetch["PhysicalDefense"]), ushort.Parse(fetch["SpecialDefense"]), ushort.Parse(fetch["Speed"]), ElementaryTypeUtils.StringsToTypes(fetch["Types"].Split(",")).ToList(), LandersGameData.GetLanderMeshAtId(ID));
-
 		public void TakeDamage(int damage)
 		{
-			Hp -= (ushort)Mathf.Min(damage, 255);
-			onHpChange?.Invoke(Hp, maxHp);
+			hp -= Mathf.Min(damage, 255);
+			onHpChange?.Invoke(Hp, MaxHp);
 		}
 		#endregion
 	}

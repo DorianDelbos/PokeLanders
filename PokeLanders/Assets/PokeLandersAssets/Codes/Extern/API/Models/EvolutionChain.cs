@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 
-namespace Lander.API
+namespace Lander.Extern.API
 {
 	[System.Serializable]
 	public class EvolutionDetails
 	{
-		public int? minLevel;
+		public int? min_level;
 	}
 
 	[System.Serializable]
 	public class Chain
 	{
 		public string species;
-		public List<EvolutionDetails> evolutionDetails;
-		public List<Chain> evolvesTo;
+		public List<EvolutionDetails> evolution_details;
+		public List<Chain> evolves_to;
 	}
 
 	[System.Serializable]

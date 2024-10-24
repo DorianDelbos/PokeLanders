@@ -14,7 +14,7 @@
       },
       {
         "base_stat": 65,
-        "stat": "defence"
+        "stat": "defense"
       },
       {
         "base_stat": 50,
@@ -22,7 +22,7 @@
       },
       {
         "base_stat": 64,
-        "stat": "special-defence"
+        "stat": "special-defense"
       },
       {
         "base_stat": 43,
@@ -58,7 +58,7 @@
       },
       {
         "base_stat": 80,
-        "stat": "defence"
+        "stat": "defense"
       },
       {
         "base_stat": 65,
@@ -66,7 +66,7 @@
       },
       {
         "base_stat": 80,
-        "stat": "special-defence"
+        "stat": "special-defense"
       },
       {
         "base_stat": 58,
@@ -102,7 +102,7 @@
       },
       {
         "base_stat": 100,
-        "stat": "defence"
+        "stat": "defense"
       },
       {
         "base_stat": 85,
@@ -110,7 +110,7 @@
       },
       {
         "base_stat": 105,
-        "stat": "special-defence"
+        "stat": "special-defense"
       },
       {
         "base_stat": 78,

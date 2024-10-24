@@ -1,18 +1,18 @@
 using System.Collections.Generic;
 
-namespace Lander.API
+namespace Lander.Extern.API
 {
 	[System.Serializable]
 	public class Moves
 	{
 		public string move;
-		public MoveLearnedDetails moveLearnedDetails;
+		public MoveLearnedDetails move_learned_details;
 	}
 
 	[System.Serializable]
 	public class Stats
 	{
-		public int baseStat;
+		public int base_stat;
 		public string stat;
 	}
 
@@ -23,9 +23,9 @@ namespace Lander.API
 		public string name;
 		public string description;
 		public List<Stats> stats;
-		public int baseExperience;
-		public int baseHeight;
-		public int baseWeight;
+		public int base_experience;
+		public int base_height;
+		public int base_weight;
 		public List<string> types;
 		public List<Moves> moves;
 		public string model;

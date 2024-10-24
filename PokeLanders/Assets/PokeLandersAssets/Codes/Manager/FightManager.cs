@@ -1,4 +1,4 @@
-using Lander.NFC;
+using Lander.Extern;
 using UnityEngine;
 
 namespace Lander.Gameplay
@@ -22,14 +22,14 @@ namespace Lander.Gameplay
 
 		private void OnEnable()
 		{
-			NfcModule.onNewNfcDetect += CheckData;
-			NfcModule.onNfcRemove += OnNfcRemove;
+			NfcRequests.onNewNfcDetect += CheckData;
+			NfcRequests.onNfcRemove += OnNfcRemove;
 		}
 
 		private void OnDisable()
 		{
-			NfcModule.onNewNfcDetect -= CheckData;
-			NfcModule.onNfcRemove -= OnNfcRemove;
+			NfcRequests.onNewNfcDetect -= CheckData;
+			NfcRequests.onNfcRemove -= OnNfcRemove;
 		}
 
 		private void DisplayNfcError(bool isError, string errorText)
@@ -39,7 +39,7 @@ namespace Lander.Gameplay
 			nfcErrorHud.SetErrorText(errorText);
 		}
 
-		private void OnNfcRemove(LanderDataNFC data) => DisplayNfcError(true, $"You must replace {data.customName} on the player to continue !");
+		private void OnNfcRemove(LanderDataNFC data) => DisplayNfcError(true, $"You must replace {data.name} on the player to continue !");
 
 		private void CheckData(LanderDataNFC data)
 		{

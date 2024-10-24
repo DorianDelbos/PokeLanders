@@ -1,4 +1,5 @@
-using Lander.NFC;
+using Lander.Extern;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,31 +9,34 @@ namespace Lander.Gameplay
     {
         private LanderData LanderData { get => GameManager.instance.Landers[0]; set => GameManager.instance.Landers[0] = value; }
 
-        [SerializeField] LanderDisplayHandler landerDisplayHandler;
+        [SerializeField] private LanderDisplayHandler landerDisplayHandler;
+        [SerializeField] private PcHudHandler pcHudHandler;
 
         private void OnEnable()
         {
-            NfcModule.onNewNfcDetect += SetData;
-            NfcModule.onNfcRemove += ResetData;
+            NfcRequests.onNewNfcDetect += SetData;
+            NfcRequests.onNfcRemove += ResetData;
         }
 
         private void OnDisable()
         {
-            NfcModule.onNewNfcDetect -= SetData;
-            NfcModule.onNfcRemove -= ResetData;
+            NfcRequests.onNewNfcDetect -= SetData;
+            NfcRequests.onNfcRemove -= ResetData;
         }
 
         private void SetData(LanderDataNFC data)
         {
-            LanderData = new LanderData(data);
+            LanderData = new LanderData(data, APIDataFetcher<Extern.API.Lander>.FetchData($"api/v1/lander/{data.id}"));
             landerDisplayHandler.SetMesh(LanderData.Mesh);
+            pcHudHandler.UpdatePc(LanderData, true);
         }
 
         private void ResetData(LanderDataNFC data)
         {
             LanderData = null;
             landerDisplayHandler.SetMesh(null);
-        }
+			pcHudHandler.UpdatePc(LanderData, false);
+		}
 
         public void StartTrainLander()
         {

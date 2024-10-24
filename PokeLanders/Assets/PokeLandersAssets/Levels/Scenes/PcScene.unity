@@ -1787,60 +1787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5c4a3111d04a04e82c974a14c5d3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Landers:
-  - name: 
-    description: 
-    types: 
-    mesh: {fileID: 0}
-  - name: 
-    description: 
-    types: 
-    mesh: {fileID: 0}
---- !u!1 &1125402300
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1125402301}
-  - component: {fileID: 1125402302}
-  m_Layer: 0
-  m_Name: Database
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1125402301
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125402300}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2113208146}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1125402302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125402300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75134ead3c72bcf4eb107a0d8461487b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  website: http://localhost/Pokelanders
+  Landers: []
 --- !u!1001 &1158148698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3291,6 +3238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   landerDisplayHandler: {fileID: 866427554}
+  pcHudHandler: {fileID: 1841439091}
 --- !u!1 &1947357368
 GameObject:
   m_ObjectHideFlags: 0
@@ -3905,7 +3853,6 @@ Transform:
   m_Children:
   - {fileID: 1530897770}
   - {fileID: 2135785286}
-  - {fileID: 1125402301}
   - {fileID: 1841439090}
   - {fileID: 951550980}
   m_Father: {fileID: 0}
