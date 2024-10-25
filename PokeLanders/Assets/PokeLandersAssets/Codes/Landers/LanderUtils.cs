@@ -24,7 +24,7 @@ namespace Lander.Gameplay
 				landerModel.description,
 				StatsCurves.GetXpByLevel(level, landerModel.base_experience),
 				maxHp,
-				new LanderStats(landerModel.stats),
+				new LanderData.Stats(landerModel.stats),
 				RandomStats(31),
 				RandomStats(252, 510),
 				landerModel.base_experience,
@@ -35,9 +35,9 @@ namespace Lander.Gameplay
 			);
 		}
 
-		public static LanderStats RandomStats(int maxValue, int maxTotal = int.MaxValue - 1)
+		public static LanderData.Stats RandomStats(int maxValue, int maxTotal = int.MaxValue - 1)
 		{
-			LanderStats stats = new LanderStats();
+			LanderData.Stats stats = new LanderData.Stats();
 			Random random = new Random();
 			int remainingTotal = maxTotal;
 			byte[] attributes = new byte[6];

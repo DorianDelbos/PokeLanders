@@ -3,6 +3,7 @@ using Lander.Gameplay.Type;
 using Lander.Maths;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Lander.Gameplay
@@ -12,106 +13,169 @@ namespace Lander.Gameplay
 	[Serializable]
 	public class LanderData
 	{
+		#region STRUCT
+		[Serializable]
+		public struct Stats
+		{
+			public Stats(byte hp, byte attack, byte defense, byte specialAttack, byte specialDefense, byte speed)
+			{
+				this.hp = hp;
+				this.attack = attack;
+				this.defense = defense;
+				this.specialAttack = specialAttack;
+				this.specialDefense = specialDefense;
+				this.speed = speed;
+			}
+
+			public Stats(List<Extern.API.Stats> stats)
+			{
+				hp = stats.Where(x => x.stat == "pv").First().base_stat;
+				attack = stats.Where(x => x.stat == "attack").First().base_stat;
+				defense = stats.Where(x => x.stat == "defense").First().base_stat;
+				specialAttack = stats.Where(x => x.stat == "special-attack").First().base_stat;
+				specialDefense = stats.Where(x => x.stat == "special-defense").First().base_stat;
+				speed = stats.Where(x => x.stat == "speed").First().base_stat;
+			}
+
+			public byte hp;
+			public byte attack;
+			public byte defense;
+			public byte specialAttack;
+			public byte specialDefense;
+			public byte speed;
+		}
+
+		[Serializable]
+		public struct MainData
+		{
+			public MainData(string tag, ushort id, string species, string name, string description)
+			{
+				this.tag = tag;
+				this.id = id;
+				this.species = species;
+				this.name = name;
+				this.description = description;
+			}
+
+			public string tag;
+			public ushort id;
+			public string species;
+			public string name;
+			public string description;
+		}
+
+		[Serializable]
+		public struct StatsData
+		{
+			public StatsData(int xp, ushort hp, Stats stats, Stats ivs, Stats evs)
+			{
+				this.xp = xp;
+				this.hp = hp;
+				this.stats = stats;
+				this.ivs = ivs;
+				this.evs = evs;
+			}
+
+			public int xp;
+			public ushort hp;
+			public Stats stats;
+			public Stats ivs;
+			public Stats evs;
+		}
+
+		[Serializable]
+		public struct OtherData
+		{
+			public OtherData(ushort baseXp, ushort height, ushort weight, List<ElementaryType> types, BundleAssetsLoad bundleModel)
+			{
+				this.baseXp = baseXp;
+				this.height = height;
+				this.weight = weight;
+				this.types = types;
+				this.bundleModel = bundleModel;
+			}
+
+			public ushort baseXp;
+			public ushort height;
+			public ushort weight;
+			public List<ElementaryType> types;
+			public BundleAssetsLoad bundleModel;
+		}
+		#endregion
+
 		#region EVENTS
 		public Action<int, int> onHpChange;
 		#endregion
 
 		#region ATTRIBUTS
-		// Main
-		private string tag = string.Empty;
-		private ushort id = 0;
-		private string species = string.Empty;
-		private string name = string.Empty;
-		private string description = string.Empty;
-		// Stats
-		private int xp = 0;
-		private ushort hp = 0;
-        private LanderStats stats;
-		private LanderStats ivs;
-		private LanderStats evs;
-        // Others
-        private ushort baseXp = 0;
-        private ushort height = 0;
-		private ushort weight = 0;
-		private List<ElementaryType> types = null;
-		private BundleAssetsLoad bundleModel = null;
+		private MainData mainData;
+		private StatsData statsData;
+		private OtherData otherData;
 		#endregion
 
 		#region GETTERS/SETTERS
 		// Main
-		public string Tag => tag;
-		public ushort ID => id;
-		public string Species => species;
-		public string Name => name;
-		public string Description => description;
+		public string Tag { get => mainData.tag; private set => mainData.tag = value; }
+		public ushort ID { get => mainData.id; private set => mainData.id = value; }
+		public string Species { get => mainData.species; private set => mainData.species = value; }
+		public string Name { get => mainData.name; private set => mainData.name = value; }
+		public string Description { get => mainData.description; private set => mainData.description = value; }
 		// Levels
-		public byte Level => StatsCurves.GetLevelByXp(xp, baseXp);
-		public int Xp => xp;
+		public byte Level => StatsCurves.GetLevelByXp(Xp, BaseXp);
+		public int Xp { get => statsData.xp; private set => statsData.xp = value; }
         // States
-        public ushort Hp => hp;
-		public ushort MaxHp => StatsCurves.GetMaxHp(stats.hp, Level, IvPv, EvPv);
-		public byte BaseHp => stats.hp;
-		public byte Attack => stats.attack;
-		public byte SpecialAttack => stats.specialAttack;
-		public byte Defense => stats.defense;
-		public byte SpecialDefense => stats.specialDefense;
-		public byte Speed => stats.speed;
+        public ushort Hp { get => statsData.hp; private set => statsData.hp = value; }
+		public ushort MaxHp => StatsCurves.GetMaxHp(BaseHp, Level, IvPv, EvPv);
+		public byte BaseHp { get => statsData.stats.hp; private set => statsData.stats.hp = value; }
+		public byte Attack { get => statsData.stats.attack; private set => statsData.stats.attack = value; }
+		public byte SpecialAttack { get => statsData.stats.specialAttack; private set => statsData.stats.specialAttack = value; }
+		public byte Defense { get => statsData.stats.defense; private set => statsData.stats.defense = value; }
+		public byte SpecialDefense { get => statsData.stats.specialDefense; private set => statsData.stats.specialDefense = value; }
+		public byte Speed { get => statsData.stats.speed; private set => statsData.stats.speed = value; }
         // IVs
-        public byte IvPv => ivs.hp;
-        public byte IvAtk => ivs.attack;
-        public byte IvDef => ivs.defense;
-        public byte IvAtkSpe => ivs.specialAttack;
-        public byte IvDefSpe => ivs.specialDefense;
-        public byte IvSpeed => ivs.speed;
+        public byte IvPv { get => statsData.ivs.hp; private set => statsData.ivs.hp = value; }
+        public byte IvAtk { get => statsData.ivs.attack; private set => statsData.ivs.attack = value; }
+		public byte IvDef { get => statsData.ivs.defense; private set => statsData.ivs.defense = value; }
+        public byte IvAtkSpe { get => statsData.ivs.specialAttack; private set => statsData.ivs.specialAttack = value; }
+        public byte IvDefSpe { get => statsData.ivs.specialDefense; private set => statsData.ivs.specialDefense = value; }
+        public byte IvSpeed { get => statsData.ivs.speed; private set => statsData.ivs.speed = value; }
         // EVs
-        public byte EvPv => evs.hp;
-        public byte EvAtk => evs.attack;
-        public byte EvDef => evs.defense;
-        public byte EvAtkSpe => evs.specialAttack;
-        public byte EvDefSpe => evs.specialDefense;
-        public byte EvSpeed => evs.speed;
+        public byte EvPv { get => statsData.evs.hp; private set => statsData.evs.hp = value; }
+		public byte EvAtk { get => statsData.evs.attack; private set => statsData.evs.attack = value; }
+        public byte EvDef { get => statsData.evs.defense; private set => statsData.evs.defense = value; }
+        public byte EvAtkSpe { get => statsData.evs.specialAttack; private set => statsData.evs.specialAttack = value; }
+        public byte EvDefSpe { get => statsData.evs.specialDefense; private set => statsData.evs.specialDefense = value; }
+        public byte EvSpeed { get => statsData.evs.speed; private set => statsData.evs.speed = value; }
         // Others
-        public List<ElementaryType> Types => types;
-		public BundleAssetsLoad BundleModel => bundleModel;
-        public ushort BaseXp => baseXp;
-        public ushort Height => height;
-		public ushort Weight => weight;
+        public List<ElementaryType> Types { get => otherData.types; private set => otherData.types = value; }
+		public BundleAssetsLoad BundleModel { get => otherData.bundleModel; private set => otherData.bundleModel = value; }
+        public ushort BaseXp { get => otherData.baseXp; private set => otherData.baseXp = value; }
+        public ushort Height { get => otherData.height; private set => otherData.height = value; }
+		public ushort Weight { get => otherData.weight; private set => otherData.weight = value; }
 		#endregion
 
 		#region CONSTRUCTORS
 		public LanderData(LanderDataNFC nfcData, Extern.API.Lander landerModel)
-			=> SetLanderBaseData(nfcData.tag, nfcData.id, landerModel.name, nfcData.name, landerModel.description, nfcData.xp, nfcData.hp, new LanderStats(landerModel.stats), new LanderStats(nfcData.ivPv, nfcData.ivAtk, nfcData.ivDef, nfcData.ivAtkSpe, nfcData.ivDefSpe, nfcData.ivSpeed), new LanderStats(nfcData.evPv, nfcData.evAtk, nfcData.evDef, nfcData.evAtkSpe, nfcData.evDefSpe, nfcData.evSpeed), landerModel.base_experience, nfcData.height, nfcData.weight, ElementaryTypeUtils.StringsToTypes(landerModel.types), BundleLoaderUtils.DownloadAssets(landerModel.bundle));
+			=> SetLanderBaseData(new MainData(nfcData.tag, nfcData.id, landerModel.name, nfcData.name, landerModel.description), new StatsData(nfcData.xp, nfcData.hp, new Stats(landerModel.stats), new Stats(nfcData.ivPv, nfcData.ivAtk, nfcData.ivDef, nfcData.ivAtkSpe, nfcData.ivDefSpe, nfcData.ivSpeed), new Stats(nfcData.evPv, nfcData.evAtk, nfcData.evDef, nfcData.evAtkSpe, nfcData.evDefSpe, nfcData.evSpeed)), new OtherData(landerModel.base_experience, nfcData.height, nfcData.weight, ElementaryTypeUtils.StringsToTypes(landerModel.types), BundleLoaderUtils.DownloadAssets(landerModel.bundle)));
 
 		public LanderData(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte baseHp, byte attack, byte specialAttack, byte defense, byte specialDefense, byte speed, byte ivPv, byte ivAtk, byte ivAtkSpe, byte ivDef, byte ivDefSpe, byte ivSpeed, byte evPv, byte evAtk, byte evAtkSpe, byte evDef, byte evDefSpe, byte evSpeed, ushort baseXp, ushort height, ushort weight, List<ElementaryType> types, BundleAssetsLoad bundleModel)
-			=> SetLanderBaseData(tag, id, species, name, description, xp, hp, new LanderStats(baseHp, attack, defense, specialAttack, specialDefense, speed), new LanderStats(ivPv, ivAtk, ivDef, ivAtkSpe, ivDefSpe, ivSpeed), new LanderStats(evPv, evAtk, evDef, evAtkSpe, evDefSpe, evSpeed), baseXp, height, weight, types, bundleModel);
+			=> SetLanderBaseData(new MainData(tag, id, species, name, description), new StatsData(xp, hp, new Stats(baseHp, attack, defense, specialAttack, specialDefense, speed), new Stats(ivPv, ivAtk, ivDef, ivAtkSpe, ivDefSpe, ivSpeed), new Stats(evPv, evAtk, evDef, evAtkSpe, evDefSpe, evSpeed)), new OtherData(baseXp, height, weight, types, bundleModel));
 
-		public LanderData(string tag, ushort id, string species, string name, string description, int xp, ushort hp, LanderStats stats, LanderStats ivs, LanderStats evs, ushort baseXp, ushort height, ushort weight, List<ElementaryType> types, BundleAssetsLoad bundleModel)
-			=> SetLanderBaseData(tag, id, species, name, description, xp, hp, stats, ivs, evs, baseXp, height, weight, types, bundleModel);
+		public LanderData(string tag, ushort id, string species, string name, string description, int xp, ushort hp, Stats stats, Stats ivs, Stats evs, ushort baseXp, ushort height, ushort weight, List<ElementaryType> types, BundleAssetsLoad bundleModel)
+			=> SetLanderBaseData(new MainData(tag, id, species, name, description), new StatsData(xp, hp, stats, ivs, evs), new OtherData(baseXp, height, weight, types, bundleModel));
 		#endregion
 
 		#region METHODS
-		private void SetLanderBaseData(string tag, ushort id, string species, string name, string description, int xp, ushort hp, LanderStats stats, LanderStats ivs, LanderStats evs, ushort baseXp, ushort height, ushort weight, List<ElementaryType> types, BundleAssetsLoad bundleModel)
+		private void SetLanderBaseData(MainData mainData, StatsData statsData, OtherData otherData)
 		{
-			this.tag = tag;
-			this.id = id;
-			this.species = species;
-			this.name = name;
-			this.description = description;
-			this.xp = xp;
-			this.hp = hp;
-			this.stats = stats;
-			this.ivs = ivs;
-			this.evs = evs;
-			this.baseXp = baseXp;
-			this.height = height;
-			this.weight = weight;
-			this.types = types;
-			this.bundleModel = bundleModel;
+			this.mainData = mainData;
+			this.statsData = statsData;
+			this.otherData = otherData;
 		}
 
 		public void TakeDamage(ushort damage)
 		{
-			hp -= (ushort)Mathf.Min(damage, MaxHp);
+			Hp -= (ushort)Mathf.Min(damage, MaxHp);
 			onHpChange?.Invoke(Hp, MaxHp);
 		}
 		#endregion
