@@ -31,7 +31,7 @@ namespace Lander.Gameplay
 
 		private void Start()
 		{
-			landerDisplayHandler.SetMesh(GameManager.instance.Landers[(int)landerId].Mesh);
+			landerDisplayHandler.SetMesh(GameManager.instance.Landers[(int)landerId].BundleModel);
 		}
 
 		private void StartTurn()

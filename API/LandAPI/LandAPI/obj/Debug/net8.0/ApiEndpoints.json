@@ -1,21 +1,5 @@
 [
   {
-    "ContainingType": "LandAPI.Controllers.ModelController",
-    "Method": "GetModel",
-    "RelativePath": "api/Model/{fileName}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "fileName",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "LandAPI.Controllers.AilementController",
     "Method": "GetAilements",
     "RelativePath": "api/v1/Ailement",
@@ -60,6 +44,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "LandAPI.Controllers.BundleController",
+    "Method": "GetModel",
+    "RelativePath": "api/v1/Bundle/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "LandAPI.Controllers.EvolutionChainController",

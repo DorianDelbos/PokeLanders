@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Ocealythe
+  m_EditorClassIdentifier: 
+  m_GroupName: Ocealythe
+  m_GUID: 810ffc7a9ec32344d89667ff2d941b5f
+  m_SerializeEntries:
+  - m_GUID: 6144acb1b91ecbb4e8aa99472cedbfed
+    m_Address: Assets/Landermon/Ocealythe/MAT_Ocealythe.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 85ab0f6e3666faf4ea8175feefb54b81
+    m_Address: Assets/Landermon/Ocealythe/Ocealythe.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 52aa164698a351846915dff4dce2a819, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1582ec6577f5cb6458e7915e59c4e90e, type: 2}
+    - {fileID: 11400000, guid: af68d63c703b34f4d943de234e1995f7, type: 2}

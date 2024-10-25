@@ -28,6 +28,6 @@ namespace Lander.Extern.API
 		public ushort base_weight;
 		public List<string> types;
 		public List<Moves> moves;
-		public string model;
+		public string bundle;
 	}
 }

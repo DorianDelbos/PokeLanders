@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LandAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d56bff5da2b70f99ea9d6761450f7139abc10d1b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b19f018be9f68c9f0daf100583cc23088cdb80c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("LandAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LandAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

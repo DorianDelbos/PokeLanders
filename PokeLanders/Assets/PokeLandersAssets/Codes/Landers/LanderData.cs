@@ -3,14 +3,19 @@ using Lander.Gameplay.Type;
 using Lander.Maths;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Lander.Gameplay
 {
+	using BundleAssetsLoad = Dictionary<System.Type, List<UnityEngine.Object>>;
+
 	[Serializable]
 	public class LanderData
 	{
+		#region EVENTS
+		public Action<int, int> onHpChange;
+		#endregion
+
 		#region ATTRIBUTS
 		// Main
 		private string tag = string.Empty;
@@ -29,11 +34,7 @@ namespace Lander.Gameplay
         private ushort height = 0;
 		private ushort weight = 0;
 		private List<ElementaryType> types = null;
-		private Mesh mesh = null;
-		#endregion
-
-		#region EVENTS
-		public Action<int, int> onHpChange;
+		private BundleAssetsLoad bundleModel = null;
 		#endregion
 
 		#region GETTERS/SETTERS
@@ -71,7 +72,7 @@ namespace Lander.Gameplay
         public byte EvSpeed => evs.speed;
         // Others
         public List<ElementaryType> Types => types;
-		public Mesh Mesh => mesh;
+		public BundleAssetsLoad BundleModel => bundleModel;
         public ushort BaseXp => baseXp;
         public ushort Height => height;
 		public ushort Weight => weight;
@@ -79,46 +80,17 @@ namespace Lander.Gameplay
 
 		#region CONSTRUCTORS
 		public LanderData(LanderDataNFC nfcData, Extern.API.Lander landerModel)
-			=> SetLanderBaseData(nfcData.tag, nfcData.id, landerModel.name, nfcData.name, landerModel.description, nfcData.xp, nfcData.hp, new LanderStats(landerModel.stats), new LanderStats(nfcData.ivPv, nfcData.ivAtk, nfcData.ivDef, nfcData.ivAtkSpe, nfcData.ivDefSpe, nfcData.ivSpeed), new LanderStats(nfcData.evPv, nfcData.evAtk, nfcData.evDef, nfcData.evAtkSpe, nfcData.evDefSpe, nfcData.evSpeed), landerModel.base_experience, nfcData.height, nfcData.weight, ElementaryTypeUtils.StringsToTypes(landerModel.types), null /*todo*/);
+			=> SetLanderBaseData(nfcData.tag, nfcData.id, landerModel.name, nfcData.name, landerModel.description, nfcData.xp, nfcData.hp, new LanderStats(landerModel.stats), new LanderStats(nfcData.ivPv, nfcData.ivAtk, nfcData.ivDef, nfcData.ivAtkSpe, nfcData.ivDefSpe, nfcData.ivSpeed), new LanderStats(nfcData.evPv, nfcData.evAtk, nfcData.evDef, nfcData.evAtkSpe, nfcData.evDefSpe, nfcData.evSpeed), landerModel.base_experience, nfcData.height, nfcData.weight, ElementaryTypeUtils.StringsToTypes(landerModel.types), BundleLoaderUtils.DownloadAssets(landerModel.bundle));
 
-		public LanderData(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte baseHp, byte attack, byte specialAttack, byte defense, byte specialDefense, byte speed, byte ivPv, byte ivAtk, byte ivAtkSpe, byte ivDef, byte ivDefSpe, byte ivSpeed, byte evPv, byte evAtk, byte evAtkSpe, byte evDef, byte evDefSpe, byte evSpeed, ushort baseXp, ushort height, ushort weight, List<ElementaryType> types, Mesh mesh)
-			=> SetLanderBaseData(tag, id, species, name, description, xp, hp, new LanderStats(baseHp, attack, defense, specialAttack, specialDefense, speed), new LanderStats(ivPv, ivAtk, ivDef, ivAtkSpe, ivDefSpe, ivSpeed), new LanderStats(evPv, evAtk, evDef, evAtkSpe, evDefSpe, evSpeed), baseXp, height, weight, types, mesh);
+		public LanderData(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte baseHp, byte attack, byte specialAttack, byte defense, byte specialDefense, byte speed, byte ivPv, byte ivAtk, byte ivAtkSpe, byte ivDef, byte ivDefSpe, byte ivSpeed, byte evPv, byte evAtk, byte evAtkSpe, byte evDef, byte evDefSpe, byte evSpeed, ushort baseXp, ushort height, ushort weight, List<ElementaryType> types, BundleAssetsLoad bundleModel)
+			=> SetLanderBaseData(tag, id, species, name, description, xp, hp, new LanderStats(baseHp, attack, defense, specialAttack, specialDefense, speed), new LanderStats(ivPv, ivAtk, ivDef, ivAtkSpe, ivDefSpe, ivSpeed), new LanderStats(evPv, evAtk, evDef, evAtkSpe, evDefSpe, evSpeed), baseXp, height, weight, types, bundleModel);
 
-		public LanderData(string tag, ushort id, string species, string name, string description, int xp, ushort hp, LanderStats stats, LanderStats ivs, LanderStats evs, ushort baseXp, ushort height, ushort weight, List<ElementaryType> types, Mesh mesh)
-			=> SetLanderBaseData(tag, id, species, name, description, xp, hp, stats, ivs, evs, baseXp, height, weight, types, mesh);
-		#endregion
-
-		#region STATICS
-		public static LanderData CreateRandomLander() => CreateRandomLander((byte)UnityEngine.Random.Range(1, 100));
-
-		public static LanderData CreateRandomLander(byte level)
-		{
-			Extern.API.Lander[] allLanders = APIDataFetcher<Extern.API.Lander>.FetchArrayData("api/v1/lander");
-			Extern.API.Lander landerModel = allLanders.Where(x => x.id == UnityEngine.Random.Range(0, allLanders.Length)).First();
-            ushort maxHp = StatsCurves.GetMaxHp(landerModel.stats.Where(x => x.stat == "pv").First().base_stat, level, 0, 0); // TODO : IV and EV
-
-			return new LanderData(
-				"-1",
-				landerModel.id,
-				landerModel.name,
-				landerModel.name,
-				landerModel.description,
-				StatsCurves.GetXpByLevel(level, landerModel.base_experience),
-				maxHp,
-				new LanderStats(landerModel.stats),
-				new LanderStats(0, 0, 0, 0, 0, 0), // TODO : IV
-				new LanderStats(0, 0, 0, 0, 0, 0), // TODO : EV
-                landerModel.base_experience,
-				landerModel.base_height,
-				landerModel.base_weight,
-				ElementaryTypeUtils.StringsToTypes(landerModel.types),
-				null // TODO : Model
-			);
-		}
+		public LanderData(string tag, ushort id, string species, string name, string description, int xp, ushort hp, LanderStats stats, LanderStats ivs, LanderStats evs, ushort baseXp, ushort height, ushort weight, List<ElementaryType> types, BundleAssetsLoad bundleModel)
+			=> SetLanderBaseData(tag, id, species, name, description, xp, hp, stats, ivs, evs, baseXp, height, weight, types, bundleModel);
 		#endregion
 
 		#region METHODS
-		private void SetLanderBaseData(string tag, ushort id, string species, string name, string description, int xp, ushort hp, LanderStats stats, LanderStats ivs, LanderStats evs, ushort baseXp, ushort height, ushort weight, List<ElementaryType> types, Mesh mesh)
+		private void SetLanderBaseData(string tag, ushort id, string species, string name, string description, int xp, ushort hp, LanderStats stats, LanderStats ivs, LanderStats evs, ushort baseXp, ushort height, ushort weight, List<ElementaryType> types, BundleAssetsLoad bundleModel)
 		{
 			this.tag = tag;
 			this.id = id;
@@ -134,7 +106,7 @@ namespace Lander.Gameplay
 			this.height = height;
 			this.weight = weight;
 			this.types = types;
-			this.mesh = mesh;
+			this.bundleModel = bundleModel;
 		}
 
 		public void TakeDamage(ushort damage)

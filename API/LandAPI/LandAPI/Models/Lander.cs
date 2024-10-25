@@ -38,7 +38,7 @@ namespace LandAPI.Models
 		public List<string> Types { get; set; }
 		[JsonPropertyName("moves")]
 		public List<Moves> Moves { get; set; }
-		[JsonPropertyName("model")]
-		public string Model { get; set; }
+		[JsonPropertyName("bundle")]
+		public string Bundle { get; set; }
 	}
 }

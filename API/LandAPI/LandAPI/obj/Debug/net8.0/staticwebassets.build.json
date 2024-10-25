@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JsQF/kCDTtvn1twz6HaqeKSJGDKT3D+lQWuzHq7fF4w=",
+  "Hash": "9cEagZ6dfmGwBwvfyS/U8HMkr/AzIozCaw5MB9a1gJQ=",
   "Source": "LandAPI",
   "BasePath": "_content/LandAPI",
   "Mode": "Default",
@@ -10,17 +10,55 @@
     {
       "Name": "LandAPI\\wwwroot",
       "Source": "LandAPI",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailements.json",
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Bundles\\aquapix_assets_all_0448fee7960074ab87b2f3060e479d3e.bundle",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "BasePath": "_content/LandAPI",
+      "RelativePath": "Assets/Bundles/aquapix_assets_all_0448fee7960074ab87b2f3060e479d3e.bundle",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Bundles\\aquapix_assets_all_0448fee7960074ab87b2f3060e479d3e.bundle"
+    },
+    {
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Bundles\\luminorine_assets_all_e471adfe5cf089734ab2647c7f21e2a7.bundle",
+      "SourceId": "LandAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "BasePath": "_content/LandAPI",
+      "RelativePath": "Assets/Bundles/luminorine_assets_all_e471adfe5cf089734ab2647c7f21e2a7.bundle",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Bundles\\luminorine_assets_all_e471adfe5cf089734ab2647c7f21e2a7.bundle"
+    },
+    {
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailements.json",
+      "SourceId": "LandAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/ailements.json",
       "AssetKind": "All",
@@ -36,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\ailements.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/evolutionChains.json",
       "AssetKind": "All",
@@ -55,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\evolutionChains.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/landers.json",
       "AssetKind": "All",
@@ -74,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\landers.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/moves.json",
       "AssetKind": "All",
@@ -93,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\moves.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/stats.json",
       "AssetKind": "All",
@@ -112,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\stats.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/types.json",
       "AssetKind": "All",
@@ -131,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\types.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\1.glb",
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\1.glb",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Models/1.glb",
       "AssetKind": "All",
@@ -150,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Models\\1.glb"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\2.glb",
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\2.glb",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Models/2.glb",
       "AssetKind": "All",
@@ -169,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Models\\2.glb"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\3.glb",
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\3.glb",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Models/3.glb",
       "AssetKind": "All",

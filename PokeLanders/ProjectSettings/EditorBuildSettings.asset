@@ -12,5 +12,6 @@ EditorBuildSettings:
     path: Assets/PokeLandersAssets/Levels/Scenes/FightScene.unity
     guid: ff2a7a7de04c70a40b9981951f221a09
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 788554fdc2e27a1419c9569e493831ac, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

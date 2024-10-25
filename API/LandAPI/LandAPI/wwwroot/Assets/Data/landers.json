@@ -41,7 +41,7 @@
         }
       }
     ],
-    "model": "https://localhost:7041/api/model/1.glb"
+    "bundle": "https://localhost:7041/api/v1/bundle/aquapix_assets_all_a19a6887859244166dbfcf90886b8081.bundle"
   },
   {
     "id": 2,
@@ -85,7 +85,7 @@
         }
       }
     ],
-    "model": "https://localhost:7041/api/model/2.glb"
+    "bundle": "https://localhost:7041/api/v1/bundle/luminorine_assets_all_f7334554105bc493b97c59e1bf37c64a.bundle"
   },
   {
     "id": 3,
@@ -129,6 +129,6 @@
         }
       }
     ],
-    "model": "https://localhost:7041/api/model/3.glb"
+    "bundle": "https://localhost:7041/api/v1/bundle/ocealythe_assets_all_8b3ca71ebd434c3d135957d98920d685.bundle"
   }
 ]

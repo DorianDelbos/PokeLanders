@@ -469,12 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91c694c2b773a34f9a5fedbe52dd993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetReferenceGameObject:
-    m_AssetGUID: 73a823dd110cc04469942b23bd41fb2f
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  assetName: aquapix_assets_all_0448fee7960074ab87b2f3060e479d3e.bundle
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

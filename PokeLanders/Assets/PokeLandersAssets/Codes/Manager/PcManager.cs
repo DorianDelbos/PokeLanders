@@ -27,7 +27,7 @@ namespace Lander.Gameplay
         private void SetData(LanderDataNFC data)
         {
             LanderData = new LanderData(data, APIDataFetcher<Extern.API.Lander>.FetchData($"api/v1/lander/{data.id}"));
-            landerDisplayHandler.SetMesh(LanderData.Mesh);
+            landerDisplayHandler.SetMesh(LanderData.BundleModel);
             pcHudHandler.UpdatePc(LanderData, true);
         }
 
@@ -40,7 +40,7 @@ namespace Lander.Gameplay
 
         public void StartTrainLander()
         {
-            GameManager.instance.Landers[1] = LanderData.CreateRandomLander(LanderData.Level);
+            GameManager.instance.Landers[1] = LanderUtils.RandomLander(LanderData.Level);
             SceneManager.LoadScene("FightScene");
         }
     }

@@ -3520,6 +3520,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043456829}
   m_CullTransparentMesh: 1
+--- !u!23 &2094843067 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6752557196356781898, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
+  m_PrefabInstance: {fileID: 3164113998890778717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2102490988
 GameObject:
   m_ObjectHideFlags: 0
@@ -4060,6 +4065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lander
       objectReference: {fileID: 0}
+    - target: {fileID: 1363669698108568376, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
+      propertyPath: landerMeshRenderer
+      value: 
+      objectReference: {fileID: 2094843067}
     - target: {fileID: 3131744858095986496, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

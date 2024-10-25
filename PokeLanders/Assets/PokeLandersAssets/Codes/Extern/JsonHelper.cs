@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Lander.JSON
+namespace Lander.Extern
 {
 	public class JsonHelper
 	{
