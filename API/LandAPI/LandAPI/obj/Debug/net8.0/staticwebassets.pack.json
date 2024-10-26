@@ -1,47 +1,51 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Bundles\\aquapix_assets_all_0448fee7960074ab87b2f3060e479d3e.bundle",
-      "PackagePath": "staticwebassets\\Assets\\Bundles\\aquapix_assets_all_0448fee7960074ab87b2f3060e479d3e.bundle"
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Bundles\\aquapix_assets_all_a19a6887859244166dbfcf90886b8081.bundle",
+      "PackagePath": "staticwebassets\\Assets\\Bundles\\aquapix_assets_all_a19a6887859244166dbfcf90886b8081.bundle"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Bundles\\luminorine_assets_all_e471adfe5cf089734ab2647c7f21e2a7.bundle",
-      "PackagePath": "staticwebassets\\Assets\\Bundles\\luminorine_assets_all_e471adfe5cf089734ab2647c7f21e2a7.bundle"
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Bundles\\luminorine_assets_all_f7334554105bc493b97c59e1bf37c64a.bundle",
+      "PackagePath": "staticwebassets\\Assets\\Bundles\\luminorine_assets_all_f7334554105bc493b97c59e1bf37c64a.bundle"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailements.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Bundles\\ocealythe_assets_all_8b3ca71ebd434c3d135957d98920d685.bundle",
+      "PackagePath": "staticwebassets\\Assets\\Bundles\\ocealythe_assets_all_8b3ca71ebd434c3d135957d98920d685.bundle"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailements.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\ailements.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\evolutionChains.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\landers.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\moves.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\stats.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\types.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\1.glb",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\1.glb",
       "PackagePath": "staticwebassets\\Assets\\Models\\1.glb"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\2.glb",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\2.glb",
       "PackagePath": "staticwebassets\\Assets\\Models\\2.glb"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\3.glb",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\3.glb",
       "PackagePath": "staticwebassets\\Assets\\Models\\3.glb"
     },
     {

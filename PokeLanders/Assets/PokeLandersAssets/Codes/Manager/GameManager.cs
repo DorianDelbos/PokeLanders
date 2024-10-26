@@ -6,7 +6,7 @@ namespace Lander.Gameplay
     {
         public static GameManager instance;
 
-        public LanderData[] Landers = new LanderData[2];
+        public LanderData[] Landers;
 
         private void Awake()
         {
@@ -22,5 +22,10 @@ namespace Lander.Gameplay
                 return;
             }
         }
-	}
+
+        private void Start()
+        {
+            Landers = new LanderData[2];
+        }
+    }
 }

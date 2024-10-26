@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LanderJsonCreator
-build_property.ProjectDir = C:\Users\Etudiant1\Documents\Unity\PokeLanders\wpf\LanderJsonCreator\LanderJsonCreator\
+build_property.ProjectDir = C:\Users\Dorian\Documents\GitHub\PokeLanders\wpf\LanderJsonCreator\LanderJsonCreator\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -9,7 +9,7 @@ namespace Lander.Gameplay
     {
         private LanderData LanderData { get => GameManager.instance.Landers[0]; set => GameManager.instance.Landers[0] = value; }
 
-        [SerializeField] private LanderDisplayHandler landerDisplayHandler;
+        [SerializeField] private LanderMeshDisplayHandler landerDisplayHandler;
         [SerializeField] private PcHudHandler pcHudHandler;
 
         private void OnEnable()

@@ -559,10 +559,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2150556631498388407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 106.91334, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 106.91334, y: -5}
+  m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8836638386319865169
 CanvasRenderer:
@@ -937,6 +937,7 @@ GameObject:
   - component: {fileID: 835523772940909050}
   - component: {fileID: 7436887619929967761}
   - component: {fileID: 2071222094882183489}
+  - component: {fileID: 5335074125721582615}
   m_Layer: 0
   m_Name: HudLander
   m_TagString: Untagged
@@ -1003,6 +1004,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5335074125721582615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6880935246980295246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5790693a1511f9d41917c3823a09a8e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameMesh: {fileID: 4252928341781941517}
+  levelMesh: {fileID: 1574521615232558674}
+  isMaleImage: {fileID: 8154084194121919000}
+  lifeBar: {fileID: 6728851313550023178}
+  xpBar: {fileID: 5076857993304651455}
+  hpMesh: {fileID: 530879263507446143}
 --- !u!1 &8507452859092655688
 GameObject:
   m_ObjectHideFlags: 0

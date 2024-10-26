@@ -1,0 +1,32 @@
+using Lander.Gameplay;
+using UnityEngine;
+
+namespace Lander.Battle
+{
+    public class EndState : BattleState
+    {
+        public EndState(BattleStateMachine stateMachine)
+            : base(stateMachine) { }
+
+        public override void Enter()
+        {
+            if (GameManager.instance.Landers[0].Hp <= 0)
+            {
+                Debug.Log("P2 win");
+            }
+            else if (GameManager.instance.Landers[1].Hp <= 0)
+            {
+                Debug.Log("P2 win");
+            }
+            else
+            {
+                Debug.Log("Game continue !");
+                stateMachine.ProcessState(stateMachine.Factory.GetState<Player1State>());
+            }
+        }
+
+        public override void Exit() { }
+
+        public override void Update() { }
+    }
+}

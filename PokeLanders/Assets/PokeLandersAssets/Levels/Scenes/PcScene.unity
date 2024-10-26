@@ -1732,17 +1732,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3131744858095986496, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
   m_PrefabInstance: {fileID: 3164113998890778717}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &866427554 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1363669698108568376, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
-  m_PrefabInstance: {fileID: 3164113998890778717}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f953570cf379140418d1c1f4baf6cd9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &951550979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3237,8 +3226,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a470d320db3798e41a9c8be409258eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  landerDisplayHandler: {fileID: 866427554}
+  landerDisplayHandler: {fileID: 1867129407}
   pcHudHandler: {fileID: 1841439091}
+--- !u!114 &1867129407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7575199475565322903, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
+  m_PrefabInstance: {fileID: 3164113998890778717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af8c6fa6153e88468305500353b4bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1947357368
 GameObject:
   m_ObjectHideFlags: 0
@@ -3520,11 +3520,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043456829}
   m_CullTransparentMesh: 1
---- !u!23 &2094843067 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 6752557196356781898, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
-  m_PrefabInstance: {fileID: 3164113998890778717}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2102490988
 GameObject:
   m_ObjectHideFlags: 0
@@ -4065,10 +4060,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lander
       objectReference: {fileID: 0}
-    - target: {fileID: 1363669698108568376, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
-      propertyPath: landerMeshRenderer
-      value: 
-      objectReference: {fileID: 2094843067}
     - target: {fileID: 3131744858095986496, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4108,10 +4099,6 @@ PrefabInstance:
     - target: {fileID: 3131744858095986496, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6997680797508525385, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

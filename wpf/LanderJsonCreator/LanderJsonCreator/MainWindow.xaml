@@ -7,40 +7,173 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <!-- Define rows for toolbar and main content -->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <!-- Toolbar -->
-            <RowDefinition Height="*"/>
-            <!-- Main Content (TabControl) -->
-        </Grid.RowDefinitions>
+        <!-- Tabs for each JSON category -->
+        <TabControl>
 
-        <!-- Toolbar at the top -->
-        <ToolBar Grid.Row="0">
-            <Button Content="Action 1" Margin="2"/>
-            <Button Content="Action 2" Margin="2"/>
-            <Button Content="Action 3" Margin="2"/>
-        </ToolBar>
+            <!-- Tab for Types -->
+            <TabItem Header="Types">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    
+                    <DataGrid Name="DataGridTypes" AutoGenerateColumns="False" CanUserAddRows="False" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="Action" Width="auto">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="X" Click="RemoveType_Click" Tag="{Binding}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
 
-        <!-- TabControl in the main content area -->
-        <TabControl Grid.Row="1">
-            <!-- First Tab -->
-            <TabItem Header="Tab 1">
-                <Grid Background="#FFE5E5E5">
-                    <TextBlock Text="Content for Tab 1" 
-                           VerticalAlignment="Center" 
-                           HorizontalAlignment="Center"/>
+                            <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="50" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Nom" Binding="{Binding Name}" Width="100"/>
+                            <DataGridTextColumn Header="Double Damage From" Binding="{Binding DamageRelations.DoubleDamageFrom}" Width="100"/>
+                            <DataGridTextColumn Header="Double Damage To" Binding="{Binding DamageRelations.DoubleDamageTo}" Width="*"/>
+                            <DataGridTextColumn Header="Half Damage From" Binding="{Binding DamageRelations.HalfDamageFrom}" Width="*"/>
+                            <DataGridTextColumn Header="Half Damage To" Binding="{Binding DamageRelations.HalfDamageTo}" Width="*"/>
+                            <DataGridTextColumn Header="None Damage From" Binding="{Binding DamageRelations.NoneDamageFrom}" Width="*"/>
+                            <DataGridTextColumn Header="None Damage To" Binding="{Binding DamageRelations.NoneDamageTo}" Width="*"/>
+                        </DataGrid.Columns>
+
+                        <DataGrid.ItemsSource>
+                            <x:Array Type="{x:Type local:Type}">
+                                
+                            </x:Array>
+                        </DataGrid.ItemsSource>
+                    </DataGrid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Button Content="Ajouter" Click="AddType_Click" Grid.Column="1" />
+                    </Grid>
                 </Grid>
             </TabItem>
 
-            <!-- Second Tab -->
-            <TabItem Header="Tab 2">
-                <Grid Background="#FFE5E5E5">
-                    <TextBlock Text="Content for Tab 2" 
-                           VerticalAlignment="Center" 
-                           HorizontalAlignment="Center"/>
+            <!-- Tab for Stats -->
+            <TabItem Header="Stats">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <DataGrid Name="DataGridStats" Grid.Row="0" AutoGenerateColumns="False" CanUserAddRows="False" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="Action" Width="auto">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="X" Click="RemoveStat_Click" Tag="{Binding}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="50" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Nom" Binding="{Binding Name}" Width="*"/>
+                        </DataGrid.Columns>
+
+                        <DataGrid.ItemsSource>
+                            <x:Array Type="{x:Type local:Stat}">
+                                
+                            </x:Array>
+                        </DataGrid.ItemsSource>
+                    </DataGrid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Button Content="Ajouter" Click="AddStat_Click" Grid.Column="1" />
+                    </Grid>
                 </Grid>
             </TabItem>
+
+            <!-- Tab for Moves -->
+            <TabItem Header="Moves">
+                <StackPanel>
+                    <DataGrid Name="DataGridMoves" AutoGenerateColumns="False" 
+                              CanUserAddRows="False" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="50"/>
+                            <DataGridTextColumn Header="Nom" Binding="{Binding Name}" Width="100"/>
+                            <DataGridTextColumn Header="Power" Binding="{Binding Power}" Width="100"/>
+                            <DataGridTextColumn Header="PP" Binding="{Binding Pp}" Width="100"/>
+                            <DataGridTextColumn Header="Type" Binding="{Binding Type}" Width="100"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Name="txtMoveName" Width="100" Text="Nom"/>
+                        <TextBox Name="txtMovePower" Width="50" Text="Puissance"/>
+                        <Button Content="Ajouter" Width="100" Click="AddMove_Click"/>
+                        <Button Content="Sauvegarder" Width="100" Click="SaveMoves_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Tab for Creatures -->
+            <TabItem Header="Creatures">
+                <StackPanel>
+                    <DataGrid Name="DataGridCreatures" AutoGenerateColumns="False" 
+                              CanUserAddRows="False" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="50"/>
+                            <DataGridTextColumn Header="Nom" Binding="{Binding Name}" Width="150"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="300"/>
+                            <DataGridTextColumn Header="Types" Binding="{Binding Types}" Width="100"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Name="txtCreatureName" Width="150" Text="Nom"/>
+                        <TextBox Name="txtCreatureDescription" Width="200" Text="Description"/>
+                        <Button Content="Ajouter" Width="100" Click="AddCreature_Click"/>
+                        <Button Content="Sauvegarder" Width="100" Click="SaveCreatures_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Tab for Evolution Chains -->
+            <TabItem Header="Evolution Chains">
+                <StackPanel>
+                    <DataGrid Name="DataGridEvolutionChains" AutoGenerateColumns="False" 
+                              CanUserAddRows="False" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="50"/>
+                            <DataGridTextColumn Header="Species" Binding="{Binding Chain.Species}" Width="150"/>
+                            <DataGridTextColumn Header="Evolves To" Binding="{Binding Chain.EvolvesTo[0].Species}" Width="150"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Name="txtEvolutionSpecies" Width="150" Text="Espèce"/>
+                        <Button Content="Ajouter" Width="100" Click="AddEvolutionChain_Click"/>
+                        <Button Content="Sauvegarder" Width="100" Click="SaveEvolutionChains_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Tab for Status Effects -->
+            <TabItem Header="Status Effects">
+                <StackPanel>
+                    <DataGrid Name="DataGridStatusEffects" AutoGenerateColumns="False" 
+                              CanUserAddRows="False" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="50"/>
+                            <DataGridTextColumn Header="Nom" Binding="{Binding Name}" Width="150"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Name="txtStatusEffectName" Width="150" Text="Nom"/>
+                        <Button Content="Ajouter" Width="100" Click="AddStatusEffect_Click"/>
+                        <Button Content="Sauvegarder" Width="100" Click="SaveStatusEffects_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
         </TabControl>
     </Grid>
 </Window>
