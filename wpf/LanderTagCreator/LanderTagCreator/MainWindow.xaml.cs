@@ -1,20 +1,12 @@
 ﻿using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LanderTagCreator
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
@@ -28,7 +20,10 @@ namespace LanderTagCreator
                 // Récupérer les données des TextBoxes
                 string tag = TagTextBox.Text.Replace(" ", ""); // Ex: "00 00 00 00"
                 ushort id = ushort.Parse(IdTextBox.Text); // Ex: 1
-                string name = NameTextBox.Text.PadRight(12).Substring(0, 12); // Ex: "Abcdefgh", 12 chars
+                string name = NameTextBox.Text.PadRight(15).Substring(0, 15); // Ex: "Abcdefgh", 15 chars
+                byte meta = 0;
+                if (IsMale.IsChecked == true) meta |= 0x01; // Bit 0 for male
+                if (IsShiny.IsChecked == true) meta |= 0x02; // Bit 1 for shiny
                 ushort hp = ushort.Parse(HpTextBox.Text); // Ex: 0
                 int xp = int.Parse(XpTextBox.Text); // Ex: 0 (4 octets)
                 ushort height = ushort.Parse(HeightTextBox.Text); // Ex: 0
@@ -65,6 +60,7 @@ namespace LanderTagCreator
                 {
                     sb.Append(((int)ch).ToString("X2"));
                 }
+                sb.Append(meta.ToString("X2")); // 1 octet for meta
 
                 // Block 2
                 sb.Append(id.ToString("X4")); // 2 octets (ID)

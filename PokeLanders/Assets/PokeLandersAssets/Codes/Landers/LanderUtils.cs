@@ -33,6 +33,7 @@ namespace Lander.Gameplay
 				landerModel.base_experience,
 				landerModel.base_height,
 				landerModel.base_weight,
+				(byte)UnityEngine.Random.Range(0, 256),
 				ElementaryTypeUtils.StringsToTypes(landerModel.types),
 				BundleLoaderUtils.DownloadAssets(landerModel.bundle)
 			);
