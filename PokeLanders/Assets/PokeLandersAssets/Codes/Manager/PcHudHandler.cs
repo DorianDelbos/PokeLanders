@@ -25,14 +25,6 @@ namespace Lander.Gameplay
 
 		private void ActivePc(bool active)
 		{
-            //dataPanel.SetActive(active);
-            //bottomPanel.SetActive(active);
-            //infoText.SetActive(!active);
-
-            //foreach (var button in buttons)
-            //{
-            //	button.interactable = active;
-            //}
             NfcErrorHudManager.current.SetActive(!active);
 
 			if (!active)

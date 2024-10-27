@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\api\\landapi\\landapi\\wwwroot\\assets\\data\\ailements.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\assets\\data\\ailements.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\api\\landapi\\landapi\\wwwroot\\assets\\data\\evolutionchains.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\assets\\data\\evolutionchains.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\api\\landapi\\landapi\\wwwroot\\assets\\data\\landers.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\assets\\data\\landers.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\api\\landapi\\landapi\\wwwroot\\assets\\data\\moves.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\assets\\data\\moves.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\api\\landapi\\landapi\\wwwroot\\assets\\data\\stats.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -25,6 +13,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\api\\landapi\\landapi\\wwwroot\\assets\\data\\types.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\assets\\data\\types.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\api\\landapi\\landapi\\wwwroot\\assets\\data\\ailements.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\assets\\data\\ailements.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\api\\landapi\\landapi\\wwwroot\\assets\\data\\evolutionchains.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\assets\\data\\evolutionchains.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\api\\landapi\\landapi\\wwwroot\\assets\\data\\moves.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\assets\\data\\moves.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "types.json",
               "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
               "RelativeDocumentMoniker": "LandAPI\\wwwroot\\Assets\\Data\\types.json",
@@ -46,11 +46,12 @@
               "RelativeToolTip": "LandAPI\\wwwroot\\Assets\\Data\\types.json",
               "ViewState": "AgIAAAkAAAAAAAAAAAAYwB4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-25T16:26:21.403Z"
+              "WhenOpened": "2024-10-25T16:26:21.403Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "stats.json",
               "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
               "RelativeDocumentMoniker": "LandAPI\\wwwroot\\Assets\\Data\\stats.json",
@@ -58,11 +59,12 @@
               "RelativeToolTip": "LandAPI\\wwwroot\\Assets\\Data\\stats.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-25T16:26:21.35Z"
+              "WhenOpened": "2024-10-25T16:26:21.35Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "moves.json",
               "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
               "RelativeDocumentMoniker": "LandAPI\\wwwroot\\Assets\\Data\\moves.json",
@@ -74,19 +76,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "landers.json",
               "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
               "RelativeDocumentMoniker": "LandAPI\\wwwroot\\Assets\\Data\\landers.json",
               "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
               "RelativeToolTip": "LandAPI\\wwwroot\\Assets\\Data\\landers.json",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAYwGgAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwCwAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-25T16:26:21.244Z"
+              "WhenOpened": "2024-10-25T16:26:21.244Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "evolutionChains.json",
               "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
               "RelativeDocumentMoniker": "LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
@@ -98,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ailements.json",
               "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailements.json",
               "RelativeDocumentMoniker": "LandAPI\\wwwroot\\Assets\\Data\\ailements.json",
