@@ -20,25 +20,23 @@ namespace Lander.Gameplay
 		[SerializeField] private Slider xpBar;
 		[SerializeField] private TMP_Text levelMesh;
 
-		[Header("Panels")]
-		[SerializeField] private GameObject dataPanel;
-		[SerializeField] private GameObject bottomPanel;
-		[SerializeField] private GameObject infoText;
-		[SerializeField] private Button[] buttons;
-
 		[Header("Other")]
 		[SerializeField] private Sprite[] typesSprite;
 
 		private void ActivePc(bool active)
 		{
-			dataPanel.SetActive(active);
-			bottomPanel.SetActive(active);
-			infoText.SetActive(!active);
+            //dataPanel.SetActive(active);
+            //bottomPanel.SetActive(active);
+            //infoText.SetActive(!active);
 
-			foreach (var button in buttons)
-			{
-				button.interactable = active;
-			}
+            //foreach (var button in buttons)
+            //{
+            //	button.interactable = active;
+            //}
+            NfcErrorHudManager.current.SetActive(!active);
+
+			if (!active)
+				NfcErrorHudManager.current.SetErrorText("Place a Lander in the field !");
 		}
 
 		public void UpdatePc(LanderData data, bool active)
@@ -54,7 +52,7 @@ namespace Lander.Gameplay
 			lifeBar.maxValue = data.MaxHp;
 			lifeBar.value = data.Hp;
 			xpBar.maxValue = StatsCurves.GetXpByLevel((byte)(data.Level + 1), data.BaseXp);
-			xpBar.value = data.Xp;
+			xpBar.value = data.Xp - StatsCurves.GetXpByLevel(data.Level, data.BaseXp);
 			levelMesh.text = $"Lvl.{data.Level}";
 
 			foreach (Transform child in typesTransform)

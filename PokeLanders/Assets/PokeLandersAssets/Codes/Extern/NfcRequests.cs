@@ -34,7 +34,7 @@ namespace Lander.Extern
 		private Queue<LanderDataNFC> nfcDataQueue = new Queue<LanderDataNFC>();
 
 		// Debug
-		public string DebugNfc = "00 00 00 01 4D 61 72 63 65 6C 6C 6C 6C 6C 6C 65 00 03 00 0A 00 00 00 64 00 32 00 3C 00 01 00 02 00 03 00 04 01 02 03 04 05 06 01 02 03 04 05 06";
+		public string DebugNfc = "00 00 00 01 4D 61 72 63 65 6C 6C 6C 6C 6C 6C 65 00 03 00 0C 00 00 00 64 00 32 00 3C 00 01 00 02 00 03 00 04 01 02 03 04 05 06 01 02 03 04 05 06";
 
 		void Awake()
 		{

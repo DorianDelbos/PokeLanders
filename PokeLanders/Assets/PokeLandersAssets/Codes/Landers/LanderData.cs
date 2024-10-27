@@ -124,28 +124,13 @@ namespace Lander.Gameplay
 		public byte Level => StatsCurves.GetLevelByXp(Xp, BaseXp);
 		public int Xp { get => statsData.xp; private set => statsData.xp = value; }
         // States
-        public ushort Hp { get => statsData.hp; private set => statsData.hp = value; }
-		public ushort MaxHp => StatsCurves.GetMaxHp(BaseHp, Level, IvPv, EvPv);
-		public byte BaseHp { get => statsData.stats.hp; private set => statsData.stats.hp = value; }
-		public byte Attack { get => statsData.stats.attack; private set => statsData.stats.attack = value; }
-		public byte SpecialAttack { get => statsData.stats.specialAttack; private set => statsData.stats.specialAttack = value; }
-		public byte Defense { get => statsData.stats.defense; private set => statsData.stats.defense = value; }
-		public byte SpecialDefense { get => statsData.stats.specialDefense; private set => statsData.stats.specialDefense = value; }
-		public byte Speed { get => statsData.stats.speed; private set => statsData.stats.speed = value; }
-        // IVs
-        public byte IvPv { get => statsData.ivs.hp; private set => statsData.ivs.hp = value; }
-        public byte IvAtk { get => statsData.ivs.attack; private set => statsData.ivs.attack = value; }
-		public byte IvDef { get => statsData.ivs.defense; private set => statsData.ivs.defense = value; }
-        public byte IvAtkSpe { get => statsData.ivs.specialAttack; private set => statsData.ivs.specialAttack = value; }
-        public byte IvDefSpe { get => statsData.ivs.specialDefense; private set => statsData.ivs.specialDefense = value; }
-        public byte IvSpeed { get => statsData.ivs.speed; private set => statsData.ivs.speed = value; }
-        // EVs
-        public byte EvPv { get => statsData.evs.hp; private set => statsData.evs.hp = value; }
-		public byte EvAtk { get => statsData.evs.attack; private set => statsData.evs.attack = value; }
-        public byte EvDef { get => statsData.evs.defense; private set => statsData.evs.defense = value; }
-        public byte EvAtkSpe { get => statsData.evs.specialAttack; private set => statsData.evs.specialAttack = value; }
-        public byte EvDefSpe { get => statsData.evs.specialDefense; private set => statsData.evs.specialDefense = value; }
-        public byte EvSpeed { get => statsData.evs.speed; private set => statsData.evs.speed = value; }
+        public ushort Hp { get => statsData.hp; set => statsData.hp = value; }
+		public ushort MaxHp => StatsCurves.GetMaxHp(statsData.stats.hp, Level, statsData.ivs.hp, statsData.evs.hp);
+		public ushort Attack => StatsCurves.GetStatValue(Level, statsData.ivs.attack, statsData.evs.attack, statsData.stats.attack);
+		public ushort SpecialAttack => StatsCurves.GetStatValue(Level, statsData.ivs.specialAttack, statsData.evs.specialAttack, statsData.stats.specialAttack);
+		public ushort Defense => StatsCurves.GetStatValue(Level, statsData.ivs.defense, statsData.evs.defense, statsData.stats.defense);
+        public ushort SpecialDefense => StatsCurves.GetStatValue(Level, statsData.ivs.specialDefense, statsData.evs.specialDefense, statsData.stats.specialDefense);
+        public ushort Speed => StatsCurves.GetStatValue(Level, statsData.ivs.speed, statsData.evs.speed, statsData.stats.speed);
         // Others
         public List<ElementaryType> Types { get => otherData.types; private set => otherData.types = value; }
 		public BundleAssetsLoad BundleModel { get => otherData.bundleModel; private set => otherData.bundleModel = value; }

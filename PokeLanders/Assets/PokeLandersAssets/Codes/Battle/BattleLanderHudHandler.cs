@@ -16,7 +16,7 @@ namespace Lander.Battle
 		[SerializeField] private Slider xpBar;
 		[SerializeField] private TMP_Text hpMesh;
 
-        public void UpdateData(LanderData data) => UpdateData(data.Name, data.Level, data.Hp, data.MaxHp, data.BaseHp, data.Xp);
+        public void UpdateData(LanderData data) => UpdateData(data.Name, data.Level, data.Hp, data.MaxHp, data.BaseXp, data.Xp);
 
         public void UpdateData(string name, byte level, int hp, int maxHp, ushort baseXp, int xp)
         {
@@ -27,7 +27,7 @@ namespace Lander.Battle
             lifeBar.value = hp;
             hpMesh.text = $"{hp} / {maxHp}";
             xpBar.maxValue = StatsCurves.GetXpByLevel((byte)(level + 1), baseXp);
-            xpBar.value = xp;
+            xpBar.value = xp - StatsCurves.GetXpByLevel(level, baseXp);
         }
     }
 }

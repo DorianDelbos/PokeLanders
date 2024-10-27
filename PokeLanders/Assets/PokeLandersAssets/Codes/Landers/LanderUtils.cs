@@ -13,8 +13,11 @@ namespace Lander.Gameplay
 		public static LanderData RandomLander(byte level)
 		{
 			Extern.API.Lander[] allLanders = APIDataFetcher<Extern.API.Lander>.FetchArrayData("api/v1/lander");
-			Extern.API.Lander landerModel = allLanders.Where(x => x.id == UnityEngine.Random.Range(1, allLanders.Length + 1)).First();
-			ushort maxHp = StatsCurves.GetMaxHp(landerModel.stats.Where(x => x.stat == "pv").First().base_stat, level, 0, 0); // TODO : IV and EV
+			Extern.API.Lander landerModel = allLanders.OrderBy(x => Guid.NewGuid()).First();
+
+			LanderData.Stats ivs = RandomStats(31);
+			LanderData.Stats evs = RandomStats(252, 510);
+            ushort maxHp = StatsCurves.GetMaxHp(landerModel.stats.Where(x => x.stat == "pv").First().base_stat, level, ivs.hp, evs.hp);
 
 			return new LanderData(
 				"-1",
@@ -25,8 +28,8 @@ namespace Lander.Gameplay
 				StatsCurves.GetXpByLevel(level, landerModel.base_experience),
 				maxHp,
 				new LanderData.Stats(landerModel.stats),
-				RandomStats(31),
-				RandomStats(252, 510),
+                ivs,
+                evs,
 				landerModel.base_experience,
 				landerModel.base_height,
 				landerModel.base_weight,

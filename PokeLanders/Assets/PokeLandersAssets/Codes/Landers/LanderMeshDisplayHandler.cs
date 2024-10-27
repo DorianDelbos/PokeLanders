@@ -13,6 +13,12 @@ namespace Lander.Gameplay
 
 		public void SetMesh(BundleAssetsLoad bundleModel)
         {
+            if (bundleModel == null)
+            {
+                landerMeshFilter.mesh = null;
+                return;
+            }
+
             landerMeshFilter.mesh = (Mesh)bundleModel[typeof(Mesh)].First();
             landerMeshRenderer.SetMaterials(bundleModel[typeof(Material)].Select(x => (Material)x).ToList());
 		}
