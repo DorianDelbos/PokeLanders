@@ -62,11 +62,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
@@ -96,6 +92,20 @@
 
                 <CheckBox x:Name="IsShiny" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" />
                 <TextBlock Text="Is Shiny" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Nature" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" />
+                <TextBox x:Name="NatureBox" Grid.Row="0" Grid.Column="1" Text="0" Margin="5"/>
             </Grid>
         </Grid>
 

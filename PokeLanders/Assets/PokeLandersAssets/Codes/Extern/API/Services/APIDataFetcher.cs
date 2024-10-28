@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Lander.Extern
+namespace LandersLegends.Extern
 {
 	public static class APIDataFetcher<T> where T : IBaseModel
 	{
@@ -17,7 +17,7 @@ namespace Lander.Extern
 				HttpResponseMessage res = await client.GetAsync($"{apiUrl}/{req}");
 				res.EnsureSuccessStatusCode();
 				string json = await res.Content.ReadAsStringAsync();
-				return JsonHelper.GetJsonArray<T>(json);
+				return JsonUtils.GetJsonArray<T>(json);
 			}
 			catch (HttpRequestException e)
 			{

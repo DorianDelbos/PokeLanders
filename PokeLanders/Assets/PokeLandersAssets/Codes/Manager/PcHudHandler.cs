@@ -1,11 +1,11 @@
-using Lander.Gameplay.Type;
-using Lander.Maths;
-using Lander.Extern;
+using LandersLegends.Gameplay.Type;
+using LandersLegends.Maths;
+using LandersLegends.Extern;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Lander.Gameplay
+namespace LandersLegends.Gameplay
 {
 	public class PcHudHandler : MonoBehaviour
 	{
@@ -31,7 +31,7 @@ namespace Lander.Gameplay
 				NfcErrorHudManager.current.SetErrorText("Place a Lander in the field !");
 		}
 
-		public void UpdatePc(LanderData data, bool active)
+		public void UpdatePc(Lander data, bool active)
 		{
 			ActivePc(active);
 			if (!active) return;

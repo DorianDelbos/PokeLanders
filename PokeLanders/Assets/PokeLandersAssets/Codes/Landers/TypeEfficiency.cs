@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Lander.Gameplay.Type
+namespace LandersLegends.Gameplay.Type
 {
 	public static class TypeEfficiency
 	{

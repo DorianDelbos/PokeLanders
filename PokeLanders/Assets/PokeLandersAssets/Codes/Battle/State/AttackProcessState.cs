@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Lander.Battle
+namespace LandersLegends.Battle
 {
     public class AttackProcessState : BattleState
     {

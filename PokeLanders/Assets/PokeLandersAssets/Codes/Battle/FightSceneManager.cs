@@ -1,15 +1,15 @@
-using Lander.Extern;
+using LandersLegends.Extern;
 using UnityEngine;
-using Lander.Gameplay;
+using LandersLegends.Gameplay;
 
-namespace Lander.Battle
+namespace LandersLegends.Battle
 {
 	public class FightSceneManager : MonoBehaviour
 	{
 		private string[] tagRegisters;
         [SerializeField] private LanderMeshDisplayHandler[] landerDisplayHandler = new LanderMeshDisplayHandler[2];
 
-        private LanderData[] landerData => GameManager.instance.Landers;
+        private Lander[] landerData => GameManager.instance.Landers;
 		private NfcErrorHudManager nfcErrorHud => NfcErrorHudManager.current;
 
 		private void Awake()
@@ -24,14 +24,14 @@ namespace Lander.Battle
 
 		private void OnEnable()
 		{
-			NfcRequests.onNewNfcDetect += CheckData;
-			NfcRequests.onNfcRemove += OnNfcRemove;
+			ExternLanderManager.onLanderDetect += CheckData;
+			ExternLanderManager.onLanderRemove += OnNfcRemove;
 		}
 
 		private void OnDisable()
 		{
-			NfcRequests.onNewNfcDetect -= CheckData;
-			NfcRequests.onNfcRemove -= OnNfcRemove;
+			ExternLanderManager.onLanderDetect -= CheckData;
+			ExternLanderManager.onLanderRemove -= OnNfcRemove;
 		}
 
         private void Start()

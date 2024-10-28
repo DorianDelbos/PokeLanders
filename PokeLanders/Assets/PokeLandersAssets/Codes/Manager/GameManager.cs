@@ -1,12 +1,12 @@
 using UnityEngine;
 
-namespace Lander.Gameplay
+namespace LandersLegends.Gameplay
 {
     public class GameManager : MonoBehaviour
     {
         public static GameManager instance;
 
-        public LanderData[] Landers;
+        public Lander[] Landers;
 
         private void Awake()
         {
@@ -25,7 +25,7 @@ namespace Lander.Gameplay
 
         private void Start()
         {
-            Landers = new LanderData[2];
+            Landers = new Lander[2];
         }
     }
 }

@@ -1,12 +1,16 @@
-namespace Lander.Gameplay
+using Unity.VisualScripting.Antlr3.Runtime;
+
+namespace LandersLegends.Gameplay
 {
     [System.Serializable]
     public class LanderDataNFC
     {
         // Block 1
         public string tag = string.Empty;      // Bytes 0-3 (4 octets)
-        public string name = string.Empty;     // Bytes 4-18 (11 octets)
+        public string name = string.Empty;     // Bytes 4-17 (14 octets)
+        public byte happiness = 0;             // Byte 18 (1 octet)
         public byte meta = 0;                  // Byte 19 (1 octet)
+        public byte nature = 0;                // Also Byte 19
 
         // Block 2
         public ushort id = 0;                  // Bytes 20-21 (2 octets)
@@ -49,50 +53,39 @@ namespace Lander.Gameplay
             tag = string.Format("{0:X2} {1:X2} {2:X2} {3:X2}", nfcData[0], nfcData[1], nfcData[2], nfcData[3]);
 
             // Block 1: Name (Bytes 4-18)
-            name = System.Text.Encoding.ASCII.GetString(nfcData, 4, 15).Trim();
-            meta = nfcData[19];                          // Byte 19
+            name = System.Text.Encoding.ASCII.GetString(nfcData, 4, 14).Trim();
+            happiness = (byte)nfcData.ReadBigEndian(18, 1);     // Byte 18
+			meta = nfcData[19];                                 // Byte 19
+            nature = nfcData[19].ReadBitsBigEndian(3, 5);
 
             // Block 2: ID, HP, XP, Height, Weight
-            id = ReadUInt16BigEndian(nfcData, 20);       // Bytes 20-21 (ushort)
-            hp = ReadUInt16BigEndian(nfcData, 22);       // Bytes 22-23 (ushort)
-            xp = ReadInt32BigEndian(nfcData, 24);        // Bytes 24-27 (int)
-            height = ReadUInt16BigEndian(nfcData, 28);   // Bytes 28-29 (ushort)
-            weight = ReadUInt16BigEndian(nfcData, 30);   // Bytes 30-31 (ushort)
+            id = (ushort)nfcData.ReadBigEndian(20, 2);          // Bytes 20-21 (ushort)
+            hp = (ushort)nfcData.ReadBigEndian(22, 2);          // Bytes 22-23 (ushort)
+			xp = nfcData.ReadBigEndian(24, 4);                  // Bytes 24-27 (int)
+			height = (ushort)nfcData.ReadBigEndian(28, 2);      // Bytes 28-29 (ushort)
+            weight = (ushort)nfcData.ReadBigEndian(30, 2);      // Bytes 30-31 (ushort)
 
-            // Block 3: Attack IDs (Each 2 bytes as ushort)
-            idAttack1 = ReadUInt16BigEndian(nfcData, 32); // Bytes 32-33 (ushort)
-            idAttack2 = ReadUInt16BigEndian(nfcData, 34); // Bytes 34-35 (ushort)
-            idAttack3 = ReadUInt16BigEndian(nfcData, 36); // Bytes 36-37 (ushort)
-            idAttack4 = ReadUInt16BigEndian(nfcData, 38); // Bytes 38-39 (ushort)
+			// Block 3: Attack IDs (Each 2 bytes as ushort)
+			idAttack1 = (ushort)nfcData.ReadBigEndian(32, 2);   // Bytes 32-33 (ushort)
+            idAttack2 = (ushort)nfcData.ReadBigEndian(34, 2);   // Bytes 34-35 (ushort)
+            idAttack3 = (ushort)nfcData.ReadBigEndian(36, 2);   // Bytes 36-37 (ushort)
+            idAttack4 = (ushort)nfcData.ReadBigEndian(38, 2);   // Bytes 38-39 (ushort)
 
-            // Block 4: IVs (Individual Values)
-            ivPv = nfcData[40];                            // Byte 40
-            ivAtk = nfcData[41];                           // Byte 41
-            ivDef = nfcData[42];                           // Byte 42
-            ivAtkSpe = nfcData[43];                        // Byte 43
-            ivDefSpe = nfcData[44];                        // Byte 44
-            ivSpeed = nfcData[45];                         // Byte 45
+			// Block 4: IVs (Individual Values)
+			ivPv = nfcData[40];                                 // Byte 40
+            ivAtk = nfcData[41];                                // Byte 41
+            ivDef = nfcData[42];                                // Byte 42
+            ivAtkSpe = nfcData[43];                             // Byte 43
+            ivDefSpe = nfcData[44];                             // Byte 44
+            ivSpeed = nfcData[45];                              // Byte 45
 
             // Block 4: EVs (Effort Values)
-            evPv = nfcData[46];                            // Byte 46
-            evAtk = nfcData[47];                           // Byte 47
-            evDef = nfcData[48];                           // Byte 48
-            evAtkSpe = nfcData[49];                        // Byte 49
-            evDefSpe = nfcData[50];                        // Byte 50
-            evSpeed = nfcData[51];                         // Byte 51
+            evPv = nfcData[46];                                 // Byte 46
+            evAtk = nfcData[47];                                // Byte 47
+            evDef = nfcData[48];                                // Byte 48
+            evAtkSpe = nfcData[49];                             // Byte 49
+            evDefSpe = nfcData[50];                             // Byte 50
+            evSpeed = nfcData[51];                              // Byte 51
         }
-
-        private ushort ReadUInt16BigEndian(byte[] data, int startIndex)
-        {
-            return (ushort)((data[startIndex] << 8) | data[startIndex + 1]);
-        }
-
-        private int ReadInt32BigEndian(byte[] data, int startIndex)
-        {
-            return (data[startIndex] << 24) |
-                   (data[startIndex + 1] << 16) |
-                   (data[startIndex + 2] << 8) |
-                   (data[startIndex + 3]);
-        }
-    }
+	}
 }

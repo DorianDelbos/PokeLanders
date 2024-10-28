@@ -1,25 +1,25 @@
-using Lander.Extern;
-using Lander.Gameplay.Type;
-using Lander.Maths;
+using LandersLegends.Extern;
+using LandersLegends.Gameplay.Type;
+using LandersLegends.Maths;
 using System;
 using System.Linq;
 
-namespace Lander.Gameplay
+namespace LandersLegends.Gameplay
 {
 	public static class LanderUtils
 	{
-		public static LanderData RandomLander() => RandomLander((byte)UnityEngine.Random.Range(1, 100));
+		public static Lander RandomLander() => RandomLander((byte)UnityEngine.Random.Range(1, 100));
 
-		public static LanderData RandomLander(byte level)
+		public static Lander RandomLander(byte level)
 		{
 			Extern.API.Lander[] allLanders = APIDataFetcher<Extern.API.Lander>.FetchArrayData("api/v1/lander");
 			Extern.API.Lander landerModel = allLanders.OrderBy(x => Guid.NewGuid()).First();
 
-			LanderData.Stats ivs = RandomStats(31);
-			LanderData.Stats evs = RandomStats(252, 510);
+			Lander.Stats ivs = RandomStats(31);
+			Lander.Stats evs = RandomStats(252, 510);
             ushort maxHp = StatsCurves.GetMaxHp(landerModel.stats.Where(x => x.stat == "pv").First().base_stat, level, ivs.hp, evs.hp);
 
-			return new LanderData(
+			return new Lander(
 				"-1",
 				landerModel.id,
 				landerModel.name,
@@ -27,21 +27,24 @@ namespace Lander.Gameplay
 				landerModel.description,
 				StatsCurves.GetXpByLevel(level, landerModel.base_experience),
 				maxHp,
-				new LanderData.Stats(landerModel.stats),
+				(byte)UnityEngine.Random.Range(0, 256),
+				(byte)UnityEngine.Random.Range(0, 25),
+				new Lander.Stats(landerModel.stats),
                 ivs,
                 evs,
 				landerModel.base_experience,
 				landerModel.base_height,
 				landerModel.base_weight,
-				(byte)UnityEngine.Random.Range(0, 256),
+				UnityEngine.Random.value < 0.5f,
+				UnityEngine.Random.value < (1.0f / 8192.0f),
 				ElementaryTypeUtils.StringsToTypes(landerModel.types),
-				BundleLoaderUtils.DownloadAssets(landerModel.bundle)
+				BundleUtils.DownloadAssets(landerModel.bundle)
 			);
 		}
 
-		public static LanderData.Stats RandomStats(int maxValue, int maxTotal = int.MaxValue - 1)
+		public static Lander.Stats RandomStats(int maxValue, int maxTotal = int.MaxValue - 1)
 		{
-			LanderData.Stats stats = new LanderData.Stats();
+			Lander.Stats stats = new Lander.Stats();
 			Random random = new Random();
 			int remainingTotal = maxTotal;
 			byte[] attributes = new byte[6];

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\LanderTagCreator.csproj": {}
+    "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\LanderTagCreator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\LanderTagCreator.csproj": {
+    "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\LanderTagCreator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\LanderTagCreator.csproj",
+        "projectUniqueName": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\LanderTagCreator.csproj",
         "projectName": "LanderTagCreator",
-        "projectPath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\LanderTagCreator.csproj",
-        "packagesPath": "C:\\Users\\Dorian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\obj\\",
+        "projectPath": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\LanderTagCreator.csproj",
+        "packagesPath": "C:\\Users\\Etudiant1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\wpf\\LanderTagCreator\\LanderTagCreator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dorian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Etudiant1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

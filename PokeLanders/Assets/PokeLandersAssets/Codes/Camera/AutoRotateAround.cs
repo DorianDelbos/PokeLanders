@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Lander.Gameplay
+namespace LandersLegends.Gameplay
 {
     public class AutoRotateAround : MonoBehaviour
     {

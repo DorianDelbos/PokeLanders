@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Lander.Maths
+namespace LandersLegends.Maths
 {
     public static class StatsCurves
     {

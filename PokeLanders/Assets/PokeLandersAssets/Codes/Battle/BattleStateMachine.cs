@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
-namespace Lander.Battle
+namespace LandersLegends.Battle
 {
     public class BattleStateMachine : MonoBehaviour
     {

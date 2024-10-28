@@ -24,7 +24,8 @@ namespace LanderTagCreator
                 byte meta = 0;
                 if (IsMale.IsChecked == true) meta |= 0x01; // Bit 0 for male
                 if (IsShiny.IsChecked == true) meta |= 0x02; // Bit 1 for shiny
-                ushort hp = ushort.Parse(HpTextBox.Text); // Ex: 0
+				meta = (byte)((byte.Parse(NatureBox.Text) << 2) | (byte)(meta & 0x03));
+				ushort hp = ushort.Parse(HpTextBox.Text); // Ex: 0
                 int xp = int.Parse(XpTextBox.Text); // Ex: 0 (4 octets)
                 ushort height = ushort.Parse(HeightTextBox.Text); // Ex: 0
                 ushort weight = ushort.Parse(WeightTextBox.Text); // Ex: 0

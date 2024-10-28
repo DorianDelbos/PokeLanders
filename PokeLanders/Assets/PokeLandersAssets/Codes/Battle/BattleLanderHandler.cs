@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
-namespace Lander.Battle
+namespace LandersLegends.Battle
 {
     public class BattleLanderHandler : MonoBehaviour
     {

@@ -1,6 +1,6 @@
-using Lander.Gameplay.Type;
+using LandersLegends.Gameplay.Type;
 
-namespace Lander.Gameplay.Attack
+namespace LandersLegends.Gameplay.Attack
 {
 	public abstract class Attack
 	{
@@ -18,7 +18,7 @@ namespace Lander.Gameplay.Attack
 		public ushort Precision => precision;
 		public ushort Pp => pp;
 
-		public abstract void Use(LanderData attacker, LanderData defenser);
-		protected abstract ushort CalculDamage(LanderData attacker, LanderData defenser);
+		public abstract void Use(Lander attacker, Lander defenser);
+		protected abstract ushort CalculDamage(Lander attacker, Lander defenser);
 	}
 }

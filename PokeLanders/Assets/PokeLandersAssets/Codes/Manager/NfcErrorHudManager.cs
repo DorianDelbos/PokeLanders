@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Lander.Gameplay
+namespace LandersLegends.Gameplay
 {
 	public class NfcErrorHudManager : MonoBehaviour
 	{

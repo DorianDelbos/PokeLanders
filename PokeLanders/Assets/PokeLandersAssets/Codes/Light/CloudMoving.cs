@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-namespace Lander.Gameplay
+namespace LandersLegends.Gameplay
 {
     [RequireComponent(typeof(UniversalAdditionalLightData))]
     public class CloudMoving : MonoBehaviour

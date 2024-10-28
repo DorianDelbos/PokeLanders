@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Lander.Extern.API
+namespace LandersLegends.Extern.API
 {
 	[System.Serializable]
 	public class Moves

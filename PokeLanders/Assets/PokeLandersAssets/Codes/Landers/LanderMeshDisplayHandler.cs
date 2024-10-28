@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace Lander.Gameplay
+namespace LandersLegends.Gameplay
 {
 	using BundleAssetsLoad = Dictionary<System.Type, List<UnityEngine.Object>>;
 

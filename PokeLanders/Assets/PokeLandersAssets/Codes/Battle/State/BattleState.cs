@@ -1,4 +1,4 @@
-namespace Lander.Battle
+namespace LandersLegends.Battle
 {
     public abstract class BattleState
     {

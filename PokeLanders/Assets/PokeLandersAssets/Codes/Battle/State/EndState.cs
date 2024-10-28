@@ -1,7 +1,7 @@
-using Lander.Gameplay;
+using LandersLegends.Gameplay;
 using UnityEngine;
 
-namespace Lander.Battle
+namespace LandersLegends.Battle
 {
     public class EndState : BattleState
     {

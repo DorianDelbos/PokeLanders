@@ -1,8 +1,8 @@
-using Lander.Gameplay;
+using LandersLegends.Gameplay;
 using TMPro;
 using UnityEngine;
 
-namespace Lander.Battle
+namespace LandersLegends.Battle
 {
     public class BattleHUDHandler : MonoBehaviour
     {
@@ -11,7 +11,7 @@ namespace Lander.Battle
         [SerializeField] private BattleLanderHudHandler[] hudHandler = new BattleLanderHudHandler[2];
         public TMP_Dialogue dialogueMesh;
 
-        private LanderData[] landers => GameManager.instance.Landers;
+        private Lander[] landers => GameManager.instance.Landers;
 
         public void UpdateLandersHUD()
         {

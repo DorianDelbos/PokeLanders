@@ -1,11 +1,11 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Bundles\aquapix_assets_all_a19a6887859244166dbfcf90886b8081.bundle))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Bundles\aquapix_assets_all_2e5d5a7e34f24cf914765cf2afdf77e1.bundle))">
       <SourceType>Package</SourceType>
       <SourceId>LandAPI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/LandAPI</BasePath>
-      <RelativePath>Assets/Bundles/aquapix_assets_all_a19a6887859244166dbfcf90886b8081.bundle</RelativePath>
+      <RelativePath>Assets/Bundles/aquapix_assets_all_2e5d5a7e34f24cf914765cf2afdf77e1.bundle</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -14,7 +14,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Bundles\aquapix_assets_all_a19a6887859244166dbfcf90886b8081.bundle))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Bundles\aquapix_assets_all_2e5d5a7e34f24cf914765cf2afdf77e1.bundle))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Bundles\luminorine_assets_all_f7334554105bc493b97c59e1bf37c64a.bundle))">
       <SourceType>Package</SourceType>

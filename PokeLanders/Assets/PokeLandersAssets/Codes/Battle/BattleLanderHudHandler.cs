@@ -1,10 +1,10 @@
-using Lander.Maths;
+using LandersLegends.Maths;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Lander.Gameplay;
+using LandersLegends.Gameplay;
 
-namespace Lander.Battle
+namespace LandersLegends.Battle
 {
 	public class BattleLanderHudHandler : MonoBehaviour
 	{
@@ -16,7 +16,7 @@ namespace Lander.Battle
 		[SerializeField] private Slider xpBar;
 		[SerializeField] private TMP_Text hpMesh;
 
-        public void UpdateData(LanderData data) => UpdateData(data.Name, data.Level, data.Hp, data.MaxHp, data.BaseXp, data.Xp);
+        public void UpdateData(Lander data) => UpdateData(data.Name, data.Level, data.Hp, data.MaxHp, data.BaseXp, data.Xp);
 
         public void UpdateData(string name, byte level, int hp, int maxHp, ushort baseXp, int xp)
         {

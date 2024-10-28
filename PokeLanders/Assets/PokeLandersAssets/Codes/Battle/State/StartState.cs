@@ -1,8 +1,8 @@
-using Lander.Gameplay;
+using LandersLegends.Gameplay;
 using System.Linq;
 using UnityEngine;
 
-namespace Lander.Battle
+namespace LandersLegends.Battle
 {
     public class StartState : BattleState
     {
