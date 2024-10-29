@@ -13,8 +13,8 @@
       "PackagePath": "staticwebassets\\Assets\\Bundles\\ocealythe_assets_all_8b3ca71ebd434c3d135957d98920d685.bundle"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailements.json",
-      "PackagePath": "staticwebassets\\Assets\\Data\\ailements.json"
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
+      "PackagePath": "staticwebassets\\Assets\\Data\\ailments.json"
     },
     {
       "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
@@ -27,6 +27,10 @@
     {
       "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\moves.json"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\nature.json",
+      "PackagePath": "staticwebassets\\Assets\\Data\\nature.json"
     },
     {
       "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",

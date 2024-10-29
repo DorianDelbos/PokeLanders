@@ -3,10 +3,10 @@
 		"id": 1,
 		"name": "water",
 		"damage_relations": {
-			"double_damage_from": ["grass"],
-			"double_damage_to": ["fire"],
-			"half_damage_from": ["fire"],
-			"half_damage_to": ["grass", "water"],
+			"double_damage_from": [ "grass" ],
+			"double_damage_to": [ "fire" ],
+			"half_damage_from": [ "fire" ],
+			"half_damage_to": [ "grass", "water" ],
 			"none_damage_from": [],
 			"none_damage_to": []
 		}
@@ -14,7 +14,7 @@
 	{
 		"id": 2,
 		"name": "fire",
-		"damage_Relations": {
+		"damage_relations": {
 			"double_damage_from": [ "water" ],
 			"double_damage_to": [ "grass" ],
 			"half_damage_from": [ "grass" ],
@@ -26,7 +26,7 @@
 	{
 		"id": 3,
 		"name": "grass",
-		"damage_Relations": {
+		"damage_relations": {
 			"double_damage_from": [ "fire" ],
 			"double_damage_to": [ "grass" ],
 			"half_damage_from": [ "grass" ],
@@ -38,7 +38,7 @@
 	{
 		"id": 4,
 		"name": "light",
-		"damage_Relations": {
+		"damage_relations": {
 			"double_damage_from": [ "dark" ],
 			"double_damage_to": [ "dark" ],
 			"half_damage_from": [],
@@ -50,7 +50,7 @@
 	{
 		"id": 5,
 		"name": "dark",
-		"damage_Relations": {
+		"damage_relations": {
 			"double_damage_from": [ "light" ],
 			"double_damage_to": [ "light" ],
 			"half_damage_from": [],

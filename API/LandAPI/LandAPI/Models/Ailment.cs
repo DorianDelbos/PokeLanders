@@ -2,7 +2,7 @@
 
 namespace LandAPI.Models
 {
-	public class Ailement
+	public class Ailment
 	{
 		[JsonPropertyName("id")]
 		public int ID { get; set; }

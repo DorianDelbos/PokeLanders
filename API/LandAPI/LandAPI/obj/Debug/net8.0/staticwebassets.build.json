@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gBzzK30jbfMlW6v/rYz8Nrxqipyfyg5Q50gxRj3tsik=",
+  "Hash": "bbz7RD3HOBk9mzxhRInvRm0Qwbf2dyjWb6wdS1Uvh5E=",
   "Source": "LandAPI",
   "BasePath": "_content/LandAPI",
   "Mode": "Default",
@@ -74,12 +74,12 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Bundles\\ocealythe_assets_all_8b3ca71ebd434c3d135957d98920d685.bundle"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailements.json",
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Data/ailements.json",
+      "RelativePath": "Assets/Data/ailments.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,7 +90,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Assets\\Data\\ailements.json"
+      "OriginalItemSpec": "wwwroot\\Assets\\Data\\ailments.json"
     },
     {
       "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\moves.json"
+    },
+    {
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\nature.json",
+      "SourceId": "LandAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "BasePath": "_content/LandAPI",
+      "RelativePath": "Assets/Data/nature.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Data\\nature.json"
     },
     {
       "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",

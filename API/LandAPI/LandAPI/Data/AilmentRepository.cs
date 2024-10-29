@@ -3,23 +3,23 @@ using System.Text.Json;
 
 namespace LandAPI.Data
 {
-	public class AilementRepository
+	public class AilmentRepository
 	{
 		private readonly string _filePath = "wwwroot/Assets/Data/ailements.json";
-		private List<Ailement> _ailement;
+		private List<Ailment> _ailment;
 
-		public List<Ailement> Ailement => _ailement;
+		public List<Ailment> Ailment => _ailment;
 
-		public AilementRepository()
+		public AilmentRepository()
 		{
 			if (File.Exists(_filePath))
 			{
 				string jsonData = File.ReadAllText(_filePath);
-				_ailement = JsonSerializer.Deserialize<List<Ailement>>(jsonData);
+				_ailment = JsonSerializer.Deserialize<List<Ailment>>(jsonData);
 			}
 			else
 			{
-				_ailement = new List<Ailement>();
+				_ailment = new List<Ailment>();
 			}
 		}
 	}

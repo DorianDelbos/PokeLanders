@@ -1,3 +1,4 @@
+using LandersLegends.Extern;
 using System.Collections.Generic;
 
 namespace LandersLegends.Gameplay.Type
@@ -6,21 +7,37 @@ namespace LandersLegends.Gameplay.Type
 	{
 		// Dictionary that associates each type with its effectiveness against other types
 		// First type -> attacker / Second type -> defender
-		private static Dictionary<(ElementaryType, ElementaryType), float> dictEfficiency = new Dictionary<(ElementaryType, ElementaryType), float>
-	{
-		{(ElementaryType.Fire,  ElementaryType.Water),  0.5f},
-		{(ElementaryType.Fire,  ElementaryType.Grass),  2.0f},
-		{(ElementaryType.Water, ElementaryType.Fire),   2.0f},
-		{(ElementaryType.Water, ElementaryType.Grass),  0.5f},
-		{(ElementaryType.Grass, ElementaryType.Water),  2.0f},
-		{(ElementaryType.Grass, ElementaryType.Fire),   0.5f},
-		{(ElementaryType.Light, ElementaryType.Dark),   2.0f},
-		{(ElementaryType.Dark,  ElementaryType.Light),  2.0f},
-	};
+		private static Dictionary<(ElementaryType, ElementaryType), float> typeEfficiency = null;
+
+		private static void MakeEfficiencyDictionary()
+		{
+			typeEfficiency = new Dictionary<(ElementaryType, ElementaryType), float>();
+			Extern.API.Type[] types = APIDataFetcher<Extern.API.Type>.FetchArrayData($"api/v1/type");
+
+			foreach (var type in types)
+			{
+				ElementaryType from = ElementaryTypeUtils.StringToType(type.name);
+
+				foreach (var typeTo in type.damage_relations.double_damage_to)
+				{
+					ElementaryType typeToS = ElementaryTypeUtils.StringToType(type.name);
+					typeEfficiency.TryAdd((from, typeToS), 2.0f);
+				}
+
+				foreach (var typeTo in type.damage_relations.half_damage_to)
+				{
+					ElementaryType typeToS = ElementaryTypeUtils.StringToType(type.name);
+					typeEfficiency.TryAdd((from, typeToS), 0.5f);
+				}
+			}
+		}
 
 		public static float GetEfficiency(ElementaryType attackerType, ElementaryType defenderType)
 		{
-			if (dictEfficiency.TryGetValue((attackerType, defenderType), out float efficiency))
+			if (typeEfficiency == null)
+				MakeEfficiencyDictionary();
+
+			if (typeEfficiency.TryGetValue((attackerType, defenderType), out float efficiency))
 				return efficiency;
 
 			return 1.0f; // Default value
