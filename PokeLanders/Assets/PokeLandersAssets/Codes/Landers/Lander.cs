@@ -1,9 +1,11 @@
 using LandersLegends.Extern;
 using LandersLegends.Extern.API;
+using LandersLegends.Gameplay.Attack;
 using LandersLegends.Maths;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 namespace LandersLegends.Gameplay
@@ -85,9 +87,26 @@ namespace LandersLegends.Gameplay
 			public Stats stats;
 			public Stats ivs;
 			public Stats evs;
-		}
+        }
 
-		[Serializable]
+        [Serializable]
+        public struct AttacksData
+        {
+			public AttacksData(ushort attack1, ushort attack2, ushort attack3, ushort attack4)
+            {
+				this.attack1 = attack1;
+				this.attack2 = attack2;
+				this.attack3 = attack3;
+				this.attack4 = attack4;
+            }
+
+			public ushort attack1;
+			public ushort attack2;
+			public ushort attack3;
+			public ushort attack4;
+        }
+
+        [Serializable]
 		public struct OtherData
 		{
 			public OtherData(ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, BundleAssetsLoad bundleModel)
@@ -118,7 +137,8 @@ namespace LandersLegends.Gameplay
 		#region ATTRIBUTS
 		private MainData mainData;
 		private StatsData statsData;
-		private OtherData otherData;
+		private AttacksData attacksData;
+        private OtherData otherData;
 		#endregion
 
 		#region GETTERS/SETTERS
@@ -137,11 +157,13 @@ namespace LandersLegends.Gameplay
         // States
         public ushort Hp { get => statsData.hp; set => statsData.hp = value; }
 		public ushort MaxHp => StatsCurves.GetMaxHp(statsData.stats.hp, Level, statsData.ivs.hp, statsData.evs.hp);
-		public ushort Attack => StatsCurves.GetStatValue(Level, statsData.ivs.attack, statsData.evs.attack, statsData.stats.attack);
-		public ushort SpecialAttack => StatsCurves.GetStatValue(Level, statsData.ivs.specialAttack, statsData.evs.specialAttack, statsData.stats.specialAttack);
-		public ushort Defense => StatsCurves.GetStatValue(Level, statsData.ivs.defense, statsData.evs.defense, statsData.stats.defense);
-        public ushort SpecialDefense => StatsCurves.GetStatValue(Level, statsData.ivs.specialDefense, statsData.evs.specialDefense, statsData.stats.specialDefense);
-        public ushort Speed => StatsCurves.GetStatValue(Level, statsData.ivs.speed, statsData.evs.speed, statsData.stats.speed);
+		public ushort Attack => StatsCurves.GetStatValue(statsData.stats.attack, Level, statsData.ivs.attack, statsData.evs.attack, NatureRepository.GetByName(Nature).GetStatMultiplier("Attack"));
+		public ushort SpecialAttack => StatsCurves.GetStatValue(statsData.stats.specialAttack, Level, statsData.ivs.specialAttack, statsData.evs.specialAttack, NatureRepository.GetByName(Nature).GetStatMultiplier("Special-Attack"));
+		public ushort Defense => StatsCurves.GetStatValue(statsData.stats.defense, Level, statsData.ivs.defense, statsData.evs.defense, NatureRepository.GetByName(Nature).GetStatMultiplier("Defense"));
+        public ushort SpecialDefense => StatsCurves.GetStatValue(statsData.stats.specialDefense, Level, statsData.ivs.specialDefense, statsData.evs.specialDefense, NatureRepository.GetByName(Nature).GetStatMultiplier("Special-Defense"));
+        public ushort Speed => StatsCurves.GetStatValue(statsData.stats.speed, Level, statsData.ivs.speed, statsData.evs.speed, NatureRepository.GetByName(Nature).GetStatMultiplier("Speed"));
+		public byte Happiness => statsData.happiness;
+		public string Nature => statsData.nature;
         // Others
         public List<string> Types { get => otherData.types; private set => otherData.types = value; }
 		public BundleAssetsLoad BundleModel { get => otherData.bundleModel; private set => otherData.bundleModel = value; }
@@ -159,33 +181,39 @@ namespace LandersLegends.Gameplay
 
 			mainData = new MainData(nfcData.tag, nfcData.id, landerModel.name, nfcData.name, landerModel.description);
 			statsData = new StatsData(nfcData.xp, nfcData.hp, nfcData.happiness, NatureRepository.GetNameById(nfcData.nature), landerStats, ivs, evs);
-			otherData =	new OtherData(landerModel.base_experience, nfcData.height, nfcData.weight, nfcData.meta.GetBit(0), nfcData.meta.GetBit(1), landerModel.types, BundleUtils.DownloadAssets(landerModel.bundle));
+            attacksData = new AttacksData(nfcData.idAttack1, nfcData.idAttack2, nfcData.idAttack3, nfcData.idAttack4);
+            otherData =	new OtherData(landerModel.base_experience, nfcData.height, nfcData.weight, nfcData.meta.GetBit(0), nfcData.meta.GetBit(1), landerModel.types, BundleUtils.DownloadAssets(landerModel.bundle));
 		}
 
-		public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, byte baseHp, byte attack, byte specialAttack, byte defense, byte specialDefense, byte speed, byte ivPv, byte ivAtk, byte ivAtkSpe, byte ivDef, byte ivDefSpe, byte ivSpeed, byte evPv, byte evAtk, byte evAtkSpe, byte evDef, byte evDefSpe, byte evSpeed, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, BundleAssetsLoad bundleModel)
+		public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, byte baseHp, byte attack, byte specialAttack, byte defense, byte specialDefense, byte speed, byte ivPv, byte ivAtk, byte ivAtkSpe, byte ivDef, byte ivDefSpe, byte ivSpeed, byte evPv, byte evAtk, byte evAtkSpe, byte evDef, byte evDefSpe, byte evSpeed, ushort attack1, ushort attack2, ushort attack3, ushort attack4, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, BundleAssetsLoad bundleModel)
 		{
 			mainData = new MainData(tag, id, species, name, description);
 			statsData = new StatsData(xp, hp, happiness, nature, new Stats(baseHp, attack, defense, specialAttack, specialDefense, speed), new Stats(ivPv, ivAtk, ivDef, ivAtkSpe, ivDefSpe, ivSpeed), new Stats(evPv, evAtk, evDef, evAtkSpe, evDefSpe, evSpeed));
-			otherData = new OtherData(baseXp, height, weight, isMale, isShiny, types, bundleModel);
+            attacksData = new AttacksData(attack1, attack2, attack3, attack4);
+            otherData = new OtherData(baseXp, height, weight, isMale, isShiny, types, bundleModel);
 		}
 
-        public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, Stats stats, Stats ivs, Stats evs, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, BundleAssetsLoad bundleModel)
+        public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, Stats stats, Stats ivs, Stats evs, ushort attack1, ushort attack2, ushort attack3, ushort attack4, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, BundleAssetsLoad bundleModel)
 		{
 			mainData = new MainData(tag, id, species, name, description);
 			statsData = new StatsData(xp, hp, happiness, nature, stats, ivs, evs);
+			attacksData = new AttacksData(attack1, attack2, attack3, attack4);
 			otherData = new OtherData(baseXp, height, weight, isMale, isShiny, types, bundleModel);
 		}
 
-        public Lander(MainData mainData, StatsData statsData, OtherData otherData)
+        public Lander(MainData mainData, StatsData statsData, AttacksData attacksData, OtherData otherData)
 		{
 			this.mainData = mainData;
 			this.statsData = statsData;
+			this.attacksData = attacksData;
 			this.otherData = otherData;
 		}
         #endregion
 
         #region METHODS
-		public void TakeDamage(ushort damage)
+        public LanderDataNFC ToDataNFC() => new LanderDataNFC(mainData, statsData, attacksData, otherData);
+
+        public void TakeDamage(ushort damage)
 		{
 			Hp -= (ushort)Mathf.Min(damage, MaxHp);
 			onHpChange?.Invoke(Hp, MaxHp);

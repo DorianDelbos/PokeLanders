@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 public static class ByteUtils
 {
@@ -99,4 +100,57 @@ public static class ByteUtils
 
 		return result;
 	}
+
+    /// <summary>
+    /// Converts a byte array to a hexadecimal string representation.
+    /// </summary>
+    /// <param name="_byte">The byte array to convert.</param>
+    /// <returns>A string representing the byte array in hexadecimal format.</returns>
+    /// <remarks>
+    /// Each byte is represented by two uppercase hexadecimal characters (e.g., "FF").
+    /// The bytes are separated by spaces for readability.
+    /// </remarks>
+    public static string MakeString(this byte[] _byte)
+    {
+        if (_byte == null || _byte.Length == 0)
+        {
+            return string.Empty; // Return an empty string if the array is null or empty
+        }
+
+        // StringBuilder is used for efficient concatenation of hexadecimal strings
+        StringBuilder hexString = new StringBuilder(_byte.Length * 3);
+
+        // Loop through each byte in the array
+        foreach (byte b in _byte)
+        {
+            // Append the byte in hexadecimal format, padded with zero if necessary, followed by a space
+            hexString.AppendFormat("{0:X2} ", b);
+        }
+
+        // Trim the trailing space for a clean result and return the formatted string
+        return hexString.ToString().TrimEnd();
+    }
+
+    /// <summary>
+    /// Reverses the bits of an 8-bit byte.
+    /// This method takes a byte value, processes each bit, and returns a new byte
+    /// with the bits in reverse order. For example, the input 10100000
+    /// will produce the output 00000101.
+    /// </summary>
+    /// <param name="value">The byte value whose bits are to be reversed.</param>
+    /// <returns>A byte with the bits reversed.</returns>
+    public static byte ReverseBits8(this byte value)
+    {
+        byte reversed = 0; // Variable to hold the reversed bits
+
+        // Loop to process each bit (8 bits total)
+        for (int i = 0; i < 8; i++)
+        {
+            reversed <<= 1; // Shift the reversed byte left by 1 to make room for the next bit
+            reversed |= (byte)(value & 1); // Add the least significant bit of value to reversed
+            value >>= 1; // Shift the original value right to process the next bit
+        }
+
+        return reversed; // Return the byte with reversed bits
+    }
 }

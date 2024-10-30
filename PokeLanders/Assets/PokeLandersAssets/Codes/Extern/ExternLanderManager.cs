@@ -187,7 +187,7 @@ namespace LandersLegends.Extern
 		#region DEBUG
 		public void ProccessLanderDebug(string data)
 		{
-			nfcManagerLander.ProcessData(data);
+            nfcDataQueue.Enqueue(nfcManagerLander.ProcessData(data));
 		}
 		#endregion
 #endif

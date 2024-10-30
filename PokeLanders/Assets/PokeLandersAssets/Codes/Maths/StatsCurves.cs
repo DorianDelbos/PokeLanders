@@ -1,3 +1,4 @@
+using LandersLegends.Extern.API;
 using UnityEngine;
 
 namespace LandersLegends.Maths
@@ -19,9 +20,9 @@ namespace LandersLegends.Maths
             return (ushort)(((2 * baseHp + iv + (ev / 4)) * level / 100) + level + 10);
         }
 
-        public static ushort GetStatValue(byte level, byte iv, byte ev, byte baseState = 0)
+        public static ushort GetStatValue(byte baseState, byte level, byte iv, byte ev, float natureMultiplier)
         {
-            return (ushort)(((2 * baseState + iv + (ev / 4)) * level / 100) + 5);
+            return (ushort)((((2 * baseState + iv + (ev / 4)) * level / 100) + 5) * natureMultiplier);
         }
     }
 }

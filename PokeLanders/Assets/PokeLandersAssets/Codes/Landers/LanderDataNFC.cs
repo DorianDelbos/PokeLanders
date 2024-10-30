@@ -1,4 +1,7 @@
+using System.Text;
+using System;
 using Unity.VisualScripting.Antlr3.Runtime;
+using LandersLegends.Extern.API;
 
 namespace LandersLegends.Gameplay
 {
@@ -56,7 +59,7 @@ namespace LandersLegends.Gameplay
             name = System.Text.Encoding.ASCII.GetString(nfcData, 4, 14).Trim();
             happiness = (byte)nfcData.ReadBigEndian(18, 1);     // Byte 18
 			meta = nfcData[19];                                 // Byte 19
-            nature = nfcData[19].ReadBitsBigEndian(3, 5);
+            nature = nfcData[19].ReadBitsBigEndian(0, 5);
 
             // Block 2: ID, HP, XP, Height, Weight
             id = (ushort)nfcData.ReadBigEndian(20, 2);          // Bytes 20-21 (ushort)
@@ -87,5 +90,110 @@ namespace LandersLegends.Gameplay
             evDefSpe = nfcData[50];                             // Byte 50
             evSpeed = nfcData[51];                              // Byte 51
         }
-	}
+
+        public LanderDataNFC(Lander.MainData mainData, Lander.StatsData statsData, Lander.AttacksData attacksData, Lander.OtherData otherData)
+        {
+            tag = mainData.tag;
+            name = mainData.name;
+            happiness = statsData.happiness;
+            meta = (byte)(((otherData.isMale ? 1 : 0) & 0x01) | ((otherData.isShiny ? 1 : 0) & 0x02));
+            nature = (byte)NatureRepository.GetIdByName(statsData.nature);
+            id = mainData.id;
+            hp = statsData.hp;
+            xp = statsData.xp;
+            height = otherData.height;
+            weight = otherData.weight;
+            idAttack1 = attacksData.attack1;
+            idAttack2 = attacksData.attack2;
+            idAttack3 = attacksData.attack3;
+            idAttack4 = attacksData.attack4;
+            ivPv = statsData.ivs.hp;
+            ivAtk = statsData.ivs.attack;
+            ivDef = statsData.ivs.defense;
+            ivAtkSpe = statsData.ivs.specialAttack;
+            ivDefSpe = statsData.ivs.specialDefense;
+            ivSpeed = statsData.ivs.speed;
+            evPv = statsData.evs.hp;
+            evAtk = statsData.evs.attack;
+            evDef = statsData.evs.defense;
+            evAtkSpe = statsData.evs.specialAttack;
+            evDefSpe = statsData.evs.specialDefense;
+            evSpeed = statsData.evs.speed;
+        }
+
+        public byte[] ToBytes()
+        {
+            byte[] data = new byte[52];
+
+            // Block 1: Tag (Bytes 0-3)
+            string[] tagBytes = tag.Split(' ');
+            for (int i = 0; i < 4; i++)
+            {
+                data[i] = Convert.ToByte(tagBytes[i], 16);
+            }
+
+            // Block 1: Name (Bytes 4-17)
+            byte[] nameBytes = Encoding.ASCII.GetBytes(name.PadRight(14));
+            Array.Copy(nameBytes, 0, data, 4, 14);
+
+            // Block 1: Happiness, Meta, Nature (Bytes 18-19)
+            data[18] = happiness;
+            data[19] = meta;
+            data[19] = data[19].ReverseBits8();
+            data[19] |= nature;
+            data[19] = data[19].ReverseBits8();
+
+            // Block 2: ID, HP, XP, Height, Weight (Bytes 20-31)
+            // 1. Copy id (2 bytes) to position 20
+            Array.Copy(BitConverter.GetBytes(id), 0, data, 20, 2);
+            Array.Reverse(data, 20, 2); // Reverse bytes
+
+            // 2. Copy hp (2 bytes) to position 22
+            Array.Copy(BitConverter.GetBytes(hp), 0, data, 22, 2);
+            Array.Reverse(data, 22, 2); // Reverse bytes
+
+            // 3. Copy xp (4 bytes) to position 24
+            Array.Copy(BitConverter.GetBytes(xp), 0, data, 24, 4);
+            Array.Reverse(data, 24, 4); // Reverse bytes
+
+            // 4. Copy height (2 bytes) to position 28
+            Array.Copy(BitConverter.GetBytes(height), 0, data, 28, 2);
+            Array.Reverse(data, 28, 2); // Reverse bytes
+
+            // 5. Copy weight (2 bytes) to position 30
+            Array.Copy(BitConverter.GetBytes(weight), 0, data, 30, 2);
+            Array.Reverse(data, 30, 2); // Reverse bytes
+
+            // Block 3: Copying Attack IDs (all 2 bytes)
+            Array.Copy(BitConverter.GetBytes(idAttack1), 0, data, 32, 2);
+            Array.Reverse(data, 32, 2); // Reverse bytes
+
+            Array.Copy(BitConverter.GetBytes(idAttack2), 0, data, 34, 2);
+            Array.Reverse(data, 34, 2); // Reverse bytes
+
+            Array.Copy(BitConverter.GetBytes(idAttack3), 0, data, 36, 2);
+            Array.Reverse(data, 36, 2); // Reverse bytes
+
+            Array.Copy(BitConverter.GetBytes(idAttack4), 0, data, 38, 2);
+            Array.Reverse(data, 38, 2); // Reverse bytes
+
+            // Block 4: IVs (Bytes 40-45)
+            data[40] = ivPv;
+            data[41] = ivAtk;
+            data[42] = ivDef;
+            data[43] = ivAtkSpe;
+            data[44] = ivDefSpe;
+            data[45] = ivSpeed;
+
+            // Block 4: EVs (Bytes 46-51)
+            data[46] = evPv;
+            data[47] = evAtk;
+            data[48] = evDef;
+            data[49] = evAtkSpe;
+            data[50] = evDefSpe;
+            data[51] = evSpeed;
+
+            return data;
+        }
+    }
 }

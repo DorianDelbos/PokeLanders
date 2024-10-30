@@ -33,6 +33,10 @@ namespace LandersLegends.Gameplay
 				new Lander.Stats(landerModel.stats),
                 ivs,
                 evs,
+				0, // TODO ATTACKS
+                0,
+				0,
+				0,
 				landerModel.base_experience,
 				landerModel.base_height,
 				landerModel.base_weight,

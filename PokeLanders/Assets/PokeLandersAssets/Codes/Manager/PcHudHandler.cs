@@ -11,7 +11,8 @@ namespace LandersLegends.Gameplay
 		[Header("Editing")]
 		[SerializeField] private TMP_Text landopediaNumberMesh;
 		[SerializeField] private TMP_Text speciesNameMesh;
-		[SerializeField] private RectTransform typesTransform;
+		[SerializeField] private TMP_Text natureNameMesh;
+        [SerializeField] private RectTransform typesTransform;
 		[SerializeField] private TMP_Text descriptionMesh;
 		[SerializeField] private TMP_Text heightWeightMesh;
 		[SerializeField] private TMP_Text customNameMesh;
@@ -37,7 +38,8 @@ namespace LandersLegends.Gameplay
 
 			landopediaNumberMesh.text = $"Landopedia No. {data.ID.ToString("D3")}";
 			speciesNameMesh.text = data.Species;
-			descriptionMesh.text = data.Description;
+			natureNameMesh.text = $"Nature : {data.Nature}";
+            descriptionMesh.text = data.Description;
 			heightWeightMesh.text = $"Height \t {GetHeightDisplay(data.Height)}\nWeight \t {GetWeightDisplay(data.Weight)} lbs";
 			customNameMesh.text = data.Name;
 			lifeBar.maxValue = data.MaxHp;
