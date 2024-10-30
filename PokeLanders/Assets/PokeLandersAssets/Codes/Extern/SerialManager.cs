@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace LandersLegends.Extern
 {
@@ -14,9 +16,11 @@ namespace LandersLegends.Extern
 		private static int dataBits = 8;
 		private static StopBits stopBits = StopBits.One;
 		private static int timeout = 100;
-
 		private static int checkDelay = 2000;
+
 		private static Dictionary<string, SerialPort> portsDetects = new Dictionary<string, SerialPort>();
+		private static Thread checkThread;
+		private static bool isRunning = false; // For stopping the thread safely
 
 		// Events
 		public static event Action<SerialPort> OnSerialPortDetect;
@@ -29,12 +33,20 @@ namespace LandersLegends.Extern
 			OnSerialPortRemove += serial => Console.WriteLine($"Serial port removed on {serial.PortName}");
 
 			// Start checking ports asynchronously
-			_ = CheckPortsAsync();
+			isRunning = true;
+			checkThread = new Thread(CheckPortsAsync);
+			checkThread.Start();
 		}
 
-		private static async Task CheckPortsAsync()
+		public static void Stop()
 		{
-			while (true)
+			isRunning = false;
+			checkThread?.Join();
+		}
+
+		private static void CheckPortsAsync()
+		{
+			while (isRunning)
 			{
 				string[] ports = SerialPort.GetPortNames();
 
@@ -64,8 +76,9 @@ namespace LandersLegends.Extern
 					}
 				}
 
-				await Task.Delay(checkDelay);
+				Thread.Sleep(checkDelay);
 			}
 		}
 	}
+
 }

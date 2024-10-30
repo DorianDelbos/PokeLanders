@@ -1,7 +1,6 @@
 #define TagCount 4
 #define BlockCount 16
-#define DataToSendCount 20
-#define BlockToRead 1
+#define DataToSendCount 52
 
 #include <SoftwareSerial.h>
 #include <PN532_SWHSU.h>
@@ -41,9 +40,19 @@ void loop()
   {
     // Read 16 bytes of data
     delay(100);
-    nfc.mifareclassic_AuthenticateBlock(dataToSend, uidLength, BlockToRead, 1, keya);
+
+    nfc.mifareclassic_AuthenticateBlock(dataToSend, uidLength, 1, 1, keya);
     delay(100);
-    nfc.mifareclassic_ReadDataBlock(BlockToRead, &dataToSend[TagCount]);
+    nfc.mifareclassic_ReadDataBlock(1, &dataToSend[TagCount]);
+
+    nfc.mifareclassic_AuthenticateBlock(dataToSend, uidLength, 2, 1, keya);
+    delay(100);
+    nfc.mifareclassic_ReadDataBlock(2, &dataToSend[TagCount + BlockCount]);
+
+    nfc.mifareclassic_AuthenticateBlock(dataToSend, uidLength, 4, 1, keya);
+    delay(100);
+    nfc.mifareclassic_ReadDataBlock(4, &dataToSend[TagCount + BlockCount * 2]);
+
     // Send data to Unity
     SendMessage(uint8ArrayToString(dataToSend, DataToSendCount), true);
   }

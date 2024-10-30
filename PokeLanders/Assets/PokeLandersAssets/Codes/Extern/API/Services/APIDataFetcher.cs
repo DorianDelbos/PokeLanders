@@ -8,7 +8,7 @@ namespace LandersLegends.Extern
 	public static class APIDataFetcher<T> where T : IBaseModel
 	{
 		private static readonly HttpClient client = new HttpClient();
-		private static readonly string apiUrl = "https://localhost:7041";
+		private static readonly string apiUrl = "http://localhost:5000";
 
 		public static async Task<T[]> FetchArrayDataAsync(string req)
 		{

@@ -1,13 +1,10 @@
 using System;
-using System.Collections.Generic;
 using System.IO.Ports;
 
 namespace LandersLegends.Extern
 {
 	public class NfcManager<T>
 	{
-		public Queue<T> nfcDataQueue = new Queue<T>();
-
 		public string ReadNFC(SerialPort serialPort)
 		{
 			try
@@ -19,18 +16,15 @@ namespace LandersLegends.Extern
 
 			return string.Empty;
 		}
-
-
-		public void ProcessData(string data)
+		public T ProcessData(string data)
 		{
 			try
 			{
-				T receivedData = (T)Activator.CreateInstance(typeof(T), data.ToByte());
-				nfcDataQueue.Enqueue(receivedData);
+				return (T)Activator.CreateInstance(typeof(T), data.ToByte());
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
-				Console.WriteLine($"Data corrupted !\n{e}");
+				return default(T);
 			}
 		}
 	}

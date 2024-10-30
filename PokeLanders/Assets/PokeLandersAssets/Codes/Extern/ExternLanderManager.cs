@@ -28,6 +28,7 @@ namespace LandersLegends.Extern
 		private NfcManager<LanderDataNFC> nfcManagerLander;
 		private LanderDataNFC lastDataRegister = null;
 		private string lastTagRegister = null;
+		public Queue<LanderDataNFC> nfcDataQueue = new Queue<LanderDataNFC>();
 
 		// Getters
 		public bool PortalIsConnected => portalStream != null;
@@ -72,10 +73,10 @@ namespace LandersLegends.Extern
 
 		void Update()
 		{
-			while (nfcManagerLander.nfcDataQueue.Count > 0)
+			while (nfcDataQueue.Count > 0)
 			{
 				LanderDataNFC nfcData;
-				nfcData = nfcManagerLander.nfcDataQueue.Dequeue();
+				nfcData = nfcDataQueue.Dequeue();
 
 				if (nfcData == null)
 				{
@@ -103,6 +104,8 @@ namespace LandersLegends.Extern
 			StopThreading();
 			if (portalStream != null && portalStream.IsOpen)
 				portalStream.Close();
+
+			SerialManager.Stop();
 		}
 
 		#region THREADING
@@ -126,6 +129,7 @@ namespace LandersLegends.Extern
 			keepReading = false;
 			if (readThread != null && readThread.IsAlive)
 			{
+				readThread.Interrupt();
 				readThread.Join();
 			}
 		}
@@ -135,7 +139,12 @@ namespace LandersLegends.Extern
 			while (keepReading)
 			{
 				string data = nfcManagerLander.ReadNFC(portalStream);
-				nfcManagerLander.ProcessData(data);
+				LanderDataNFC processData = nfcManagerLander.ProcessData(data);
+
+				if (data != "-1" && data != string.Empty)
+					nfcDataQueue.Enqueue(processData);
+				else if (data == "-1")
+					nfcDataQueue.Enqueue(null);
 			}
 		}
 		#endregion
@@ -143,13 +152,10 @@ namespace LandersLegends.Extern
 		#region PORTALS
 		private void CheckSerialIsLander(SerialPort serialPort)
 		{
-			if (portalStream == null)
-				return;
-
 			try
 			{
 				serialPort.Open();
-				serialPort.Write("IsArduino\n");
+				serialPort.Write("IsLanderPortal\n");
 				Thread.Sleep(1000);
 				string response = serialPort.ReadLine();
 
@@ -162,17 +168,13 @@ namespace LandersLegends.Extern
 				}
 			}
 			catch (TimeoutException) { }
-			finally
-			{
-				if (serialPort.IsOpen)
-					serialPort.Close();
-			}
 		}
 
 		private void CheckPortalDisconnect(SerialPort serialPort)
 		{
 			if (serialPort.PortName == portalStream.PortName)
 			{
+				nfcDataQueue.Enqueue(null);
 				StopThreading(); // Stop threading before close stream !
 				portalStream.Close();
 				portalStream = null;

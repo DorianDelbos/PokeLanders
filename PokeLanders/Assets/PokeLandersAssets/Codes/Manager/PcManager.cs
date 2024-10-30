@@ -1,4 +1,5 @@
 using LandersLegends.Extern;
+using LandersLegends.Extern.API;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,7 +27,7 @@ namespace LandersLegends.Gameplay
 
         private void SetData(LanderDataNFC data)
         {
-            LanderData[0] = new Lander(data, APIDataFetcher<Extern.API.Lander>.FetchData($"api/v1/lander/{data.id}"));
+            LanderData[0] = new Lander(data, LanderRepository.GetById(data.id));
             landerDisplayHandler.SetMesh(LanderData[0].BundleModel);
             pcHudHandler.UpdatePc(LanderData[0], true);
         }

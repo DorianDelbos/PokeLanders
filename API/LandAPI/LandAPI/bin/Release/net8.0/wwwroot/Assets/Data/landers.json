@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "Aquapix",
+    "description": "Aquapix is a mischievous Lander that lives by rivers and lakes. Thanks to its fountain-shaped tail, it can spray fine, shimmering droplets that have the power to calm restless minds. Sailors often say that rainbows appear after an Aquapix passes by.",
+    "stats": [
+      {
+        "base_stat": 44,
+        "stat": "pv"
+      },
+      {
+        "base_stat": 48,
+        "stat": "attack"
+      },
+      {
+        "base_stat": 65,
+        "stat": "defense"
+      },
+      {
+        "base_stat": 50,
+        "stat": "special-attack"
+      },
+      {
+        "base_stat": 64,
+        "stat": "special-defense"
+      },
+      {
+        "base_stat": 43,
+        "stat": "speed"
+      }
+    ],
+    "base_experience": 63,
+    "base_height": 5,
+    "base_weight": 90,
+    "types": [ "water" ],
+    "moves": [
+      {
+        "move": "Water Gun",
+        "move_learned_details": {
+          "level_learned_at": 0
+        }
+      }
+    ],
+    "bundle": "http://localhost:5000/api/v1/bundle/aquapix_assets_all_2e5d5a7e34f24cf914765cf2afdf77e1.bundle"
+  },
+  {
+    "id": 2,
+    "name": "Luminorine",
+    "description": "Luminorine is revered in certain coastal cultures as the guardian of the oceans. Through its aquatic dance, it can calm even the fiercest storms. Its songs, carried by the sea breeze, inspire hope and courage in those who hear them.",
+    "stats": [
+      {
+        "base_stat": 59,
+        "stat": "pv"
+      },
+      {
+        "base_stat": 63,
+        "stat": "attack"
+      },
+      {
+        "base_stat": 80,
+        "stat": "defense"
+      },
+      {
+        "base_stat": 65,
+        "stat": "special-attack"
+      },
+      {
+        "base_stat": 80,
+        "stat": "special-defense"
+      },
+      {
+        "base_stat": 58,
+        "stat": "speed"
+      }
+    ],
+    "base_experience": 142,
+    "base_height": 10,
+    "base_weight": 225,
+    "types": [ "water", "light" ],
+    "moves": [
+      {
+        "move": "Water Gun",
+        "move_learned_details": {
+          "level_learned_at": 0
+        }
+      }
+    ],
+    "bundle": "http://localhost:5000/api/v1/bundle/luminorine_assets_all_f7334554105bc493b97c59e1bf37c64a.bundle"
+  },
+  {
+    "id": 3,
+    "name": "Ocealythe",
+    "description": "Ocealythe is revered as a divine protector of the oceans and marine creatures. Its mystical powers can influence ocean currents and even control the weather. Legends say that when Ocealythe appears, storms subside, and the waters become clear and luminous.",
+    "stats": [
+      {
+        "base_stat": 79,
+        "stat": "pv"
+      },
+      {
+        "base_stat": 83,
+        "stat": "attack"
+      },
+      {
+        "base_stat": 100,
+        "stat": "defense"
+      },
+      {
+        "base_stat": 85,
+        "stat": "special-attack"
+      },
+      {
+        "base_stat": 105,
+        "stat": "special-defense"
+      },
+      {
+        "base_stat": 78,
+        "stat": "speed"
+      }
+    ],
+    "base_experience": 265,
+    "base_height": 16,
+    "base_weight": 855,
+    "types": [ "water", "light" ],
+    "moves": [
+      {
+        "move": "Water Gun",
+        "move_learned_details": {
+          "level_learned_at": 0
+        }
+      }
+    ],
+    "bundle": "http://localhost:5000/api/v1/bundle/ocealythe_assets_all_8b3ca71ebd434c3d135957d98920d685.bundle"
+  }
+]

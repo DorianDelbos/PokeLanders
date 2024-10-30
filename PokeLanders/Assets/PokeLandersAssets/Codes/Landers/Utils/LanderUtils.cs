@@ -1,8 +1,9 @@
 using LandersLegends.Extern;
-using LandersLegends.Gameplay.Type;
+using LandersLegends.Extern.API;
 using LandersLegends.Maths;
 using System;
 using System.Linq;
+using UnityEditor;
 
 namespace LandersLegends.Gameplay
 {
@@ -28,7 +29,7 @@ namespace LandersLegends.Gameplay
 				StatsCurves.GetXpByLevel(level, landerModel.base_experience),
 				maxHp,
 				(byte)UnityEngine.Random.Range(0, 256),
-				(byte)UnityEngine.Random.Range(0, 25),
+				NatureRepository.GetAll().OrderBy(x => UnityEngine.Random.value).First().name,
 				new Lander.Stats(landerModel.stats),
                 ivs,
                 evs,
@@ -37,7 +38,7 @@ namespace LandersLegends.Gameplay
 				landerModel.base_weight,
 				UnityEngine.Random.value < 0.5f,
 				UnityEngine.Random.value < (1.0f / 8192.0f),
-				ElementaryTypeUtils.StringsToTypes(landerModel.types),
+				landerModel.types,
 				BundleUtils.DownloadAssets(landerModel.bundle)
 			);
 		}

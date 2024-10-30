@@ -1,5 +1,5 @@
 using LandersLegends.Extern;
-using LandersLegends.Gameplay.Type;
+using LandersLegends.Extern.API;
 using LandersLegends.Maths;
 using System;
 using System.Collections.Generic;
@@ -67,7 +67,7 @@ namespace LandersLegends.Gameplay
 		[Serializable]
 		public struct StatsData
 		{
-			public StatsData(int xp, ushort hp, byte happiness, byte nature, Stats stats, Stats ivs, Stats evs)
+			public StatsData(int xp, ushort hp, byte happiness, string nature, Stats stats, Stats ivs, Stats evs)
 			{
 				this.xp = xp;
 				this.hp = hp;
@@ -81,7 +81,7 @@ namespace LandersLegends.Gameplay
 			public int xp;
 			public ushort hp;
 			public byte happiness;
-			public byte nature;
+			public string nature;
 			public Stats stats;
 			public Stats ivs;
 			public Stats evs;
@@ -90,7 +90,7 @@ namespace LandersLegends.Gameplay
 		[Serializable]
 		public struct OtherData
 		{
-			public OtherData(ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<ElementaryType> types, BundleAssetsLoad bundleModel)
+			public OtherData(ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, BundleAssetsLoad bundleModel)
 			{
 				this.baseXp = baseXp;
 				this.height = height;
@@ -106,7 +106,7 @@ namespace LandersLegends.Gameplay
 			public ushort weight;
 			public bool isMale;
 			public bool isShiny;
-			public List<ElementaryType> types;
+			public List<string> types;
 			public BundleAssetsLoad bundleModel;
 		}
 		#endregion
@@ -143,7 +143,7 @@ namespace LandersLegends.Gameplay
         public ushort SpecialDefense => StatsCurves.GetStatValue(Level, statsData.ivs.specialDefense, statsData.evs.specialDefense, statsData.stats.specialDefense);
         public ushort Speed => StatsCurves.GetStatValue(Level, statsData.ivs.speed, statsData.evs.speed, statsData.stats.speed);
         // Others
-        public List<ElementaryType> Types { get => otherData.types; private set => otherData.types = value; }
+        public List<string> Types { get => otherData.types; private set => otherData.types = value; }
 		public BundleAssetsLoad BundleModel { get => otherData.bundleModel; private set => otherData.bundleModel = value; }
         public ushort BaseXp { get => otherData.baseXp; private set => otherData.baseXp = value; }
         public ushort Height { get => otherData.height; private set => otherData.height = value; }
@@ -158,18 +158,18 @@ namespace LandersLegends.Gameplay
 			Stats evs = new Stats(nfcData.evPv, nfcData.evAtk, nfcData.evDef, nfcData.evAtkSpe, nfcData.evDefSpe, nfcData.evSpeed);
 
 			mainData = new MainData(nfcData.tag, nfcData.id, landerModel.name, nfcData.name, landerModel.description);
-			statsData = new StatsData(nfcData.xp, nfcData.hp, nfcData.happiness, nfcData.nature, landerStats, ivs, evs);
-			otherData =	new OtherData(landerModel.base_experience, nfcData.height, nfcData.weight, nfcData.meta.GetBit(0), nfcData.meta.GetBit(1), ElementaryTypeUtils.StringsToTypes(landerModel.types), BundleUtils.DownloadAssets(landerModel.bundle));
+			statsData = new StatsData(nfcData.xp, nfcData.hp, nfcData.happiness, NatureRepository.GetNameById(nfcData.nature), landerStats, ivs, evs);
+			otherData =	new OtherData(landerModel.base_experience, nfcData.height, nfcData.weight, nfcData.meta.GetBit(0), nfcData.meta.GetBit(1), landerModel.types, BundleUtils.DownloadAssets(landerModel.bundle));
 		}
 
-		public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, byte nature, byte baseHp, byte attack, byte specialAttack, byte defense, byte specialDefense, byte speed, byte ivPv, byte ivAtk, byte ivAtkSpe, byte ivDef, byte ivDefSpe, byte ivSpeed, byte evPv, byte evAtk, byte evAtkSpe, byte evDef, byte evDefSpe, byte evSpeed, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<ElementaryType> types, BundleAssetsLoad bundleModel)
+		public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, byte baseHp, byte attack, byte specialAttack, byte defense, byte specialDefense, byte speed, byte ivPv, byte ivAtk, byte ivAtkSpe, byte ivDef, byte ivDefSpe, byte ivSpeed, byte evPv, byte evAtk, byte evAtkSpe, byte evDef, byte evDefSpe, byte evSpeed, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, BundleAssetsLoad bundleModel)
 		{
 			mainData = new MainData(tag, id, species, name, description);
 			statsData = new StatsData(xp, hp, happiness, nature, new Stats(baseHp, attack, defense, specialAttack, specialDefense, speed), new Stats(ivPv, ivAtk, ivDef, ivAtkSpe, ivDefSpe, ivSpeed), new Stats(evPv, evAtk, evDef, evAtkSpe, evDefSpe, evSpeed));
 			otherData = new OtherData(baseXp, height, weight, isMale, isShiny, types, bundleModel);
 		}
 
-        public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, byte nature, Stats stats, Stats ivs, Stats evs, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<ElementaryType> types, BundleAssetsLoad bundleModel)
+        public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, Stats stats, Stats ivs, Stats evs, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, BundleAssetsLoad bundleModel)
 		{
 			mainData = new MainData(tag, id, species, name, description);
 			statsData = new StatsData(xp, hp, happiness, nature, stats, ivs, evs);

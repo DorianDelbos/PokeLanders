@@ -1,3 +1,4 @@
+using LandersLegends.Extern.API;
 using UnityEngine;
 
 namespace LandersLegends.Gameplay
@@ -21,6 +22,15 @@ namespace LandersLegends.Gameplay
                 Destroy(gameObject);
                 return;
             }
+
+            // Initialize all web requests
+            TypeRepository.Initialize();
+            StatRepository.Initialize();
+            NatureRepository.Initialize();
+            MoveRepository.Initialize();
+            LanderRepository.Initialize();
+            EvolutionChainRepository.Initialize();
+            AilmentRepository.Initialize();
         }
 
         private void Start()

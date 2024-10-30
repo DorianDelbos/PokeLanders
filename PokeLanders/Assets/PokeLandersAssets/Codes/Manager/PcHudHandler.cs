@@ -1,6 +1,5 @@
-using LandersLegends.Gameplay.Type;
+using LandersLegends.Extern.API;
 using LandersLegends.Maths;
-using LandersLegends.Extern;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -52,14 +51,14 @@ namespace LandersLegends.Gameplay
 				Destroy(child.gameObject);
 			}
 
-			foreach (ElementaryType type in data.Types)
+			foreach (string type in data.Types)
 			{
 				GameObject go = new GameObject("type");
 				go.transform.parent = typesTransform;
 				go.transform.localScale = Vector3.one;
 				Image image = go.AddComponent<Image>();
 				image.rectTransform.sizeDelta = new Vector2(84, 20);
-				image.sprite = typesSprite[(int)type];
+				image.sprite = typesSprite[TypeRepository.GetIdByName(type) - 1];
 			}
 		}
 

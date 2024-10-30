@@ -1,0 +1,73 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Bundles\\aquapix_assets_all_2e5d5a7e34f24cf914765cf2afdf77e1.bundle",
+      "PackagePath": "staticwebassets\\Assets\\Bundles\\aquapix_assets_all_2e5d5a7e34f24cf914765cf2afdf77e1.bundle"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Bundles\\luminorine_assets_all_f7334554105bc493b97c59e1bf37c64a.bundle",
+      "PackagePath": "staticwebassets\\Assets\\Bundles\\luminorine_assets_all_f7334554105bc493b97c59e1bf37c64a.bundle"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Bundles\\ocealythe_assets_all_8b3ca71ebd434c3d135957d98920d685.bundle",
+      "PackagePath": "staticwebassets\\Assets\\Bundles\\ocealythe_assets_all_8b3ca71ebd434c3d135957d98920d685.bundle"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
+      "PackagePath": "staticwebassets\\Assets\\Data\\ailments.json"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
+      "PackagePath": "staticwebassets\\Assets\\Data\\evolutionChains.json"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
+      "PackagePath": "staticwebassets\\Assets\\Data\\landers.json"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
+      "PackagePath": "staticwebassets\\Assets\\Data\\moves.json"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\nature.json",
+      "PackagePath": "staticwebassets\\Assets\\Data\\nature.json"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
+      "PackagePath": "staticwebassets\\Assets\\Data\\stats.json"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
+      "PackagePath": "staticwebassets\\Assets\\Data\\types.json"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\1.glb",
+      "PackagePath": "staticwebassets\\Assets\\Models\\1.glb"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\2.glb",
+      "PackagePath": "staticwebassets\\Assets\\Models\\2.glb"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\3.glb",
+      "PackagePath": "staticwebassets\\Assets\\Models\\3.glb"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.LandAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.LandAPI.props",
+      "PackagePath": "build\\LandAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.LandAPI.props",
+      "PackagePath": "buildMultiTargeting\\LandAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.LandAPI.props",
+      "PackagePath": "buildTransitive\\LandAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

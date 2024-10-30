@@ -5,7 +5,7 @@ namespace LandersLegends.Extern.API
 	[System.Serializable]
 	public class EvolutionDetails
 	{
-		public int? min_level;
+		public int min_level;
 	}
 
 	[System.Serializable]

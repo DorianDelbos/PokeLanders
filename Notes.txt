@@ -7,3 +7,7 @@ Formule niveau gagné après avoir vaincu une créature :
 
 b -> base_xp du pokémon vaincu
 N -> niveau du pokémon vaincu
+
+
+
+gltf
