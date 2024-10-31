@@ -351,11 +351,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161434879}
   m_CullTransparentMesh: 1
---- !u!4 &238745035 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5474024988926340748, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
-  m_PrefabInstance: {fileID: 3164113998890778717}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &279757025
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78bb21bfc140699458786e52ce9cfa0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 238745035}
+  target: {fileID: 866427553}
   offset: {x: 0, y: 0.75, z: 0}
   angle: 30
   time: 10
@@ -3192,6 +3187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landopediaNumberMesh: {fileID: 1711021756}
   speciesNameMesh: {fileID: 1692071658}
+  natureNameMesh: {fileID: 1114938930}
   typesTransform: {fileID: 1301835220}
   descriptionMesh: {fileID: 598832703}
   heightWeightMesh: {fileID: 161434882}
@@ -3217,17 +3213,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a470d320db3798e41a9c8be409258eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  landerDisplayHandler: {fileID: 1867129407}
+  gltfAsset: {fileID: 1935990947}
   pcHudHandler: {fileID: 1841439091}
---- !u!114 &1867129407 stripped
+--- !u!114 &1935990947 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7575199475565322903, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8456041556218384343, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
   m_PrefabInstance: {fileID: 3164113998890778717}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0af8c6fa6153e88468305500353b4bf0, type: 3}
+  m_Script: {fileID: 11500000, guid: b781fe673a5534e91b1e802df4b9362e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1947357368

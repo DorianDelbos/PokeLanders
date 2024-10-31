@@ -11,7 +11,7 @@ namespace LandersLegends.Extern.API
 
 		public static void Initialize()
 		{
-			typeList = APIDataFetcher<Type>.FetchArrayData($"api/v1/type");
+			typeList = DataFetcher<Type>.FetchArrayData($"api/v1/type");
 			InitializeEfficiencyDictionary();
 		}
 

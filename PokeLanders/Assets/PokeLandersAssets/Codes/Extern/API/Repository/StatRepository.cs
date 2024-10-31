@@ -8,7 +8,7 @@ namespace LandersLegends.Extern.API
 
 		public static void Initialize()
 		{
-			statList = APIDataFetcher<Stat>.FetchArrayData($"api/v1/stat");
+			statList = DataFetcher<Stat>.FetchArrayData($"api/v1/stat");
 		}
 
 		public static Stat[] GetAll() => statList;

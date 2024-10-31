@@ -41,16 +41,8 @@
       "PackagePath": "staticwebassets\\Assets\\Data\\types.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\1.glb",
-      "PackagePath": "staticwebassets\\Assets\\Models\\1.glb"
-    },
-    {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\2.glb",
-      "PackagePath": "staticwebassets\\Assets\\Models\\2.glb"
-    },
-    {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\3.glb",
-      "PackagePath": "staticwebassets\\Assets\\Models\\3.glb"
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
+      "PackagePath": "staticwebassets\\Assets\\Models\\Aquapix.glb"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.LandAPI.Microsoft.AspNetCore.StaticWebAssets.props",

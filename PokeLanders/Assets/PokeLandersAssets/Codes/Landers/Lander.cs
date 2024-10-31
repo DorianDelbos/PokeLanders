@@ -1,17 +1,12 @@
-using LandersLegends.Extern;
 using LandersLegends.Extern.API;
-using LandersLegends.Gameplay.Attack;
 using LandersLegends.Maths;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using UnityEngine;
 
 namespace LandersLegends.Gameplay
 {
-	using BundleAssetsLoad = Dictionary<System.Type, List<UnityEngine.Object>>;
-
 	[Serializable]
 	public class Lander
 	{
@@ -109,7 +104,7 @@ namespace LandersLegends.Gameplay
         [Serializable]
 		public struct OtherData
 		{
-			public OtherData(ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, BundleAssetsLoad bundleModel)
+			public OtherData(ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, string modelUrl)
 			{
 				this.baseXp = baseXp;
 				this.height = height;
@@ -117,7 +112,7 @@ namespace LandersLegends.Gameplay
 				this.isMale = isMale;
 				this.isShiny = isShiny;
 				this.types = types;
-				this.bundleModel = bundleModel;
+				this.modelUrl = modelUrl;
 			}
 
 			public ushort baseXp;
@@ -126,7 +121,7 @@ namespace LandersLegends.Gameplay
 			public bool isMale;
 			public bool isShiny;
 			public List<string> types;
-			public BundleAssetsLoad bundleModel;
+			public string modelUrl;
 		}
 		#endregion
 
@@ -166,7 +161,7 @@ namespace LandersLegends.Gameplay
 		public string Nature => statsData.nature;
         // Others
         public List<string> Types { get => otherData.types; private set => otherData.types = value; }
-		public BundleAssetsLoad BundleModel { get => otherData.bundleModel; private set => otherData.bundleModel = value; }
+		public string ModelUrl { get => otherData.modelUrl; private set => otherData.modelUrl = value; }
         public ushort BaseXp { get => otherData.baseXp; private set => otherData.baseXp = value; }
         public ushort Height { get => otherData.height; private set => otherData.height = value; }
 		public ushort Weight { get => otherData.weight; private set => otherData.weight = value; }
@@ -182,23 +177,23 @@ namespace LandersLegends.Gameplay
 			mainData = new MainData(nfcData.tag, nfcData.id, landerModel.name, nfcData.name, landerModel.description);
 			statsData = new StatsData(nfcData.xp, nfcData.hp, nfcData.happiness, NatureRepository.GetNameById(nfcData.nature), landerStats, ivs, evs);
             attacksData = new AttacksData(nfcData.idAttack1, nfcData.idAttack2, nfcData.idAttack3, nfcData.idAttack4);
-            otherData =	new OtherData(landerModel.base_experience, nfcData.height, nfcData.weight, nfcData.meta.GetBit(0), nfcData.meta.GetBit(1), landerModel.types, BundleUtils.DownloadAssets(landerModel.bundle));
+            otherData =	new OtherData(landerModel.base_experience, nfcData.height, nfcData.weight, nfcData.meta.GetBit(0), nfcData.meta.GetBit(1), landerModel.types, landerModel.model);
 		}
 
-		public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, byte baseHp, byte attack, byte specialAttack, byte defense, byte specialDefense, byte speed, byte ivPv, byte ivAtk, byte ivAtkSpe, byte ivDef, byte ivDefSpe, byte ivSpeed, byte evPv, byte evAtk, byte evAtkSpe, byte evDef, byte evDefSpe, byte evSpeed, ushort attack1, ushort attack2, ushort attack3, ushort attack4, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, BundleAssetsLoad bundleModel)
+		public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, byte baseHp, byte attack, byte specialAttack, byte defense, byte specialDefense, byte speed, byte ivPv, byte ivAtk, byte ivAtkSpe, byte ivDef, byte ivDefSpe, byte ivSpeed, byte evPv, byte evAtk, byte evAtkSpe, byte evDef, byte evDefSpe, byte evSpeed, ushort attack1, ushort attack2, ushort attack3, ushort attack4, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, string modelUrl)
 		{
 			mainData = new MainData(tag, id, species, name, description);
 			statsData = new StatsData(xp, hp, happiness, nature, new Stats(baseHp, attack, defense, specialAttack, specialDefense, speed), new Stats(ivPv, ivAtk, ivDef, ivAtkSpe, ivDefSpe, ivSpeed), new Stats(evPv, evAtk, evDef, evAtkSpe, evDefSpe, evSpeed));
             attacksData = new AttacksData(attack1, attack2, attack3, attack4);
-            otherData = new OtherData(baseXp, height, weight, isMale, isShiny, types, bundleModel);
+            otherData = new OtherData(baseXp, height, weight, isMale, isShiny, types, modelUrl);
 		}
 
-        public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, Stats stats, Stats ivs, Stats evs, ushort attack1, ushort attack2, ushort attack3, ushort attack4, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, BundleAssetsLoad bundleModel)
+        public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, Stats stats, Stats ivs, Stats evs, ushort attack1, ushort attack2, ushort attack3, ushort attack4, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, string modelUrl)
 		{
 			mainData = new MainData(tag, id, species, name, description);
 			statsData = new StatsData(xp, hp, happiness, nature, stats, ivs, evs);
 			attacksData = new AttacksData(attack1, attack2, attack3, attack4);
-			otherData = new OtherData(baseXp, height, weight, isMale, isShiny, types, bundleModel);
+			otherData = new OtherData(baseXp, height, weight, isMale, isShiny, types, modelUrl);
 		}
 
         public Lander(MainData mainData, StatsData statsData, AttacksData attacksData, OtherData otherData)

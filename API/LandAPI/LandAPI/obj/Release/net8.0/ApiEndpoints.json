@@ -180,6 +180,22 @@
     ]
   },
   {
+    "ContainingType": "LandAPI.Controllers.ModelController",
+    "Method": "GetModel",
+    "RelativePath": "api/v1/Model/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LandAPI.Controllers.MoveController",
     "Method": "GetMoves",
     "RelativePath": "api/v1/Move",

@@ -8,7 +8,7 @@ namespace LandersLegends.Extern.API
 
 		public static void Initialize()
 		{
-			ailmentList = APIDataFetcher<Ailment>.FetchArrayData($"api/v1/ailment");
+			ailmentList = DataFetcher<Ailment>.FetchArrayData($"api/v1/ailment");
 		}
 
 		public static Ailment[] GetAll() => ailmentList;

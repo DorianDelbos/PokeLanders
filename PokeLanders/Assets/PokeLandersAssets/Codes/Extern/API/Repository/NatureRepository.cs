@@ -8,7 +8,7 @@ namespace LandersLegends.Extern.API
 
 		public static void Initialize()
 		{
-			natureList = APIDataFetcher<Nature>.FetchArrayData($"api/v1/nature");
+			natureList = DataFetcher<Nature>.FetchArrayData($"api/v1/nature");
 		}
 
 		public static Nature[] GetAll() => natureList;

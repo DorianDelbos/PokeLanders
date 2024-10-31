@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bbz7RD3HOBk9mzxhRInvRm0Qwbf2dyjWb6wdS1Uvh5E=",
+  "Hash": "TXqzUWSBOE8HkY/sOT0Ob7eanG8yQlRSB4BQlvtulc8=",
   "Source": "LandAPI",
   "BasePath": "_content/LandAPI",
   "Mode": "Default",
@@ -207,12 +207,12 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\types.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\1.glb",
+      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Models/1.glb",
+      "RelativePath": "Assets/Models/Aquapix.glb",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -223,45 +223,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Assets\\Models\\1.glb"
-    },
-    {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\2.glb",
-      "SourceId": "LandAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
-      "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Models/2.glb",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Assets\\Models\\2.glb"
-    },
-    {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\3.glb",
-      "SourceId": "LandAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
-      "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Models/3.glb",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Assets\\Models\\3.glb"
+      "OriginalItemSpec": "wwwroot\\Assets\\Models\\Aquapix.glb"
     }
   ]
 }

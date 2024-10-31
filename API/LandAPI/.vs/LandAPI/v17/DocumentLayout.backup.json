@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\etudiant1\\documents\\unity\\pokelanders\\api\\landapi\\landapi\\wwwroot\\assets\\data\\types.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\assets\\data\\types.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\etudiant1\\documents\\unity\\pokelanders\\api\\landapi\\landapi\\models\\lander.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\models\\lander.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\etudiant1\\documents\\unity\\pokelanders\\api\\landapi\\landapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\etudiant1\\documents\\unity\\pokelanders\\api\\landapi\\landapi\\controllers\\modelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\controllers\\modelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\etudiant1\\documents\\unity\\pokelanders\\api\\landapi\\landapi\\controllers\\bundlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\controllers\\bundlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\etudiant1\\documents\\unity\\pokelanders\\api\\landapi\\landapi\\wwwroot\\assets\\data\\landers.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\assets\\data\\landers.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +35,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "types.json",
-              "DocumentMoniker": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
-              "RelativeDocumentMoniker": "LandAPI\\wwwroot\\Assets\\Data\\types.json",
-              "ToolTip": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
-              "RelativeToolTip": "LandAPI\\wwwroot\\Assets\\Data\\types.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-29T08:13:11.43Z",
+              "Title": "Lander.cs",
+              "DocumentMoniker": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\Models\\Lander.cs",
+              "RelativeDocumentMoniker": "LandAPI\\Models\\Lander.cs",
+              "ToolTip": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\Models\\Lander.cs",
+              "RelativeToolTip": "LandAPI\\Models\\Lander.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwCkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T08:18:32.321Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BundleController.cs",
+              "DocumentMoniker": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\Controllers\\BundleController.cs",
+              "RelativeDocumentMoniker": "LandAPI\\Controllers\\BundleController.cs",
+              "ToolTip": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\Controllers\\BundleController.cs",
+              "RelativeToolTip": "LandAPI\\Controllers\\BundleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T08:14:27.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModelController.cs",
+              "DocumentMoniker": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\Controllers\\ModelController.cs",
+              "RelativeDocumentMoniker": "LandAPI\\Controllers\\ModelController.cs",
+              "ToolTip": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\Controllers\\ModelController.cs",
+              "RelativeToolTip": "LandAPI\\Controllers\\ModelController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T08:13:07.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\Program.cs",
+              "RelativeDocumentMoniker": "LandAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\Program.cs",
+              "RelativeToolTip": "LandAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T08:11:47.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "landers.json",
+              "DocumentMoniker": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
+              "RelativeDocumentMoniker": "LandAPI\\wwwroot\\Assets\\Data\\landers.json",
+              "ToolTip": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
+              "RelativeToolTip": "LandAPI\\wwwroot\\Assets\\Data\\landers.json",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAIIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-31T08:08:57.379Z"
             }
           ]
         }

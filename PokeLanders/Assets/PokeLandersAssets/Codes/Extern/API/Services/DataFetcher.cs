@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace LandersLegends.Extern
 {
-	public static class APIDataFetcher<T> where T : IBaseModel
+	public static class DataFetcher<T> where T : IBaseModel
 	{
 		private static readonly HttpClient client = new HttpClient();
 		private static readonly string apiUrl = "http://localhost:5000";

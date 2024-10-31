@@ -8,7 +8,7 @@ namespace LandersLegends.Extern.API
 
 		public static void Initialize()
 		{
-			moveList = APIDataFetcher<Move>.FetchArrayData($"api/v1/move");
+			moveList = DataFetcher<Move>.FetchArrayData($"api/v1/move");
 		}
 
 		public static Move[] GetAll() => moveList;

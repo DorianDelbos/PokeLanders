@@ -1,3 +1,4 @@
+using GLTFast;
 using LandersLegends.Extern;
 using LandersLegends.Extern.API;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace LandersLegends.Gameplay
     {
         private Lander[] LanderData => GameManager.instance.Landers;
 
-        [SerializeField] private LanderMeshDisplayHandler landerDisplayHandler;
+        [SerializeField] private GltfAsset gltfAsset;
         [SerializeField] private PcHudHandler pcHudHandler;
 
         private void OnEnable()
@@ -25,17 +26,17 @@ namespace LandersLegends.Gameplay
 			ExternLanderManager.onLanderRemove -= ResetData;
         }
 
-        private void SetData(LanderDataNFC data)
+        private async void SetData(LanderDataNFC data)
         {
             LanderData[0] = new Lander(data, LanderRepository.GetById(data.id));
-            landerDisplayHandler.SetMesh(LanderData[0].BundleModel);
-            pcHudHandler.UpdatePc(LanderData[0], true);
+            await gltfAsset.Load(LanderData[0].ModelUrl);
+			pcHudHandler.UpdatePc(LanderData[0], true);
         }
 
         private void ResetData(LanderDataNFC data)
         {
             LanderData[0] = null;
-            landerDisplayHandler.SetMesh(null);
+			gltfAsset.ClearScenes();
 			pcHudHandler.UpdatePc(LanderData[0], false);
 		}
 

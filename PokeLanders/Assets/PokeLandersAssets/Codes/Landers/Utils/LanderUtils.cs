@@ -13,7 +13,7 @@ namespace LandersLegends.Gameplay
 
 		public static Lander RandomLander(byte level)
 		{
-			Extern.API.Lander[] allLanders = APIDataFetcher<Extern.API.Lander>.FetchArrayData("api/v1/lander");
+			Extern.API.Lander[] allLanders = DataFetcher<Extern.API.Lander>.FetchArrayData("api/v1/lander");
 			Extern.API.Lander landerModel = allLanders.OrderBy(x => Guid.NewGuid()).First();
 
 			Lander.Stats ivs = RandomStats(31);
@@ -43,7 +43,7 @@ namespace LandersLegends.Gameplay
 				UnityEngine.Random.value < 0.5f,
 				UnityEngine.Random.value < (1.0f / 8192.0f),
 				landerModel.types,
-				BundleUtils.DownloadAssets(landerModel.bundle)
+				$"localhost:5000/api/v1/model/{landerModel.name}.glb"
 			);
 		}
 

@@ -8,7 +8,7 @@ namespace LandersLegends.Extern.API
 
 		public static void Initialize()
 		{
-			landerList = APIDataFetcher<Lander>.FetchArrayData($"api/v1/lander");
+			landerList = DataFetcher<Lander>.FetchArrayData($"api/v1/lander");
 		}
 
 		public static Lander[] GetAll() => landerList;

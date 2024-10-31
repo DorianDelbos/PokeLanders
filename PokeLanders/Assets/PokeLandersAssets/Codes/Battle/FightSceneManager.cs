@@ -1,13 +1,14 @@
 using LandersLegends.Extern;
 using UnityEngine;
 using LandersLegends.Gameplay;
+using GLTFast;
 
 namespace LandersLegends.Battle
 {
 	public class FightSceneManager : MonoBehaviour
 	{
 		private string[] tagRegisters;
-        [SerializeField] private LanderMeshDisplayHandler[] landerDisplayHandler = new LanderMeshDisplayHandler[2];
+        [SerializeField] private GltfAsset[] gltfAssets = new GltfAsset[2];
 
         private Lander[] landerData => GameManager.instance.Landers;
 		private NfcErrorHudManager nfcErrorHud => NfcErrorHudManager.current;
@@ -34,12 +35,12 @@ namespace LandersLegends.Battle
 			ExternLanderManager.onLanderRemove -= OnNfcRemove;
 		}
 
-        private void Start()
+        private async void Start()
         {
             for (int i = 0; i < landerData.Length; ++i)
             {
-                landerDisplayHandler[i].SetMesh(landerData[i].BundleModel);
-            }
+				await gltfAssets[i].Load(landerData[i].ModelUrl);
+			}
         }
 
         private void DisplayNfcError(bool isError, string errorText)
