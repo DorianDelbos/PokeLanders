@@ -1,5 +1,6 @@
-using LandAPI.Data;
-using LandAPI.Services;
+using LandAPI.API.Data;
+using LandAPI.API.Services;
+using LandAPI.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,8 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // Add Swagger services
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddSwaggerGen();
+
+// Add Razor Service
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
 
 // Add services to the container.
 builder.Services.AddScoped<LanderRepository>();
@@ -34,15 +39,23 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-app.UseSwagger();
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "LandAPI V1");
-    c.RoutePrefix = string.Empty;
-});
+//app.UseSwagger();
+//app.UseSwaggerUI(c =>
+//{
+//    c.SwaggerEndpoint("/swagger/v1/swagger.json", "LandAPI V1");
+//    c.RoutePrefix = string.Empty;
+//});
 
-app.UseStaticFiles();
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    app.UseHsts();
+}
+
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseAntiforgery();
 app.UseAuthorization();
 app.MapControllers();
+app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
 app.Run();

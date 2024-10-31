@@ -1801,7 +1801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ca979a17940354295c4db4fcab7873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  landerDisplayHandler:
+  gltfAssets:
   - {fileID: 1715022167}
   - {fileID: 1175729711}
 --- !u!114 &906356325
@@ -2469,7 +2469,7 @@ PrefabInstance:
     - target: {fileID: 1363669698108568376, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
       propertyPath: landerMeshRenderer
       value: 
-      objectReference: {fileID: 1175729712}
+      objectReference: {fileID: 0}
     - target: {fileID: 3131744858095986496, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2523,20 +2523,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1175729711 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7575199475565322903, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8456041556218384343, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
   m_PrefabInstance: {fileID: 1175729709}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0af8c6fa6153e88468305500353b4bf0, type: 3}
+  m_Script: {fileID: 11500000, guid: b781fe673a5534e91b1e802df4b9362e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!23 &1175729712 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 6752557196356781898, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
-  m_PrefabInstance: {fileID: 1175729709}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1194358821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3138,7 +3133,7 @@ PrefabInstance:
     - target: {fileID: 1363669698108568376, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
       propertyPath: landerMeshRenderer
       value: 
-      objectReference: {fileID: 1715022168}
+      objectReference: {fileID: 0}
     - target: {fileID: 3131744858095986496, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3192,20 +3187,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1715022167 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7575199475565322903, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8456041556218384343, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
   m_PrefabInstance: {fileID: 1715022165}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0af8c6fa6153e88468305500353b4bf0, type: 3}
+  m_Script: {fileID: 11500000, guid: b781fe673a5534e91b1e802df4b9362e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!23 &1715022168 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 6752557196356781898, guid: 9dc999212bd65214aa074ac471eb4799, type: 3}
-  m_PrefabInstance: {fileID: 1715022165}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1737472184
 GameObject:
   m_ObjectHideFlags: 0

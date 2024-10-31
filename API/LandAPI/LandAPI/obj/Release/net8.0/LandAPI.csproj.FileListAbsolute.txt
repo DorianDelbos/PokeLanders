@@ -34,3 +34,6 @@ C:\Users\Etudiant1\Documents\Unity\PokeLanders\API\LandAPI\LandAPI\obj\Release\n
 C:\Users\Etudiant1\Documents\Unity\PokeLanders\API\LandAPI\LandAPI\obj\Release\net8.0\LandAPI.pdb
 C:\Users\Etudiant1\Documents\Unity\PokeLanders\API\LandAPI\LandAPI\obj\Release\net8.0\LandAPI.genruntimeconfig.cache
 C:\Users\Etudiant1\Documents\Unity\PokeLanders\API\LandAPI\LandAPI\obj\Release\net8.0\ref\LandAPI.dll
+C:\Users\Etudiant1\Documents\Unity\PokeLanders\API\LandAPI\LandAPI\obj\Release\net8.0\scopedcss\Web\Components\Layout\MainLayout.razor.rz.scp.css
+C:\Users\Etudiant1\Documents\Unity\PokeLanders\API\LandAPI\LandAPI\obj\Release\net8.0\scopedcss\Web\Components\Layout\NavMenu.razor.rz.scp.css
+C:\Users\Etudiant1\Documents\Unity\PokeLanders\API\LandAPI\LandAPI\obj\Release\net8.0\scopedcss\projectbundle\LandAPI.bundle.scp.css

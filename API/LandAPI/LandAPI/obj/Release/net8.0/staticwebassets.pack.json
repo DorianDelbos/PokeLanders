@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\LandAPI.bundle.scp.css"
+    },
+    {
       "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Bundles\\aquapix_assets_all_2e5d5a7e34f24cf914765cf2afdf77e1.bundle",
       "PackagePath": "staticwebassets\\Assets\\Bundles\\aquapix_assets_all_2e5d5a7e34f24cf914765cf2afdf77e1.bundle"
     },
@@ -43,6 +47,22 @@
     {
       "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
       "PackagePath": "staticwebassets\\Assets\\Models\\Aquapix.glb"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\app.css",
+      "PackagePath": "staticwebassets\\Web\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Web\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\Web\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\favicon.png",
+      "PackagePath": "staticwebassets\\Web\\favicon.png"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.LandAPI.Microsoft.AspNetCore.StaticWebAssets.props",
