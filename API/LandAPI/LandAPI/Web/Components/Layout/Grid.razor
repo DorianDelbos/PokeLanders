@@ -1,0 +1,26 @@
+﻿@typeparam TItem
+
+<div class="container">
+    <div class="row row-cols-@ColumnMax">
+        @if (Items?.Any() == true)
+        {
+            foreach (var item in Items)
+            {
+                <div class="col">
+                    @ItemTemplate!(item)
+                </div>
+            }
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public IEnumerable<TItem> Items { get; set; } = Enumerable.Empty<TItem>();
+
+    [Parameter]
+    public string ColumnMax { get; set; } = "auto";
+
+    [Parameter]
+    public RenderFragment<TItem>? ItemTemplate { get; set; }
+}

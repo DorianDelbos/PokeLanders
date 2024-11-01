@@ -29,6 +29,14 @@ namespace LandAPI.API.Controllers
             return Ok(Lander);
         }
 
+        [HttpGet("name/{name}")]
+        public ActionResult<Lander> GetLanderByName(string name)
+        {
+            var Lander = _landerService.GetLanderByName(name);
+            if (Lander == null) return NotFound();
+            return Ok(Lander);
+        }
+
         [HttpGet("type/{type}")]
         public ActionResult<IEnumerable<Lander>> GetLanderByType(string type)
         {

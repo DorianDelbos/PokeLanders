@@ -5,7 +5,7 @@ namespace LandAPI.API.Data
 {
     public class AilmentRepository
     {
-        private readonly string _filePath = "wwwroot/Assets/Data/ailements.json";
+        private readonly string _filePath = "wwwroot/Assets/Data/ailments.json";
         private List<Ailment> _ailment;
 
         public List<Ailment> Ailment => _ailment;

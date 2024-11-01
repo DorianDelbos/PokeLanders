@@ -1,7 +1,25 @@
-﻿@page "/Landopedia"
+﻿@using LandAPI.Web.Components.Layout
+@using LandAPI.API.Models
+@using System.Text.Json
+@page "/landopedia"
 
-<PageTitle>Home</PageTitle>
+@code {
+    private List<Lander> landers = new List<Lander>();
+    private readonly string _filePath = "wwwroot/Assets/Data/landers.json";
 
-<h1>Hello, world!</h1>
+    protected override void OnInitialized()
+    {
+        string jsonData = File.ReadAllText(_filePath);
+        landers = JsonSerializer.Deserialize<List<Lander>>(jsonData);
+    }
+}
 
-Welcome to your new app.
+<br/>
+<Grid Items="landers" ColumnMax="5">
+    <ItemTemplate Context="lander">
+        <Card GltfUrl="@lander.Model"
+              Number="@lander.ID"
+              Title="@lander.Name"
+              Types="@lander.Types" />
+    </ItemTemplate>
+</Grid>

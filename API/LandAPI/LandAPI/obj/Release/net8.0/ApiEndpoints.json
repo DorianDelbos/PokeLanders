@@ -155,6 +155,32 @@
   },
   {
     "ContainingType": "LandAPI.API.Controllers.LanderController",
+    "Method": "GetLanderByName",
+    "RelativePath": "api/v1/Lander/name/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "LandAPI.API.Models.Lander",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LandAPI.API.Controllers.LanderController",
     "Method": "GetLanderByType",
     "RelativePath": "api/v1/Lander/type/{type}",
     "HttpMethod": "GET",

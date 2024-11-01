@@ -1,0 +1,75 @@
+﻿@using LandAPI.Web.Components.Layout
+@using LandAPI.API.Models
+@using System.Text.Json
+@page "/landopedia/Lander/{Name}"
+@inject NavigationManager Navigation
+
+<div class="container">
+    <div id="LanderFirstPanel">
+        <glb-viewer class="bg-body-tertiary" style="border-radius:8px;" src="@ModelUrl" camera-x="0" camera-y="0.75" camera-z="2.5" offset-x="0" offset-y="0.75" offset-z="0" width="300px" height="300px" auto-rotate></glb-viewer>
+        <div>
+            <h1>@landerData.Name</h1>
+            <p class="card-text text-body-secondary text-start" style="margin-bottom: 8px;">N° @landerData.ID.ToString("D4")</p>
+            <p>@landerData.Description</p>
+            <ul class="lander-type-container">
+                @foreach (var type in landerData.Types)
+                {
+                    <li class="lander-type @type">@type</li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <div class="lander-stats">
+        <h2>Stats</h2>
+        <ul>
+            @foreach (var stat in landerData.Stats)
+            {
+                <li><strong>@stat.Stat:</strong> @stat.BaseStat</li>
+            }
+        </ul>
+    </div>
+
+    <div class="lander-info">
+        <h2>General Info</h2>
+        <p><strong>Base Experience:</strong> @landerData.BaseExperience</p>
+        <p><strong>Height:</strong> @landerData.BaseHeight</p>
+        <p><strong>Weight:</strong> @landerData.BaseWeight</p>
+    </div>
+
+    <div class="lander-types">
+        <h2>Types</h2>
+        <ul>
+            @foreach (var type in landerData.Types)
+            {
+                <li>@type</li>
+            }
+        </ul>
+    </div>
+
+    <div class="lander-moves">
+        <h2>Moves</h2>
+        <ul>
+            @foreach (var move in landerData.Moves)
+            {
+                <li>@move.Move (Level: @move.MoveLearnedDetails.LevelLearnedAt)</li>
+            }
+        </ul>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string? Name { get; set; }
+
+    private string ModelUrl => Navigation.BaseUri + $"api/v1/model/{Name}.glb";
+
+    private Lander landerData = null;
+    private string _filePath => $"wwwroot/Assets/Data/landers.json";
+
+    protected override void OnInitialized()
+    {
+        string jsonData = File.ReadAllText(_filePath);
+        landerData = JsonSerializer.Deserialize<List<Lander>>(jsonData).First(x => x.Name == Name);
+    }
+}
