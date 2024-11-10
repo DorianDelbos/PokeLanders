@@ -40,5 +40,7 @@ namespace LandAPI.API.Models
         public List<Moves> Moves { get; set; }
         [JsonPropertyName("model")]
         public string Model { get; set; }
+        [JsonPropertyName("sprite")]
+        public string Sprite { get; set; }
     }
 }

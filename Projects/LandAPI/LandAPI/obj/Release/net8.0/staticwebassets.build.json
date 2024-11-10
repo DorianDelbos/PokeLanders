@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OtTncY5nUQxL6KiOxXOVKjSFkckmqc+x3g0bJ0m6UwY=",
+  "Hash": "WYTt4h0UxZMgHU3dXv/s0P0H+MelDEpf+4EXH04ib80=",
   "Source": "LandAPI",
   "BasePath": "_content/LandAPI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "LandAPI\\wwwroot",
       "Source": "LandAPI",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\LandAPI.styles.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\LandAPI.styles.css",
       "SourceId": "LandAPI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "LandAPI.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\LandAPI.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\LandAPI.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css",
       "SourceId": "LandAPI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "LandAPI.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/ailments.json",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\ailments.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/evolutionChains.json",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\evolutionChains.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/landers.json",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\landers.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/moves.json",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\moves.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\nature.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\nature.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/nature.json",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\nature.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/stats.json",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\stats.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Data/types.json",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\types.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Models/Aquapix.glb",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Models\\Aquapix.glb"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Luminorine.glb",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Luminorine.glb",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Models/Luminorine.glb",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Models\\Luminorine.glb"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Ocealythe.glb",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Ocealythe.glb",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Assets/Models/Ocealythe.glb",
       "AssetKind": "All",
@@ -245,10 +245,67 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Models\\Ocealythe.glb"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\app.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Aquapix.png",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "BasePath": "_content/LandAPI",
+      "RelativePath": "Assets/Sprites/Aquapix.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Sprites\\Aquapix.png"
+    },
+    {
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Luminorine.png",
+      "SourceId": "LandAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "BasePath": "_content/LandAPI",
+      "RelativePath": "Assets/Sprites/Luminorine.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Sprites\\Luminorine.png"
+    },
+    {
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Ocealythe.png",
+      "SourceId": "LandAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "BasePath": "_content/LandAPI",
+      "RelativePath": "Assets/Sprites/Ocealythe.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Sprites\\Ocealythe.png"
+    },
+    {
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\app.css",
+      "SourceId": "LandAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/css/app.css",
       "AssetKind": "All",
@@ -264,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\favicon.png",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\favicon.png",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/favicon.png",
       "AssetKind": "All",
@@ -283,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\App.js",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\App.js",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/js/App.js",
       "AssetKind": "All",
@@ -302,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\js\\App.js"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\GLBViewer.js",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\GLBViewer.js",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/js/GLBViewer.js",
       "AssetKind": "All",
@@ -321,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\js\\GLBViewer.js"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\.package-lock.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\.package-lock.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/.package-lock.json",
       "AssetKind": "All",
@@ -340,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\.package-lock.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\@popperjs\\core\\package.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\@popperjs\\core\\package.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/@popperjs/core/package.json",
       "AssetKind": "All",
@@ -359,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\@popperjs\\core\\package.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -378,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -397,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -416,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -435,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -454,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -473,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -492,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -511,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -530,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -549,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -568,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -587,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -606,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -625,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -644,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -663,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\package.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\package.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/node_modules/bootstrap/package.json",
       "AssetKind": "All",
@@ -682,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\package.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\package.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/package.json",
       "AssetKind": "All",
@@ -701,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\Web\\package.json"
     },
     {
-      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\Web\\package-lock.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package-lock.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "RelativePath": "Web/package-lock.json",
       "AssetKind": "All",

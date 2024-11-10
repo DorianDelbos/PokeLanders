@@ -18,8 +18,8 @@ namespace LandAPI.API.Services
             => _typeRepository.Types.FirstOrDefault(p => p.ID == id);
 
 
-        public IEnumerable<Models.Type> GetTypeByName(string name)
-            => _typeRepository.Types.Where(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+        public Models.Type GetTypeByName(string name)
+            => _typeRepository.Types.First(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
 
     }
 }

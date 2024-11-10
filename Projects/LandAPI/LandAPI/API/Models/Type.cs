@@ -24,6 +24,8 @@ namespace LandAPI.API.Models
         public int ID { get; set; }
         [JsonPropertyName("name")]
         public string Name { get; set; }
+        [JsonPropertyName("color")]
+        public string Color { get; set; }
         [JsonPropertyName("damage_relations")]
         public DamageRelations DamageRelations { get; set; }
     }

@@ -9,47 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LandAPI
 build_property.RootNamespace = LandAPI
-build_property.ProjectDir = C:\Users\Dorian\Documents\GitHub\PokeLanders\API\LandAPI\LandAPI\
+build_property.ProjectDir = C:\Users\Dorian\Documents\GitHub\PokeLanders\Projects\LandAPI\LandAPI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Dorian\Documents\GitHub\PokeLanders\API\LandAPI\LandAPI
+build_property.MSBuildProjectDirectory = C:\Users\Dorian\Documents\GitHub\PokeLanders\Projects\LandAPI\LandAPI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/API/LandAPI/LandAPI/Web/Components/App.razor]
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcQXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/API/LandAPI/LandAPI/Web/Components/Layout/Card.razor]
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layout/Card.razor]
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0XENhcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/API/LandAPI/LandAPI/Web/Components/Layout/Grid.razor]
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layout/Grid.razor]
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0XEdyaWQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/API/LandAPI/LandAPI/Web/Components/Pages/Home.razor]
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcUGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/API/LandAPI/LandAPI/Web/Components/Pages/LanderPage.razor]
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Pages/LanderPage.razor]
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcUGFnZXNcTGFuZGVyUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/API/LandAPI/LandAPI/Web/Components/Routes.razor]
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcUm91dGVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/API/LandAPI/LandAPI/Web/Components/_Imports.razor]
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcX0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/API/LandAPI/LandAPI/Web/Components/Layout/MainLayout.razor]
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-gr3jvupim7
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/API/LandAPI/LandAPI/Web/Components/Layout/NavMenu.razor]
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rbc5hu0452

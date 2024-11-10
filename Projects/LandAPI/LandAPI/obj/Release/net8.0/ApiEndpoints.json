@@ -314,6 +314,22 @@
     ]
   },
   {
+    "ContainingType": "LandAPI.API.Controllers.SpriteController",
+    "Method": "GetModel",
+    "RelativePath": "api/v1/Sprite/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LandAPI.API.Controllers.StatController",
     "Method": "GetStats",
     "RelativePath": "api/v1/Stat",
@@ -447,7 +463,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[LandAPI.API.Models.Type, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "LandAPI.API.Models.Type",
         "MediaTypes": [
           "text/plain",
           "application/json",

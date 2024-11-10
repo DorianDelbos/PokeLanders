@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mISUHUgjKf8=",
+  "dgSpecHash": "kn/C1pV+f1Q=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\LandAPI.csproj",
+  "projectFilePath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dorian\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Dorian\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",

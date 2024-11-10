@@ -41,7 +41,8 @@
         }
       }
     ],
-    "model": "http://localhost:7041/api/v1/model/aquapix.glb"
+    "model": "http://localhost:7041/api/v1/model/aquapix.glb",
+    "sprite": "http://localhost:7041/api/v1/sprite/aquapix.png"
   },
   {
     "id": 2,
@@ -85,7 +86,8 @@
         }
       }
     ],
-    "model": "http://localhost:7041/api/v1/model/Luminorine.glb"
+    "model": "http://localhost:7041/api/v1/model/Luminorine.glb",
+    "sprite": "http://localhost:7041/api/v1/sprite/Luminorine.png"
   },
   {
     "id": 3,
@@ -129,6 +131,7 @@
         }
       }
     ],
-    "model": "http://localhost:7041/api/v1/model/Ocealythe.glb"
+    "model": "http://localhost:7041/api/v1/model/Ocealythe.glb",
+    "sprite": "http://localhost:7041/api/v1/sprite/Ocealythe.png"
   }
 ]

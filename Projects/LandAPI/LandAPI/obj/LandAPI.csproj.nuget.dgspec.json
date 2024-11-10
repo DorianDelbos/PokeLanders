@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\LandAPI.csproj": {}
+    "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\LandAPI.csproj": {
+    "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\LandAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj",
         "projectName": "LandAPI",
-        "projectPath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\LandAPI.csproj",
+        "projectPath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj",
         "packagesPath": "C:\\Users\\Dorian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\API\\LandAPI\\LandAPI\\obj\\",
+        "outputPath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dorian\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -30,7 +30,7 @@ namespace LandAPI.API.Controllers
         }
 
         [HttpGet("name/{name}")]
-        public ActionResult<IEnumerable<Models.Type>> GetStatByType(string name)
+        public ActionResult<Models.Type> GetStatByType(string name)
         {
             return Ok(_typeService.GetTypeByName(name));
         }
