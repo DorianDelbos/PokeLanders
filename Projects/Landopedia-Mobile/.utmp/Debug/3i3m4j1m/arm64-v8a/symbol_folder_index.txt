@@ -1,0 +1,1 @@
+C:\Users\Dorian\Documents\GitHub\PokeLanders\Projects\Landopedia-Mobile\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\Debug\3i3m4j1m\obj\arm64-v8a

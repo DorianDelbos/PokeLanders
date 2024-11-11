@@ -1,6 +1,6 @@
 using System;
 
-namespace Dgames
+namespace Lander
 {
     public static class IntUtilities
     {

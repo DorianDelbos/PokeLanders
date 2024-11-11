@@ -1,0 +1,12 @@
+# ninja log v5
+97	855	7530232812311525	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	30ae316c4f913099
+857	1792	7530232819319871	C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/Landopedia-Mobile/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3i3m4j1m/obj/arm64-v8a/libswappywrapper.so	58ed57bd2687f3f9
+1	1972	7530232824228199	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	56f8fe7691cab622
+79	2022	7530232824569684	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e3cf5ece259f36d
+15	2063	7530232825299589	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	78214063a5117f5b
+55	2175	7530232826563656	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	e6405980102f5469
+6	2195	7530232826730976	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	6ead14736a8a4a95
+34	2218	7530232826943060	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	96d236f0232b6070
+26	2220	7530232826973197	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	590bffcc7f95e1d6
+9	2344	7530232828214594	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	cbce76cdc0235377
+2344	2484	7530232829590961	C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/Landopedia-Mobile/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3i3m4j1m/obj/arm64-v8a/libgame.so	313c4b72f5b0f74

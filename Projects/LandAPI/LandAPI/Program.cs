@@ -33,24 +33,7 @@ builder.Services.AddScoped<NatureService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-}
-
-//app.UseSwagger();
-//app.UseSwaggerUI(c =>
-//{
-//    c.SwaggerEndpoint("/swagger/v1/swagger.json", "LandAPI V1");
-//    c.RoutePrefix = string.Empty;
-//});
-
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    app.UseHsts();
-}
+app.MapGet("/", () => Results.Redirect("/landopedia"));
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
