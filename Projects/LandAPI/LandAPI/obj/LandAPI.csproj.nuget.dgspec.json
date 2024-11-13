@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj": {}
+    "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj": {
+    "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj",
         "projectName": "LandAPI",
-        "projectPath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj",
-        "packagesPath": "C:\\Users\\Dorian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\",
+        "projectPath": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\LandAPI.csproj",
+        "packagesPath": "C:\\Users\\Etudiant1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dorian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Etudiant1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

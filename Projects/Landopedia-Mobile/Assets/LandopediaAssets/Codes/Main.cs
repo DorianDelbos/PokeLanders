@@ -15,12 +15,12 @@ public class Main : MonoBehaviour
 	{
 		if (!background) 
 		{
-			if (GUI.Button (new Rect (0, Screen.height - 50, Screen.width, 50), "Scan NFC")) 
+			if (GUI.Button (new Rect (0, Screen.height - 50, Screen.width, 50), "Scan NFC", new GUIStyle { fontSize = 32 })) 
 			{
 				AndroidNFCReader.ScanNFC (gameObject.name, "OnFinishScan");
 			}
 
-			if (GUI.Button (new Rect (0, Screen.height - 100, Screen.width, 50), "Enable Backgraound Mode")) 
+			if (GUI.Button (new Rect (0, Screen.height - 100, Screen.width, 50), "Enable Backgraound Mode", new GUIStyle { fontSize = 32 })) 
 			{
 				AndroidNFCReader.enableBackgroundScan ();
 				background = true;
@@ -34,7 +34,7 @@ public class Main : MonoBehaviour
 				background = false;
 			}
 		}
-		GUI.Label (new Rect (0, 0, Screen.width, 50), "Result: " + qrString);
+		GUI.Label (new Rect (0, 0, Screen.width, 50), $"Result: {qrString}\r\nBackground:{background}", new GUIStyle { fontSize = 32 });
 	}
 
 	void OnFinishScan (string result)
@@ -42,15 +42,15 @@ public class Main : MonoBehaviour
 
 		if (result == AndroidNFCReader.CANCELLED) 
 		{
-
+			qrString = "CANCELLED";
 		} 
-		else if (result == AndroidNFCReader.ERROR) 
+		else if (result == AndroidNFCReader.ERROR)
 		{
-
+			qrString = "ERROR";
 		} 
-		else if (result == AndroidNFCReader.NO_HARDWARE) 
+		else if (result == AndroidNFCReader.NO_HARDWARE)
 		{
-
+			qrString = "NO HARDWARE";
 		}
 		else
         {
