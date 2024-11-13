@@ -37,7 +37,7 @@ namespace Landopedia
             landers = await DataFetcher<Lander.Module.API.Lander>.FetchArrayDataAsync("api/v1/lander", OnSuccess, ExeptionError);
 
             //List<int> landerIds = SaveSystem.LoadIDs();
-            List<int> landerIds = new List<int>() { 1, 3 };
+            List<int> landerIds = new List<int>() { 1 };
 
             foreach (Lander.Module.API.Lander lander in landers)
             {
