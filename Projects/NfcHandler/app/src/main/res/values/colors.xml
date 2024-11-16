@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color> <!-- Violet -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Violet foncé -->
+    <color name="colorAccent">#03DAC5</color> <!-- Cyan -->
+    <color name="backgroundColor">#FFFFFF</color> <!-- Blanc -->
+    <color name="textColorPrimary">#000000</color> <!-- Noir -->
+    <color name="textColorSecondary">#808080</color> <!-- Gris -->
+</resources>

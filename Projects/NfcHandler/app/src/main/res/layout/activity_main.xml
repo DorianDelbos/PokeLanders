@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tag_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place an NFC tag nearby"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/enable_nfc_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activate NFC"
+        android:layout_below="@id/tag_info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>
