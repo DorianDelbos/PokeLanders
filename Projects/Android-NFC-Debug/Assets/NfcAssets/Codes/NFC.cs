@@ -4,59 +4,93 @@ public class NFC : MonoBehaviour
 {
     private Console console => Console.current;
 
-    private AndroidJavaObject mActivity;
-    private AndroidJavaObject mIntent;
-    private string sAction;
+    AndroidJavaObject mActivity;
+    AndroidJavaObject nfcReader;
 
-    private void Update() 
-	{
-		if (Application.platform == RuntimePlatform.Android) 
-		{
-			try 
-			{
-                mActivity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
-                mIntent = mActivity.Call<AndroidJavaObject>("getIntent");
-                sAction = mIntent.Call<System.String>("getAction");
+    private void OnEnable()
+    {
+#if PLATFORM_ANDROID
+        nfcReader.Call("onResume");
+#endif
+    }
 
-				switch (sAction)
-				{
-					case "android.nfc.action.NDEF_DISCOVERED":
-                        console.AppendText("Tag of type NDEF", "yellow");
-                        break;
-                    case "android.nfc.action.TECH_DISCOVERED":
-                        console.AppendText("This type of tag is not supported !", "yellow");
-                        break;
-					case "android.nfc.action.TAG_DISCOVERED":
-                        ProcessNFC();
-                        break;
-                    default:
-                        console.AppendText(sAction, "yellow");
-						break;
-                };
-			}
-			catch (System.Exception ex) 
-			{
-                console.AppendText(ex.Message, "red");
-			}
-		}
-	}
+    private void OnDisable()
+    {
+#if PLATFORM_ANDROID
+        nfcReader.Call("onPause");
+#endif
+    }
 
-	private void ProcessNFC()
-	{
-		try
-		{
-			console.AppendText("TAG DISCOVERED", "green");
+    void Start()
+    {
+#if PLATFORM_ANDROID
+        try
+        {
+            mActivity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
 
-			// Get the NFC Tag from the intent
-			AndroidJavaObject mTag = mIntent.Call<AndroidJavaObject>("getParcelableExtra", "android.nfc.extra.TAG");
-			AndroidJavaClass ndef = new AndroidJavaClass("android.nfc.tech.Ndef");
-			AndroidJavaObject mNdef = ndef.CallStatic<AndroidJavaObject>("get", mTag);
+            using (nfcReader = new AndroidJavaObject("com.dgames.nfchandlerlib.NfcHandler"))
+            {
+                nfcReader.Call("setContext", mActivity);
+                nfcReader.Call("onResume");
+            }
 
-			mNdef.Call("connect");
-		}
-		catch (System.Exception e)
-		{
-			console.AppendText($"Process Error : {e.Message}\r\n{e.StackTrace}", "red");
-		}
-	}
+            console.AppendText($"NFC reader initialized successfully.", "green");
+        }
+        catch (System.Exception e)
+        {
+            console.AppendText(e.StackTrace, "red");
+        }
+#endif
+    }
+
+    private void Update()
+    {
+#if PLATFORM_ANDROID
+        //try
+        //{
+        //    AndroidJavaObject intent = mActivity.Call<AndroidJavaObject>("getIntent");
+        //    string tag = intent.Call<string>("getAction");
+        //    AndroidJavaObject mNdefMessage = intent.Call<AndroidJavaObject>("getParcelableExtra", "android.nfc.extra.TAG");
+
+        //    if (mNdefMessage != null)
+        //    {
+        //        byte[] payLoad = mNdefMessage.Call<byte[]>("getId");
+        //        console.AppendText($"This is your tag text: {bytesToHex(payLoad)}");
+        //    }
+        //    else
+        //    {
+        //        console.AppendText("No ID found !");
+        //    }
+        //}
+        //catch (System.Exception e)
+        //{
+        //    console.AppendText(e.StackTrace, "red");
+        //}
+
+        try
+        {
+            AndroidJavaObject intent = mActivity.Call<AndroidJavaObject>("getIntent");
+            nfcReader.Call("handleNewIntent", intent);
+
+            byte[] tagBytes = nfcReader.Call<byte[]>("fetchTag");
+
+            if (tagBytes != null)
+                console.AppendText($"tag detect : {bytesToHex(tagBytes)}");
+        }
+        catch (System.Exception e)
+        {
+            console.AppendText(e.StackTrace, "red");
+        }
+#endif
+    }
+
+    private string bytesToHex(byte[] bytes)
+    {
+        string hexString = "";
+
+        foreach (byte b in bytes)
+            hexString += b.ToString("X2");
+
+        return hexString;
+    }
 }

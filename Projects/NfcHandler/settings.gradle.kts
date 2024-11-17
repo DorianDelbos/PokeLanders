@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "NfcHandler"
 include(":app")
+include(":NfcHandlerLib")

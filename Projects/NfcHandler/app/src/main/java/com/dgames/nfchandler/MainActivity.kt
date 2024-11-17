@@ -1,5 +1,6 @@
 package com.dgames.nfchandler
 
+import android.app.Activity
 import android.os.Build
 import android.app.PendingIntent
 import android.content.Intent
@@ -9,9 +10,8 @@ import android.nfc.Tag
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Activity() {
 
     private var nfcAdapter: NfcAdapter? = null
     private lateinit var tagInfoTextView: TextView
