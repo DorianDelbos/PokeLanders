@@ -2,82 +2,110 @@ using Lander.Module.Utilities;
 using Lander.Module.API;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Linq;
 
 namespace Landopedia
 {
-    public class GameManager : MonoBehaviour
-    {
-        private static GameManager instance;
-        public static GameManager Instance => instance;
+	public class GameManager : MonoBehaviour
+	{
+		private static GameManager instance;
+		public static GameManager Instance => instance;
 
-        [SerializeField] private Transform landerCaseContent;
-        [SerializeField] private LanderCase landerCase;
-        private Lander.Module.API.Lander[] landers;
+		[SerializeField] private Transform landerCaseContent;
+		[SerializeField] private LanderCase landerCase;
+		private Lander.Module.API.Lander[] landers;
 
-        public Lander.Module.API.Lander[] Landers => landers;
+		public Lander.Module.API.Lander[] Landers => landers;
 
-        private void Awake()
-        {
-            if (instance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
+		private void Awake()
+		{
+			if (instance != null)
+			{
+				Destroy(gameObject);
+				return;
+			}
 
-            instance = this;
-        }
+			instance = this;
+		}
 
-        private void Start()
-        {
-            LoadGame();
-        }
+		private void Start()
+		{
+			LoadGame();
+			NFC.onBlocksRead += blocks =>
+			{
+				short ID = (short)(
+					(blocks[1][0] << 8) |
+					(blocks[1][1])
+				);
 
-        private async void LoadGame()
-        {
-            landers = await DataFetcher<Lander.Module.API.Lander>.FetchArrayDataAsync("api/v1/lander", OnSuccess, ExeptionError);
+				SaveSystem.AddID(ID);
+				UpdateLanderDisplay(SaveSystem.LoadIDs());
 
-            //List<int> landerIds = SaveSystem.LoadIDs();
-            List<int> landerIds = new List<int>() { 1 };
+				LanderMenuManager.current.SetLander(landers.FirstOrDefault(x => x.id == ID));
+				MenuManager.current.MenuHandler.ChangeMenu("Lander");
+			};
+		}
 
-            foreach (Lander.Module.API.Lander lander in landers)
-            {
-                LanderCase landerCaseInstance = Instantiate(landerCase, landerCaseContent);
+		public void ResetData()
+		{
+			SaveSystem.Clear();
+			UpdateLanderDisplay(SaveSystem.LoadIDs());
+		}
 
-                landerCaseInstance.Initialize(lander.id, await WebSpriteUtilities.LoadSpriteFromUrlAsync(lander.sprite));
-                landerCaseInstance.SetHasLander(landerIds.Contains(lander.id));
-            }
-        }
+		private async void LoadGame()
+		{
+			landers = await DataFetcher<Lander.Module.API.Lander>.FetchArrayDataAsync("api/v1/lander", OnSuccess, ExeptionError);
+			UpdateLanderDisplay(SaveSystem.LoadIDs());
+		}
 
-        private void OnSuccess(Lander.Module.API.Lander[] landers)
-        {
-            MenuManager.current.MenuHandler.ChangeMenu("main");
-        }
+		private void UpdateLanderDisplay(List<int> landerIds)
+		{
+			// Clear
+			foreach (Transform child in landerCaseContent)
+			{
+				Destroy(child.gameObject);
+			}
 
-        private void ExeptionError()
-        {
-            DataPanelStruct dataPanelStruct = new DataPanelStruct()
-            {
-                text = (Resources.Load("ErrorMessageHandler") as ErrorMessageHandler).webServiceError,
-                buttons = new List<DataPanelStruct.Button>
-                {
-                    new DataPanelStruct.Button
-                    {
-                        text = "Retry",
-                        action = () =>
-                        {
-                            DataPanelSystem.Instance.ClearDataPanel();
-                            LoadGame();
-                        }
-                    },
-                    new DataPanelStruct.Button
-                    {
-                        text = "Quit application",
-                        action = () => MenuManager.current.QuitApplication()
-                    },
-                }
-            };
+			// Set
+			foreach (Lander.Module.API.Lander lander in landers)
+			{
+				LanderCase landerCaseInstance = Instantiate(landerCase, landerCaseContent);
 
-            DataPanelSystem.Instance.CreateDataPanel(dataPanelStruct);
-        }
-    }
+				landerCaseInstance.Initialize(lander.id, lander.sprite);
+				landerCaseInstance.SetHasLander(landerIds.Contains(lander.id));
+			}
+		}
+
+		private void OnSuccess(Lander.Module.API.Lander[] landers)
+		{
+			MenuManager.current.MenuHandler.ChangeMenu("main");
+		}
+
+		private void ExeptionError()
+		{
+			DataPanelSystem.Instance.CreateDataPanel(new DataPanelStruct()
+			{
+				text = DataPanelSystem.ErrorMessageHandler.webServiceError,
+				buttons = new List<DataPanelStruct.Button>
+					{
+						new DataPanelStruct.Button
+						{
+							text = "Retry",
+							action = () =>
+							{
+								DataPanelSystem.Instance.ClearDataPanel();
+								LoadGame();
+							}
+						},
+						new DataPanelStruct.Button
+						{
+							text = "Quit application",
+							action = () => MenuManager.current.QuitApplication()
+						},
+					}
+			}
+			);
+		}
+	}
 }

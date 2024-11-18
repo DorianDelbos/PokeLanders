@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Landopedia
@@ -7,6 +6,8 @@ namespace Landopedia
     {
         private static DataPanelSystem instance;
         public static DataPanelSystem Instance => instance;
+
+        public static DataMessageHandler ErrorMessageHandler => (Resources.Load("ErrorMessageHandler") as DataMessageHandler);
 
         [SerializeField] private Transform dataPanelTransform;
         [SerializeField] private DataPanel dataPanelPrefab;
@@ -25,14 +26,12 @@ namespace Landopedia
         public void ClearDataPanel()
         {
             foreach (Transform dataPanel in dataPanelTransform)
-            {
                 Destroy(dataPanel.gameObject);
-            }
-        }
+		}
 
         public DataPanel CreateDataPanel(DataPanelStruct dataPanelStruct)
-        {
-            DataPanel dataPanel = Instantiate(dataPanelPrefab, dataPanelTransform);
+		{
+			DataPanel dataPanel = Instantiate(dataPanelPrefab, dataPanelTransform);
             dataPanel.SetDataPanel(dataPanelStruct);
             return dataPanel;
         }

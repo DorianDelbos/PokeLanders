@@ -1,14 +1,13 @@
 using Lander.Module.API;
-using Lander.Module;
+using Lander.Module.Utilities;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
-using System.Collections.Generic;
 
 namespace Landopedia
 {
-    public class LanderCase : MonoBehaviour
+	public class LanderCase : MonoBehaviour
     {
         [SerializeField] private TMP_Text landerIDTextMesh;
         [SerializeField] private Image landerImage;
@@ -17,11 +16,11 @@ namespace Landopedia
 
         public bool HasLander => hasLander;
 
-        public void Initialize(int id, Sprite sprite)
+        public async void Initialize(int id, string spriteUrl)
         {
             landerID = id;
             landerIDTextMesh.text = landerID.ToString("D3");
-            landerImage.sprite = sprite;
+            landerImage.sprite = await WebSpriteUtilities.LoadSpriteFromUrlAsync(spriteUrl);
         }
 
         public void SetHasLander(bool hasLander)
@@ -53,29 +52,28 @@ namespace Landopedia
 
         private void ExeptionError()
         {
-            DataPanelStruct dataPanelStruct = new DataPanelStruct()
-            {
-                text = (Resources.Load("ErrorMessageHandler") as ErrorMessageHandler).webServiceError,
-                buttons = new List<DataPanelStruct.Button>
-            {
-                new DataPanelStruct.Button
-                {
-                    text = "Retry",
-                    action = () =>
-                    {
-                        DataPanelSystem.Instance.ClearDataPanel();
-                        TryLoadLander();
-                    }
-                },
-                new DataPanelStruct.Button
-                {
-                    text = "Quit application",
-                    action = () => MenuManager.current.QuitApplication()
-                },
-            }
-            };
-
-            DataPanelSystem.Instance.CreateDataPanel(dataPanelStruct);
+            DataPanelSystem.Instance.CreateDataPanel(new DataPanelStruct()
+			    {
+				    text = (Resources.Load("ErrorMessageHandler") as DataMessageHandler).webServiceError,
+				    buttons = new List<DataPanelStruct.Button>
+				    {
+					    new DataPanelStruct.Button
+					    {
+						    text = "Retry",
+						    action = () =>
+						    {
+							    DataPanelSystem.Instance.ClearDataPanel();
+							    TryLoadLander();
+						    }
+					    },
+					    new DataPanelStruct.Button
+					    {
+						    text = "Quit application",
+						    action = () => MenuManager.current.QuitApplication()
+					    },
+				    }
+			    }
+            );
         }
     }
 }
