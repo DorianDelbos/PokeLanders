@@ -1,96 +1,139 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Linq;
+using UnityEngine;
 
 public class NFC : MonoBehaviour
 {
     private Console console => Console.current;
+	private Coroutine routine = null;
 
-    AndroidJavaObject mActivity;
-    AndroidJavaObject nfcReader;
-
-    private void OnEnable()
+    public void TryReadTag()
     {
+		if (routine == null)
+			routine = StartCoroutine(ReadTagCoroutine());
+	}
+
+	private IEnumerator ReadTagCoroutine()
+	{
 #if PLATFORM_ANDROID
-        nfcReader.Call("onResume");
+		InitializeNfcReader();
+
+		bool isRead = false;
+
+		while (!isRead)
+		{
+			console.AppendText("Place a NFC tag ...");
+
+			try
+			{
+				AndroidJavaObject tag = GetNfcTag();
+				if (tag != null)
+				{
+					string[] techList = GetTechList(tag);
+
+					if (techList.Contains("android.nfc.tech.MifareClassic"))
+					{
+						HandleMifareClassicTag(tag, 1, 0);
+						HandleMifareClassicTag(tag, 2, 0);
+						HandleMifareClassicTag(tag, 4, 1);
+
+						isRead = true;
+					}
+					else
+					{
+						console.AppendText("Tag is not MifareClassic.");
+					}
+
+					PauseNfcReader();
+					ClearNfcIntent();
+				}
+			}
+			catch (System.Exception e)
+			{
+				console.AppendText(e.StackTrace, "red");
+
+				PauseNfcReader();
+				ClearNfcIntent();
+
+				break;
+			}
+
+			yield return new WaitForSeconds(1.0f);
+		}
+
+		routine = null;
 #endif
-    }
+	}
 
-    private void OnDisable()
-    {
-#if PLATFORM_ANDROID
-        nfcReader.Call("onPause");
-#endif
-    }
+	private void InitializeNfcReader()
+	{
+		AndroidJavaObject mActivity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+		AndroidJavaObject nfcReader = new AndroidJavaObject("com.dgames.nfchandlerlib.NfcHandler");
+		nfcReader.Call("setContext", mActivity);
+		nfcReader.Call("onResume");
+	}
 
-    void Start()
-    {
-#if PLATFORM_ANDROID
-        try
-        {
-            mActivity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+	private AndroidJavaObject GetNfcTag()
+	{
+		AndroidJavaObject mActivity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+		AndroidJavaObject intent = mActivity.Call<AndroidJavaObject>("getIntent");
+		return intent.Call<AndroidJavaObject>("getParcelableExtra", "android.nfc.extra.TAG");
+	}
 
-            using (nfcReader = new AndroidJavaObject("com.dgames.nfchandlerlib.NfcHandler"))
-            {
-                nfcReader.Call("setContext", mActivity);
-                nfcReader.Call("onResume");
-            }
+	private string[] GetTechList(AndroidJavaObject tag)
+	{
+		return tag.Call<string[]>("getTechList");
+	}
 
-            console.AppendText($"NFC reader initialized successfully.", "green");
-        }
-        catch (System.Exception e)
-        {
-            console.AppendText(e.StackTrace, "red");
-        }
-#endif
-    }
+	private byte[] HandleMifareClassicTag(AndroidJavaObject tag, int blockToRead, int sector)
+	{
+		AndroidJavaClass mifareClassicClass = new AndroidJavaClass("android.nfc.tech.MifareClassic");
+		AndroidJavaObject mifareClassic = mifareClassicClass.CallStatic<AndroidJavaObject>("get", tag);
 
-    private void Update()
-    {
-#if PLATFORM_ANDROID
-        //try
-        //{
-        //    AndroidJavaObject intent = mActivity.Call<AndroidJavaObject>("getIntent");
-        //    string tag = intent.Call<string>("getAction");
-        //    AndroidJavaObject mNdefMessage = intent.Call<AndroidJavaObject>("getParcelableExtra", "android.nfc.extra.TAG");
+		mifareClassic.Call("connect");
 
-        //    if (mNdefMessage != null)
-        //    {
-        //        byte[] payLoad = mNdefMessage.Call<byte[]>("getId");
-        //        console.AppendText($"This is your tag text: {bytesToHex(payLoad)}");
-        //    }
-        //    else
-        //    {
-        //        console.AppendText("No ID found !");
-        //    }
-        //}
-        //catch (System.Exception e)
-        //{
-        //    console.AppendText(e.StackTrace, "red");
-        //}
+		byte[] defaultKey = new byte[] { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
+		bool auth = mifareClassic.Call<bool>("authenticateSectorWithKeyA", sector, defaultKey);
 
-        try
-        {
-            AndroidJavaObject intent = mActivity.Call<AndroidJavaObject>("getIntent");
-            nfcReader.Call("handleNewIntent", intent);
+		if (auth)
+		{
+			byte[] blockData = mifareClassic.Call<byte[]>("readBlock", blockToRead);
+			console.AppendText($"Block {blockToRead} data: {blockData.BytesToHex()}");
 
-            byte[] tagBytes = nfcReader.Call<byte[]>("fetchTag");
+			mifareClassic.Call("close");
+			return blockData;
+		}
+		else
+		{
+			console.AppendText("Authentication failed!", "yellow");
+		}
 
-            if (tagBytes != null)
-                console.AppendText($"tag detect : {bytesToHex(tagBytes)}");
-        }
-        catch (System.Exception e)
-        {
-            console.AppendText(e.StackTrace, "red");
-        }
-#endif
-    }
+		mifareClassic.Call("close");
+		return null;
+	}
 
-    private string bytesToHex(byte[] bytes)
-    {
-        string hexString = "";
+	private void PauseNfcReader()
+	{
+		AndroidJavaObject nfcReader = new AndroidJavaObject("com.dgames.nfchandlerlib.NfcHandler");
+		nfcReader.Call("onPause");
+	}
 
-        foreach (byte b in bytes)
-            hexString += b.ToString("X2");
+	private void ClearNfcIntent()
+	{
+		AndroidJavaObject mActivity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+		mActivity.Call("setIntent", new AndroidJavaObject("android.content.Intent"));
+	}
+}
 
-        return hexString;
-    }
+static class BytesUtilities
+{
+	public static string BytesToHex(this byte[] bytes)
+	{
+		string hexString = "";
+
+		foreach (byte b in bytes)
+			hexString += b.ToString("X2");
+
+		return hexString;
+	}
 }

@@ -16,7 +16,6 @@ public class NfcHandler
 {
     private Context context = null;
     private NfcAdapter mNfcAdapter = null;
-    private final Queue<byte[]> tagsReceive = new LinkedList<>();
 
     public NfcHandler() { }
 
@@ -43,33 +42,5 @@ public class NfcHandler
     {
         if (mNfcAdapter != null)
             mNfcAdapter.disableForegroundDispatch((Activity) context);
-    }
-
-    public void handleNewIntent(Intent intent)
-    {
-        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction()))
-        {
-            Tag tag = null;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
-                tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG, Tag.class);
-            else
-                tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-
-            if (tag != null)
-                tagsReceive.add(tag.getId());
-        }
-    }
-
-    public byte[] fetchTag()
-    {
-        if (!tagsReceive.isEmpty())
-        {
-            byte[] result = tagsReceive.poll();
-
-            if (result != null)
-                return result;
-        }
-
-        return null;
     }
 }
