@@ -19,7 +19,7 @@ public class NFC : MonoBehaviour
 
 	private IEnumerator ReadTagCoroutine()
 	{
-#if PLATFORM_ANDROID && !UNITY_EDITOR
+#if PLATFORM_ANDROID
 		InitializeNfcReader();
 
 		bool isRead = false;
@@ -116,7 +116,7 @@ public class NFC : MonoBehaviour
 		yield return null;
 	}
 
-#if PLATFORM_ANDROID && !UNITY_EDITOR
+#if PLATFORM_ANDROID
 	private void InitializeNfcReader()
 	{
 		AndroidJavaObject mActivity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
