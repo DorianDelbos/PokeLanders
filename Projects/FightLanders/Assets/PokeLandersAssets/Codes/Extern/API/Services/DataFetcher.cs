@@ -8,7 +8,11 @@ namespace LandersLegends.Extern
 	public static class DataFetcher<T> where T : IBaseModel
 	{
 		private static readonly HttpClient client = new HttpClient();
+#if UNITY_EDITOR
 		private static readonly string apiUrl = "http://localhost:5000";
+#else
+		private static readonly string apiUrl = "https://landopedia-gwhtbqbqdhd4d5hw.westeurope-01.azurewebsites.net";
+#endif
 
 		public static async Task<T[]> FetchArrayDataAsync(string req)
 		{

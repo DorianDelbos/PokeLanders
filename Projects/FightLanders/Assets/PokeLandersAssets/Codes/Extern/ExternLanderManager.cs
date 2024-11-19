@@ -185,14 +185,14 @@ namespace LandersLegends.Extern
 		}
 		#endregion
 
-#if UNITY_EDITOR
 		#region DEBUG
 		public void ProccessLanderDebug(string data)
 		{
-			if (nfcManagerLander.ProcessData(data, out LanderDataNFC processData))
+			if (data == null)
+				nfcDataQueue.Enqueue(null);
+			else if (nfcManagerLander.ProcessData(data, out LanderDataNFC processData))
                 nfcDataQueue.Enqueue(processData);
         }
 		#endregion
-#endif
 	}
 }
