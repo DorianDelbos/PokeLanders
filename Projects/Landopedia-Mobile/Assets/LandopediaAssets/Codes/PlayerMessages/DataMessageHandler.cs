@@ -9,5 +9,6 @@ namespace Landopedia
         [TextArea(3, int.MaxValue)] public string waitTagNfc = "Place your lander behind the device ...";
         [TextArea(3, int.MaxValue)] public string mifareTagError = "Tag is not MifareClassic.";
         [TextArea(3, int.MaxValue)] public string mifareTagAuthenticationError = "Authentication failed to MifareClasic !";
-	}
+        [TextArea(3, int.MaxValue)] public string resetTextAlert = "Warning: This action will permanently reset all your landers. Are you sure you want to continue ?";
+    }
 }

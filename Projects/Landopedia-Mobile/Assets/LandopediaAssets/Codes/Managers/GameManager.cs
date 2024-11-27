@@ -48,14 +48,69 @@ namespace Landopedia
 		}
 
 		public void ResetData()
-		{
-			SaveSystem.Clear();
-			UpdateLanderDisplay(SaveSystem.LoadIDs());
+        {
+            DataPanelSystem.Instance.CreateDataPanel(new DataPanelStruct()
+            {
+                text = DataPanelSystem.ErrorMessageHandler.resetTextAlert,
+                buttons = new List<DataPanelStruct.Button>
+                    {
+                        new DataPanelStruct.Button
+                        {
+                            text = "No",
+                            action = () =>
+                            {
+                                DataPanelSystem.Instance.ClearDataPanel();
+                            }
+                        },
+                        new DataPanelStruct.Button
+                        {
+                            text = "Yes",
+                            action = () =>
+                            {
+                                DataPanelSystem.Instance.ClearDataPanel();
+                                SaveSystem.Clear();
+								UpdateLanderDisplay(SaveSystem.LoadIDs());
+                            }
+                        },
+                    }
+				}
+            );
 		}
 
 		private async void LoadGame()
 		{
-			landers = await DataFetcher<Lander.Module.API.Lander>.FetchArrayDataAsync("api/v1/lander", OnSuccess, ExeptionError);
+			landers = await DataFetcher<Lander.Module.API.Lander>.FetchArrayDataAsync(
+				"api/v1/lander", 
+				lander =>
+				{
+                    MenuManager.current.MenuHandler.ChangeMenu("main");
+                }, 
+				() =>
+                {
+                    DataPanelSystem.Instance.CreateDataPanel(new DataPanelStruct()
+						{
+							text = DataPanelSystem.ErrorMessageHandler.webServiceError,
+							buttons = new List<DataPanelStruct.Button>
+							{
+								new DataPanelStruct.Button
+								{
+									text = "Retry",
+									action = () =>
+									{
+										DataPanelSystem.Instance.ClearDataPanel();
+										LoadGame();
+									}
+								},
+								new DataPanelStruct.Button
+								{
+									text = "Quit application",
+									action = () => MenuManager.current.QuitApplication()
+								},
+							}
+						}
+                    );
+                }
+			);
 			UpdateLanderDisplay(SaveSystem.LoadIDs());
 		}
 
@@ -75,37 +130,6 @@ namespace Landopedia
 				landerCaseInstance.Initialize(lander.id, lander.sprite);
 				landerCaseInstance.SetHasLander(landerIds.Contains(lander.id));
 			}
-		}
-
-		private void OnSuccess(Lander.Module.API.Lander[] landers)
-		{
-			MenuManager.current.MenuHandler.ChangeMenu("main");
-		}
-
-		private void ExeptionError()
-		{
-			DataPanelSystem.Instance.CreateDataPanel(new DataPanelStruct()
-			{
-				text = DataPanelSystem.ErrorMessageHandler.webServiceError,
-				buttons = new List<DataPanelStruct.Button>
-					{
-						new DataPanelStruct.Button
-						{
-							text = "Retry",
-							action = () =>
-							{
-								DataPanelSystem.Instance.ClearDataPanel();
-								LoadGame();
-							}
-						},
-						new DataPanelStruct.Button
-						{
-							text = "Quit application",
-							action = () => MenuManager.current.QuitApplication()
-						},
-					}
-			}
-			);
 		}
 	}
 }
