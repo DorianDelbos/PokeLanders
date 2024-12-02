@@ -2,11 +2,12 @@ using System.Text;
 using System;
 using Unity.VisualScripting.Antlr3.Runtime;
 using LandersLegends.Extern.API;
+using UnityEngine.InputSystem.Controls;
 
 namespace LandersLegends.Gameplay
 {
     [System.Serializable]
-    public class LanderDataNFC
+	public class LanderDataNFC : IEquatable<LanderDataNFC>
     {
         // Block 1
         public string tag = string.Empty;      // Bytes 0-3 (4 octets)
@@ -121,7 +122,18 @@ namespace LandersLegends.Gameplay
             evSpeed = statsData.evs.speed;
         }
 
-        public byte[] ToBytes()
+		public bool Equals(LanderDataNFC other)
+		{
+			if (other == null)
+				throw new NullReferenceException();
+
+			if (string.IsNullOrEmpty(tag) || string.IsNullOrEmpty(other.tag))
+				return false;
+
+			return tag.Equals(other.tag);
+		}
+
+		public byte[] ToBytes()
         {
             byte[] data = new byte[52];
 

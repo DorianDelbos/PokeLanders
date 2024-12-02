@@ -3,15 +3,14 @@ using UnityEngine;
 
 namespace LandersLegends.Gameplay
 {
-	public class NfcErrorHudManager : MonoBehaviour
+	public class NfcErrorHandler : MonoBehaviour
 	{
-		public static NfcErrorHudManager current;
+		public static NfcErrorHandler current;
 
 		[SerializeField] private GameObject canvas;
 		[SerializeField] private TMP_Text textMesh;
-		private bool isActive = false;
 
-		public bool IsActive => isActive;
+		public bool IsActive => canvas.activeSelf;
 
 		private void Awake()
 		{
@@ -23,15 +22,15 @@ namespace LandersLegends.Gameplay
 			current = this;
 		}
 
-		public void SetActive(bool active)
+		public void CallError(string text)
 		{
-			canvas.SetActive(active);
-			isActive = active;
+			canvas.SetActive(true);
+			textMesh.text = text;
 		}
 
-		public void SetErrorText(string text)
+		public void Close()
 		{
-			textMesh.text = text;
+			canvas.SetActive(false);
 		}
 	}
 }

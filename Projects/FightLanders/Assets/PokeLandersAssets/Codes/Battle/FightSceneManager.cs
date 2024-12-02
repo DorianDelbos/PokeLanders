@@ -11,7 +11,7 @@ namespace LandersLegends.Battle
         [SerializeField] private GltfAsset[] gltfAssets = new GltfAsset[2];
 
         private Lander[] landerData => GameManager.instance.Landers;
-		private NfcErrorHudManager nfcErrorHud => NfcErrorHudManager.current;
+		private NfcErrorHandler nfcErrorHandler => NfcErrorHandler.current;
 
 		private void Awake()
 		{
@@ -46,15 +46,19 @@ namespace LandersLegends.Battle
         private void DisplayNfcError(bool isError, string errorText)
 		{
 			Time.timeScale = (isError ? 0.0f : 1.0f);
-			nfcErrorHud.SetActive(isError);
-			nfcErrorHud.SetErrorText(errorText);
+
+			nfcErrorHandler.Close();
+
+			if (isError)
+				nfcErrorHandler.CallError(errorText);
 		}
 
-		private void OnNfcRemove(LanderDataNFC data) => DisplayNfcError(true, $"You must replace {data.name} on the player to continue !");
+		private void OnNfcRemove(LanderDataNFC data) 
+			=> DisplayNfcError(true, $"You must replace {data.name} on the player to continue !");
 
 		private void CheckData(LanderDataNFC data)
 		{
-			if (!CheckIfSameTag(data))
+			if (!data.Equals(tagRegisters))
 			{
 				DisplayNfcError(true, $"Wrong Lander detected, make sure it's the same card used !");
 				return;
@@ -62,18 +66,5 @@ namespace LandersLegends.Battle
 
 			DisplayNfcError(false, string.Empty);
         }
-
-		private bool CheckIfSameTag(LanderDataNFC data)
-		{
-			for (int i = 0; i < landerData.Length; i++)
-			{
-				if (tagRegisters[i] == data.tag)
-				{
-					return true;
-				}
-			}
-
-			return false;
-		}
 	}
 }

@@ -41,6 +41,7 @@ namespace LandersLegends.Battle
             currentState.Enter();
         }
     }
+
     public class BattleStateFactory
     {
         private readonly BattleStateMachine _stateMachine;

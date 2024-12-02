@@ -23,12 +23,14 @@ namespace LandersLegends.Gameplay
 		[Header("Other")]
 		[SerializeField] private Sprite[] typesSprite;
 
+		// Getters
+		private NfcErrorHandler nfcErrorHandler => NfcErrorHandler.current;
+
 		private void ActivePc(bool active)
 		{
-            NfcErrorHudManager.current.SetActive(!active);
-
+			nfcErrorHandler.Close();
 			if (!active)
-				NfcErrorHudManager.current.SetErrorText("Place a Lander in the field !");
+				nfcErrorHandler.CallError("Place a Lander in the field !");
 		}
 
 		public void UpdatePc(Lander data, bool active)
