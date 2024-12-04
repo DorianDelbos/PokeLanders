@@ -15,7 +15,8 @@ namespace LandersLegends.Extern.API
 	public class Type : IBaseModel
 	{
 		public int id;
-		public string name;
-		public DamageRelations damage_relations;
+        public string name;
+        public string color;
+        public DamageRelations damage_relations;
 	}
 }

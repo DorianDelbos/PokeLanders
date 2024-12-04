@@ -1,13 +1,14 @@
 using LandersLegends.Gameplay;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace LandersLegends.Battle
 {
     public class BattleHUDHandler : MonoBehaviour
     {
         [Header("Prefabs")]
-		[SerializeField] private AttackUIHandler attackUIPrefab;
+		[SerializeField] private GameObject attackUIPrefab;
 
 		[Header("UI")]
         [SerializeField] private GameObject dialoguePanel;
@@ -55,8 +56,9 @@ namespace LandersLegends.Battle
                 if (id == 0)
                     continue;
 
-                AttackUIHandler instance = Instantiate(attackUIPrefab, attackPanel.transform);
-                instance.UpdateByID(id);
+                GameObject instance = Instantiate(attackUIPrefab, attackPanel.transform);
+				AttackHandler attackUI = instance.GetComponent<AttackHandler>();
+                attackUI.InitializeByID(id);
             }
 		}
 

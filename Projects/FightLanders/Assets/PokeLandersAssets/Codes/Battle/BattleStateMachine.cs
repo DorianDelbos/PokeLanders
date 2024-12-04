@@ -8,6 +8,9 @@ namespace LandersLegends.Battle
 {
     public class BattleStateMachine : MonoBehaviour
     {
+        private static BattleStateMachine instance;
+        public static BattleStateMachine Instance => instance;
+
         private BattleState currentState;
         private BattleHUDHandler hudHandler;
         private BattleStateFactory factory;
@@ -16,6 +19,19 @@ namespace LandersLegends.Battle
         public BattleStateFactory Factory => factory;
         public BattleHUDHandler HudHandler => hudHandler;
         public BattleLanderHandler[] BattleLandersHandler => battleLandersHandler;
+
+        private void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
+        }
 
         private void Start()
         {
@@ -39,6 +55,14 @@ namespace LandersLegends.Battle
                 currentState.Exit();
             currentState = newState;
             currentState.Enter();
+        }
+
+        public void ProcessNextState()
+        {
+            if (currentState.GetType() == typeof(Player1State))
+                ProcessState(factory.GetState<Player2State>());
+            else if (currentState.GetType() == typeof(Player2State))
+                ProcessState(factory.GetState<AttackProcessState>());
         }
     }
 

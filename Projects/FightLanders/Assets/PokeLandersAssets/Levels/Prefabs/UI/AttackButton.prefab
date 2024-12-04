@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.5411765, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -346,10 +346,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0.5411765, b: 1, a: 0.8}
-    m_HighlightedColor: {r: 0, g: 0.5411765, b: 1, a: 0.9019608}
-    m_PressedColor: {r: 0, g: 0.5411765, b: 1, a: 0.8}
-    m_SelectedColor: {r: 0, g: 0.5411765, b: 1, a: 0.9019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.7490196}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.7490196}
     m_DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -407,6 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d1b36aa81de474f9103baf71b2bda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorImage: {fileID: 6641441270146620730}
   image: {fileID: 7253730727256459283}
   nameTextMesh: {fileID: 4627248947384333428}
   ppTextMesh: {fileID: 3079403772568750146}
