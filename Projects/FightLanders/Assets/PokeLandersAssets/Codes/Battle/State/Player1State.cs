@@ -1,3 +1,4 @@
+using LandersLegends.Gameplay;
 using UnityEngine;
 
 namespace LandersLegends.Battle
@@ -10,13 +11,13 @@ namespace LandersLegends.Battle
         public override void Enter()
         {
             stateMachine.BattleLandersHandler[0].StartTurn();
-            stateMachine.HudHandler.SetActiveAttack(true);
+            stateMachine.HudHandler.UpdateAttackUI(GameManager.instance.Landers[0]);
         }
 
         public override void Exit()
         {
             stateMachine.BattleLandersHandler[0].EndTurn();
-            stateMachine.HudHandler.SetActiveAttack(false);
+            stateMachine.HudHandler.ClearAttackUI();
         }
 
         public override void Update()

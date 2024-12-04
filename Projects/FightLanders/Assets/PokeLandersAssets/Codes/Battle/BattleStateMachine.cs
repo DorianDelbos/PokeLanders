@@ -71,15 +71,26 @@ namespace LandersLegends.Battle
                     _stateCreators[stateType] = () => (BattleState)constructor.Invoke(new object[] { _stateMachine });
                 }
             }
-        }
+		}
 
-        public T GetState<T>() where T : BattleState
-        {
-            if (_stateCreators.TryGetValue(typeof(T), out var creator))
-            {
-                return (T)creator();
-            }
-            throw new InvalidOperationException($"State of type {typeof(T).Name} not registered in factory.");
-        }
-    }
+		public T GetState<T>() where T : BattleState
+		{
+			if (_stateCreators.TryGetValue(typeof(T), out var creator))
+			{
+				return (T)creator();
+			}
+			throw new InvalidOperationException($"State of type {typeof(T).Name} not registered in factory.");
+		}
+
+		public bool TryGetState<T>(out T output) where T : BattleState
+		{
+			output = null;
+			if (_stateCreators.TryGetValue(typeof(T), out var creator))
+			{
+                output = (T)creator();
+				return true;
+			}
+			return false;
+		}
+	}
 }
