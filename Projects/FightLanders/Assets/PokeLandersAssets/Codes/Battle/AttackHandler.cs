@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace LandersLegends.Battle
 {
-	public class AttackHandler : MonoBehaviour
+	public class AttackUIHandler : MonoBehaviour
 	{
 		[SerializeField] private Image colorImage;
 		[SerializeField] private RawImage image;
@@ -15,11 +15,10 @@ namespace LandersLegends.Battle
 
 		private Move move;
 		private Type type;
-		private int currentPP;
 
-        public void InitializeByID(ushort id)
+        public void InitializeUI(Move move)
 		{
-			move = MoveRepository.GetById(id);
+			this.move = move;
 			type = TypeRepository.GetByName(move.type);
 
 			UpdateUI();
@@ -33,17 +32,15 @@ namespace LandersLegends.Battle
             colorImage.color = type.color.ToColor();
             image.texture = Resources.Load<Texture>($"ElementaryIcons/{move.type}");
             nameTextMesh.text = move.name;
-            ppTextMesh.text = $"{move.pp} / {move.pp}";
+            ppTextMesh.text = $"{move.pp} / {MoveRepository.GetById(move.id).pp}";
         }
 
-		// TODO : this is delete between all states
-		// Change logic
 		private void Use()
 		{
-			if (currentPP <= 0)
+			if (move.pp <= 0)
 				return;
 
-			currentPP--;
+			move.pp--;
 			UpdateUI();
             BattleStateMachine.Instance.ProcessNextState();
         }

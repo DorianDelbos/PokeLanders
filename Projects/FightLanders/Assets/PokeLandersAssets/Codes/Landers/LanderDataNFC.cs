@@ -92,7 +92,7 @@ namespace LandersLegends.Gameplay
             evSpeed = nfcData[51];                              // Byte 51
         }
 
-        public LanderDataNFC(Lander.MainData mainData, Lander.StatsData statsData, Lander.AttacksData attacksData, Lander.OtherData otherData)
+        public LanderDataNFC(Lander.MainData mainData, Lander.StatsData statsData, Lander.MovesData attacksData, Lander.OtherData otherData)
         {
             tag = mainData.tag;
             name = mainData.name;
@@ -104,10 +104,10 @@ namespace LandersLegends.Gameplay
             xp = statsData.xp;
             height = otherData.height;
             weight = otherData.weight;
-            idAttack1 = attacksData.attack1;
-            idAttack2 = attacksData.attack2;
-            idAttack3 = attacksData.attack3;
-            idAttack4 = attacksData.attack4;
+            idAttack1 = (ushort)attacksData.moves[0].id;
+            idAttack2 = (ushort)attacksData.moves[1].id;
+            idAttack3 = (ushort)attacksData.moves[2].id;
+            idAttack4 = (ushort)attacksData.moves[3].id;
             ivPv = statsData.ivs.hp;
             ivAtk = statsData.ivs.attack;
             ivDef = statsData.ivs.defense;

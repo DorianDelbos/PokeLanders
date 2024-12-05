@@ -1,11 +1,11 @@
+using LandersLegends.Extern.API;
 using LandersLegends.Gameplay;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace LandersLegends.Battle
 {
-    public class BattleHUDHandler : MonoBehaviour
+	public class BattleHUDHandler : MonoBehaviour
     {
         [Header("Prefabs")]
 		[SerializeField] private GameObject attackUIPrefab;
@@ -16,7 +16,7 @@ namespace LandersLegends.Battle
         [SerializeField] private BattleLanderHudHandler[] hudHandler = new BattleLanderHudHandler[2];
         [SerializeField] private TMP_Dialogue dialogueMesh;
 
-        private Lander[] landers => GameManager.instance.Landers;
+        private Gameplay.Lander[] landers => GameManager.instance.Landers;
 
         public void UpdateLandersHUD()
         {
@@ -46,19 +46,19 @@ namespace LandersLegends.Battle
 			dialogueMesh.multSpeed = 1.0f;
 		}
 
-		public void UpdateAttackUI(Lander lander)
+		public void UpdateAttackUI(Gameplay.Lander lander)
 		{
             ClearAttackUI();
 			attackPanel.SetActive(true);
 			
-            foreach (ushort id in lander.AttacksID)
+            foreach (Move move in lander.Moves)
             {
-                if (id == 0)
+                if (move == null)
                     continue;
 
                 GameObject instance = Instantiate(attackUIPrefab, attackPanel.transform);
-				AttackHandler attackUI = instance.GetComponent<AttackHandler>();
-                attackUI.InitializeByID(id);
+				AttackUIHandler attackUI = instance.GetComponent<AttackUIHandler>();
+                attackUI.InitializeUI(move);
             }
 		}
 

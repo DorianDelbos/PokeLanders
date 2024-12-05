@@ -61,9 +61,11 @@ namespace LandersLegends.Battle
         {
             if (currentState.GetType() == typeof(Player1State))
                 ProcessState(factory.GetState<Player2State>());
-            else if (currentState.GetType() == typeof(Player2State))
-                ProcessState(factory.GetState<AttackProcessState>());
-        }
+			else if (currentState.GetType() == typeof(Player2State))
+				ProcessState(factory.GetState<AttackProcessState>());
+			else if (currentState.GetType() == typeof(AttackProcessState))
+				ProcessState(factory.GetState<Player1State>());
+		}
     }
 
     public class BattleStateFactory
