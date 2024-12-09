@@ -104,10 +104,10 @@ namespace LandersLegends.Gameplay
             xp = statsData.xp;
             height = otherData.height;
             weight = otherData.weight;
-            idAttack1 = (ushort)attacksData.moves[0].id;
-            idAttack2 = (ushort)attacksData.moves[1].id;
-            idAttack3 = (ushort)attacksData.moves[2].id;
-            idAttack4 = (ushort)attacksData.moves[3].id;
+            idAttack1 = attacksData.moves[0];
+            idAttack2 = attacksData.moves[1];
+            idAttack3 = attacksData.moves[2];
+            idAttack4 = attacksData.moves[3];
             ivPv = statsData.ivs.hp;
             ivAtk = statsData.ivs.attack;
             ivDef = statsData.ivs.defense;

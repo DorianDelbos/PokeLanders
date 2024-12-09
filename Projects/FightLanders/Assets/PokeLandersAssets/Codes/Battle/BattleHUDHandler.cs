@@ -46,7 +46,7 @@ namespace LandersLegends.Battle
 			dialogueMesh.multSpeed = 1.0f;
 		}
 
-		public void UpdateAttackUI(Gameplay.Lander lander)
+		public void UpdateAttackUI(LanderBattleHandler lander)
 		{
             ClearAttackUI();
 			attackPanel.SetActive(true);

@@ -1,49 +1,55 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+using LandersLegends.Gameplay;
 using UnityEngine;
 
 namespace LandersLegends.Battle
 {
-    public class BattleStateMachine : MonoBehaviour
+	[System.Serializable]
+	public class BattleStateMachine
     {
-        private static BattleStateMachine instance;
-        public static BattleStateMachine Instance => instance;
+		[SerializeField] private BattleHUDHandler hudHandler;
+		[SerializeField] private LanderBattleHandler[] landers;
 
-        private BattleState currentState;
-        private BattleHUDHandler hudHandler;
+		private BattleState currentState;
         private BattleStateFactory factory;
-        [SerializeField] private BattleLanderHandler[] battleLandersHandler = new BattleLanderHandler[2];
 
         public BattleStateFactory Factory => factory;
         public BattleHUDHandler HudHandler => hudHandler;
-        public BattleLanderHandler[] BattleLandersHandler => battleLandersHandler;
-
-        private void Awake()
+        public LanderBattleHandler[] Landers => landers;
+        public LanderBattleHandler Lander1 => landers[0];
+		public LanderBattleHandler Lander2 => landers[1];
+        public LanderBattleHandler CurrentLander
         {
-            if (instance == null)
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-                return;
-            }
+            get
+			{
+				if (currentState.GetType() == typeof(Player1State))
+                    return landers[0];
+				else if (currentState.GetType() == typeof(Player2State))
+                    return landers[1];
+                else
+                    return null;
+			}
         }
 
-        private void Start()
+		public BattleStateMachine()
         {
             factory = new BattleStateFactory(this);
-
-            hudHandler = FindFirstObjectByType<BattleHUDHandler>();
-            hudHandler.UpdateLandersHUD();
-
-            ProcessState(factory.GetState<StartState>());
+            factory.RegisterState(() => new StartState(this));
+            factory.RegisterState(() => new Player1State(this));
+            factory.RegisterState(() => new Player2State(this));
+            factory.RegisterState(() => new AttackProcessState(this));
+            factory.RegisterState(() => new EndState(this));
         }
 
-        private void Update()
+        public void Start()
+		{
+			landers[0].InitializeLander(GameManager.instance.Landers[0]);
+			landers[1].InitializeLander(GameManager.instance.Landers[1]);
+
+			hudHandler.UpdateLandersHUD();
+			ProcessState(factory.GetState<StartState>());
+		}
+
+        public void Update()
         {
             if (currentState != null)
                 currentState.Update();
@@ -67,56 +73,4 @@ namespace LandersLegends.Battle
 				ProcessState(factory.GetState<Player1State>());
 		}
     }
-
-    public class BattleStateFactory
-    {
-        private readonly BattleStateMachine _stateMachine;
-        private readonly Dictionary<Type, Func<BattleState>> _stateCreators;
-
-        public BattleStateFactory(BattleStateMachine stateMachine)
-        {
-            _stateMachine = stateMachine;
-            _stateCreators = new Dictionary<Type, Func<BattleState>>();
-
-            RegisterStates();
-        }
-
-        private void RegisterStates()
-        {
-            // Get all types that inherit from BattleState
-            var stateTypes = Assembly.GetAssembly(typeof(BattleState))
-                .GetTypes()
-                .Where(t => t.IsSubclassOf(typeof(BattleState)) && !t.IsAbstract);
-
-            foreach (var stateType in stateTypes)
-            {
-                // Create a delegate to instantiate the state
-                var constructor = stateType.GetConstructor(new[] { typeof(BattleStateMachine) });
-                if (constructor != null)
-                {
-                    _stateCreators[stateType] = () => (BattleState)constructor.Invoke(new object[] { _stateMachine });
-                }
-            }
-		}
-
-		public T GetState<T>() where T : BattleState
-		{
-			if (_stateCreators.TryGetValue(typeof(T), out var creator))
-			{
-				return (T)creator();
-			}
-			throw new InvalidOperationException($"State of type {typeof(T).Name} not registered in factory.");
-		}
-
-		public bool TryGetState<T>(out T output) where T : BattleState
-		{
-			output = null;
-			if (_stateCreators.TryGetValue(typeof(T), out var creator))
-			{
-                output = (T)creator();
-				return true;
-			}
-			return false;
-		}
-	}
 }

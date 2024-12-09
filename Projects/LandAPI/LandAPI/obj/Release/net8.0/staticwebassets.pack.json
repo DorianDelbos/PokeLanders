@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css",
-      "PackagePath": "staticwebassets\\LandAPI.bundle.scp.css"
+      "PackagePath": "staticwebassets\\LandAPI.0dm1uyn702.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
@@ -155,6 +155,10 @@
     {
       "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package.json",
       "PackagePath": "staticwebassets\\Web\\package.json"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.LandAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.LandAPI.Microsoft.AspNetCore.StaticWebAssets.props",

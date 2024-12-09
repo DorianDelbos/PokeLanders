@@ -154,3 +154,7 @@ C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\LandAPI\LandAPI\obj\Rele
 C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\LandAPI\LandAPI\obj\Release\net8.0\LandAPI.pdb
 C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\LandAPI\LandAPI\obj\Release\net8.0\LandAPI.genruntimeconfig.cache
 C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\LandAPI\LandAPI\obj\Release\net8.0\ref\LandAPI.dll
+C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\LandAPI\LandAPI\bin\Release\net8.0\LandAPI.staticwebassets.endpoints.json
+C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\LandAPI\LandAPI\obj\Release\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\LandAPI\LandAPI\obj\Release\net8.0\staticwebassets\msbuild.LandAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\LandAPI\LandAPI\obj\Release\net8.0\staticwebassets.upToDateCheck.txt

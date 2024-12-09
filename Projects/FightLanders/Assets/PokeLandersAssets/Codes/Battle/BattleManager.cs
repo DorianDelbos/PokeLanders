@@ -5,16 +5,31 @@ using GLTFast;
 
 namespace LandersLegends.Battle
 {
-	public class FightSceneManager : MonoBehaviour
+	public class BattleManager : MonoBehaviour
 	{
+		private static BattleManager i;
+
 		private string[] tagRegisters;
         [SerializeField] private GltfAsset[] gltfAssets = new GltfAsset[2];
+		[SerializeField] private BattleStateMachine stateMachine;
 
         private Lander[] landerData => GameManager.instance.Landers;
 		private NfcErrorHandler nfcErrorHandler => NfcErrorHandler.current;
+		public BattleStateMachine StateMachine => stateMachine;
+		public static BattleManager instance => i;
 
 		private void Awake()
 		{
+			if (i == null)
+			{
+				i = this;
+			}
+			else
+			{
+				Destroy(gameObject);
+				return;
+			}
+
 			int lenghtLander = landerData.Length;
 			tagRegisters = new string[lenghtLander];
 			for (int i = 0; i < lenghtLander; i++)
@@ -35,15 +50,24 @@ namespace LandersLegends.Battle
 			ExternLanderManager.onLanderRemove -= OnNfcRemove;
 		}
 
-        private async void Start()
+        private void Start()
         {
-            for (int i = 0; i < landerData.Length; ++i)
-            {
-				await gltfAssets[i].Load(landerData[i].ModelUrl);
-			}
-        }
+			stateMachine.Start();
+			loadModels();
+		}
 
-        private void DisplayNfcError(bool isError, string errorText)
+		private async void loadModels()
+		{
+			for (int i = 0; i < landerData.Length; ++i)
+				await gltfAssets[i].Load(landerData[i].ModelUrl);
+		}
+
+		private void Update()
+		{
+			stateMachine.Update();
+		}
+
+		private void DisplayNfcError(bool isError, string errorText)
 		{
 			Time.timeScale = (isError ? 0.0f : 1.0f);
 

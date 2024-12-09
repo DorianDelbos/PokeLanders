@@ -87,18 +87,15 @@ namespace LandersLegends.Gameplay
 		[Serializable]
 		public struct MovesData
 		{
-			public MovesData(ushort moveId1, ushort moveId2, ushort moveId3, ushort moveId4)
-				: this(MoveRepository.GetById(moveId1), MoveRepository.GetById(moveId2), MoveRepository.GetById(moveId3), MoveRepository.GetById(moveId4)) { }
+			public MovesData(ushort move1, ushort move2, ushort move3, ushort move4)
+				: this(new ushort[] {move1,move2,move3,move4}) {}
 
-			public MovesData(Move move1, Move move2, Move move3, Move move4)
-				: this(new Move[] {move1,move2,move3,move4}) {}
-
-			public MovesData(Move[] moves)
+			public MovesData(ushort[] moves)
 			{
 				this.moves = moves;
 			}
 
-			public Move[] moves;
+			public ushort[] moves;
 		}
 
 		[Serializable]
@@ -166,7 +163,7 @@ namespace LandersLegends.Gameplay
 		public ushort Height { get => otherData.height; private set => otherData.height = value; }
 		public ushort Weight { get => otherData.weight; private set => otherData.weight = value; }
 		// Attacks
-		public Move[] Moves => movesData.moves;
+		public ushort[] Moves => movesData.moves;
 		#endregion
 
 		#region CONSTRUCTORS
@@ -188,18 +185,6 @@ namespace LandersLegends.Gameplay
 				   new MovesData(attack1, attack2, attack3, attack4),
 				   new OtherData(baseXp, height, weight, isMale, isShiny, types, modelUrl)) { }
 
-		public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, byte baseHp, byte attack, byte specialAttack, byte defense, byte specialDefense, byte speed, byte ivPv, byte ivAtk, byte ivAtkSpe, byte ivDef, byte ivDefSpe, byte ivSpeed, byte evPv, byte evAtk, byte evAtkSpe, byte evDef, byte evDefSpe, byte evSpeed, Move[] moves, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, string modelUrl)
-			: this(new MainData(tag, id, species, name, description),
-				   new StatsData(xp, hp, happiness, nature, new Stats(baseHp, attack, defense, specialAttack, specialDefense, speed), new Stats(ivPv, ivAtk, ivDef, ivAtkSpe, ivDefSpe, ivSpeed), new Stats(evPv, evAtk, evDef, evAtkSpe, evDefSpe, evSpeed)),
-				   new MovesData(moves),
-				   new OtherData(baseXp, height, weight, isMale, isShiny, types, modelUrl)) { }
-
-		public Lander(string tag, ushort id, string species, string name, string description, int xp, ushort hp, byte happiness, string nature, Stats stats, Stats ivs, Stats evs, Move[] moves, ushort baseXp, ushort height, ushort weight, bool isMale, bool isShiny, List<string> types, string modelUrl)
-			: this(new MainData(tag, id, species, name, description),
-				   new StatsData(xp, hp, happiness, nature, stats, ivs, evs),
-				   new MovesData(moves),
-				   new OtherData(baseXp, height, weight, isMale, isShiny, types, modelUrl)) { }
-
 		public Lander(MainData mainData, StatsData statsData, MovesData attacksData, OtherData otherData)
 		{
 			this.mainData = mainData;
@@ -214,7 +199,7 @@ namespace LandersLegends.Gameplay
 
         public void TakeDamage(ushort damage)
 		{
-			Hp -= (ushort)Mathf.Min(damage, MaxHp);
+			Hp -= (ushort)Mathf.Min(damage, Hp);
 			onHpChange?.Invoke(Hp, MaxHp);
 		}
 		#endregion

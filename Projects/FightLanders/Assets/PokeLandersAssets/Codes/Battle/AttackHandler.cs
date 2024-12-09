@@ -16,7 +16,9 @@ namespace LandersLegends.Battle
 		private Move move;
 		private Type type;
 
-        public void InitializeUI(Move move)
+		private BattleStateMachine battlesStateMachine => BattleManager.instance.StateMachine;
+
+		public void InitializeUI(Move move)
 		{
 			this.move = move;
 			type = TypeRepository.GetByName(move.type);
@@ -41,8 +43,8 @@ namespace LandersLegends.Battle
 				return;
 
 			move.pp--;
-			UpdateUI();
-            BattleStateMachine.Instance.ProcessNextState();
-        }
+			battlesStateMachine.CurrentLander.lastMoveProccess = (ushort)move.id;
+			battlesStateMachine.ProcessNextState();
+		}
 	}
 }

@@ -12,11 +12,11 @@ namespace LandersLegends.Battle
         {
             if (GameManager.instance.Landers[0].Hp <= 0)
             {
-                Debug.Log("P2 win");
+                Debug.Log($"{GameManager.instance.Landers[1].Name} win");
             }
             else if (GameManager.instance.Landers[1].Hp <= 0)
             {
-                Debug.Log("P2 win");
+                Debug.Log($"{GameManager.instance.Landers[0].Name} win");
             }
             else
             {

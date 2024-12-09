@@ -3,7 +3,6 @@ using LandersLegends.Extern.API;
 using LandersLegends.Maths;
 using System;
 using System.Linq;
-using UnityEditor;
 
 namespace LandersLegends.Gameplay
 {
@@ -68,6 +67,16 @@ namespace LandersLegends.Gameplay
 			stats.speed = attributes[5];
 
 			return stats;
+		}
+
+		public static ushort CalculAttackDamage(Lander from, Lander to, Move move)
+		{
+			return (ushort)((from.Level * 0.4f + 2) * from.Attack * move.power / to.Defense / 50 + 2);
+		}
+
+		public static ushort CalculSpecialAttackDamage(Lander from, Lander to, Move move)
+		{
+			return (ushort)((from.Level * 0.4f + 2) * from.SpecialAttack * move.power / to.SpecialDefense / 50 + 2);
 		}
 	}
 }

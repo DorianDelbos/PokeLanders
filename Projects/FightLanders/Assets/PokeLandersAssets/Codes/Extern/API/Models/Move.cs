@@ -1,5 +1,4 @@
 using System;
-using System.Data.SqlTypes;
 
 namespace LandersLegends.Extern.API
 {

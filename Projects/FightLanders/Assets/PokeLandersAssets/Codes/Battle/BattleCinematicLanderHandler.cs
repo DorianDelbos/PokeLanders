@@ -3,7 +3,7 @@ using UnityEngine.Playables;
 
 namespace LandersLegends.Battle
 {
-    public class BattleLanderHandler : MonoBehaviour
+    public class BattleCinematicLanderHandler : MonoBehaviour
     {
         [SerializeField] private PlayableDirector playableDirector;
 
