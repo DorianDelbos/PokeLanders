@@ -1,38 +1,27 @@
-using UnityEditor;
 using UnityEngine;
 
 namespace Landers.API
 {
     [CreateAssetMenu(fileName = "ApiSettings", menuName = "API/Settings")]
     public class ApiSettings : ScriptableObject
-	{
-		private void OnEnable()
-		{
-			Initialize();
-		}
+    {
+        private static ApiSettings _instance;
 
-#if UNITY_EDITOR
-		private void OnValidate()
-		{
-			Initialize();
-		}
-#endif
+        public static ApiSettings instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = Resources.Load<ApiSettings>("ApiSettings");
+                    if (_instance == null)
+                        Debug.LogError("PluginSettings asset not found in Resources folder!");
+                }
+                return _instance;
+            }
+        }
 
-		private void Initialize()
-		{
-			if (_i && _i != this)
-			{
-				AssetDatabase.DeleteAsset(AssetDatabase.GetAssetPath(this));
-				return;
-			}
-
-			_i = this;
-		}
-
-		private static ApiSettings _i;
-		public static ApiSettings instance => _i;
-
-		[SerializeField] private string apiUrl = "https://landopedia-gwhtbqbqdhd4d5hw.westeurope-01.azurewebsites.net/";
+        [SerializeField] private string apiUrl = "https://landopedia-gwhtbqbqdhd4d5hw.westeurope-01.azurewebsites.net/";
 		public string ApiUrl => apiUrl;
 	}
 }
