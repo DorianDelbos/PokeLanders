@@ -3,7 +3,7 @@ using System.Text;
 
 namespace dgames.Utilities
 {
-    public static class ByteUtils
+    public static class ByteUtilities
     {
         /// <summary>
         /// Modifies the value of a bit at a specific position in a byte.

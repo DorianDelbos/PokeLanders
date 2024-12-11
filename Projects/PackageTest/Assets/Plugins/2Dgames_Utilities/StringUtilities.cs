@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace dgames.Utilities
 {
-	public static class StringUtils
+	public static class StringUtilities
 	{
 		/// <summary>
 		/// Convert a string (HEX) to byte.

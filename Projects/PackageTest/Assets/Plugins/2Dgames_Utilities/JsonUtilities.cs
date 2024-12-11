@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace dgames.Utilities
 {
-	public class JsonUtils
+	public class JsonUtilities
 	{
         /// <summary>
         /// Parses a JSON array string into an array of the specified type.
