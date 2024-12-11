@@ -1,73 +1,69 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using UnityEngine;
+using dgames.Utilities;
 
 namespace dgames.http
 {
-    /// <summary>
-    /// Provides functionality to perform web service requests using an HttpClient.
-    /// </summary>
     public class WebService : IDisposable
     {
-        private readonly HttpClient _client;
+		#region MAIN
+		private readonly HttpClient _client;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebService"/> class with an optional HttpClient.
-        /// </summary>
-        /// <param name="client">An optional <see cref="HttpClient"/> instance. If null, a new HttpClient is created.</param>
-        public WebService(HttpClient? client = null)
+        public WebService(HttpClient client = null)
         {
             _client = client ?? new HttpClient();
-        }
+		}
 
-        /// <summary>
-        /// Sends an asynchronous GET request to the specified URL and returns the response content as a byte array.
-        /// </summary>
-        /// <param name="req">The URL to send the GET request to.</param>
-        /// <returns>A task that represents the asynchronous operation. The task result contains the response content as a byte array.</returns>
-        /// <exception cref="ArgumentException">Thrown if the request URL is null or whitespace.</exception>
-        /// <exception cref="Exception">
-        /// Thrown if an HTTP request error occurs or if the response content is empty.
-        /// </exception>
-        public async Task<byte[]> AsyncRequest(string req)
-        {
-            if (string.IsNullOrWhiteSpace(req))
-                throw new ArgumentException("Request URL cannot be null or whitespace.", nameof(req));
+		public void Dispose()
+		{
+			_client.Dispose();
+		}
+		#endregion
 
-            try
-            {
-                using var response = await _client.GetAsync(req, HttpCompletionOption.ResponseContentRead);
-                response.EnsureSuccessStatusCode();
+		#region PROCESSORS
+		public static async Task<T> JsonProcessor<T>(HttpContent content)
+		{
+			string json = await content.ReadAsStringAsync();
+			return JsonUtilities.FromJson<T>(json);
+		}
 
-                byte[] content = await response.Content.ReadAsByteArrayAsync();
-                if (content == null || content.Length == 0)
-                    throw new Exception("Response content is empty.");
+		public static async Task<Texture2D> ImageProcessor(HttpContent content)
+		{
+			byte[] data = await content.ReadAsByteArrayAsync();
+			var texture = new Texture2D(2, 2);
+			texture.LoadImage(data);
+			return texture;
+		}
+		#endregion
 
-                return content;
-            }
-            catch (HttpRequestException e)
-            {
-                throw new Exception($"HTTP request error: {e.Message}", e);
-            }
-            catch (Exception e)
-            {
-                throw new Exception($"Unexpected error: {e.Message}", e);
-            }
-        }
+		#region STANDARD REQUESTS
+		public void AsyncRequestJson<T>(string req, Action<bool, T> onCompleted)
+			=> AsyncRequest(req, JsonProcessor<T>, onCompleted);
 
-        /// <summary>
-        /// A wrapper for <see cref="AsyncRequest"/> to send an asynchronous GET request to the specified URL.
-        /// </summary>
-        /// <param name="req">The URL to send the GET request to.</param>
-        /// <returns>A task that represents the asynchronous operation. The task result contains the response content as a byte array.</returns>
-        public async Task<byte[]> RequestAsync(string req) => await AsyncRequest(req);
+		public void AsyncRequestImage(string req, Action<bool, Texture2D> onCompleted)
+			=> AsyncRequest(req, ImageProcessor, onCompleted);
+		#endregion
 
-        /// <summary>
-        /// Releases the resources used by the <see cref="WebService"/> instance, including the underlying HttpClient.
-        /// </summary>
-        public void Dispose()
-        {
-            _client.Dispose();
-        }
-    }
+		#region GLOBAL REQUESTS
+		public async void AsyncRequest<T>(string req, Func<HttpContent, Task<T>> processContent, Action<bool, T> onCompleted)
+		{
+			try
+			{
+				using var response = await _client.GetAsync(req, HttpCompletionOption.ResponseContentRead);
+				response.EnsureSuccessStatusCode();
+
+				T result = await processContent(response.Content);
+
+				onCompleted?.Invoke(true, result);
+			}
+			catch (Exception ex)
+			{
+				Debug.LogError($"Error in AsyncRequest\n{ex.Message}");
+				onCompleted?.Invoke(false, default);
+			}
+		}
+		#endregion
+	}
 }
