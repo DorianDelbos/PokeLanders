@@ -1,0 +1,1 @@
+C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\PackageTest\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\s2633q4f\obj\arm64-v8a

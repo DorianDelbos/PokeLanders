@@ -1,0 +1,10 @@
+# ninja log v5
+28	767	7557037445255624	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	bc4aa57b5d2e641c
+20	773	7557037445315627	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	65baadb63eee987
+5	797	7557037445585612	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	7cdc4dd8af99e32a
+32	808	7557037445712477	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	709b80e98ff96625
+37	856	7557037446183421	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c31c647d03e8cad8
+0	944	7557037447056690	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f124e72b2d28ff18
+13	1119	7557037448781467	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	f3b2faf5aa656a72
+9	1234	7557037449952937	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	d91d86b79262624a
+1234	1320	7557037450868061	C:/Users/Etudiant1/Documents/Unity/PokeLanders/Projects/PackageTest/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/s2633q4f/obj/arm64-v8a/libgame.so	8c154f48e8eb39f5

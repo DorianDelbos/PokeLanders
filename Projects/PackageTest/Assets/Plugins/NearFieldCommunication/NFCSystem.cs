@@ -1,20 +1,41 @@
 ﻿using System;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace dgames.nfc
 {
     public static partial class NFCSystem
-    {
-#pragma warning disable CS1998
-        public static async void ReadTag()
-#pragma warning restore CS1998
-        {
-#if PLATFORM_STANDALONE_WIN
-            await ReadTagWindows();
-#elif PLATFORM_ANDROID
-            await ReadTagAndroid();
-#else
-		    throw new NotImplementedException("NFCSystem is not supported on your platforms !");
-#endif
-        }
-    }
+	{
+		public static async void ReadTagAsync(Action<bool, byte[], Exception> onComplete, int timeoutMilliseconds = -1)
+		{
+			try
+			{
+				using (var cts = new CancellationTokenSource(timeoutMilliseconds))
+				{
+					byte[] result = await ReadTagInternalAsync(cts.Token);
+					onComplete?.Invoke(true, result, null);
+				}
+			}
+			catch (Exception e)
+			{
+				onComplete?.Invoke(false, null, e);
+			}
+		}
+
+		public static async void ReadBlockAsync(int sector, int block, Action<bool, byte[], Exception> onComplete, int timeoutMilliseconds = -1)
+		{
+			try
+			{
+				using (var cts = new CancellationTokenSource(timeoutMilliseconds))
+				{
+					byte[] result = await ReadBlockInternalAsync(block, sector, cts.Token);
+					onComplete?.Invoke(true, result, null);
+				}
+			}
+			catch (Exception e)
+			{
+				onComplete?.Invoke(false, null, e);
+			}
+		}
+	}
 }

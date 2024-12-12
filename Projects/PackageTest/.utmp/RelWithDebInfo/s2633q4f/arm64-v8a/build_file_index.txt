@@ -1,0 +1,2 @@
+C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\PackageTest\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\PackageTest\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

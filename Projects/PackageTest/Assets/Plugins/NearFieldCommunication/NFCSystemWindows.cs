@@ -6,10 +6,7 @@ namespace dgames.nfc
 {
     public static partial class NFCSystem
     {
-        public static async Task ReadTagWindows()
-        {
-            throw new NotImplementedException("NFCSystem is not supported on your platforms !");
-        }
+
     }
 }
 #endif

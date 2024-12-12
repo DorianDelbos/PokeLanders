@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Text;
 
 namespace dgames.Utilities
@@ -52,14 +53,29 @@ namespace dgames.Utilities
             return _byte.ToString("X2");
         }
 
-        /// <summary>
-        /// Reads an integer value from a byte array in big-endian format, starting from a specified index.
-        /// </summary>
-        /// <param name="data">The byte array containing the data to read from.</param>
-        /// <param name="startIndex">The index in the byte array where reading begins.</param>
-        /// <param name="bytes">The number of bytes to read (bits should typically be 1, 2, 4, or 8).</param>
-        /// <returns>The integer value read from the byte array.</returns>
-        public static int ReadBigEndian(this byte[] data, int startIndex, int bytes)
+		/// <summary>
+		/// Converts a byte array to a hexadecimal string.
+		/// Returns an empty string if the input is null or empty.
+		/// </summary>
+		/// <param name="_bytes">The byte array to convert.</param>
+		/// <returns>A string containing the hexadecimal representation of the byte array.</returns>
+		public static string ToHex(this byte[] _bytes)
+		{
+			if (_bytes == null || _bytes.Length == 0)
+				return string.Empty;
+
+			// Convert each byte in the array to a hexadecimal string
+			return string.Concat(_bytes.Select(b => b.ToString("X2")));
+		}
+
+		/// <summary>
+		/// Reads an integer value from a byte array in big-endian format, starting from a specified index.
+		/// </summary>
+		/// <param name="data">The byte array containing the data to read from.</param>
+		/// <param name="startIndex">The index in the byte array where reading begins.</param>
+		/// <param name="bytes">The number of bytes to read (bits should typically be 1, 2, 4, or 8).</param>
+		/// <returns>The integer value read from the byte array.</returns>
+		public static int ReadBigEndian(this byte[] data, int startIndex, int bytes)
         {
             int result = data[startIndex] << (8 * bytes);
 
