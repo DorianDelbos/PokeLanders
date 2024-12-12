@@ -9,17 +9,11 @@ public class ConsoleSystem : MonoBehaviour
 
 	[SerializeField] private Transform container;
 	[SerializeField] private TMP_Text textPrefab;
-	[SerializeField] private bool isPaused = false;
 
 	private void Awake()
 	{
 		_i = this;
 		AppendText("Console ...", Color.green);
-	}
-
-	public void SetPause(bool pause)
-	{
-		isPaused = pause;
 	}
 
 	public void Clear()
@@ -37,9 +31,6 @@ public class ConsoleSystem : MonoBehaviour
 
 	public void AppendText(string text, Color color)
 	{
-		if (isPaused)
-			return;
-
 		TMP_Text instance = Instantiate(textPrefab, container);
 		instance.text = text;
 		instance.color = color;

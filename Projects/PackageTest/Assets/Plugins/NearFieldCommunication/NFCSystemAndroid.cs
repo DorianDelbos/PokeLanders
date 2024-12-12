@@ -12,25 +12,30 @@ namespace dgames.nfc
         private const string NfcTechMifareClassic = "android.nfc.tech.MifareClassic";
         private const string NfcTagExtra = "android.nfc.extra.TAG";
         private static readonly byte[] DefaultKey = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
+        private static readonly Int32 FLAG_RECEIVER_REPLACE_PENDING = 0x20000000;
+        private static readonly Int32 FLAG_MUTABLE = 0x02000000;
+
+        private static AndroidJavaObject activity;
+        private static AndroidJavaObject nfcReader;
+        private static AndroidJavaObject nfcAdapter;
 
         public async Task<byte[]> ReadTagAsync(CancellationToken cancellationToken)
         {
-            using AndroidJavaObject activity = GetCurrentActivity();
-            using AndroidJavaObject nfcReader = InitializeNfcReader(activity);
+            InitializeAndroidNFC();
 
-            AndroidJavaObject tag = await WaitForNfcTagAsync(activity, cancellationToken);
+            AndroidJavaObject tag = await WaitForNfcTagAsync(cancellationToken);
             byte[] tagId = tag?.Call<byte[]>("getId") ?? throw new Exception("Failed to retrieve NFC tag ID.");
 
-            ResetNfcProcess(nfcReader, activity);
+            ResetNfcProcess();
 
             return tagId;
         }
 
         public async Task<byte[]> ReadBlockAsync(int block, int sector, CancellationToken cancellationToken)
         {
-            using AndroidJavaObject activity = GetCurrentActivity();
-            using AndroidJavaObject nfcReader = InitializeNfcReader(activity);
-            AndroidJavaObject mifareClassic = await WaitForMifareBlockAsync(activity, block, sector, cancellationToken);
+            InitializeAndroidNFC();
+
+            AndroidJavaObject mifareClassic = await WaitForMifareBlockAsync(block, sector, cancellationToken);
             byte[] blockData;
 
             try
@@ -45,28 +50,17 @@ namespace dgames.nfc
             finally
             {
                 mifareClassic?.Call("close");
-                ResetNfcProcess(nfcReader, activity);
+                ResetNfcProcess();
             }
 
             return blockData;
         }
 
-        private static AndroidJavaObject GetCurrentActivity()
-            => new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
-
-        private static AndroidJavaObject InitializeNfcReader(AndroidJavaObject activity)
-        {
-            AndroidJavaObject nfcReader = new AndroidJavaObject("com.dgames.nfchandlerlib.NfcHandler");
-            nfcReader.Call("setContext", activity);
-            nfcReader.Call("onResume");
-            return nfcReader;
-        }
-
-        private async Task<AndroidJavaObject> WaitForNfcTagAsync(AndroidJavaObject activity, CancellationToken cancellationToken)
+        private async Task<AndroidJavaObject> WaitForNfcTagAsync(CancellationToken cancellationToken)
         {
             while (true)
             {
-                if (TryGetNfcTag(activity, out AndroidJavaObject tag))
+                if (TryGetNfcTag(out AndroidJavaObject tag))
                     return tag;
 
                 if (cancellationToken.IsCancellationRequested)
@@ -76,11 +70,11 @@ namespace dgames.nfc
             }
         }
 
-        private async Task<AndroidJavaObject> WaitForMifareBlockAsync(AndroidJavaObject activity, int block, int sector, CancellationToken cancellationToken)
+        private async Task<AndroidJavaObject> WaitForMifareBlockAsync(int block, int sector, CancellationToken cancellationToken)
         {
             while (true)
             {
-                if (TryGetMifareBlock(activity, block, sector, out AndroidJavaObject mifareClassic))
+                if (TryGetMifareBlock(block, sector, out AndroidJavaObject mifareClassic))
                     return mifareClassic;
 
                 if (cancellationToken.IsCancellationRequested)
@@ -102,24 +96,18 @@ namespace dgames.nfc
             return mifareClassic.Call<bool>("authenticateSectorWithKeyA", sector, DefaultKey);
         }
 
-        private static void ResetNfcProcess(AndroidJavaObject nfcReader, AndroidJavaObject activity)
-        {
-            nfcReader?.Call("onPause");
-            activity?.Call("setIntent", new AndroidJavaObject("android.content.Intent"));
-        }
-
-        private bool TryGetNfcTag(AndroidJavaObject activity, out AndroidJavaObject tag)
+        private bool TryGetNfcTag(out AndroidJavaObject tag)
         {
             AndroidJavaObject intent = activity.Call<AndroidJavaObject>("getIntent");
             tag = intent?.Call<AndroidJavaObject>("getParcelableExtra", NfcTagExtra);
             return tag != null;
         }
 
-        private bool TryGetMifareBlock(AndroidJavaObject activity, int block, int sector, out AndroidJavaObject mifareClassic)
+        private bool TryGetMifareBlock(int block, int sector, out AndroidJavaObject mifareClassic)
         {
             mifareClassic = null;
 
-            if (!TryGetNfcTag(activity, out AndroidJavaObject tag) || !IsMifareClassicTag(tag))
+            if (!TryGetNfcTag(out AndroidJavaObject tag) || !IsMifareClassicTag(tag))
                 return false;
 
             mifareClassic = new AndroidJavaClass(NfcTechMifareClassic).CallStatic<AndroidJavaObject>("get", tag);
@@ -130,6 +118,40 @@ namespace dgames.nfc
         {
             string[] techList = tag.Call<string[]>("getTechList");
             return techList.Contains(NfcTechMifareClassic);
+        }
+
+        private static void InitializeAndroidNFC()
+        {
+            activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+            nfcReader = new AndroidJavaObject("com.dgames.nfchandlerlib.NfcHandler");
+            nfcAdapter = activity.Call<AndroidJavaObject>("getSystemService", "nfc");
+
+            nfcReader.Call("setContext", activity);
+            nfcReader.Call("onResume");
+
+            //// ON RESUME
+            //AndroidJavaObject intent = new AndroidJavaObject("android.content.Intent", activity, activity.Call<AndroidJavaObject>("getClass"));
+            //intent.Call<AndroidJavaObject>("addFlags", FLAG_RECEIVER_REPLACE_PENDING);
+
+            //using (AndroidJavaClass pendingIntentClass = new AndroidJavaClass("android.app.PendingIntent"))
+            //{
+            //    AndroidJavaObject pendingIntent = pendingIntentClass.CallStatic<AndroidJavaObject>("getActivity", activity, 0, intent, FLAG_MUTABLE);
+
+            //    AndroidJavaObject[] intentFilters = new AndroidJavaObject[1];
+            //    intentFilters[0] = new AndroidJavaObject("android.content.IntentFilter", "android.nfc.action.TAG_DISCOVERED");
+
+            //    if (nfcAdapter != null)
+            //        nfcAdapter.Call("enableForegroundDispatch", activity, pendingIntent, intentFilters, null);
+            //}
+        }
+
+        private static void ResetNfcProcess()
+        {
+            //if (nfcAdapter != null)
+            //    nfcAdapter.Call("disableForegroundDispatch", activity);
+
+            nfcReader?.Call("onPause");
+            activity?.Call("setIntent", new AndroidJavaObject("android.content.Intent"));
         }
     }
 }
