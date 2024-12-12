@@ -1,18 +1,19 @@
 ﻿using System;
-using System.Threading.Tasks;
 using System.Threading;
 
 namespace dgames.nfc
 {
-    public static partial class NFCSystem
+    public partial class NFCSystem
 	{
-		public static async void ReadTagAsync(Action<bool, byte[], Exception> onComplete, int timeoutMilliseconds = -1)
+		public int timeout = -1;
+
+        public async void ReadTagAsync(Action<bool, byte[], Exception> onComplete)
 		{
 			try
 			{
-				using (var cts = new CancellationTokenSource(timeoutMilliseconds))
+                using (var cts = new CancellationTokenSource(timeout))
 				{
-					byte[] result = await ReadTagInternalAsync(cts.Token);
+					byte[] result = await ReadTagAsync(cts.Token);
 					onComplete?.Invoke(true, result, null);
 				}
 			}
@@ -22,13 +23,13 @@ namespace dgames.nfc
 			}
 		}
 
-		public static async void ReadBlockAsync(int sector, int block, Action<bool, byte[], Exception> onComplete, int timeoutMilliseconds = -1)
+		public async void ReadBlockAsync(int sector, int block, Action<bool, byte[], Exception> onComplete)
 		{
 			try
-			{
-				using (var cts = new CancellationTokenSource(timeoutMilliseconds))
-				{
-					byte[] result = await ReadBlockInternalAsync(block, sector, cts.Token);
+            {
+                using (var cts = new CancellationTokenSource(timeout))
+                {
+					byte[] result = await ReadBlockAsync(block, sector, cts.Token);
 					onComplete?.Invoke(true, result, null);
 				}
 			}
@@ -37,5 +38,5 @@ namespace dgames.nfc
 				onComplete?.Invoke(false, null, e);
 			}
 		}
-	}
+    }
 }

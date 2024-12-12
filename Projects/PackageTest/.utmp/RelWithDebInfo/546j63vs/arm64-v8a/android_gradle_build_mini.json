@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\PackageTest\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp\\CMakeLists.txt",
+    "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\PackageTest\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp\\GameActivity\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "D:\\Unity\\6000.0.23f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\PackageTest\\.utmp\\RelWithDebInfo\\546j63vs\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "D:\\Unity\\6000.0.23f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\PackageTest\\.utmp\\RelWithDebInfo\\546j63vs\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "game::@d02bb112ea9f9c2ed29f": {
+      "artifactName": "game",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\PackageTest\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\546j63vs\\obj\\arm64-v8a\\libgame.so",
+      "runtimeFiles": []
+    }
+  }
+}

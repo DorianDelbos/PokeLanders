@@ -1,161 +1,136 @@
-﻿#if PLATFORM_ANDROID || UNITY_EDITOR
-using dgames.Utilities;
+﻿#if PLATFORM_ANDROID
 using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace dgames.nfc
 {
-    public static partial class NFCSystem
-	{
-		private static async Task<byte[]> ReadTagInternalAsync(CancellationToken cancellationToken)
-		{
-			if (Application.platform != RuntimePlatform.Android)
-				throw new PlatformNotSupportedException("NFC is not supported on this platform.");
+    public partial class NFCSystem
+    {
+        private const string NfcTechMifareClassic = "android.nfc.tech.MifareClassic";
+        private const string NfcTagExtra = "android.nfc.extra.TAG";
+        private static readonly byte[] DefaultKey = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
 
-			// Initialization
-			AndroidJavaObject tag = null;
+        public async Task<byte[]> ReadTagAsync(CancellationToken cancellationToken)
+        {
+            using AndroidJavaObject activity = GetCurrentActivity();
+            using AndroidJavaObject nfcReader = InitializeNfcReader(activity);
 
-			// Get all nfc objects
-			AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-			AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-			AndroidJavaObject nfcAdapter = activity.Call<AndroidJavaObject>("getSystemService", "nfc");
-			AndroidJavaObject nfcReader = new AndroidJavaObject("com.dgames.nfchandlerlib.NfcHandler");
+            AndroidJavaObject tag = await WaitForNfcTagAsync(activity, cancellationToken);
+            byte[] tagId = tag?.Call<byte[]>("getId") ?? throw new Exception("Failed to retrieve NFC tag ID.");
 
-			// Enable reader
-			InitializeNfcReader(nfcReader, activity);
+            ResetNfcProcess(nfcReader, activity);
 
-			if (nfcAdapter != null)
-			{
-				while (!cancellationToken.IsCancellationRequested && tag == null)
-				{
-					tag = GetNfcTag();
-					await Task.Delay(100);
-				}
+            return tagId;
+        }
 
-				if (tag != null)
-				{
-					byte[] data = tag.Call<byte[]>("getId");
-					ClearNfcIntent(nfcReader, activity);
-					return data;
-				}
+        public async Task<byte[]> ReadBlockAsync(int block, int sector, CancellationToken cancellationToken)
+        {
+            using AndroidJavaObject activity = GetCurrentActivity();
+            using AndroidJavaObject nfcReader = InitializeNfcReader(activity);
+            AndroidJavaObject mifareClassic = await WaitForMifareBlockAsync(activity, block, sector, cancellationToken);
+            byte[] blockData;
 
-				ClearNfcIntent(nfcReader, activity);
+            try
+            {
+                AuthenticateMifareClassic(mifareClassic, sector);
+                blockData = mifareClassic.Call<byte[]>("readBlock", block);
+            }
+            catch (Exception)
+            {
+                throw new Exception($"Failed to read NFC block {block} in sector {sector}. Ensure the card remains on the reader.");
+            }
+            finally
+            {
+                mifareClassic?.Call("close");
+                ResetNfcProcess(nfcReader, activity);
+            }
 
-				if (cancellationToken.IsCancellationRequested)
-					throw new Exception("NFC timeout.");
-			}
-			else
-			{
-				ClearNfcIntent(nfcReader, activity);
-				throw new Exception("NFC adapter not available.");
-			}
+            return blockData;
+        }
 
-			throw new Exception("Failed to read NFC tag.");
-		}
+        private static AndroidJavaObject GetCurrentActivity()
+            => new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
 
-		private static async Task<byte[]> ReadBlockInternalAsync(int block, int sector, CancellationToken cancellationToken)
-		{
-			if (Application.platform != RuntimePlatform.Android)
-				throw new PlatformNotSupportedException("NFC is not supported on this platform.");
+        private static AndroidJavaObject InitializeNfcReader(AndroidJavaObject activity)
+        {
+            AndroidJavaObject nfcReader = new AndroidJavaObject("com.dgames.nfchandlerlib.NfcHandler");
+            nfcReader.Call("setContext", activity);
+            nfcReader.Call("onResume");
+            return nfcReader;
+        }
 
-			// Get all nfc objects
-			AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-			AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-			AndroidJavaObject nfcAdapter = activity.Call<AndroidJavaObject>("getSystemService", "nfc");
-			AndroidJavaObject nfcReader = new AndroidJavaObject("com.dgames.nfchandlerlib.NfcHandler");
+        private async Task<AndroidJavaObject> WaitForNfcTagAsync(AndroidJavaObject activity, CancellationToken cancellationToken)
+        {
+            while (true)
+            {
+                if (TryGetNfcTag(activity, out AndroidJavaObject tag))
+                    return tag;
 
-			// Initialization
-			AndroidJavaObject tag = null;
+                if (cancellationToken.IsCancellationRequested)
+                    throw new TaskCanceledException("NFC tag detection was canceled or timed out.");
 
-			// Enable reader
-			InitializeNfcReader(nfcReader, activity);
+                await Task.Delay(100, cancellationToken);
+            }
+        }
 
-			if (nfcAdapter != null)
-			{
-				while (!cancellationToken.IsCancellationRequested && HasNfcDetect())
-				{
-					await Task.Delay(100);
-				}
+        private async Task<AndroidJavaObject> WaitForMifareBlockAsync(AndroidJavaObject activity, int block, int sector, CancellationToken cancellationToken)
+        {
+            while (true)
+            {
+                if (TryGetMifareBlock(activity, block, sector, out AndroidJavaObject mifareClassic))
+                    return mifareClassic;
 
-				if (tag != null)
-				{
-					byte[] data = GetMifareBlock(tag, block, sector);
-					ClearNfcIntent(nfcReader, activity);
-					return data;
-				}
+                if (cancellationToken.IsCancellationRequested)
+                    throw new TaskCanceledException("MIFARE block detection was canceled or timed out.");
 
-				ClearNfcIntent(nfcReader, activity);
+                await Task.Delay(100, cancellationToken);
+            }
+        }
 
-				if (cancellationToken.IsCancellationRequested)
-					throw new Exception("NFC timeout.");
-			}
-			else
-			{
-				ClearNfcIntent(nfcReader, activity);
-				throw new Exception("NFC adapter not available.");
-			}
+        private static void AuthenticateMifareClassic(AndroidJavaObject mifareClassic, int sector)
+        {
+            if (!IsAuthenticated(mifareClassic, sector))
+                throw new Exception($"Failed to authenticate NFC sector {sector}.");
+        }
 
-			throw new Exception("Failed to read NFC block.");
-		}
+        private static bool IsAuthenticated(AndroidJavaObject mifareClassic, int sector)
+        {
+            mifareClassic.Call("connect");
+            return mifareClassic.Call<bool>("authenticateSectorWithKeyA", sector, DefaultKey);
+        }
 
+        private static void ResetNfcProcess(AndroidJavaObject nfcReader, AndroidJavaObject activity)
+        {
+            nfcReader?.Call("onPause");
+            activity?.Call("setIntent", new AndroidJavaObject("android.content.Intent"));
+        }
 
+        private bool TryGetNfcTag(AndroidJavaObject activity, out AndroidJavaObject tag)
+        {
+            AndroidJavaObject intent = activity.Call<AndroidJavaObject>("getIntent");
+            tag = intent?.Call<AndroidJavaObject>("getParcelableExtra", NfcTagExtra);
+            return tag != null;
+        }
 
-		private static void InitializeNfcReader(AndroidJavaObject nfcReader, AndroidJavaObject activity)
-		{
-			nfcReader.Call("setContext", activity);
-			nfcReader.Call("onResume");
-		}
+        private bool TryGetMifareBlock(AndroidJavaObject activity, int block, int sector, out AndroidJavaObject mifareClassic)
+        {
+            mifareClassic = null;
 
-		private static void ClearNfcIntent(AndroidJavaObject nfcReader, AndroidJavaObject activity)
-		{
-			nfcReader.Call("onPause");
-			activity.Call("setIntent", new AndroidJavaObject("android.content.Intent"));
-		}
+            if (!TryGetNfcTag(activity, out AndroidJavaObject tag) || !IsMifareClassicTag(tag))
+                return false;
 
-		private static AndroidJavaObject GetNfcTag()
-		{
-			AndroidJavaObject mActivity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
-			AndroidJavaObject intent = mActivity.Call<AndroidJavaObject>("getIntent");
-			return intent.Call<AndroidJavaObject>("getParcelableExtra", "android.nfc.extra.TAG");
-		}
+            mifareClassic = new AndroidJavaClass(NfcTechMifareClassic).CallStatic<AndroidJavaObject>("get", tag);
+            return mifareClassic != null;
+        }
 
-		private static bool HasNfcDetect()
-			=> GetNfcTag() != null;
-
-		private static bool CheckMifare(AndroidJavaObject tag)
-		{
-			string[] techs = tag.Call<string[]>("getTechList");
-			return techs.Contains("android.nfc.tech.MifareClassic");
-		}
-
-		private static bool IsAuthentificate(AndroidJavaObject mifareClassic, int sector)
-		{
-			mifareClassic.Call("connect");
-			byte[] defaultKey = new byte[] { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
-			bool auth = mifareClassic.Call<bool>("authenticateSectorWithKeyA", sector, defaultKey);
-
-			return auth;
-		}
-
-		private static byte[] GetMifareBlock(AndroidJavaObject tag, int block, int sector)
-		{
-			if (!CheckMifare(tag))
-				return null;
-
-			AndroidJavaClass mifareClassicClass = new AndroidJavaClass("android.nfc.tech.MifareClassic");
-			AndroidJavaObject mifareClassic = mifareClassicClass.CallStatic<AndroidJavaObject>("get", tag);
-			byte[] result = null;
-
-			if (IsAuthentificate(mifareClassic, sector))
-				result = mifareClassic.Call<byte[]>("readBlock", block);
-
-			mifareClassic.Call("close");
-			return result;
-		}
-	}
+        private static bool IsMifareClassicTag(AndroidJavaObject tag)
+        {
+            string[] techList = tag.Call<string[]>("getTechList");
+            return techList.Contains(NfcTechMifareClassic);
+        }
+    }
 }
 #endif

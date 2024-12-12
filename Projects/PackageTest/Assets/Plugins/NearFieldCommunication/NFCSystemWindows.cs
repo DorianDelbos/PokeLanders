@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace dgames.nfc
 {
-    public static partial class NFCSystem
+    public partial class NFCSystem
     {
 
     }
