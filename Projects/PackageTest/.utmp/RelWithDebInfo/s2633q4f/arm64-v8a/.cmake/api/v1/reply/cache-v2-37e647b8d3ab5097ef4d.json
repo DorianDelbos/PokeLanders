@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "android-23"
+			"value" : "android-24"
 		},
 		{
 			"name" : "ANDROID_STL",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/Etudiant1/Documents/Unity/PokeLanders/Projects/PackageTest/.utmp/RelWithDebInfo/1i3q6a43/arm64-v8a"
+			"value" : "c:/Users/Etudiant1/Documents/Unity/PokeLanders/Projects/PackageTest/.utmp/RelWithDebInfo/s2633q4f/arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -200,22 +200,6 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ctest.exe"
-		},
-		{
-			"name" : "CMAKE_CXX_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "(This variable does not exist and should not be used)"
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -328,22 +312,6 @@
 			],
 			"type" : "STRING",
 			"value" : "-O2 -g -DNDEBUG"
-		},
-		{
-			"name" : "CMAKE_C_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "(This variable does not exist and should not be used)"
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -599,7 +567,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\PackageTest\\.utmp\\RelWithDebInfo\\1i3q6a43\\prefab\\arm64-v8a\\prefab"
+			"value" : "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\PackageTest\\.utmp\\RelWithDebInfo\\s2633q4f\\prefab\\arm64-v8a\\prefab"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -695,7 +663,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\PackageTest\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\1i3q6a43\\obj\\arm64-v8a"
+			"value" : "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\PackageTest\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\s2633q4f\\obj\\arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -967,7 +935,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\PackageTest\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\1i3q6a43\\obj\\arm64-v8a"
+			"value" : "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\PackageTest\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\s2633q4f\\obj\\arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1199,7 +1167,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "23"
+			"value" : "24"
 		},
 		{
 			"name" : "CMAKE_TOOLCHAIN_FILE",
@@ -1207,11 +1175,11 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "The CMake toolchain file"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "FILEPATH",
-			"value" : "C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK/build/cmake/android.toolchain.cmake"
+			"type" : "UNINITIALIZED",
+			"value" : "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.23f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\NDK\\build\\cmake\\android.toolchain.cmake"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
@@ -1239,7 +1207,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Etudiant1/Documents/Unity/PokeLanders/Projects/PackageTest/.utmp/RelWithDebInfo/1i3q6a43/arm64-v8a"
+			"value" : "C:/Users/Etudiant1/Documents/Unity/PokeLanders/Projects/PackageTest/.utmp/RelWithDebInfo/s2633q4f/arm64-v8a"
 		},
 		{
 			"name" : "Unity_IS_TOP_LEVEL",
@@ -1275,7 +1243,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/Etudiant1/Documents/Unity/PokeLanders/Projects/PackageTest/.utmp/RelWithDebInfo/1i3q6a43/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/game-activity"
+			"value" : "C:/Users/Etudiant1/Documents/Unity/PokeLanders/Projects/PackageTest/.utmp/RelWithDebInfo/s2633q4f/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/game-activity"
 		},
 		{
 			"name" : "game_BINARY_DIR",
@@ -1287,7 +1255,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Etudiant1/Documents/Unity/PokeLanders/Projects/PackageTest/.utmp/RelWithDebInfo/1i3q6a43/arm64-v8a/GameActivity"
+			"value" : "C:/Users/Etudiant1/Documents/Unity/PokeLanders/Projects/PackageTest/.utmp/RelWithDebInfo/s2633q4f/arm64-v8a/GameActivity"
 		},
 		{
 			"name" : "game_IS_TOP_LEVEL",
