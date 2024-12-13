@@ -12,50 +12,61 @@ namespace dgames.nfc
 		#region PROPERTIES
 		private const string NfcTechMifareClassic = "android.nfc.tech.MifareClassic";
         private const string NfcTagExtra = "android.nfc.extra.TAG";
-        private static readonly byte[] DefaultKey = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
+        private readonly byte[] DefaultKey = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
         private const Int32 FLAG_RECEIVER_REPLACE_PENDING = 0x20000000;
         private const Int32 FLAG_MUTABLE = 0x02000000;
 
-        private static AndroidJavaObject activity;
-        private static AndroidJavaObject nfcAdapter;
+        private AndroidJavaObject activity;
+        private AndroidJavaObject nfcAdapter;
 		#endregion
 
 		#region MAIN
 		public async Task<byte[]> ReadTagAsync(CancellationToken cancellationToken)
         {
-            InitializeAndroidNFC();
+            try
+            {
+                InitializeAndroidNFC();
 
-            AndroidJavaObject tag = await WaitForNfcTagAsync(cancellationToken);
-            byte[] tagId = tag?.Call<byte[]>("getId") ?? throw new Exception("Failed to retrieve NFC tag ID.");
+                AndroidJavaObject tag = await WaitForNfcTagAsync(cancellationToken);
+                byte[] tagId = tag?.Call<byte[]>("getId") ?? throw new Exception("Failed to retrieve NFC tag ID.");
 
-            ResetNfcProcess();
-
-            return tagId;
+                return tagId;
+            }
+            finally
+            {
+                ResetNfcProcess();
+            }
         }
 
         public async Task<byte[]> ReadBlockAsync(int block, int sector, CancellationToken cancellationToken)
         {
-            InitializeAndroidNFC();
-
-            AndroidJavaObject mifareClassic = await WaitForMifareBlockAsync(block, sector, cancellationToken);
-            byte[] blockData;
-
             try
             {
-                AuthenticateMifareClassic(mifareClassic, sector);
-                blockData = mifareClassic.Call<byte[]>("readBlock", block);
-            }
-            catch (Exception)
-            {
-                throw new Exception($"Failed to read NFC block {block} in sector {sector}. Ensure the card remains on the reader.");
+                InitializeAndroidNFC();
+
+                AndroidJavaObject mifareClassic = await WaitForMifareBlockAsync(block, sector, cancellationToken);
+                byte[] blockData;
+
+                try
+                {
+                    AuthenticateMifareClassic(mifareClassic, sector);
+                    blockData = mifareClassic.Call<byte[]>("readBlock", block);
+                }
+                catch (Exception)
+                {
+                    throw new Exception($"Failed to read NFC block {block} in sector {sector}. Ensure the card remains on the reader.");
+                }
+                finally
+                {
+                    mifareClassic?.Call("close");
+                }
+
+                return blockData;
             }
             finally
             {
-                mifareClassic?.Call("close");
                 ResetNfcProcess();
             }
-
-            return blockData;
         }
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
@@ -95,13 +106,13 @@ namespace dgames.nfc
             }
         }
 
-        private static void AuthenticateMifareClassic(AndroidJavaObject mifareClassic, int sector)
+        private void AuthenticateMifareClassic(AndroidJavaObject mifareClassic, int sector)
         {
             if (!IsAuthenticated(mifareClassic, sector))
                 throw new Exception($"Failed to authenticate NFC sector {sector}.");
         }
 
-        private static bool IsAuthenticated(AndroidJavaObject mifareClassic, int sector)
+        private bool IsAuthenticated(AndroidJavaObject mifareClassic, int sector)
         {
             mifareClassic.Call("connect");
             return mifareClassic.Call<bool>("authenticateSectorWithKeyA", sector, DefaultKey);
@@ -125,13 +136,13 @@ namespace dgames.nfc
             return mifareClassic != null;
         }
 
-        private static bool IsMifareClassicTag(AndroidJavaObject tag)
+        private bool IsMifareClassicTag(AndroidJavaObject tag)
         {
             string[] techList = tag.Call<string[]>("getTechList");
             return techList.Contains(NfcTechMifareClassic);
         }
 
-        private static void InitializeAndroidNFC()
+        private void InitializeAndroidNFC()
         {
             activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
 			nfcAdapter = new AndroidJavaClass("android.nfc.NfcAdapter").CallStatic<AndroidJavaObject>("getDefaultAdapter", activity);
@@ -153,7 +164,7 @@ namespace dgames.nfc
 			}
 		}
 
-        private static void ResetNfcProcess()
+        private void ResetNfcProcess()
         {
             if (nfcAdapter != null)
                 nfcAdapter.Call("disableForegroundDispatch", activity);

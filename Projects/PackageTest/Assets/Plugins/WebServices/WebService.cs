@@ -2,7 +2,6 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using UnityEngine;
-using dgames.Utilities;
 
 namespace dgames.http
 {
