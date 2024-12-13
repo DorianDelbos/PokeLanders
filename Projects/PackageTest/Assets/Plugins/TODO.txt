@@ -1,4 +1,0 @@
-Check platform (Android / or other)
-Script NFC :
-- Read
-- Write

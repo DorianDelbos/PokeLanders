@@ -9,7 +9,8 @@ namespace dgames.nfc
 {
     public partial class NFCSystem
     {
-        private const string NfcTechMifareClassic = "android.nfc.tech.MifareClassic";
+		#region PROPERTIES
+		private const string NfcTechMifareClassic = "android.nfc.tech.MifareClassic";
         private const string NfcTagExtra = "android.nfc.extra.TAG";
         private static readonly byte[] DefaultKey = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
         private const Int32 FLAG_RECEIVER_REPLACE_PENDING = 0x20000000;
@@ -17,8 +18,10 @@ namespace dgames.nfc
 
         private static AndroidJavaObject activity;
         private static AndroidJavaObject nfcAdapter;
+		#endregion
 
-        public async Task<byte[]> ReadTagAsync(CancellationToken cancellationToken)
+		#region MAIN
+		public async Task<byte[]> ReadTagAsync(CancellationToken cancellationToken)
         {
             InitializeAndroidNFC();
 
@@ -55,7 +58,16 @@ namespace dgames.nfc
             return blockData;
         }
 
-        private async Task<AndroidJavaObject> WaitForNfcTagAsync(CancellationToken cancellationToken)
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+		public async Task<bool> WriteBlockAsync(int block, int sector, CancellationToken cancellationToken)
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+		{
+            throw new NotImplementedException();
+		}
+		#endregion
+
+		#region COMMON
+		private async Task<AndroidJavaObject> WaitForNfcTagAsync(CancellationToken cancellationToken)
         {
             while (true)
             {
@@ -148,6 +160,7 @@ namespace dgames.nfc
 
             activity?.Call("setIntent", new AndroidJavaObject("android.content.Intent"));
         }
-    }
+		#endregion
+	}
 }
 #endif

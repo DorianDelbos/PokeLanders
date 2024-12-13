@@ -26,7 +26,7 @@ namespace dgames.http
 		public static async Task<T> JsonProcessor<T>(HttpContent content)
 		{
 			string json = await content.ReadAsStringAsync();
-			return JsonUtilities.FromJson<T>(json);
+			return Utilities.JsonUtility.FromJson<T>(json);
 		}
 
 		public static async Task<Texture2D> ImageProcessor(HttpContent content)

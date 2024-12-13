@@ -23,7 +23,7 @@ namespace dgames.nfc
 			}
 		}
 
-		public async void ReadBlockAsync(int sector, int block, Action<bool, byte[], Exception> onComplete)
+		public async void ReadBlockAsync(int block, int sector, Action<bool, byte[], Exception> onComplete)
 		{
 			try
             {
@@ -38,5 +38,21 @@ namespace dgames.nfc
 				onComplete?.Invoke(false, null, e);
 			}
 		}
-    }
+
+		public async void WriteBlockAsync(int block, int sector, Action<bool, Exception> onComplete)
+		{
+			try
+			{
+				using (var cts = new CancellationTokenSource(timeout))
+				{
+					bool result = await WriteBlockAsync(block, sector, cts.Token);
+					onComplete?.Invoke(result, null);
+				}
+			}
+			catch (Exception e)
+			{
+				onComplete?.Invoke(false, e);
+			}
+		}
+	}
 }

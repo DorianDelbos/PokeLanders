@@ -1,9 +1,8 @@
 using System;
-using UnityEngine;
 
 namespace dgames.Utilities
 {
-	public class JsonUtilities
+	public class JsonUtility
 	{
 		public static T FromJson<T>(string json)
 		{
@@ -13,7 +12,7 @@ namespace dgames.Utilities
 				Type jsonArrayWrapperType = typeof(Wrapper<>).MakeGenericType(elementType);
 
 				string newJson = "{ \"items\": " + json + "}";
-				object deserializedObject = JsonUtility.FromJson(newJson, jsonArrayWrapperType);
+				object deserializedObject = UnityEngine.JsonUtility.FromJson(newJson, jsonArrayWrapperType);
 
 				var itemsField = jsonArrayWrapperType.GetField("items");
 				if (itemsField != null)
@@ -25,7 +24,7 @@ namespace dgames.Utilities
 				return default;
 			}
 
-			return JsonUtility.FromJson<T>(json);
+			return UnityEngine.JsonUtility.FromJson<T>(json);
 		}
 
 		[Serializable]
