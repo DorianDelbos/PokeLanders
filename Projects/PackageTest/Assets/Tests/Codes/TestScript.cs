@@ -2,17 +2,21 @@ using dgames.http;
 using dgames.nfc;
 using dgames.Utilities;
 using Landers.API;
+using System.IO;
 using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
 	private WebService webService = new WebService();
 
-	public void RequestTest()
+	public void Update()
 	{
+		if (!Input.GetKeyDown(KeyCode.Y))
+			return;
+
 		ConsoleSystem.instance.AppendText($"Request web launch ...");
-		string request = "https://landopedia-gwhtbqbqdhd4d5hw.westeurope-01.azurewebsites.net/api/v1/lander/1";
-		webService.AsyncRequestJson<Lander>(request, (isSucceed, lander) =>
+		string request = Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/lander/1");
+		webService.AsyncRequestJson<Lander>(request, (isSucceed, lander, e) =>
 		{
 			if (isSucceed)
 			{
@@ -20,7 +24,7 @@ public class TestScript : MonoBehaviour
 			}
 			else
 			{
-				ConsoleSystem.instance.AppendText("An error was appear when you tried to load a lander !", Color.red);
+				ConsoleSystem.instance.AppendText($"An error was appear when you tried to load a lander !\n{e}", Color.red);
 			}
 		});
 	}

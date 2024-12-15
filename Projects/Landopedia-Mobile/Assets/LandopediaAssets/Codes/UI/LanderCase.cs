@@ -1,8 +1,7 @@
-using Lander.Module.API;
-using Lander.Module.Utilities;
-using System.Collections.Generic;
+using Landers.API;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Landopedia
@@ -10,70 +9,39 @@ namespace Landopedia
 	public class LanderCase : MonoBehaviour
     {
         [SerializeField] private TMP_Text landerIDTextMesh;
-        [SerializeField] private Image landerImage;
-        private int landerID = 0;
+        [SerializeField] private RawImage landerImage;
+        private Lander lander;
         private bool hasLander = false;
 
-        public bool HasLander => hasLander;
-
-        public async void Initialize(int id, string spriteUrl)
+        public bool HasLander
         {
-            landerID = id;
-            landerIDTextMesh.text = landerID.ToString("D3");
-            landerImage.sprite = await WebSpriteUtilities.LoadSpriteFromUrlAsync(spriteUrl);
-        }
-
-        public void SetHasLander(bool hasLander)
-        {
-            this.hasLander = hasLander;
-            landerIDTextMesh.gameObject.SetActive(!hasLander);
-            landerImage.gameObject.SetActive(hasLander);
-        }
-
-        public void OpenPanelLander()
-        {
-            if (hasLander)
+            get => hasLander;
+            set
             {
-                MenuManager.current.MenuHandler.ChangeMenu("Loading");
-                TryLoadLander();
+                hasLander = value;
+                landerIDTextMesh.gameObject.SetActive(!hasLander);
+                landerImage.gameObject.SetActive(hasLander);
             }
         }
 
-        private async void TryLoadLander()
+        public void SetLander(Lander lander)
         {
-            await DataFetcher<Lander.Module.API.Lander>.FetchDataAsync($"api/v1/lander/{landerID}", OnSuccess, ExeptionError);
+            this.lander = lander;
+            landerIDTextMesh.text = lander.id.ToString("D3");
         }
 
-        private void OnSuccess(Lander.Module.API.Lander lander)
+        public void SetTexture(Texture2D texture)
         {
-            LanderMenuManager.current.SetLander(lander);
-            MenuManager.current.MenuHandler.ChangeMenu("Lander");
+            landerImage.texture = texture;
         }
 
-        private void ExeptionError()
+        public void OpenLander()
         {
-            DataPanelSystem.Instance.CreateDataPanel(new DataPanelStruct()
-			    {
-				    text = (Resources.Load("ErrorMessageHandler") as DataMessageHandler).webServiceError,
-				    buttons = new List<DataPanelStruct.Button>
-				    {
-					    new DataPanelStruct.Button
-					    {
-						    text = "Retry",
-						    action = () =>
-						    {
-							    DataPanelSystem.Instance.ClearDataPanel();
-							    TryLoadLander();
-						    }
-					    },
-					    new DataPanelStruct.Button
-					    {
-						    text = "Quit application",
-						    action = () => MenuManager.current.QuitApplication()
-					    },
-				    }
-			    }
-            );
+            if (!hasLander)
+                return;
+
+            LanderMenuHandler.lander = lander;
+            SceneManager.LoadScene("Lander");
         }
     }
 }

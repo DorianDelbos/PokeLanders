@@ -1,3 +1,4 @@
+using Landers.API;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace Landopedia
 	public static class SaveSystem
 	{
 		// Maximum number of IDs to manage, defined by the number of available 'Lander' objects
-		private static readonly int MaxID = GameManager.Instance.Landers.Length;
+		private static readonly int MaxID = LanderRepository.GetAll().Length;
 
 		// Save key for the IDs bitmask in the player's preferences
 		private const string BitmaskKey = "IDsBitmask";

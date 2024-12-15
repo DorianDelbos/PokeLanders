@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "40afKH8l81zErPDRdcAxZUm9S3Kir/05eDMeHo9V1yI=",
+  "Hash": "WYTt4h0UxZMgHU3dXv/s0P0H+MelDEpf+4EXH04ib80=",
   "Source": "LandAPI",
   "BasePath": "_content/LandAPI",
   "Mode": "Default",
@@ -10,19 +10,19 @@
     {
       "Name": "LandAPI\\wwwroot",
       "Source": "LandAPI",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\LandAPI.styles.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\LandAPI.styles.css",
       "SourceId": "LandAPI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "LandAPI#[.{fingerprint}]?.styles.css",
+      "RelativePath": "LandAPI.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -31,19 +31,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "0dm1uyn702",
-      "Integrity": "dP2BZFDiYrwQDuw+pW2YVOUaefJXzArIL/zCCNyNdRY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\LandAPI.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\LandAPI.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css",
       "SourceId": "LandAPI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "LandAPI#[.{fingerprint}]!.bundle.scp.css",
+      "RelativePath": "LandAPI.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -52,4091 +50,731 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "0dm1uyn702",
-      "Integrity": "dP2BZFDiYrwQDuw+pW2YVOUaefJXzArIL/zCCNyNdRY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Data/ailments#[.{fingerprint}]?.json",
+      "RelativePath": "Assets/Data/ailments.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "l65f5nwj74",
-      "Integrity": "A5cI0XMY0nGbe2WN5t0FTtulYj6ypOTbZPX2TtYUIRw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\ailments.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Data/evolutionChains#[.{fingerprint}]?.json",
+      "RelativePath": "Assets/Data/evolutionChains.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "a7s1wfx4ok",
-      "Integrity": "BhF3Rm4QUoc65Sw3qaPIH82oYWgnMsQl7366CQfpsbE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\evolutionChains.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Data/landers#[.{fingerprint}]?.json",
+      "RelativePath": "Assets/Data/landers.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "m5exgi9hlw",
-      "Integrity": "FtJ/jBAoKbD+C6NrDwMhncbH4yfBt0TyqEAP62CMjug=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\landers.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Data/moves#[.{fingerprint}]?.json",
+      "RelativePath": "Assets/Data/moves.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pfabwtaidi",
-      "Integrity": "ayKjWYGLnNXOFrLnY1am3rv7triLsK7vCew5kLWCjNc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\moves.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\nature.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\nature.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Data/nature#[.{fingerprint}]?.json",
+      "RelativePath": "Assets/Data/nature.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "arcelkmxaz",
-      "Integrity": "6iI/QgBVaWj+BmruYb52QLojDcbYNgxJkHjxoTvf/TA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\nature.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Data/stats#[.{fingerprint}]?.json",
+      "RelativePath": "Assets/Data/stats.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "drh0ocx2mr",
-      "Integrity": "F04pTDdXtlHZmv75iEbDUM2oiPw4IctrtnWKqm95IRw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\stats.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Data/types#[.{fingerprint}]?.json",
+      "RelativePath": "Assets/Data/types.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1m7vz6pxga",
-      "Integrity": "SePdzUUf8MtkXXWv15HXyUZZnybJWQ5ItCmEZTKnfMM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Data\\types.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Models/Aquapix#[.{fingerprint}]?.glb",
+      "RelativePath": "Assets/Models/Aquapix.glb",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zgym3g0tju",
-      "Integrity": "A7t/z7jjXkU1vt+oXTCReZE8rSnVR3JTRlGU4S8yyJI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Models\\Aquapix.glb"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Luminorine.glb",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Luminorine.glb",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Models/Luminorine#[.{fingerprint}]?.glb",
+      "RelativePath": "Assets/Models/Luminorine.glb",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bvbj3am1vr",
-      "Integrity": "1635EXmp/zF3JPeqRxYrvOBva/wBNNy/sdd57mXBUnY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Models\\Luminorine.glb"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Ocealythe.glb",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Ocealythe.glb",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Models/Ocealythe#[.{fingerprint}]?.glb",
+      "RelativePath": "Assets/Models/Ocealythe.glb",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ggg4ssk7bz",
-      "Integrity": "sEf9FzeD0zfwlt3qTVv5bHmQ7UgosZHnJ9OfySMMtGY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Models\\Ocealythe.glb"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Aquapix.png",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Aquapix.png",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Sprites/Aquapix#[.{fingerprint}]?.png",
+      "RelativePath": "Assets/Sprites/Aquapix.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4ggdsopwve",
-      "Integrity": "hCD+U+mW4hY8U1jJtyOugFzcgM24L8JdmuIoTo7EdbM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Sprites\\Aquapix.png"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Luminorine.png",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Luminorine.png",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Sprites/Luminorine#[.{fingerprint}]?.png",
+      "RelativePath": "Assets/Sprites/Luminorine.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zxdp11b75f",
-      "Integrity": "18fArktCsrsnFuP/SmYMT9/tT7hIrYPQtC3k3o7+CM4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Sprites\\Luminorine.png"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Ocealythe.png",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Ocealythe.png",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Assets/Sprites/Ocealythe#[.{fingerprint}]?.png",
+      "RelativePath": "Assets/Sprites/Ocealythe.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6k21elg771",
-      "Integrity": "yjp5WL6mpD2F++TZYji90lx9HIwuJV8tmqbkkbAjalE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Sprites\\Ocealythe.png"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\app.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\app.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/css/app#[.{fingerprint}]?.css",
+      "RelativePath": "Web/css/app.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mxqqo3dyg5",
-      "Integrity": "JqGJ2+/c+TrO8Y4Duf0JLKaRhdF8vQkuwmN/K3LpESA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\favicon.png",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\favicon.png",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/favicon#[.{fingerprint}]?.png",
+      "RelativePath": "Web/favicon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ifv42okdf2",
-      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\App.js",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\App.js",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/js/App#[.{fingerprint}]?.js",
+      "RelativePath": "Web/js/App.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mmwg7xmds6",
-      "Integrity": "0svoaiFB9+7frhL3Six2P3+twrc/DoOYl5G/MKA/jzw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\js\\App.js"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\GLBViewer.js",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\GLBViewer.js",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/js/GLBViewer#[.{fingerprint}]?.js",
+      "RelativePath": "Web/js/GLBViewer.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u9zj81g9ce",
-      "Integrity": "UiVrWt47CWIi9R7eyBbs+t7VjJX27h0TCcQCEVUwAtY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\js\\GLBViewer.js"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\.package-lock.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\.package-lock.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/.package-lock#[.{fingerprint}]?.json",
+      "RelativePath": "Web/node_modules/.package-lock.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "cbrme8yqet",
-      "Integrity": "OD4Pljlee/2dzhsxsoHypeKqKm6R4XLugOTF0A9345s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\.package-lock.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\@popperjs\\core\\package.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\@popperjs\\core\\package.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/@popperjs/core/package#[.{fingerprint}]?.json",
+      "RelativePath": "Web/node_modules/@popperjs/core/package.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xjqfgd68pm",
-      "Integrity": "LfgMJ8wHsZl1aHDEQUnLscn5Q1zYVMq0hfsO58+9Brw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\@popperjs\\core\\package.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zub09dkrxp",
-      "Integrity": "CzmECrtXV8BSk/+8SG+Rw7Fr+3hCt2bS2bEkS4YD3PQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap.min#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "43atpzeawx",
-      "Integrity": "sKIQRfQriISuQ9l/44b1zHfQniGXJhGonVtB2LlSuIs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ynyaa8k90p",
-      "Integrity": "/rceNUMI0RlFJugRzjua815bgXwawEJBGBPh4Vx3r38=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl.min#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c63t5i9ira",
-      "Integrity": "rI1w2GDxZPCr77bpZIGQ8mUvMVtEr+gBtahl5RIPJpA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "t1cqhe9u97",
-      "Integrity": "f4c8YV1qrr6RSiVYWMQT7R5W2OkT+iXmE5H69/uRvGQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.min#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "sejl45xvog",
-      "Integrity": "hN2ttMG/K3wQlFrN3SbQ1YF4tIJHCE4oYP+QibT3vOY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xvp3kq03qx",
-      "Integrity": "M15fHTKfMK6cTars5c28PNhN6hD0qeUb3HPzOdoPwCc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.min#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "22vffe00uq",
-      "Integrity": "+rGG3u63SMkHL80Ga42LAawPUj7i8vaR2Kuenqlta2E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "qesaa3a1fm",
-      "Integrity": "rjusxCRzKjztCcfgOVduAc3e3Z7KvimJGokJSeADNmE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.min#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tmc1g35s3z",
-      "Integrity": "y72bT5TKmFmfvw3bNEzPRNZa/8595xtseZIcBUV0PdM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "rxsg74s51o",
-      "Integrity": "gRKIHVkBgnCPUs/hmZsXynZ9ZJpvsE77idtljDkrWGI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.min#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "q9ht133ko3",
-      "Integrity": "UkajePbMzGj8y73Imkd3dWWnLJr0v2CrBCLMrVMleP8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "gye83jo8yx",
-      "Integrity": "uIzOR4gILoNjCGNryIsWnkEGO3BSwRa/MLjr73tDodE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.min#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wl58j5mj3v",
-      "Integrity": "ZBXbYF8OZrF1GDOLMLvW/zRPtx1RfeMDYj5D2Wb/9jo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "d4r6k3f320",
-      "Integrity": "MwFckg8YbY2WrveNQnXkfULkprYhFOq+t1BH92A7GsI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.min#[.{fingerprint}]?.css",
+      "RelativePath": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "keugtjm085",
-      "Integrity": "7MYEMUFgHEc1CjrfAK/TlV30POxgoxXk2b+vAs/143U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\package.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\package.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/node_modules/bootstrap/package#[.{fingerprint}]?.json",
+      "RelativePath": "Web/node_modules/bootstrap/package.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ve8fep4dan",
-      "Integrity": "qdX4ugkL5LOPwhMscXOtACaD7bYF3sQe4Crz0ZglZY0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\node_modules\\bootstrap\\package.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/package#[.{fingerprint}]?.json",
+      "RelativePath": "Web/package.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dmwhty5f5c",
-      "Integrity": "myvcn/45H77W6cGd8anwkyQhM2cSqF5Pl1Meca54+bk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\package.json"
     },
     {
-      "Identity": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package-lock.json",
+      "Identity": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package-lock.json",
       "SourceId": "LandAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\",
       "BasePath": "_content/LandAPI",
-      "RelativePath": "Web/package-lock#[.{fingerprint}]?.json",
+      "RelativePath": "Web/package-lock.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "n25rdxdh6w",
-      "Integrity": "b7Nrvp9XJmwlGCu3U2P31ev8Srxw1X/U4jaSZ2P3iUU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Web\\package-lock.json"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "Assets/Data/ailments.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "333"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"A5cI0XMY0nGbe2WN5t0FTtulYj6ypOTbZPX2TtYUIRw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-A5cI0XMY0nGbe2WN5t0FTtulYj6ypOTbZPX2TtYUIRw="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/ailments.l65f5nwj74.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "333"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"A5cI0XMY0nGbe2WN5t0FTtulYj6ypOTbZPX2TtYUIRw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "l65f5nwj74"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Data/ailments.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-A5cI0XMY0nGbe2WN5t0FTtulYj6ypOTbZPX2TtYUIRw="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/evolutionChains.a7s1wfx4ok.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "585"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BhF3Rm4QUoc65Sw3qaPIH82oYWgnMsQl7366CQfpsbE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "a7s1wfx4ok"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Data/evolutionChains.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-BhF3Rm4QUoc65Sw3qaPIH82oYWgnMsQl7366CQfpsbE="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/evolutionChains.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "585"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BhF3Rm4QUoc65Sw3qaPIH82oYWgnMsQl7366CQfpsbE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-BhF3Rm4QUoc65Sw3qaPIH82oYWgnMsQl7366CQfpsbE="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/landers.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3810"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"FtJ/jBAoKbD+C6NrDwMhncbH4yfBt0TyqEAP62CMjug=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-FtJ/jBAoKbD+C6NrDwMhncbH4yfBt0TyqEAP62CMjug="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/landers.m5exgi9hlw.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3810"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"FtJ/jBAoKbD+C6NrDwMhncbH4yfBt0TyqEAP62CMjug=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "m5exgi9hlw"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Data/landers.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-FtJ/jBAoKbD+C6NrDwMhncbH4yfBt0TyqEAP62CMjug="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/moves.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "208"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ayKjWYGLnNXOFrLnY1am3rv7triLsK7vCew5kLWCjNc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ayKjWYGLnNXOFrLnY1am3rv7triLsK7vCew5kLWCjNc="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/moves.pfabwtaidi.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "208"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ayKjWYGLnNXOFrLnY1am3rv7triLsK7vCew5kLWCjNc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "pfabwtaidi"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Data/moves.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ayKjWYGLnNXOFrLnY1am3rv7triLsK7vCew5kLWCjNc="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/nature.arcelkmxaz.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\nature.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5476"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6iI/QgBVaWj+BmruYb52QLojDcbYNgxJkHjxoTvf/TA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "arcelkmxaz"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Data/nature.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6iI/QgBVaWj+BmruYb52QLojDcbYNgxJkHjxoTvf/TA="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/nature.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\nature.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5476"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6iI/QgBVaWj+BmruYb52QLojDcbYNgxJkHjxoTvf/TA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6iI/QgBVaWj+BmruYb52QLojDcbYNgxJkHjxoTvf/TA="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/stats.drh0ocx2mr.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "298"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"F04pTDdXtlHZmv75iEbDUM2oiPw4IctrtnWKqm95IRw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "drh0ocx2mr"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Data/stats.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-F04pTDdXtlHZmv75iEbDUM2oiPw4IctrtnWKqm95IRw="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/stats.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "298"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"F04pTDdXtlHZmv75iEbDUM2oiPw4IctrtnWKqm95IRw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-F04pTDdXtlHZmv75iEbDUM2oiPw4IctrtnWKqm95IRw="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/types.1m7vz6pxga.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1463"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SePdzUUf8MtkXXWv15HXyUZZnybJWQ5ItCmEZTKnfMM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1m7vz6pxga"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Data/types.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-SePdzUUf8MtkXXWv15HXyUZZnybJWQ5ItCmEZTKnfMM="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Data/types.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1463"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SePdzUUf8MtkXXWv15HXyUZZnybJWQ5ItCmEZTKnfMM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-SePdzUUf8MtkXXWv15HXyUZZnybJWQ5ItCmEZTKnfMM="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Models/Aquapix.glb",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "212824"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"A7t/z7jjXkU1vt+oXTCReZE8rSnVR3JTRlGU4S8yyJI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-A7t/z7jjXkU1vt+oXTCReZE8rSnVR3JTRlGU4S8yyJI="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Models/Aquapix.zgym3g0tju.glb",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "212824"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"A7t/z7jjXkU1vt+oXTCReZE8rSnVR3JTRlGU4S8yyJI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zgym3g0tju"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Models/Aquapix.glb"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-A7t/z7jjXkU1vt+oXTCReZE8rSnVR3JTRlGU4S8yyJI="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Models/Luminorine.bvbj3am1vr.glb",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Luminorine.glb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2320"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"1635EXmp/zF3JPeqRxYrvOBva/wBNNy/sdd57mXBUnY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "bvbj3am1vr"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Models/Luminorine.glb"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-1635EXmp/zF3JPeqRxYrvOBva/wBNNy/sdd57mXBUnY="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Models/Luminorine.glb",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Luminorine.glb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2320"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"1635EXmp/zF3JPeqRxYrvOBva/wBNNy/sdd57mXBUnY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-1635EXmp/zF3JPeqRxYrvOBva/wBNNy/sdd57mXBUnY="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Models/Ocealythe.ggg4ssk7bz.glb",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Ocealythe.glb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "69888"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sEf9FzeD0zfwlt3qTVv5bHmQ7UgosZHnJ9OfySMMtGY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ggg4ssk7bz"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Models/Ocealythe.glb"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sEf9FzeD0zfwlt3qTVv5bHmQ7UgosZHnJ9OfySMMtGY="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Models/Ocealythe.glb",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Ocealythe.glb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "69888"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sEf9FzeD0zfwlt3qTVv5bHmQ7UgosZHnJ9OfySMMtGY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-sEf9FzeD0zfwlt3qTVv5bHmQ7UgosZHnJ9OfySMMtGY="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Sprites/Aquapix.4ggdsopwve.png",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Aquapix.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6492"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hCD+U+mW4hY8U1jJtyOugFzcgM24L8JdmuIoTo7EdbM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4ggdsopwve"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Sprites/Aquapix.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-hCD+U+mW4hY8U1jJtyOugFzcgM24L8JdmuIoTo7EdbM="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Sprites/Aquapix.png",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Aquapix.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6492"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hCD+U+mW4hY8U1jJtyOugFzcgM24L8JdmuIoTo7EdbM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-hCD+U+mW4hY8U1jJtyOugFzcgM24L8JdmuIoTo7EdbM="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Sprites/Luminorine.png",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Luminorine.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6231"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"18fArktCsrsnFuP/SmYMT9/tT7hIrYPQtC3k3o7+CM4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-18fArktCsrsnFuP/SmYMT9/tT7hIrYPQtC3k3o7+CM4="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Sprites/Luminorine.zxdp11b75f.png",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Luminorine.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6231"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"18fArktCsrsnFuP/SmYMT9/tT7hIrYPQtC3k3o7+CM4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zxdp11b75f"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Sprites/Luminorine.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-18fArktCsrsnFuP/SmYMT9/tT7hIrYPQtC3k3o7+CM4="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Sprites/Ocealythe.6k21elg771.png",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Ocealythe.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5552"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yjp5WL6mpD2F++TZYji90lx9HIwuJV8tmqbkkbAjalE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6k21elg771"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Sprites/Ocealythe.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-yjp5WL6mpD2F++TZYji90lx9HIwuJV8tmqbkkbAjalE="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Sprites/Ocealythe.png",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Ocealythe.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5552"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yjp5WL6mpD2F++TZYji90lx9HIwuJV8tmqbkkbAjalE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-yjp5WL6mpD2F++TZYji90lx9HIwuJV8tmqbkkbAjalE="
-        }
-      ]
-    },
-    {
-      "Route": "LandAPI.0dm1uyn702.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5905"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"dP2BZFDiYrwQDuw+pW2YVOUaefJXzArIL/zCCNyNdRY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "0dm1uyn702"
-        },
-        {
-          "Name": "label",
-          "Value": "LandAPI.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-dP2BZFDiYrwQDuw+pW2YVOUaefJXzArIL/zCCNyNdRY="
-        }
-      ]
-    },
-    {
-      "Route": "LandAPI.0dm1uyn702.styles.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\LandAPI.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5905"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"dP2BZFDiYrwQDuw+pW2YVOUaefJXzArIL/zCCNyNdRY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "0dm1uyn702"
-        },
-        {
-          "Name": "label",
-          "Value": "LandAPI.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-dP2BZFDiYrwQDuw+pW2YVOUaefJXzArIL/zCCNyNdRY="
-        }
-      ]
-    },
-    {
-      "Route": "LandAPI.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5905"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"dP2BZFDiYrwQDuw+pW2YVOUaefJXzArIL/zCCNyNdRY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-dP2BZFDiYrwQDuw+pW2YVOUaefJXzArIL/zCCNyNdRY="
-        }
-      ]
-    },
-    {
-      "Route": "LandAPI.styles.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\bundle\\LandAPI.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5905"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"dP2BZFDiYrwQDuw+pW2YVOUaefJXzArIL/zCCNyNdRY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-dP2BZFDiYrwQDuw+pW2YVOUaefJXzArIL/zCCNyNdRY="
-        }
-      ]
-    },
-    {
-      "Route": "Web/css/app.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1101"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JqGJ2+/c+TrO8Y4Duf0JLKaRhdF8vQkuwmN/K3LpESA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-JqGJ2+/c+TrO8Y4Duf0JLKaRhdF8vQkuwmN/K3LpESA="
-        }
-      ]
-    },
-    {
-      "Route": "Web/css/app.mxqqo3dyg5.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1101"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JqGJ2+/c+TrO8Y4Duf0JLKaRhdF8vQkuwmN/K3LpESA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mxqqo3dyg5"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/css/app.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JqGJ2+/c+TrO8Y4Duf0JLKaRhdF8vQkuwmN/K3LpESA="
-        }
-      ]
-    },
-    {
-      "Route": "Web/favicon.ifv42okdf2.png",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\favicon.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1148"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ifv42okdf2"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/favicon.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
-        }
-      ]
-    },
-    {
-      "Route": "Web/favicon.png",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\favicon.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1148"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
-        }
-      ]
-    },
-    {
-      "Route": "Web/js/App.js",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\App.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1229"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0svoaiFB9+7frhL3Six2P3+twrc/DoOYl5G/MKA/jzw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0svoaiFB9+7frhL3Six2P3+twrc/DoOYl5G/MKA/jzw="
-        }
-      ]
-    },
-    {
-      "Route": "Web/js/App.mmwg7xmds6.js",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\App.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1229"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0svoaiFB9+7frhL3Six2P3+twrc/DoOYl5G/MKA/jzw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mmwg7xmds6"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/js/App.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0svoaiFB9+7frhL3Six2P3+twrc/DoOYl5G/MKA/jzw="
-        }
-      ]
-    },
-    {
-      "Route": "Web/js/GLBViewer.js",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\GLBViewer.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5999"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"UiVrWt47CWIi9R7eyBbs+t7VjJX27h0TCcQCEVUwAtY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-UiVrWt47CWIi9R7eyBbs+t7VjJX27h0TCcQCEVUwAtY="
-        }
-      ]
-    },
-    {
-      "Route": "Web/js/GLBViewer.u9zj81g9ce.js",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\GLBViewer.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5999"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"UiVrWt47CWIi9R7eyBbs+t7VjJX27h0TCcQCEVUwAtY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "u9zj81g9ce"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/js/GLBViewer.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-UiVrWt47CWIi9R7eyBbs+t7VjJX27h0TCcQCEVUwAtY="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/.package-lock.cbrme8yqet.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\.package-lock.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1433"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OD4Pljlee/2dzhsxsoHypeKqKm6R4XLugOTF0A9345s=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "cbrme8yqet"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/.package-lock.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-OD4Pljlee/2dzhsxsoHypeKqKm6R4XLugOTF0A9345s="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/.package-lock.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\.package-lock.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1433"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OD4Pljlee/2dzhsxsoHypeKqKm6R4XLugOTF0A9345s=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-OD4Pljlee/2dzhsxsoHypeKqKm6R4XLugOTF0A9345s="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/@popperjs/core/package.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\@popperjs\\core\\package.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4349"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"LfgMJ8wHsZl1aHDEQUnLscn5Q1zYVMq0hfsO58+9Brw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-LfgMJ8wHsZl1aHDEQUnLscn5Q1zYVMq0hfsO58+9Brw="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/@popperjs/core/package.xjqfgd68pm.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\@popperjs\\core\\package.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4349"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"LfgMJ8wHsZl1aHDEQUnLscn5Q1zYVMq0hfsO58+9Brw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xjqfgd68pm"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/@popperjs/core/package.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-LfgMJ8wHsZl1aHDEQUnLscn5Q1zYVMq0hfsO58+9Brw="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "293102"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"CzmECrtXV8BSk/+8SG+Rw7Fr+3hCt2bS2bEkS4YD3PQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-CzmECrtXV8BSk/+8SG+Rw7Fr+3hCt2bS2bEkS4YD3PQ="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap.min.43atpzeawx.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "232808"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sKIQRfQriISuQ9l/44b1zHfQniGXJhGonVtB2LlSuIs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "43atpzeawx"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sKIQRfQriISuQ9l/44b1zHfQniGXJhGonVtB2LlSuIs="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "232808"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sKIQRfQriISuQ9l/44b1zHfQniGXJhGonVtB2LlSuIs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-sKIQRfQriISuQ9l/44b1zHfQniGXJhGonVtB2LlSuIs="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "292288"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/rceNUMI0RlFJugRzjua815bgXwawEJBGBPh4Vx3r38=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-/rceNUMI0RlFJugRzjua815bgXwawEJBGBPh4Vx3r38="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl.min.c63t5i9ira.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "232916"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rI1w2GDxZPCr77bpZIGQ8mUvMVtEr+gBtahl5RIPJpA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "c63t5i9ira"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-rI1w2GDxZPCr77bpZIGQ8mUvMVtEr+gBtahl5RIPJpA="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "232916"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rI1w2GDxZPCr77bpZIGQ8mUvMVtEr+gBtahl5RIPJpA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-rI1w2GDxZPCr77bpZIGQ8mUvMVtEr+gBtahl5RIPJpA="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl.ynyaa8k90p.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "292288"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/rceNUMI0RlFJugRzjua815bgXwawEJBGBPh4Vx3r38=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ynyaa8k90p"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap.rtl.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/rceNUMI0RlFJugRzjua815bgXwawEJBGBPh4Vx3r38="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap.zub09dkrxp.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "293102"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"CzmECrtXV8BSk/+8SG+Rw7Fr+3hCt2bS2bEkS4YD3PQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zub09dkrxp"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-CzmECrtXV8BSk/+8SG+Rw7Fr+3hCt2bS2bEkS4YD3PQ="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "74413"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"f4c8YV1qrr6RSiVYWMQT7R5W2OkT+iXmE5H69/uRvGQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-f4c8YV1qrr6RSiVYWMQT7R5W2OkT+iXmE5H69/uRvGQ="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "51800"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hN2ttMG/K3wQlFrN3SbQ1YF4tIJHCE4oYP+QibT3vOY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-hN2ttMG/K3wQlFrN3SbQ1YF4tIJHCE4oYP+QibT3vOY="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.min.sejl45xvog.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "51800"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hN2ttMG/K3wQlFrN3SbQ1YF4tIJHCE4oYP+QibT3vOY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "sejl45xvog"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-hN2ttMG/K3wQlFrN3SbQ1YF4tIJHCE4oYP+QibT3vOY="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "74486"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"M15fHTKfMK6cTars5c28PNhN6hD0qeUb3HPzOdoPwCc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-M15fHTKfMK6cTars5c28PNhN6hD0qeUb3HPzOdoPwCc="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.min.22vffe00uq.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "51875"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+rGG3u63SMkHL80Ga42LAawPUj7i8vaR2Kuenqlta2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "22vffe00uq"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+rGG3u63SMkHL80Ga42LAawPUj7i8vaR2Kuenqlta2E="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "51875"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+rGG3u63SMkHL80Ga42LAawPUj7i8vaR2Kuenqlta2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-+rGG3u63SMkHL80Ga42LAawPUj7i8vaR2Kuenqlta2E="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.xvp3kq03qx.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "74486"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"M15fHTKfMK6cTars5c28PNhN6hD0qeUb3HPzOdoPwCc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xvp3kq03qx"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-M15fHTKfMK6cTars5c28PNhN6hD0qeUb3HPzOdoPwCc="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.t1cqhe9u97.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "74413"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"f4c8YV1qrr6RSiVYWMQT7R5W2OkT+iXmE5H69/uRvGQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "t1cqhe9u97"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-grid.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-f4c8YV1qrr6RSiVYWMQT7R5W2OkT+iXmE5H69/uRvGQ="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12661"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rjusxCRzKjztCcfgOVduAc3e3Z7KvimJGokJSeADNmE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-rjusxCRzKjztCcfgOVduAc3e3Z7KvimJGokJSeADNmE="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10131"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"y72bT5TKmFmfvw3bNEzPRNZa/8595xtseZIcBUV0PdM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-y72bT5TKmFmfvw3bNEzPRNZa/8595xtseZIcBUV0PdM="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.min.tmc1g35s3z.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10131"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"y72bT5TKmFmfvw3bNEzPRNZa/8595xtseZIcBUV0PdM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tmc1g35s3z"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-y72bT5TKmFmfvw3bNEzPRNZa/8595xtseZIcBUV0PdM="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.qesaa3a1fm.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12661"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rjusxCRzKjztCcfgOVduAc3e3Z7KvimJGokJSeADNmE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "qesaa3a1fm"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-rjusxCRzKjztCcfgOVduAc3e3Z7KvimJGokJSeADNmE="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12651"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gRKIHVkBgnCPUs/hmZsXynZ9ZJpvsE77idtljDkrWGI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-gRKIHVkBgnCPUs/hmZsXynZ9ZJpvsE77idtljDkrWGI="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10203"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"UkajePbMzGj8y73Imkd3dWWnLJr0v2CrBCLMrVMleP8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-UkajePbMzGj8y73Imkd3dWWnLJr0v2CrBCLMrVMleP8="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.min.q9ht133ko3.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10203"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"UkajePbMzGj8y73Imkd3dWWnLJr0v2CrBCLMrVMleP8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "q9ht133ko3"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-UkajePbMzGj8y73Imkd3dWWnLJr0v2CrBCLMrVMleP8="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.rxsg74s51o.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12651"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gRKIHVkBgnCPUs/hmZsXynZ9ZJpvsE77idtljDkrWGI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "rxsg74s51o"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-gRKIHVkBgnCPUs/hmZsXynZ9ZJpvsE77idtljDkrWGI="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "113224"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uIzOR4gILoNjCGNryIsWnkEGO3BSwRa/MLjr73tDodE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-uIzOR4gILoNjCGNryIsWnkEGO3BSwRa/MLjr73tDodE="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.gye83jo8yx.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "113224"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uIzOR4gILoNjCGNryIsWnkEGO3BSwRa/MLjr73tDodE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "gye83jo8yx"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-uIzOR4gILoNjCGNryIsWnkEGO3BSwRa/MLjr73tDodE="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.min.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "85357"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ZBXbYF8OZrF1GDOLMLvW/zRPtx1RfeMDYj5D2Wb/9jo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZBXbYF8OZrF1GDOLMLvW/zRPtx1RfeMDYj5D2Wb/9jo="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.min.wl58j5mj3v.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "85357"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ZBXbYF8OZrF1GDOLMLvW/zRPtx1RfeMDYj5D2Wb/9jo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "wl58j5mj3v"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZBXbYF8OZrF1GDOLMLvW/zRPtx1RfeMDYj5D2Wb/9jo="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "113083"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"MwFckg8YbY2WrveNQnXkfULkprYhFOq+t1BH92A7GsI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-MwFckg8YbY2WrveNQnXkfULkprYhFOq+t1BH92A7GsI="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.d4r6k3f320.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "113083"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"MwFckg8YbY2WrveNQnXkfULkprYhFOq+t1BH92A7GsI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "d4r6k3f320"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-MwFckg8YbY2WrveNQnXkfULkprYhFOq+t1BH92A7GsI="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "85286"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7MYEMUFgHEc1CjrfAK/TlV30POxgoxXk2b+vAs/143U=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-7MYEMUFgHEc1CjrfAK/TlV30POxgoxXk2b+vAs/143U="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.min.keugtjm085.css",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "85286"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7MYEMUFgHEc1CjrfAK/TlV30POxgoxXk2b+vAs/143U=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "keugtjm085"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-7MYEMUFgHEc1CjrfAK/TlV30POxgoxXk2b+vAs/143U="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/package.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\package.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9832"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qdX4ugkL5LOPwhMscXOtACaD7bYF3sQe4Crz0ZglZY0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-qdX4ugkL5LOPwhMscXOtACaD7bYF3sQe4Crz0ZglZY0="
-        }
-      ]
-    },
-    {
-      "Route": "Web/node_modules/bootstrap/package.ve8fep4dan.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\package.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9832"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qdX4ugkL5LOPwhMscXOtACaD7bYF3sQe4Crz0ZglZY0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ve8fep4dan"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/node_modules/bootstrap/package.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-qdX4ugkL5LOPwhMscXOtACaD7bYF3sQe4Crz0ZglZY0="
-        }
-      ]
-    },
-    {
-      "Route": "Web/package.dmwhty5f5c.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "85"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"myvcn/45H77W6cGd8anwkyQhM2cSqF5Pl1Meca54+bk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "dmwhty5f5c"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/package.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-myvcn/45H77W6cGd8anwkyQhM2cSqF5Pl1Meca54+bk="
-        }
-      ]
-    },
-    {
-      "Route": "Web/package.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "85"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"myvcn/45H77W6cGd8anwkyQhM2cSqF5Pl1Meca54+bk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-myvcn/45H77W6cGd8anwkyQhM2cSqF5Pl1Meca54+bk="
-        }
-      ]
-    },
-    {
-      "Route": "Web/package-lock.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package-lock.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1547"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"b7Nrvp9XJmwlGCu3U2P31ev8Srxw1X/U4jaSZ2P3iUU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-b7Nrvp9XJmwlGCu3U2P31ev8Srxw1X/U4jaSZ2P3iUU="
-        }
-      ]
-    },
-    {
-      "Route": "Web/package-lock.n25rdxdh6w.json",
-      "AssetFile": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package-lock.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1547"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"b7Nrvp9XJmwlGCu3U2P31ev8Srxw1X/U4jaSZ2P3iUU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 12 Nov 2024 07:59:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "n25rdxdh6w"
-        },
-        {
-          "Name": "label",
-          "Value": "Web/package-lock.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-b7Nrvp9XJmwlGCu3U2P31ev8Srxw1X/U4jaSZ2P3iUU="
-        }
-      ]
     }
   ]
 }
