@@ -7,7 +7,8 @@ namespace dgames.http
 	public class AsyncOperationWeb<TObject>
 	{
 		public bool IsDone { get; private set; }
-		public Exception Exception { get; private set; }
+        public bool IsError => Exception != null;
+        public Exception Exception { get; private set; }
 		public TObject Result { get; private set; }
 
 		private Action<AsyncOperationWeb<TObject>> completeCallback;

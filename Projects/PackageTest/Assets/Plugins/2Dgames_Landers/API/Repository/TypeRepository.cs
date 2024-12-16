@@ -20,11 +20,11 @@ namespace Landers.API
 		}
 
 		public static void OnInitialize(AsyncOperationWeb<Type[]> operation)
-		{
-			if (operation.Exception != null)
-				throw operation.Exception;
+        {
+            if (operation.Exception != null)
+                return;
 
-			typeList = operation.Result;
+            typeList = operation.Result;
 			InitializeEfficiencyDictionary();
 		}
 

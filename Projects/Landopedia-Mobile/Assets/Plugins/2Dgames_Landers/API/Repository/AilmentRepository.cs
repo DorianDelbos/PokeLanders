@@ -21,7 +21,7 @@ namespace Landers.API
 		public static void OnInitialize(AsyncOperationWeb<Ailment[]> operation)
 		{
 			if (operation.Exception != null)
-				throw operation.Exception;
+				return;
 
 			ailmentList = operation.Result;
 		}

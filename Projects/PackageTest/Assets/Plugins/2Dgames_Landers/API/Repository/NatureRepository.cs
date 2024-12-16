@@ -19,11 +19,11 @@ namespace Landers.API
 		}
 
 		public static void OnInitialize(AsyncOperationWeb<Nature[]> operation)
-		{
-			if (operation.Exception != null)
-				throw operation.Exception;
+        {
+            if (operation.Exception != null)
+                return;
 
-			natureList = operation.Result;
+            natureList = operation.Result;
 		}
 
 		public static Nature[] GetAll() => natureList;

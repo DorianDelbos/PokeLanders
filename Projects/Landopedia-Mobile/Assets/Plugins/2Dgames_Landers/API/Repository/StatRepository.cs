@@ -19,11 +19,11 @@ namespace Landers.API
 		}
 
 		public static void OnInitialize(AsyncOperationWeb<Stat[]> operation)
-		{
-			if (operation.Exception != null)
-				throw operation.Exception;
+        {
+            if (operation.Exception != null)
+                return;
 
-			statList = operation.Result;
+            statList = operation.Result;
 		}
 
 		public static Stat[] GetAll() => statList;

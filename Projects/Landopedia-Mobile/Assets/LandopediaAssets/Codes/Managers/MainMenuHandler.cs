@@ -69,25 +69,25 @@ namespace Landopedia
             DataPanel.current.SetText("Scan your lander !");
             DataPanel.current.Active = true;
 
-            NFCSystem NFCSystem = new NFCSystem() { timeout = 10000 };
-            NFCSystem.ReadBlockAsync(2, 0, (isSucceed, result, e) =>
+            AsyncOperationNfc operation = NFCSystem.ReadBlock(2, 0, 10000);
+            operation.OnComplete += operation =>
             {
-                if (isSucceed)
+                if (!operation.IsError)
                 {
                     DataPanel.current.Active = false;
-                    short ID = (short)((result[0] << 8) | (result[1]));
+                    short ID = (short)((operation.Result[0] << 8) | (operation.Result[1]));
                     SaveSystem.AddID(ID);
                     Initialize();
                 }
                 else
                 {
                     DataPanel.current.Clear();
-                    DataPanel.current.SetText(e.Message);
+                    DataPanel.current.SetText(operation.Exception.Message);
                     DataPanel.current.AddButton("Retry", ProcessNfc);
                     DataPanel.current.AddButton("Stop", () => { DataPanel.current.Active = false; });
                     DataPanel.current.Active = true;
                 }
-            });
+            };
         }
 
         public void ClearSave()

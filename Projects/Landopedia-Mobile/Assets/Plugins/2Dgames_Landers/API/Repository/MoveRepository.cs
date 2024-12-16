@@ -19,11 +19,11 @@ namespace Landers.API
 		}
 
 		public static void OnInitialize(AsyncOperationWeb<Move[]> operation)
-		{
-			if (operation.Exception != null)
-				throw operation.Exception;
+        {
+            if (operation.Exception != null)
+                return;
 
-			moveList = operation.Result;
+            moveList = operation.Result;
 		}
 
 		public static Move[] GetAll() => moveList;

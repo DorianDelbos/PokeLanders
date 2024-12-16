@@ -3,56 +3,30 @@ using System.Threading;
 
 namespace dgames.nfc
 {
-    public partial class NFCSystem
+    public static partial class NFCSystem
 	{
-		public int timeout = -1;
-
-        public async void ReadTagAsync(Action<bool, byte[], Exception> onComplete)
-		{
-			try
-			{
-                using (var cts = new CancellationTokenSource(timeout))
-				{
-					byte[] result = await ReadTagAsync(cts.Token);
-					onComplete?.Invoke(true, result, null);
-				}
-			}
-			catch (Exception e)
-			{
-				onComplete?.Invoke(false, null, e);
-			}
-		}
-
-		public async void ReadBlockAsync(int block, int sector, Action<bool, byte[], Exception> onComplete)
-		{
-			try
+        public static AsyncOperationNfc ReadTag(int timeout = -1)
+        {
+            using (var cts = new CancellationTokenSource(timeout))
             {
-                using (var cts = new CancellationTokenSource(timeout))
-                {
-					byte[] result = await ReadBlockAsync(block, sector, cts.Token);
-					onComplete?.Invoke(true, result, null);
-				}
-			}
-			catch (Exception e)
-			{
-				onComplete?.Invoke(false, null, e);
-			}
+                return new AsyncOperationNfc(ReadTagAsync(cts.Token));
+            }
+        }
+
+        public static AsyncOperationNfc ReadBlock(int block, int sector, int timeout = -1)
+        {
+            using (var cts = new CancellationTokenSource(timeout))
+            {
+                return new AsyncOperationNfc(ReadBlockAsync(block, sector, cts.Token));
+            }
 		}
 
-		public async void WriteBlockAsync(int block, int sector, Action<bool, Exception> onComplete)
-		{
-			try
-			{
-				using (var cts = new CancellationTokenSource(timeout))
-				{
-					bool result = await WriteBlockAsync(block, sector, cts.Token);
-					onComplete?.Invoke(result, null);
-				}
-			}
-			catch (Exception e)
-			{
-				onComplete?.Invoke(false, e);
-			}
+		public static AsyncOperationNfc WriteBlock(int block, int sector, int timeout = -1)
+        {
+            using (var cts = new CancellationTokenSource(timeout))
+            {
+                return new AsyncOperationNfc(WriteBlockAsync(block, sector, cts.Token));
+            }
 		}
 	}
 }

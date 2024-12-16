@@ -18,11 +18,11 @@ namespace Landers.API
 		}
 
 		public static void OnInitialize(AsyncOperationWeb<Lander[]> operation)
-		{
-			if (operation.Exception != null)
-				throw operation.Exception;
+        {
+            if (operation.Exception != null)
+                return;
 
-			landerList = operation.Result;
+            landerList = operation.Result;
 		}
 
 		public static Lander[] GetAll() => landerList;

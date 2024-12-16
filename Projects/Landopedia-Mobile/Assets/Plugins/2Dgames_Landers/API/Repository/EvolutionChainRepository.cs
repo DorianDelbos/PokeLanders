@@ -18,11 +18,11 @@ namespace Landers.API
 		}
 
 		public static void OnInitialize(AsyncOperationWeb<EvolutionChain[]> operation)
-		{
-			if (operation.Exception != null)
-				throw operation.Exception;
+        {
+            if (operation.Exception != null)
+                return;
 
-			evolutionChainList = operation.Result;
+            evolutionChainList = operation.Result;
 		}
 
 		public static EvolutionChain[] GetAll() => evolutionChainList;
