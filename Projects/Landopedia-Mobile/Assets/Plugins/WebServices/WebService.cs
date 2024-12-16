@@ -1,5 +1,6 @@
 using System;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -9,15 +10,24 @@ namespace dgames.http
     {
 		#region MAIN
 		private readonly HttpClient _client;
+		private readonly CancellationTokenSource _cancellationTokenSource;
 
-        public WebService(HttpClient client = null)
-        {
-            _client = client ?? new HttpClient();
+		public WebService(HttpClient client = null)
+		{
+			_client = client ?? new HttpClient();
+			_cancellationTokenSource = new CancellationTokenSource();
 		}
 
 		public void Dispose()
 		{
+			_cancellationTokenSource.Cancel();
+			_cancellationTokenSource.Dispose();
 			_client.Dispose();
+		}
+		
+		public void Cancel()
+		{
+			_cancellationTokenSource.Cancel();
 		}
 		#endregion
 

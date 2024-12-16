@@ -14,19 +14,22 @@ public class TestScript : MonoBehaviour
 		if (!Input.GetKeyDown(KeyCode.Y))
 			return;
 
-		ConsoleSystem.instance.AppendText($"Request web launch ...");
-		string request = Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/lander/1");
-		webService.AsyncRequestJson<Lander>(request, (isSucceed, lander, e) =>
-		{
-			if (isSucceed)
-			{
-				ConsoleSystem.instance.AppendText($"Lander {lander.name} was correctly load !");
-			}
-			else
-			{
-				ConsoleSystem.instance.AppendText($"An error was appear when you tried to load a lander !\n{e}", Color.red);
-			}
-		});
+		using (var webService = new WebService())
+        {
+            webService.AsyncRequestJson<Lander>(
+                "https://localhost:5000/lander/1",
+                (success, result, exception) =>
+                {
+                    if (success)
+                    {
+						ConsoleSystem.instance.AppendText($"Data received: {result}");
+					}
+                    else
+					{
+						ConsoleSystem.instance.AppendText($"Error occurred: {exception.Message}", Color.red);
+                    }
+                });
+        }
 	}
 
 	public void NFCTagTest()
