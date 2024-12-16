@@ -1,3 +1,4 @@
+using dgames.http;
 using Landers.API;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,14 +12,17 @@ namespace Landopedia
 
         private void Awake()
         {
-            LanderRepository.Initialize(InitializeCompleted);
-            TypeRepository.Initialize(InitializeCompleted);
-            MoveRepository.Initialize(InitializeCompleted);
-        }
+            AsyncOperationWeb<Lander[]> opLander = LanderRepository.Initialize();
+            AsyncOperationWeb<Type[]> opType = TypeRepository.Initialize();
+            AsyncOperationWeb<Move[]> opMove = MoveRepository.Initialize();
 
-        private void InitializeCompleted<T>(bool isSucceed, T[] result, System.Exception e)
+            opLander.OnComplete += InitializeCompleted;
+
+		}
+
+        private void InitializeCompleted<T>(AsyncOperationWeb<T> op)
         {
-            if (isSucceed)
+            if (op.Exception != null)
             {
                 if (++currentSaved >= maxSaved)
                     SceneManager.LoadScene("Main");
@@ -26,10 +30,10 @@ namespace Landopedia
             else
             {
                 DataPanel.current.Clear();
-                DataPanel.current.SetText(e.Message);
+                DataPanel.current.SetText(op.Exception.Message);
                 DataPanel.current.AddButton("Retry", () =>
                 {
-                    LanderRepository.Initialize(InitializeCompleted);
+                    LanderRepository.Initialize().OnComplete += InitializeCompleted;
                     DataPanel.current.Active = false;
                 });
                 DataPanel.current.Active = true;

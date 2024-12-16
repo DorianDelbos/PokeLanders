@@ -1,4 +1,5 @@
 using dgames.http;
+using NUnit.Framework.Interfaces;
 using System;
 using System.IO;
 using System.Linq;
@@ -9,22 +10,21 @@ namespace Landers.API
 	{
 		private static Nature[] natureList;
 
-		public static void Initialize(Action<bool, Nature[], Exception> onCompleted)
+		public static AsyncOperationWeb<Nature[]> Initialize()
 		{
-            try
-            {
-				WebService webService = new WebService();
-                webService.AsyncRequestJson<Nature[]>(Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/nature"), (isSucceed, nature, e) =>
-                {
-                    natureList = nature;
-                    onCompleted?.Invoke(isSucceed, nature, e);
-                });
-            }
-            catch (Exception e)
-            {
-                onCompleted?.Invoke(false, null, e);
-            }
-        }
+			string request = Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/nature");
+			AsyncOperationWeb<Nature[]> asyncOp = WebService.AsyncRequestJson<Nature[]>(request);
+			asyncOp.OnComplete += OnInitialize;
+			return asyncOp;
+		}
+
+		public static void OnInitialize(AsyncOperationWeb<Nature[]> operation)
+		{
+			if (operation.Exception != null)
+				throw operation.Exception;
+
+			natureList = operation.Result;
+		}
 
 		public static Nature[] GetAll() => natureList;
 		public static Nature GetByName(string name) => natureList.First(x => x.name == name);

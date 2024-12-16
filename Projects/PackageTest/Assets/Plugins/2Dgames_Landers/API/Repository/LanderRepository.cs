@@ -9,21 +9,20 @@ namespace Landers.API
 	{
 		private static Lander[] landerList;
 
-		public static void Initialize(Action<bool, Lander[], Exception> onCompleted)
+		public static AsyncOperationWeb<Lander[]> Initialize()
 		{
-			try
-			{
-				WebService webService = new WebService();
-                webService.AsyncRequestJson<Lander[]>(Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/lander"), (isSucceed, lander, e) =>
-                {
-                    landerList = lander;
-                    onCompleted?.Invoke(isSucceed, lander, e);
-                });
-            }
-			catch (Exception e)
-            {
-                onCompleted?.Invoke(false, null, e);
-            }
+			string request = Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/lander");
+			AsyncOperationWeb<Lander[]> asyncOp = WebService.AsyncRequestJson<Lander[]>(request);
+			asyncOp.OnComplete += OnInitialize;
+			return asyncOp;
+		}
+
+		public static void OnInitialize(AsyncOperationWeb<Lander[]> operation)
+		{
+			if (operation.Exception != null)
+				throw operation.Exception;
+
+			landerList = operation.Result;
 		}
 
 		public static Lander[] GetAll() => landerList;

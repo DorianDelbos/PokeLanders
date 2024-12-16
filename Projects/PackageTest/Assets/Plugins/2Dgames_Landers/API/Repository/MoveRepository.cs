@@ -2,6 +2,7 @@ using dgames.http;
 using System;
 using System.IO;
 using System.Linq;
+using Unity.VisualScripting.Antlr3.Runtime.Collections;
 
 namespace Landers.API
 {
@@ -9,22 +10,21 @@ namespace Landers.API
 	{
 		private static Move[] moveList;
 
-		public static void Initialize(Action<bool, Move[], Exception> onCompleted)
+		public static AsyncOperationWeb<Move[]> Initialize()
 		{
-            try
-            {
-                WebService webService = new WebService();
-                webService.AsyncRequestJson<Move[]>(Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/move"), (isSucceed, move, e) =>
-                {
-                    moveList = move;
-                    onCompleted?.Invoke(isSucceed, move, e);
-                });
-            }
-            catch (Exception e)
-            {
-                onCompleted?.Invoke(false, null, e);
-            }
-        }
+			string request = Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/move");
+			AsyncOperationWeb<Move[]> asyncOp = WebService.AsyncRequestJson<Move[]>(request);
+			asyncOp.OnComplete += OnInitialize;
+			return asyncOp;
+		}
+
+		public static void OnInitialize(AsyncOperationWeb<Move[]> operation)
+		{
+			if (operation.Exception != null)
+				throw operation.Exception;
+
+			moveList = operation.Result;
+		}
 
 		public static Move[] GetAll() => moveList;
 		public static Move GetByName(string name) => moveList.First(x => x.name == name);

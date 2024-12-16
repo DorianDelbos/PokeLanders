@@ -10,22 +10,21 @@ namespace Landers.API
 	{
 		private static Stat[] statList;
 
-		public static void Initialize(Action<bool, Stat[], Exception> onCompleted)
+		public static AsyncOperationWeb<Stat[]> Initialize()
 		{
-            try
-            {
-                WebService webService = new WebService();
-                webService.AsyncRequestJson<Stat[]>(Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/stat"), (isSucceed, stat, e) =>
-                {
-                    statList = stat;
-                    onCompleted(isSucceed, stat, e);
-                });
-            }
-            catch (Exception e)
-            {
-                onCompleted?.Invoke(false, null, e);
-            }
-        }
+			string request = Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/stat");
+			AsyncOperationWeb<Stat[]> asyncOp = WebService.AsyncRequestJson<Stat[]>(request);
+			asyncOp.OnComplete += OnInitialize;
+			return asyncOp;
+		}
+
+		public static void OnInitialize(AsyncOperationWeb<Stat[]> operation)
+		{
+			if (operation.Exception != null)
+				throw operation.Exception;
+
+			statList = operation.Result;
+		}
 
 		public static Stat[] GetAll() => statList;
 		public static Stat GetByName(string name) => statList.First(x => x.name == name);

@@ -29,8 +29,7 @@ namespace Landopedia
         private void Initialize()
         {
             ClearLandersCase();
-
-            WebService webService = new WebService();
+            
             List<int> landersSaved = SaveSystem.LoadIDs();
 
             Lander[] landers = LanderRepository.GetAll();
@@ -42,13 +41,14 @@ namespace Landopedia
                 instance.HasLander = landersSaved.Contains(lander.id);
                 if (instance.HasLander)
                 {
-                    webService.AsyncRequestImage(lander.sprite, (isSucceed, texture, e) =>
-                    {
-                        if (isSucceed)
-                            instance.SetTexture(texture);
+                    AsyncOperationWeb<Texture2D> op = WebService.AsyncRequestImage(lander.sprite);
+					op.OnComplete += op =>
+					{
+                        if (op.Exception != null)
+                            instance.SetTexture(op.Result);
                         else
-                            Debug.LogError(e.Message, this);
-                    });
+                            Debug.LogError(op.Exception.Message, this);
+                    };
                 }
             }
         }

@@ -11,26 +11,22 @@ namespace Landers.API
 		private static Type[] typeList;
 		private static Dictionary<(string, string), float> typeEfficiency = null;
 
-		public static void Initialize(Action<bool, Type[], Exception> onCompleted)
+		public static AsyncOperationWeb<Type[]> Initialize()
 		{
-            try
-            {
-				WebService webService = new WebService();
-                webService.AsyncRequestJson<Type[]>(Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/type"), (isSucceed, type, e) =>
-                {
-					if (isSucceed)
-					{
-						typeList = type;
-						InitializeEfficiencyDictionary();
-					}
-                    onCompleted?.Invoke(isSucceed, type, e);
-                });
-            }
-            catch (Exception e)
-            {
-                onCompleted?.Invoke(false, null, e);
-            }
-        }
+			string request = Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/type");
+			AsyncOperationWeb<Type[]> asyncOp = WebService.AsyncRequestJson<Type[]>(request);
+			asyncOp.OnComplete += OnInitialize;
+			return asyncOp;
+		}
+
+		public static void OnInitialize(AsyncOperationWeb<Type[]> operation)
+		{
+			if (operation.Exception != null)
+				throw operation.Exception;
+
+			typeList = operation.Result;
+			InitializeEfficiencyDictionary();
+		}
 
 		private static void InitializeEfficiencyDictionary()
 		{

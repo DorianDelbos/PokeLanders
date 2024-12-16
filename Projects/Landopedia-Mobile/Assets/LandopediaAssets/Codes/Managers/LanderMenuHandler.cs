@@ -158,14 +158,13 @@ namespace Landopedia
 
         private void InitializeTexture()
         {
-            WebService webService = new WebService();
-            webService.AsyncRequestImage(lander.sprite, (isSucceed, texture, e) =>
+            AsyncOperationWeb<Texture2D> op = WebService.AsyncRequestImage(lander.sprite);
             {
-                if (isSucceed)
-                    landerTextureImage.texture = texture;
+                if (op.Exception != null)
+                    landerTextureImage.texture = op.Result;
                 else
-                    Debug.LogError(e.Message, this);
-            });
+                    Debug.LogError(op.Exception.Message, this);
+            };
         }
 
         private void SetType(GameObject typeObject, Landers.API.Type type)

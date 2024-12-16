@@ -2,6 +2,7 @@ using dgames.http;
 using System;
 using System.IO;
 using System.Linq;
+using Unity.Collections;
 
 namespace Landers.API
 {
@@ -9,22 +10,21 @@ namespace Landers.API
     {
 		private static Ailment[] ailmentList;
 
-		public static void Initialize(Action<bool, Ailment[], Exception> onCompleted)
+		public static AsyncOperationWeb<Ailment[]> Initialize()
 		{
-            try
-            {
-                WebService webService = new WebService();
-                webService.AsyncRequestJson<Ailment[]>(Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/ailment"), (isSucceed, ailment, e) =>
-                {
-                    ailmentList = ailment;
-                    onCompleted?.Invoke(isSucceed, ailment, e);
-                });
-            }
-            catch (Exception e)
-            {
-                onCompleted?.Invoke(false, null, e);
-            }
-        }
+			string request = Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/ailement");
+			AsyncOperationWeb<Ailment[]> asyncOp = WebService.AsyncRequestJson<Ailment[]>(request);
+			asyncOp.OnComplete += OnInitialize;
+			return asyncOp;
+		}
+
+		public static void OnInitialize(AsyncOperationWeb<Ailment[]> operation)
+		{
+			if (operation.Exception != null)
+				throw operation.Exception;
+
+			ailmentList = operation.Result;
+		}
 
 		public static Ailment[] GetAll() => ailmentList;
 		public static Ailment GetByName(string name) => ailmentList.First(x => x.name == name);

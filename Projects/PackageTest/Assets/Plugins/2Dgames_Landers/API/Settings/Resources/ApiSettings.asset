@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650faddb7e689ef4380a0c4e11d806d5, type: 3}
   m_Name: ApiSettings
   m_EditorClassIdentifier: 
-  apiUrl: http://localhost:5000
+  apiUrl: http://localhost:5000/
