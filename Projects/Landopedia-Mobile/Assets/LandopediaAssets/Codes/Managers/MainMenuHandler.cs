@@ -29,7 +29,7 @@ namespace Landopedia
         private void Initialize()
         {
             ClearLandersCase();
-            
+
             List<int> landersSaved = SaveSystem.LoadIDs();
 
             Lander[] landers = LanderRepository.GetAll();
@@ -44,7 +44,7 @@ namespace Landopedia
                     AsyncOperationWeb<Texture2D> op = WebService.AsyncRequestImage(lander.sprite);
 					op.OnComplete += op =>
 					{
-                        if (op.Exception != null)
+                        if (op.Exception == null)
                             instance.SetTexture(op.Result);
                         else
                             Debug.LogError(op.Exception.Message, this);

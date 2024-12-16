@@ -17,12 +17,13 @@ namespace Landopedia
             AsyncOperationWeb<Move[]> opMove = MoveRepository.Initialize();
 
             opLander.OnComplete += InitializeCompleted;
-
+			opType.OnComplete += InitializeCompleted;
+			opMove.OnComplete += InitializeCompleted;
 		}
 
         private void InitializeCompleted<T>(AsyncOperationWeb<T> op)
         {
-            if (op.Exception != null)
+            if (op.Exception == null)
             {
                 if (++currentSaved >= maxSaved)
                     SceneManager.LoadScene("Main");

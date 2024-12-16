@@ -159,8 +159,9 @@ namespace Landopedia
         private void InitializeTexture()
         {
             AsyncOperationWeb<Texture2D> op = WebService.AsyncRequestImage(lander.sprite);
-            {
-                if (op.Exception != null)
+			op.OnComplete += op =>
+			{
+                if (op.Exception == null)
                     landerTextureImage.texture = op.Result;
                 else
                     Debug.LogError(op.Exception.Message, this);
