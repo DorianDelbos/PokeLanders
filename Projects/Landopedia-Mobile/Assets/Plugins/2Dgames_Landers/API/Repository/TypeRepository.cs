@@ -18,8 +18,11 @@ namespace Landers.API
 				WebService webService = new WebService();
                 webService.AsyncRequestJson<Type[]>(Path.Combine(ApiSettings.instance.ApiUrl, "api/v1/type"), (isSucceed, type, e) =>
                 {
-                    typeList = type;
-                    InitializeEfficiencyDictionary();
+					if (isSucceed)
+					{
+						typeList = type;
+						InitializeEfficiencyDictionary();
+					}
                     onCompleted?.Invoke(isSucceed, type, e);
                 });
             }
