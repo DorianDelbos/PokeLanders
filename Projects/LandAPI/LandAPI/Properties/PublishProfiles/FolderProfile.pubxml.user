@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>F:\LandAPI</_PublishTargetUrl>
-    <History>True|2024-12-15T09:33:17.4158679Z||;</History>
+    <_PublishTargetUrl>C:\Users\Etudiant1\Documents\Unity\PokeLanders\Projects\LandAPI\LandAPI\bin</_PublishTargetUrl>
+    <History>False|2024-12-17T08:37:06.7740026Z||;False|2024-12-17T09:36:18.5086560+01:00||;True|2024-12-15T10:33:17.4158679+01:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
