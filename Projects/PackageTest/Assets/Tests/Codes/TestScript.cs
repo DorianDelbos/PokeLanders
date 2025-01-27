@@ -1,4 +1,3 @@
-using dgames.http;
 using dgames.nfc;
 using dgames.Utilities;
 using Landers.API;
@@ -6,21 +5,18 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-	public void Update()
-	{
-		if (!Input.GetKeyDown(KeyCode.Y))
-			return;
-
+    public void InitializeLander()
+    {
         ConsoleSystem.instance.AppendText($"Request web ...");
-        AsyncOperationWeb<Lander> asyncOp = WebService.AsyncRequestJson<Lander>("http://localhost:5000/api/v1/lander/1");
-		asyncOp.OnComplete += op =>
-		{
-			if (!op.IsError)
-				ConsoleSystem.instance.AppendText($"Data received: {op.Result.name}");
-			else
-				ConsoleSystem.instance.AppendText($"Error occurred: {op.Exception.Message}", Color.red);
-		};
-	}
+        LanderRepository.Initialize().OnComplete += op =>
+        {
+            if (!op.IsError)
+                foreach (var item in op.Result)
+                    ConsoleSystem.instance.AppendText($"Data received: {item.name}");
+            else
+                ConsoleSystem.instance.AppendText($"Error occurred: {op.Exception.Message}", Color.red);
+        };
+    }
 
 	public void NFCTagTest()
 	{

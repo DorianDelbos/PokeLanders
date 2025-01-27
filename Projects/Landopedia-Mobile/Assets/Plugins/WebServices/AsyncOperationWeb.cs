@@ -22,23 +22,23 @@ namespace dgames.http
 			remove => completeCallback = (Action<AsyncOperationWeb<TObject>>)Delegate.Remove(completeCallback, value);
 		}
 
-		public AsyncOperationWeb(Task<HttpResponseMessage> asyncRequest, Func<HttpContent, Task<TObject>> processContent)
+		public AsyncOperationWeb(string req, Func<HttpContent, Task<TObject>> processContent)
 		{
-			SetOperation(asyncRequest, processContent);
+			SetOperation(req, processContent);
 		}
 
-		private async void SetOperation(Task<HttpResponseMessage> asyncRequest, Func<HttpContent, Task<TObject>> processContent)
+		private async void SetOperation(string req, Func<HttpContent, Task<TObject>> processContent)
 		{
 			IsDone = false;
 			try
 			{
-				HttpResponseMessage response = await asyncRequest;
+				HttpResponseMessage response = await new HttpClient().GetAsync(req, HttpCompletionOption.ResponseContentRead);
 				response.EnsureSuccessStatusCode();
 				Result = await processContent(response.Content);
 			}
 			catch (Exception e)
 			{
-				Exception = e;
+				Exception = new Exception($"{req}\n{e.Message}", e);
 			}
 			finally
 			{

@@ -1,164 +1,160 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css",
-      "PackagePath": "staticwebassets\\LandAPI.0dm1uyn702.bundle.scp.css"
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\LandAPI.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\ailments.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\evolutionChains.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\evolutionChains.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\landers.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\landers.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\moves.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\moves.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\nature.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\nature.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\nature.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\stats.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\stats.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\types.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\types.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
       "PackagePath": "staticwebassets\\Assets\\Models\\Aquapix.glb"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Luminorine.glb",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Luminorine.glb",
       "PackagePath": "staticwebassets\\Assets\\Models\\Luminorine.glb"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Ocealythe.glb",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Ocealythe.glb",
       "PackagePath": "staticwebassets\\Assets\\Models\\Ocealythe.glb"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Aquapix.png",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Aquapix.png",
       "PackagePath": "staticwebassets\\Assets\\Sprites\\Aquapix.png"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Luminorine.png",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Luminorine.png",
       "PackagePath": "staticwebassets\\Assets\\Sprites\\Luminorine.png"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Ocealythe.png",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Ocealythe.png",
       "PackagePath": "staticwebassets\\Assets\\Sprites\\Ocealythe.png"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\app.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\app.css",
       "PackagePath": "staticwebassets\\Web\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\favicon.png",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\favicon.png",
       "PackagePath": "staticwebassets\\Web\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\App.js",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\App.js",
       "PackagePath": "staticwebassets\\Web\\js\\App.js"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\GLBViewer.js",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\js\\GLBViewer.js",
       "PackagePath": "staticwebassets\\Web\\js\\GLBViewer.js"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\.package-lock.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\.package-lock.json",
       "PackagePath": "staticwebassets\\Web\\node_modules\\.package-lock.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\@popperjs\\core\\package.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\@popperjs\\core\\package.json",
       "PackagePath": "staticwebassets\\Web\\node_modules\\@popperjs\\core\\package.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\package.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\node_modules\\bootstrap\\package.json",
       "PackagePath": "staticwebassets\\Web\\node_modules\\bootstrap\\package.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package-lock.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package-lock.json",
       "PackagePath": "staticwebassets\\Web\\package-lock.json"
     },
     {
-      "Id": "C:\\Users\\Etudiant1\\Documents\\Unity\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package.json",
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\package.json",
       "PackagePath": "staticwebassets\\Web\\package.json"
-    },
-    {
-      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.LandAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.LandAPI.Microsoft.AspNetCore.StaticWebAssets.props",

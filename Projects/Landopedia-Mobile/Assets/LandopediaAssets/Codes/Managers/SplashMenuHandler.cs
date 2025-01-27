@@ -1,5 +1,5 @@
-using dgames.http;
 using Landers.API;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,38 +7,48 @@ namespace Landopedia
 {
     public class SplashMenuHandler : MonoBehaviour
     {
-        private int currentSaved = 0;
-        private const int maxSaved = 3;
-
         private void Awake()
         {
-            AsyncOperationWeb<Lander[]> opLander = LanderRepository.Initialize();
-            AsyncOperationWeb<Type[]> opType = TypeRepository.Initialize();
-            AsyncOperationWeb<Move[]> opMove = MoveRepository.Initialize();
+            InitializeLanderRepository();
+        }
 
-            opLander.OnComplete += InitializeCompleted;
-			opType.OnComplete += InitializeCompleted;
-			opMove.OnComplete += InitializeCompleted;
-		}
-
-        private void InitializeCompleted<T>(AsyncOperationWeb<T> op)
+        private void InitializeLanderRepository()
         {
-            if (op.Exception == null)
+            LanderRepository.Initialize().OnComplete += op =>
             {
-                if (++currentSaved >= maxSaved)
-                    SceneManager.LoadScene("Main");
-            }
-            else
+                if (op.IsError) HandleError(op.Exception);
+                else InitializeTypeRepository();
+            };
+        }
+
+        private void InitializeTypeRepository()
+        {
+            TypeRepository.Initialize().OnComplete += op =>
             {
-                DataPanel.current.Clear();
-                DataPanel.current.SetText(op.Exception.Message);
-                DataPanel.current.AddButton("Retry", () =>
-                {
-                    LanderRepository.Initialize().OnComplete += InitializeCompleted;
-                    DataPanel.current.Active = false;
-                });
-                DataPanel.current.Active = true;
-            }
+                if (op.IsError) HandleError(op.Exception);
+                else InitializeMoveRepository();
+            };
+        }
+
+        private void InitializeMoveRepository()
+        {
+            MoveRepository.Initialize().OnComplete += op =>
+            {
+                if (op.IsError) HandleError(op.Exception);
+                else SceneManager.LoadScene("Main");
+            };
+        }
+
+        private void HandleError(Exception e)
+        {
+            DataPanel.current.Clear();
+            DataPanel.current.SetText($"{e.Message}");
+            DataPanel.current.AddButton("Retry", () =>
+            {
+                InitializeLanderRepository();
+                DataPanel.current.Active = false;
+            });
+            DataPanel.current.Active = true;
         }
     }
 }

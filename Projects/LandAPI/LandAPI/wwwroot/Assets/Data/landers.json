@@ -41,8 +41,8 @@
         }
       }
     ],
-    "model": "https://landopedia-gwhtbqbqdhd4d5hw.westeurope-01.azurewebsites.net/api/v1/model/aquapix.glb",
-    "sprite": "https://landopedia-gwhtbqbqdhd4d5hw.westeurope-01.azurewebsites.net/api/v1/sprite/aquapix.png"
+    "model": "http://192.168.1.101:5000/api/v1/model/aquapix.glb",
+    "sprite": "http://192.168.1.101:5000/api/v1/sprite/aquapix.png"
   },
   {
     "id": 2,
@@ -86,8 +86,8 @@
         }
       }
     ],
-    "model": "https://landopedia-gwhtbqbqdhd4d5hw.westeurope-01.azurewebsites.net/api/v1/model/Luminorine.glb",
-    "sprite": "https://landopedia-gwhtbqbqdhd4d5hw.westeurope-01.azurewebsites.net/api/v1/sprite/Luminorine.png"
+    "model": "http://192.168.1.101:5000/api/v1/model/Luminorine.glb",
+    "sprite": "http://192.168.1.101:5000/api/v1/sprite/Luminorine.png"
   },
   {
     "id": 3,
@@ -131,7 +131,7 @@
         }
       }
     ],
-    "model": "https://landopedia-gwhtbqbqdhd4d5hw.westeurope-01.azurewebsites.net/api/v1/model/Ocealythe.glb",
-    "sprite": "https://landopedia-gwhtbqbqdhd4d5hw.westeurope-01.azurewebsites.net/api/v1/sprite/Ocealythe.png"
+    "model": "http://192.168.1.101:5000/api/v1/model/Ocealythe.glb",
+    "sprite": "http://192.168.1.101:5000/api/v1/sprite/Ocealythe.png"
   }
 ]
