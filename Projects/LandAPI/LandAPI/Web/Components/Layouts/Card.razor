@@ -1,0 +1,24 @@
+﻿@using LandAPI.Web.Components.Layouts
+@using LandAPI.API.Models
+@using System.Text.Json
+@inject NavigationManager Navigation
+
+<a class="card" style="width: 100%; padding: 0; cursor: pointer; text-decoration: none;" href="@TargetUrl">
+    <p class="header3 card-title">@Lander.Name</p>
+    <glb-viewer src="@ModelUrl" camera-x="0" camera-y="1" camera-z="2.5" offset-x="0" offset-y="1" offset-z="0" width="240px" height="240px"></glb-viewer>
+    <ul class="type-container">
+        @foreach (var type in Lander.Types)
+        {
+            <li class="lander-type NunitoXL Bold">@type.ToUpper()</li>
+        }
+    </ul>
+</a>
+
+@code 
+{
+    [Parameter] 
+    public Lander Lander { get; set; }
+
+    private string ModelUrl => Navigation.BaseUri + $"api/v1/model/{Lander.Name}.glb";
+    private string TargetUrl => $"/landopedia/lander/{Lander.Name}";
+}

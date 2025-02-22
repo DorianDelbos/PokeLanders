@@ -1,0 +1,21 @@
+@using LandAPI.Web.Components.Layouts
+@using Microsoft.AspNetCore.Components
+@page "/landopedia/about"
+
+<MainLayout>
+    <Body>
+        <p class="header1" style="color: var(--Neutral-White);">ABOUT</p>
+
+        <svg width="100%" height="100%">
+            <defs>
+                <marker id="arrowhead" markerWidth="5" markerHeight="7" refX="2.5" refY="3.5" orient="auto">
+                    <polygon points="0 0,5 3.5,0 7" fill="white" />
+                </marker>
+            </defs>
+
+            <polyline points="0,100 50,100 50,50 100,50"
+                      stroke="white" stroke-width="3" fill="none"
+                      marker-end="url(#arrowhead)" />
+        </svg>
+    </Body>
+</MainLayout>

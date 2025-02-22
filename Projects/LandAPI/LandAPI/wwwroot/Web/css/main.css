@@ -1,0 +1,159 @@
+﻿:root 
+{
+    /* NEUTRAL COLORS */
+    --Neutral-White: #FFFFFFFF;
+    --Neutral-Black: #000000FF;
+    --Neutral-Transparent: #00000000;
+
+    /* Gray */
+    --Gray-Base: #838383FF;
+    --Gray-100:  #E7E7E7FF;
+    --Gray-200:  #BFBFBFFF;
+    --Gray-300:  #979797FF;
+    --Gray-400:  #6F6F6FFF;
+    --Gray-500:  #474747FF;
+    --Gray-600:  #1F1F1FFF;
+
+    /* BLUE */
+    --Blue-Base: #2030DFFF;
+    --Blue-100:  #979EE5FF;
+    --Blue-200:  #3D47BBFF;
+    --Blue-300:  #141D7AFF;
+    --Blue-400:  #131534FF;
+    --Blue-500:  #11121DFF;
+    --Blue-600:  #040510FF;
+
+    /* RED */
+    --Red-Base: #E41B1BFF;
+    --Red-100:  #EDD4D4FF;
+    --Red-200:  #E98A8AFF;
+    --Red-300:  #E64040FF;
+    --Red-400:  #C01616FF;
+    --Red-500:  #770D0DFF;
+    --Red-600:  #2E0404FF;
+
+    /* GREEN */
+    --Green-Base: #1BE428FF;
+    --Green-100:  #C4DDC5FF;
+    --Green-200:  #80E086FF;
+    --Green-300:  #3DE347FF;
+    --Green-400:  #16C021FF;
+    --Green-500:  #15661AFF;
+    --Green-600:  #112612FF;
+
+    /* PINK */
+    --Pink-Base: #E41BB2FF;
+    --Pink-100:  #E7D5E2FF;
+    --Pink-200:  #E68BCFFF;
+    --Pink-300:  #E540BCFF;
+    --Pink-400:  #BE1694FF;
+    --Pink-500:  #720C58FF;
+    --Pink-600:  #25021CFF;
+
+    /* SHADOW */
+    --Shadow-XL: #000000B3;
+    --Shadow-X:  #00000080;
+    --Shadow-L:  #0000004D;
+    --Shadow-S:  #0000001F;
+
+    /* HIGHLIGHT */
+    --Highlight-XL: #FFFFFFB3;
+    --Highlight-X:  #FFFFFF80;
+    --Highlight-L:  #FFFFFF4D;
+    --Highlight-S:  #FFFFFF1F;
+
+    /* DROPSHADOW */
+    --Dropshadow-XL: 0px 4px 4px #000000B3;
+    --Dropshadow-X:  0px 4px 4px #00000080;
+    --Dropshadow-L:  0px 4px 4px #0000004D;
+    --Dropshadow-S:  0px 4px 4px #0000001F;
+}
+
+/* FONT */
+@font-face 
+{
+    font-family: 'NunitoSans';
+    src: url('../Assets/Fonts/NunitoSans.ttf') format('truetype');
+}
+
+/* HEADER */
+.header1
+{
+    font-family: "NunitoSans";
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.header2
+{
+    font-family: "NunitoSans";
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.header3
+{
+    font-family: "NunitoSans";
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* NUNITO */
+.NunitoXL
+{
+    font-family: "NunitoSans";
+    font-size: 20px;
+}
+
+.NunitoX
+{
+    font-family: "NunitoSans";
+    font-size: 16px;
+}
+
+.NunitoL
+{
+    font-family: "NunitoSans";
+    font-size: 12px;
+}
+
+/* WEIGHT */
+.Black
+{
+    font-weight: 900;
+}
+
+.ExtraBold
+{
+    font-weight: 800;
+}
+
+.Bold
+{
+    font-weight: 700;
+}
+
+.SemiBold
+{
+    font-weight: 600;
+}
+
+.Medium
+{
+    font-weight: 500;
+}
+
+.Regular
+{
+    font-weight: 400;
+}
+
+.Light
+{
+    font-weight: 300;
+}
+
+.ExtraLight
+{
+    font-weight: 200;
+}

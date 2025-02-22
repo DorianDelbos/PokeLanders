@@ -1,0 +1,50 @@
+@using LandAPI.API.Models
+@using LandAPI.Web.Components.Layouts
+@using Microsoft.AspNetCore.Components
+@using System.Text.Json
+@page "/landopedia/lander/moves"
+@page "/landopedia/lander/moves/{Name}"
+
+<LanderLayout>
+    <Body>
+        @if (hasLander)
+        {
+            <div class="container" style="width: 100%; height: 100%; position: relative; grid-template-columns: repeat(auto-fit, 400px); grid-gap: 20px; padding: 20px 0;">
+
+                @foreach (var move in lander!.Moves)
+                {
+                    <div class="Card-Move">
+                        <p class="header2">@move.Move</p>
+                    </div>
+                }
+
+            </div>
+        }
+        else
+        {
+            <p class="header1" style="color: var(--Neutral-White); text-align: center; width: 100%; margin: auto;">NO LANDER SELECTED</p>
+        }
+    </Body>
+</LanderLayout>
+
+@code {
+    [Parameter] public string? Name { get; set; }
+    private bool hasLander = false;
+
+    private Lander? lander = null;
+    private const string filePath = "wwwroot/Assets/Data/landers.json";
+
+    protected override void OnInitialized()
+    {
+        if (Name == null) return;
+
+        string jsonData = File.ReadAllText(filePath);
+        List<Lander>? landerList = JsonSerializer.Deserialize<List<Lander>>(jsonData);
+        if (landerList == null) return;
+
+        lander = landerList.FirstOrDefault(x => x.Name == Name);
+        if (lander == null) return;
+
+        hasLander = true;
+    }
+}

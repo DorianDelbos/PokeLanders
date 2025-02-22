@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\LandAPI.bundle.scp.css",
-      "PackagePath": "staticwebassets\\LandAPI.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Data\\ailments.json",
       "PackagePath": "staticwebassets\\Assets\\Data\\ailments.json"
     },
@@ -57,8 +53,24 @@
       "PackagePath": "staticwebassets\\Assets\\Sprites\\Ocealythe.png"
     },
     {
-      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\app.css",
-      "PackagePath": "staticwebassets\\Web\\css\\app.css"
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\Assets\\Fonts\\NunitoSans.ttf",
+      "PackagePath": "staticwebassets\\Web\\Assets\\Fonts\\NunitoSans.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\Assets\\Images\\Card-background.png",
+      "PackagePath": "staticwebassets\\Web\\Assets\\Images\\Card-background.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\Assets\\Images\\Card-symbol.png",
+      "PackagePath": "staticwebassets\\Web\\Assets\\Images\\Card-symbol.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\controls.css",
+      "PackagePath": "staticwebassets\\Web\\css\\controls.css"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\main.css",
+      "PackagePath": "staticwebassets\\Web\\css\\main.css"
     },
     {
       "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\favicon.png",

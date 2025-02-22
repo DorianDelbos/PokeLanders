@@ -22,20 +22,44 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcQXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layout/Card.razor]
-build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0XENhcmQucmF6b3I=
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layouts/Card.razor]
+build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0c1xDYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layout/Grid.razor]
-build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0XEdyaWQucmF6b3I=
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layouts/Grid.razor]
+build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0c1xHcmlkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcUGFnZXNcSG9tZS5yYXpvcg==
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layouts/LanderLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0c1xMYW5kZXJMYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layouts/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0c1xNYWluTGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Pages/About.razor]
+build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcUGFnZXNcQWJvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Pages/Evolutions.razor]
+build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcUGFnZXNcRXZvbHV0aW9ucy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Pages/LanderPage.razor]
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcUGFnZXNcTGFuZGVyUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Pages/Landers.razor]
+build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcUGFnZXNcTGFuZGVycy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Pages/Moves.razor]
+build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcUGFnZXNcTW92ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Pages/Search.razor]
+build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcUGFnZXNcU2VhcmNoLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Routes.razor]
@@ -45,11 +69,3 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcX0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layout/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-gr3jvupim7
-
-[C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/LandAPI/LandAPI/Web/Components/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = V2ViXENvbXBvbmVudHNcTGF5b3V0XE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-rbc5hu0452

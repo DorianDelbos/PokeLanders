@@ -1,0 +1,50 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager NavManager
+
+<link rel="stylesheet" href="Web/css/controls.css" />
+
+<div id="page">
+    <img id="background-image" src="../Web/Assets/Images/Card-symbol.png" />
+
+    <div id="grid">
+        <div class="cell cell-container" style="border-left: 0; border-top: 0;">
+            <img id="icon" onclick="window.location.href = 'landopedia'" src="../Web/Assets/Images/Card-symbol.png" />
+        </div>
+
+        <div class="cell" id="first-navigation" style="border-top: 0;">
+            <a class="first-navigation-button header3 @(IsActive("/landopedia", true))" href="landopedia">SEARCH</a>
+            <a class="first-navigation-button header3 @(IsActive("/lander"))" href="landopedia/lander">LANDERS</a>
+            <a class="first-navigation-button header3 @(IsActive("/about"))" href="landopedia/about">ABOUT</a>
+        </div>
+
+        <div class="cell" style="border-right: 0; border-top: 0;"></div>
+        <div class="cell" style="border-left: 0;"></div>
+
+        <div class="cell" id="viewport">
+            @Body
+        </div>
+
+        <div class="cell" style="border-right: 0;"></div>
+
+        <div class="cell" style="border-left: 0; border-bottom: 0;"></div>
+
+        <div class="cell" id="secondary-navigation" style="border-bottom: 0;">
+            @SecondaryNavigationContent
+        </div>
+
+        <div class="cell" style="border-right: 0; border-bottom: 0;"></div>
+    </div>
+</div>
+
+@code 
+{
+    [Parameter] public RenderFragment SecondaryNavigationContent { get; set; }
+
+    private string IsActive(string page, bool onlyEnd = false)
+    {
+        if (onlyEnd)
+            return NavManager.Uri.EndsWith(page, StringComparison.OrdinalIgnoreCase) ? "active" : "";
+
+        return NavManager.Uri.Contains(page, StringComparison.OrdinalIgnoreCase) ? "active" : "";
+    }
+}

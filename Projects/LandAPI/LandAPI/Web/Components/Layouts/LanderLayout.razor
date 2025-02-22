@@ -1,0 +1,46 @@
+@using LandAPI.Web.Components.Layouts
+@using Microsoft.AspNetCore.Components
+@inject NavigationManager NavManager
+@inherits LayoutComponentBase
+
+<MainLayout>
+    <Body>
+        @Body
+    </Body>
+
+    <SecondaryNavigationContent>
+        <a class="secondary-navigation-button header3 @(IsActive(0))" href="/landopedia/lander/@LanderName">DESCRIPTION</a>
+        <a class="secondary-navigation-button header3 @(IsActive(1))" href="/landopedia/lander/evolutions/@LanderName">EVOLUTIONS</a>
+        <a class="secondary-navigation-button header3 @(IsActive(2))" href="/landopedia/lander/moves/@LanderName">CAPABLE MOVES</a>
+    </SecondaryNavigationContent>
+</MainLayout>
+
+@code 
+{
+    private int navigationIndex
+    {
+        get
+        {
+            var uri = NavManager.Uri.ToLowerInvariant();
+
+            if (uri.Contains("evolution"))  return 1;
+            else if (uri.Contains("moves")) return 2;
+            return 0;
+        }
+    }
+
+    private string LanderName
+    {
+        get
+        {
+            var segments = NavManager.Uri.TrimEnd('/').Split('/');
+            if (segments[^1] != "lander" && segments[^1] != "evolutions" && segments[^1] != "moves")
+            {
+                return segments[^1];
+            }
+            return string.Empty;
+        }
+    }
+
+    private string IsActive(int index) => navigationIndex == index ? "active" : "";
+}

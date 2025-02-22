@@ -1,0 +1,99 @@
+@using LandAPI.API.Models
+@using LandAPI.Web.Components.Layouts
+@using Microsoft.AspNetCore.Components
+@using System.Text.Json
+@page "/landopedia/lander"
+@page "/landopedia/lander/{Name}"
+
+<LanderLayout>
+    <Body>
+        @if (hasLander)
+        {
+            <div style="width: 100%; height: 100%; position: relative;">
+
+                @* LANDER DISPLAY *@
+                <div style="position: absolute; background-image: url('../Web/Assets/Images/Card-background.png'); background-size: contain; background-repeat: no-repeat; background-position: center; width: 60vh; height: 60vh; top: 50%; left: 50%; transform: translate(-50%, -50%)">
+
+                    <glb-viewer class="bg-body-tertiary" style="border-radius:8px;" src="@modelPath" camera-x="0" camera-y="0.75" camera-z="2.5" 
+                                offset-x="0" offset-y="0.75" offset-z="0" auto-rotate />
+                
+                </div>
+
+                @* GLOBAL DATA *@
+                <div style="background-color: var(--Highlight-S); position: absolute; top: 25px; left: 25px; padding: 15px; min-width: 350px;">
+                    
+                    <div style="position: absolute; top: 0; left: 0; border: solid 3px var(--Green-Base); width: 40%;" />
+
+                    <p class="NunitoXL ExtraBold" style="color: var(--Neutral-White); margin: 0 0 15px 0;">@lander!.Name.ToUpper()</p>
+                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); margin: 0;">TYPE :</p>
+                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); margin: 0;">EVOLUTION :</p>
+
+                    <button class="Secondary-Button" style="position: absolute; right : 16px; bottom: -4ch;">SEE NEXT EVOLUTION</button>
+                
+                </div>
+
+                @* STATS *@
+                <div style="min-width: 600px; display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 5%; position: absolute; bottom: 25px; left: 25px;">
+
+                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">HP : 000</p>
+                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 100%; margin: auto; margin-left: 0;" />
+
+                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">ATTACK : 000</p>
+                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 60%; margin: auto; margin-left: 0;" />
+
+                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">DEFENSE : 000</p>
+                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 80%; margin: auto; margin-left: 0;" />
+
+                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">SPECIAL-ATTACK : 000</p>
+                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 70%; margin: auto; margin-left: 0;" />
+
+                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">SPECIAL-DEFENSE : 000</p>
+                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 20%; margin: auto; margin-left: 0;" />
+
+                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">SPEED : 000</p>
+                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 45%; margin: auto; margin-left: 0;" />
+
+                </div>
+
+                @* DESCRIPTION *@
+                <div style="background-color: var(--Highlight-S); position: absolute; bottom: 25px; right: 25px; padding: 15px; width: 400px;">
+                    
+                    <div style="position: absolute; top: 0; left: 0; border: solid 3px var(--Green-Base); width: 40%;" />
+
+                    <p class="NunitoXL ExtraBold" style="color: var(--Neutral-White); margin: 0 0 15px 0;">DESCRIPTION</p>
+
+                    <p class="NunitoL SemiBold" style="color: var(--Neutral-White); text-align: justify; margin: 0;">@lander.Description</p>
+                
+                </div>
+
+            </div>
+        }
+        else
+        {
+            <p class="header1" style="color: var(--Neutral-White); text-align: center; width: 100%; margin: auto;">NO LANDER SELECTED</p>
+        }
+    </Body>
+</LanderLayout>
+
+@code {
+    [Parameter] public string? Name { get; set; }
+    private bool hasLander = false;
+
+    private Lander? lander = null;
+    private const string filePath = "wwwroot/Assets/Data/landers.json";
+    private string modelPath => $"api/v1/model/{Name}.glb";
+
+    protected override void OnInitialized()
+    {
+        if (Name == null) return;
+
+        string jsonData = File.ReadAllText(filePath);
+        List<Lander>? landerList = JsonSerializer.Deserialize<List<Lander>>(jsonData);
+        if (landerList == null) return;
+
+        lander = landerList.FirstOrDefault(x => x.Name == Name);
+        if (lander == null) return;
+
+        hasLander = true;
+    }
+}
