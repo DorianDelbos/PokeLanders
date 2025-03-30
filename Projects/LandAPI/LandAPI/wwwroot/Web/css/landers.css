@@ -1,0 +1,44 @@
+﻿.moves-container 
+{
+    width: 100%;
+
+    padding: 20px;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    grid-gap: 80px;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    overflow: auto;
+}
+
+.evolution-container 
+{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.evolution-container *
+{
+    max-width: 320px;
+}
+
+.arrow
+{
+  margin: auto;
+  margin-left: 16px;
+  margin-right: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0; 
+  height: 0; 
+
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid var(--Neutral-White);
+}

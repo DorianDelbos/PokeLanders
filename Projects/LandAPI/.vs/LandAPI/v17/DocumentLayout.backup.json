@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\projects\\landapi\\landapi\\web\\components\\pages\\about.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\web\\components\\pages\\about.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\projects\\landapi\\landapi\\web\\components\\pages\\landers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\web\\components\\pages\\landers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\projects\\landapi\\landapi\\web\\components\\pages\\moves.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\web\\components\\pages\\moves.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\projects\\landapi\\landapi\\wwwroot\\web\\css\\controls.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\web\\css\\controls.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\projects\\landapi\\landapi\\web\\components\\pages\\landerpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\web\\components\\pages\\landerpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\projects\\landapi\\landapi\\wwwroot\\web\\css\\landers.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\wwwroot\\web\\css\\landers.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\projects\\landapi\\landapi\\web\\components\\pages\\evolutions.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\web\\components\\pages\\evolutions.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\projects\\landapi\\landapi\\web\\components\\pages\\search.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\web\\components\\pages\\search.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\projects\\landapi\\landapi\\web\\components\\layouts\\card.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\web\\components\\layouts\\card.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\projects\\landapi\\landapi\\web\\components\\layouts\\landerlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\web\\components\\layouts\\landerlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|c:\\users\\dorian\\documents\\github\\pokelanders\\projects\\landapi\\landapi\\web\\components\\pages\\search.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B89FE3B7-8F79-42F4-991F-778771809C5E}|LandAPI\\LandAPI.csproj|solutionrelative:landapi\\web\\components\\pages\\search.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,106 +35,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "About.razor",
-              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\About.razor",
-              "RelativeDocumentMoniker": "LandAPI\\Web\\Components\\Pages\\About.razor",
-              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\About.razor",
-              "RelativeToolTip": "LandAPI\\Web\\Components\\Pages\\About.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-22T11:52:17.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Search.razor",
-              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Search.razor",
-              "RelativeDocumentMoniker": "LandAPI\\Web\\Components\\Pages\\Search.razor",
-              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Search.razor",
-              "RelativeToolTip": "LandAPI\\Web\\Components\\Pages\\Search.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-22T10:03:26.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Moves.razor",
-              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Moves.razor",
-              "RelativeDocumentMoniker": "LandAPI\\Web\\Components\\Pages\\Moves.razor",
-              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Moves.razor",
-              "RelativeToolTip": "LandAPI\\Web\\Components\\Pages\\Moves.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-22T09:37:49.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Evolutions.razor",
-              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Evolutions.razor",
-              "RelativeDocumentMoniker": "LandAPI\\Web\\Components\\Pages\\Evolutions.razor",
-              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Evolutions.razor",
-              "RelativeToolTip": "LandAPI\\Web\\Components\\Pages\\Evolutions.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-22T09:37:47.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LanderLayout.razor",
-              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Layouts\\LanderLayout.razor",
-              "RelativeDocumentMoniker": "LandAPI\\Web\\Components\\Layouts\\LanderLayout.razor",
-              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Layouts\\LanderLayout.razor",
-              "RelativeToolTip": "LandAPI\\Web\\Components\\Layouts\\LanderLayout.razor",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-22T09:35:22.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LanderPage.razor",
-              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\LanderPage.razor",
-              "RelativeDocumentMoniker": "LandAPI\\Web\\Components\\Pages\\LanderPage.razor",
-              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\LanderPage.razor",
-              "RelativeToolTip": "LandAPI\\Web\\Components\\Pages\\LanderPage.razor",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEAAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-22T09:25:23.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Landers.razor",
               "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Landers.razor",
               "RelativeDocumentMoniker": "LandAPI\\Web\\Components\\Pages\\Landers.razor",
               "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Landers.razor",
               "RelativeToolTip": "LandAPI\\Web\\Components\\Pages\\Landers.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAABxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-02T07:38:05.038Z",
+              "WhenOpened": "2025-03-29T15:34:51.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "controls.css",
-              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\controls.css",
-              "RelativeDocumentMoniker": "LandAPI\\wwwroot\\Web\\css\\controls.css",
-              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\controls.css",
-              "RelativeToolTip": "LandAPI\\wwwroot\\Web\\css\\controls.css",
-              "ViewState": "AgIAAAUBAAAAAAAAAAAkwCEBAAAkAAAAAAAAAA==",
+              "Title": "Card.razor",
+              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Layouts\\Card.razor",
+              "RelativeDocumentMoniker": "LandAPI\\Web\\Components\\Layouts\\Card.razor",
+              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Layouts\\Card.razor",
+              "RelativeToolTip": "LandAPI\\Web\\Components\\Layouts\\Card.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T13:37:46.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "landers.css",
+              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\landers.css",
+              "RelativeDocumentMoniker": "LandAPI\\wwwroot\\Web\\css\\landers.css",
+              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\landers.css",
+              "RelativeToolTip": "LandAPI\\wwwroot\\Web\\css\\landers.css",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-02T06:58:03.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T13:19:22.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Evolutions.razor",
+              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Evolutions.razor",
+              "RelativeDocumentMoniker": "LandAPI\\Web\\Components\\Pages\\Evolutions.razor",
+              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Evolutions.razor",
+              "RelativeToolTip": "LandAPI\\Web\\Components\\Pages\\Evolutions.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T08:57:23.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Search.razor",
+              "DocumentMoniker": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Search.razor",
+              "RelativeDocumentMoniker": "LandAPI\\Web\\Components\\Pages\\Search.razor",
+              "ToolTip": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\Web\\Components\\Pages\\Search.razor",
+              "RelativeToolTip": "LandAPI\\Web\\Components\\Pages\\Search.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T13:18:59.305Z"
             }
           ]
         }

@@ -2,6 +2,7 @@
 @using LandAPI.Web.Components.Layouts
 @using Microsoft.AspNetCore.Components
 @using System.Text.Json
+@inject NavigationManager NavManager
 @page "/landopedia/lander"
 @page "/landopedia/lander/{Name}"
 
@@ -14,8 +15,7 @@
                 @* LANDER DISPLAY *@
                 <div style="position: absolute; background-image: url('../Web/Assets/Images/Card-background.png'); background-size: contain; background-repeat: no-repeat; background-position: center; width: 60vh; height: 60vh; top: 50%; left: 50%; transform: translate(-50%, -50%)">
 
-                    <glb-viewer class="bg-body-tertiary" style="border-radius:8px;" src="@modelPath" camera-x="0" camera-y="0.75" camera-z="2.5" 
-                                offset-x="0" offset-y="0.75" offset-z="0" auto-rotate />
+                    <glb-viewer class="bg-body-tertiary" style="border-radius:8px;" src="@lander!.Model" camera-x="0" camera-y="0.25" camera-z="1" offset-x="0" offset-y="0.25" offset-z="0" auto-rotate />
                 
                 </div>
 
@@ -25,33 +25,21 @@
                     <div style="position: absolute; top: 0; left: 0; border: solid 3px var(--Green-Base); width: 40%;" />
 
                     <p class="NunitoXL ExtraBold" style="color: var(--Neutral-White); margin: 0 0 15px 0;">@lander!.Name.ToUpper()</p>
-                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); margin: 0;">TYPE :</p>
-                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); margin: 0;">EVOLUTION :</p>
+                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); margin: 0;">TYPE : <span class="Medium">@landerTypes</span></p>
+                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); margin: 0;">EVOLUTION : <span class="Medium">@landerStage.ToString()</span></p>
 
-                    <button class="Secondary-Button" style="position: absolute; right : 16px; bottom: -4ch;">SEE NEXT EVOLUTION</button>
+                    @* <a class="Secondary-Button" style="position: absolute; right : 16px; bottom: -4ch;" href="@EvolutionPath">SEE NEXT EVOLUTION</a> *@
                 
                 </div>
 
                 @* STATS *@
                 <div style="min-width: 600px; display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 5%; position: absolute; bottom: 25px; left: 25px;">
 
-                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">HP : 000</p>
-                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 100%; margin: auto; margin-left: 0;" />
-
-                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">ATTACK : 000</p>
-                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 60%; margin: auto; margin-left: 0;" />
-
-                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">DEFENSE : 000</p>
-                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 80%; margin: auto; margin-left: 0;" />
-
-                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">SPECIAL-ATTACK : 000</p>
-                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 70%; margin: auto; margin-left: 0;" />
-
-                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">SPECIAL-DEFENSE : 000</p>
-                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 20%; margin: auto; margin-left: 0;" />
-
-                    <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right;">SPEED : 000</p>
-                    <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: 45%; margin: auto; margin-left: 0;" />
+                    @foreach (var stat in @lander!.Stats)
+                    {
+                        <p class="NunitoXL Bold" style="color: var(--Neutral-White); text-align: right; margin: 8px 0 8px 0">@stat.Stat.ToUpper() : @stat.BaseStat.ToString("D3")</p>
+                        <div style="border: solid 3px var(--Green-300); border-radius: 3px; height: 0; width: @(MathF.Round((float)stat.BaseStat / (float)maxStats.GetValueOrDefault(stat.Stat) * 100.0f))%; margin: auto; margin-left: 0;" />
+                    }
 
                 </div>
 
@@ -81,7 +69,28 @@
 
     private Lander? lander = null;
     private const string filePath = "wwwroot/Assets/Data/landers.json";
-    private string modelPath => $"api/v1/model/{Name}.glb";
+
+    private string landerTypes = string.Empty;
+    private int landerStage = -1;
+    private Dictionary<string, int> maxStats;
+
+    private string EvolutionPath
+    {
+        get
+        {
+            string json = File.ReadAllText("wwwroot/Assets/Data/evolutionChains.json");
+            List<EvolutionChain> evolutionChains = JsonSerializer.Deserialize<List<EvolutionChain>>(json)!;
+
+            string? nextEvolution = GetNextEvolutionName(evolutionChains, lander!.Name);
+
+            if (!string.IsNullOrEmpty(nextEvolution))
+            {
+                return $"/landopedia/lander/{nextEvolution}";
+            }
+
+            return NavManager.Uri;
+        }
+    }
 
     protected override void OnInitialized()
     {
@@ -95,5 +104,95 @@
         if (lander == null) return;
 
         hasLander = true;
+
+        InitializeLanderTypes();
+        InitializeLanderStage();
+        InitializeLanderStats();
+    }
+
+    private void InitializeLanderTypes()
+    {
+        for (int i = 0; i < lander!.Types.Count; i++)
+        {
+            landerTypes += $"{lander!.Types[i].ToString()}{(lander!.Types.Count - 1 != i ? ", " : string.Empty)}";
+        }
+    }
+
+    private void InitializeLanderStage()
+    {
+        string json = File.ReadAllText("wwwroot/Assets/Data/evolutionChains.json");
+        List<EvolutionChain> evolutionChains = JsonSerializer.Deserialize<List<EvolutionChain>>(json)!;
+
+        foreach (var root in evolutionChains)
+        {
+            landerStage = GetEvolutionStage(root.Chain, lander!.Name);
+            if (landerStage != -1) break;
+        }
+    }
+
+    private int GetEvolutionStage(Chain chain, string species, int stage = 1)
+    {
+        if (chain.Species == species)
+            return stage;
+
+        if (chain.EvolvesTo == null)
+            return -1;
+
+        foreach (var evolution in chain.EvolvesTo)
+        {
+            int result = GetEvolutionStage(evolution, species, stage + 1);
+            if (result != 0)
+                return result;
+        }
+        return -1;
+    }
+
+    private void InitializeLanderStats()
+    {
+        string jsonData = File.ReadAllText(filePath);
+        List<Lander>? landerList = JsonSerializer.Deserialize<List<Lander>>(jsonData);
+
+        maxStats = new Dictionary<string, int>();
+        lander!.Stats.ForEach(s =>
+        {
+            maxStats.Add(s.Stat, landerList!.Select(l => l.Stats.First(s2 => s2.Stat == s.Stat)).Max(s3 => s3.BaseStat));
+        });
+    }
+
+    private string? GetNextEvolutionName(List<EvolutionChain> evolutionChains, string currentLander)
+    {
+        foreach (var root in evolutionChains)
+        {
+            if (root.Chain == null) break;
+
+            string? nextEvolution = FindNextEvolution(root.Chain, currentLander);
+            if (!string.IsNullOrEmpty(nextEvolution))
+            {
+                return nextEvolution;
+            }
+        }
+        return null;
+    }
+
+    private string? FindNextEvolution(Chain chain, string currentLander)
+    {
+        if (chain.EvolvesTo == null)
+            return null;
+
+        if (chain.Species == currentLander && chain.EvolvesTo.Any())
+        {
+            return chain.EvolvesTo.First().Species;
+        }
+
+        foreach (var evolution in chain.EvolvesTo)
+        {
+            string? next = FindNextEvolution(evolution, currentLander);
+            if (!string.IsNullOrEmpty(next))
+            {
+                return next;
+            }
+        }
+
+        return null;
     }
 }

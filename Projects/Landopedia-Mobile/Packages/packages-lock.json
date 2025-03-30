@@ -1,5 +1,42 @@
 {
   "dependencies": {
+    "com.dgames.landers": {
+      "version": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.landers",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.dgames.utils": "1.0.0",
+        "com.dgames.nearfieldcommunication": "1.0.0",
+        "com.dgames.webservices": "1.0.0",
+        "com.dgames.tasks": "1.0.0"
+      }
+    },
+    "com.dgames.nearfieldcommunication": {
+      "version": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.nearfieldcommunication",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.dgames.tasks": {
+      "version": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.tasks",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.dgames.utils": {
+      "version": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.utils",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.dgames.webservices": {
+      "version": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.webservices",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.dgames.utils": "1.0.0"
+      }
+    },
     "com.unity.2d.animation": {
       "version": "10.1.3",
       "depth": 1,

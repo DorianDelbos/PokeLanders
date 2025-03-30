@@ -331,8 +331,24 @@
   },
   {
     "ContainingType": "LandAPI.API.Controllers.SpriteController",
-    "Method": "GetModel",
-    "RelativePath": "api/v1/Sprite/{fileName}",
+    "Method": "GetLander",
+    "RelativePath": "api/v1/Sprite/landers/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LandAPI.API.Controllers.SpriteController",
+    "Method": "GetSprite",
+    "RelativePath": "api/v1/Sprite/types/{fileName}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

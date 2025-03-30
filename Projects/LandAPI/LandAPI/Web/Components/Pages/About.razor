@@ -1,21 +1,59 @@
 @using LandAPI.Web.Components.Layouts
 @using Microsoft.AspNetCore.Components
 @page "/landopedia/about"
+<link rel="stylesheet" href="Web/css/about.css" />
 
 <MainLayout>
     <Body>
-        <p class="header1" style="color: var(--Neutral-White);">ABOUT</p>
+        <div class="scrollviewer about-container">
+            <div class="about-colonne" style="margin: auto;">
+                <div class="about-row">
+                    <div class="about-box">
+                        <p class="NunitoXL ExtraBold about-title">LANDER PROJECT</p>
+                        <p class="NunitoX Bold about-desc">
+                            The Lander project draws inspiration from several iconic video game franchises. It incorporates the interactive collection concept from Skylanders, where physical cards can directly interact with the game to unlock content or modify the 
+                            player's experience. At the same time, it integrates key elements from the Pokémon series, such as capturing and evolving creatures, strategically optimizing teams, and the thrill of collecting / encouraging players to continuously expand 
+                            and refine their roster. This unique combination aims to deliver an immersive experience, blending strategy, collection, and interaction between the physical and digital worlds.
+                        </p>
+                    </div>
+                </div>
 
-        <svg width="100%" height="100%">
-            <defs>
-                <marker id="arrowhead" markerWidth="5" markerHeight="7" refX="2.5" refY="3.5" orient="auto">
-                    <polygon points="0 0,5 3.5,0 7" fill="white" />
-                </marker>
-            </defs>
+                <div class="about-row">
+                    <div class="about-box" style="flex : 3;">
+                        <p class="NunitoXL ExtraBold about-title">Near Field Communication (NFC)</p>
+                        <p class="NunitoX Bold about-desc">
+                            The use of NFC (Near Field Communication) technology is at the heart of the Lander experience. Each collectible card is equipped with an NFC chip, enabling instant interaction with the game. By bringing a card close to a compatible
+                            reader, the player can unlock new creatures. This technology ensures a smooth and intuitive experience, strengthening the connection between the physical world of the cards and the digital game environment. Additionally, it provides
+                            secure data management, ensuring that each card is authentic and unique to its player, preventing counterfeiting or unauthorized duplication.
+                        </p>
+                    </div>
 
-            <polyline points="0,100 50,100 50,50 100,50"
-                      stroke="white" stroke-width="3" fill="none"
-                      marker-end="url(#arrowhead)" />
-        </svg>
+                    <div class="about-box" style="flex : 2;">
+                        <p class="NunitoXL ExtraBold about-title">Application Programming Interface (API)</p>
+                        <p class="NunitoX Bold about-desc">
+                            The use of a dedicated API plays a crucial role in the Lander project, enabling dynamic synchronization between NFC cards and the game. Through this API, the game can retrieve global information related to scanned cards in real time. 
+                            This connected architecture ensures an immersive and adaptable experience while providing developers with the ability to integrate new features over time.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-row">
+                    <div class="about-box">
+                        <p class="NunitoXL ExtraBold about-title">Web Page</p>
+                        <img src="../Web/Assets/Images/LandopediaWeb.png" class="about-image" style="height: 288px;" />
+                    </div>
+
+                    <div class="about-box">
+                        <p class="NunitoXL ExtraBold about-title">Simple Lander Battle System</p>
+                        <img src="../Web/Assets/Images/FighterDemo.png" class="about-image" style="height: 288px;" />
+                    </div>
+
+                    <div class="about-box">
+                        <p class="NunitoXL ExtraBold about-title">Landopedia</p>
+                        <img src="../Web/Assets/Images/LandopediaMobile.png" class="about-image" style="height: 288px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </Body>
 </MainLayout>

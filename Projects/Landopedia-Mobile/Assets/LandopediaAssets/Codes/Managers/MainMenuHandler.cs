@@ -1,6 +1,5 @@
 using dgames.http;
 using dgames.nfc;
-using dgames.Utilities;
 using Landers.API;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,13 +25,13 @@ namespace Landopedia
                 Destroy(child.gameObject);
         }
 
-        private void Initialize()
+        private async void Initialize()
         {
             ClearLandersCase();
 
             List<int> landersSaved = SaveSystem.LoadIDs();
 
-            Lander[] landers = LanderRepository.GetAll();
+            Lander[] landers = LanderRepository.Instance.GetAll();
             foreach (Lander lander in landers)
             {
                 LanderCase instance = Instantiate(landerCasePrefab, landerCaseTransform);
@@ -42,13 +41,13 @@ namespace Landopedia
                 if (instance.HasLander)
                 {
                     AsyncOperationWeb<Texture2D> op = WebService.AsyncRequestImage(lander.sprite);
-					op.OnComplete += op =>
-					{
-                        if (op.Exception == null)
-                            instance.SetTexture(op.Result);
-                        else
-                            Debug.LogError(op.Exception.Message, this);
-                    };
+
+                    await op.AwaitCompletion();
+
+                    if (!op.IsError)
+                        instance.SetTexture(op.Result);
+                    else
+                        Debug.LogError(op.Exception.Message, this);
                 }
             }
         }

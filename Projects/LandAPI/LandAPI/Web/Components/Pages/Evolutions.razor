@@ -9,9 +9,21 @@
     <Body>
         @if (hasLander)
         {
-            <div style="width: 100%; height: 100%; position: relative;">
+            <div style="width: 100%; height: 100%; position: relative; display: flex; align-items: center; justify-content: center;">
 
-                <p class="header1" style="color: var(--Neutral-White); text-align: center; width: 100%; margin: auto;">EVOLUTIONS</p>
+                <div class="evolution-container">
+                    @if (@previousLander != null)
+                    {
+                        <Card Lander="@previousLander" />
+                        <span class="arrow" />
+                    }
+                    <Card Lander="@lander" />
+                    @if (@nextLander != null)
+                    {
+                        <span class="arrow" />
+                        <Card Lander="@nextLander" />
+                    }
+                </div>
 
             </div>
         }
@@ -27,20 +39,76 @@
     private bool hasLander = false;
 
     private Lander? lander = null;
-    private const string filePath = "wwwroot/Assets/Data/landers.json";
+    private Lander? previousLander = null;
+    private Lander? nextLander = null;
+    private (string? previous, string? next) previousNextEvolution;
 
     protected override void OnInitialized()
     {
         if (Name == null) return;
 
-        string jsonData = File.ReadAllText(filePath);
+        string jsonData = File.ReadAllText("wwwroot/Assets/Data/landers.json");
         List<Lander>? landerList = JsonSerializer.Deserialize<List<Lander>>(jsonData);
         if (landerList == null) return;
 
         lander = landerList.FirstOrDefault(x => x.Name == Name);
         if (lander == null) return;
 
+        string json = File.ReadAllText("wwwroot/Assets/Data/evolutionChains.json");
+        List<EvolutionChain> evolutionChains = JsonSerializer.Deserialize<List<EvolutionChain>>(json)!;
+        if (evolutionChains == null) return;
+
+        previousNextEvolution = GetEvolutionNames(lander.Name, evolutionChains);
+        previousLander = landerList.FirstOrDefault(x => x.Name == previousNextEvolution.previous);
+        nextLander = landerList.FirstOrDefault(x => x.Name == previousNextEvolution.next);
+
         hasLander = true;
+    }
+
+    public (string? previous, string? next) GetEvolutionNames(string species, List<EvolutionChain> chains)
+    {
+        string? previous = null;
+        string? next = null;
+
+        foreach (var chain in chains)
+        {
+            if (chain.Chain == null) break;
+            if (FindEvolution(chain.Chain, species, out previous, out next)) break;
+        }
+
+        return (previous, next);
+    }
+
+    private bool FindEvolution(Chain currentChain, string species, out string? previous, out string? next)
+    {
+        previous = null;
+        next = null;
+
+        if (currentChain.Species == species)
+        {
+            if (currentChain.EvolvesTo != null && currentChain.EvolvesTo.Any())
+            {
+                next = currentChain.EvolvesTo.FirstOrDefault()?.Species;
+            }
+            return true;
+        }
+
+        if (currentChain.EvolvesTo != null)
+        {
+            foreach (var evolve in currentChain.EvolvesTo)
+            {
+                if (FindEvolution(evolve, species, out previous, out next))
+                {
+                    if (previous == null)
+                    {
+                        previous = currentChain.Species;
+                    }
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 }
 

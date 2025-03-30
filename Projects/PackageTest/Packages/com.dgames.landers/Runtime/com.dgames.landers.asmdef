@@ -1,0 +1,19 @@
+{
+    "name": "com.dgames.landers",
+    "rootNamespace": "Landers",
+    "references": [
+        "GUID:4e81bc59b11fef742b8a74ad04a1e574",
+        "GUID:94e3a25a62af6da4fae35eb5bca905a8",
+        "GUID:94b4517ceb95d4d468cf46f0619cebfe",
+        "GUID:1b46acf9b3af24f40b5abeed077531ad"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -39,10 +39,34 @@
         "move_learned_details": {
           "level_learned_at": 0
         }
+      },
+      {
+        "move": "Aqua Jet",
+        "move_learned_details": {
+          "level_learned_at": 5
+        }
+      },
+      {
+        "move": "Hydro Pump",
+        "move_learned_details": {
+          "level_learned_at": 10
+        }
+      },
+      {
+        "move": "Rain Dance",
+        "move_learned_details": {
+          "level_learned_at": 15
+        }
+      },
+      {
+        "move": "Surf",
+        "move_learned_details": {
+          "level_learned_at": 20
+        }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/aquapix.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/aquapix.png"
+    "model": "http://192.168.1.104:5000/api/v1/model/aquapix.glb",
+    "sprite": "http://192.168.1.104:5000/api/v1/sprite/landers/aquapix.png"
   },
   {
     "id": 2,
@@ -84,10 +108,34 @@
         "move_learned_details": {
           "level_learned_at": 0
         }
+      },
+      {
+        "move": "Aqua Ring",
+        "move_learned_details": {
+          "level_learned_at": 5
+        }
+      },
+      {
+        "move": "Dazzling Gleam",
+        "move_learned_details": {
+          "level_learned_at": 12
+        }
+      },
+      {
+        "move": "Hydro Pump",
+        "move_learned_details": {
+          "level_learned_at": 18
+        }
+      },
+      {
+        "move": "Light Screen",
+        "move_learned_details": {
+          "level_learned_at": 22
+        }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/Luminorine.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/Luminorine.png"
+    "model": "http://192.168.1.104:5000/api/v1/model/Luminorine.glb",
+    "sprite": "http://192.168.1.104:5000/api/v1/sprite/landers/Luminorine.png"
   },
   {
     "id": 3,
@@ -129,9 +177,441 @@
         "move_learned_details": {
           "level_learned_at": 0
         }
+      },
+      {
+        "move": "Hydro Pump",
+        "move_learned_details": {
+          "level_learned_at": 5
+        }
+      },
+      {
+        "move": "Calm Mind",
+        "move_learned_details": {
+          "level_learned_at": 12
+        }
+      },
+      {
+        "move": "Rain Dance",
+        "move_learned_details": {
+          "level_learned_at": 15
+        }
+      },
+      {
+        "move": "Thunder",
+        "move_learned_details": {
+          "level_learned_at": 20
+        }
+      },
+      {
+        "move": "Aqua Tail",
+        "move_learned_details": {
+          "level_learned_at": 25
+        }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/Ocealythe.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/Ocealythe.png"
+    "model": "http://192.168.1.104:5000/api/v1/model/Ocealythe.glb",
+    "sprite": "http://192.168.1.104:5000/api/v1/sprite/landers/Ocealythe.png"
+  },
+  {
+    "id": 4,
+    "name": "Flamivine",
+    "description": "Flamivine is a fiery little Pokémon resembling a burning plant. It carries a flame that burns continuously on its back, using its heat to fuel rapid growth. It can release small bursts of fire to defend itself.",
+    "stats": [
+      {
+        "base_stat": 45,
+        "stat": "pv"
+      },
+      {
+        "base_stat": 50,
+        "stat": "attack"
+      },
+      {
+        "base_stat": 40,
+        "stat": "defense"
+      },
+      {
+        "base_stat": 60,
+        "stat": "special-attack"
+      },
+      {
+        "base_stat": 50,
+        "stat": "special-defense"
+      },
+      {
+        "base_stat": 60,
+        "stat": "speed"
+      }
+    ],
+    "base_experience": 60,
+    "base_height": 1,
+    "base_weight": 10,
+    "types": [ "fire" ],
+    "moves": [
+      {
+        "move": "Ember",
+        "move_learned_details": {
+          "level_learned_at": 0
+        }
+      },
+      {
+        "move": "Fire Claw",
+        "move_learned_details": {
+          "level_learned_at": 5
+        }
+      },
+      {
+        "move": "Flame Burst",
+        "move_learned_details": {
+          "level_learned_at": 10
+        }
+      },
+      {
+        "move": "Flamethrower",
+        "move_learned_details": {
+          "level_learned_at": 15
+        }
+      },
+      {
+        "move": "Will-O-Wisp",
+        "move_learned_details": {
+          "level_learned_at": 18
+        }
+      }
+    ],
+    "model": "http://192.168.1.104:5000/api/v1/model/Flamivine.glb",
+    "sprite": "http://192.168.1.104:5000/api/v1/sprite/landers/Flamivine.png"
+  },
+  {
+    "id": 5,
+    "name": "Flamiflora",
+    "description": "Flamiflora is the evolution of Flamivine, with flames now taking on a plant-like form. Its fiery stem is surrounded by burning petals, and it uses its fiery roots to attack and defend itself.",
+    "stats": [
+      {
+        "base_stat": 60,
+        "stat": "pv"
+      },
+      {
+        "base_stat": 75,
+        "stat": "attack"
+      },
+      {
+        "base_stat": 60,
+        "stat": "defense"
+      },
+      {
+        "base_stat": 80,
+        "stat": "special-attack"
+      },
+      {
+        "base_stat": 70,
+        "stat": "special-defense"
+      },
+      {
+        "base_stat": 70,
+        "stat": "speed"
+      }
+    ],
+    "base_experience": 135,
+    "base_height": 1,
+    "base_weight": 25,
+    "types": [ "fire", "grass" ],
+    "moves": [
+      {
+        "move": "Ember",
+        "move_learned_details": {
+          "level_learned_at": 0
+        }
+      },
+      {
+        "move": "Fire Claw",
+        "move_learned_details": {
+          "level_learned_at": 5
+        }
+      },
+      {
+        "move": "Flamethrower",
+        "move_learned_details": {
+          "level_learned_at": 12
+        }
+      },
+      {
+        "move": "Fiery Vines",
+        "move_learned_details": {
+          "level_learned_at": 18
+        }
+      },
+      {
+        "move": "Solar Beam",
+        "move_learned_details": {
+          "level_learned_at": 22
+        }
+      }
+    ],
+    "model": "http://192.168.1.104:5000/api/v1/model/Flamiflora.glb",
+    "sprite": "http://192.168.1.104:5000/api/v1/sprite/landers/Flamiflora.png"
+  },
+  {
+    "id": 6,
+    "name": "Pyroflora",
+    "description": "Pyroflora is the ultimate evolution of Flamivine, where flames and plant life merge into a breathtaking yet terrifying form. It can manipulate both flames and vines, releasing waves of fire and foliage to overwhelm foes.",
+    "stats": [
+      {
+        "base_stat": 85,
+        "stat": "pv"
+      },
+      {
+        "base_stat": 100,
+        "stat": "attack"
+      },
+      {
+        "base_stat": 90,
+        "stat": "defense"
+      },
+      {
+        "base_stat": 110,
+        "stat": "special-attack"
+      },
+      {
+        "base_stat": 95,
+        "stat": "special-defense"
+      },
+      {
+        "base_stat": 85,
+        "stat": "speed"
+      }
+    ],
+    "base_experience": 220,
+    "base_height": 2,
+    "base_weight": 85,
+    "types": [ "fire", "grass" ],
+    "moves": [
+      {
+        "move": "Ember",
+        "move_learned_details": {
+          "level_learned_at": 0
+        }
+      },
+      {
+        "move": "Fire Claw",
+        "move_learned_details": {
+          "level_learned_at": 5
+        }
+      },
+      {
+        "move": "Flamethrower",
+        "move_learned_details": {
+          "level_learned_at": 12
+        }
+      },
+      {
+        "move": "Fiery Vines",
+        "move_learned_details": {
+          "level_learned_at": 18
+        }
+      },
+      {
+        "move": "Flame Burst",
+        "move_learned_details": {
+          "level_learned_at": 30
+        }
+      },
+      {
+        "move": "Flame Wave",
+        "move_learned_details": {
+          "level_learned_at": 40
+        }
+      }
+    ],
+    "model": "http://192.168.1.104:5000/api/v1/model/Pyroflora.glb",
+    "sprite": "http://192.168.1.104:5000/api/v1/sprite/landers/Pyroflora.png"
+  },
+  {
+    "id": 7,
+    "name": "Briseveine",
+    "description": "Briseveine is a small plant-like Pokémon living in dense forests. It can control the winds and leaves, creating powerful gusts. While calm in nature, it changes its demeanor when in danger.",
+    "stats": [
+      {
+        "base_stat": 50,
+        "stat": "pv"
+      },
+      {
+        "base_stat": 45,
+        "stat": "attack"
+      },
+      {
+        "base_stat": 55,
+        "stat": "defense"
+      },
+      {
+        "base_stat": 60,
+        "stat": "special-attack"
+      },
+      {
+        "base_stat": 70,
+        "stat": "special-defense"
+      },
+      {
+        "base_stat": 70,
+        "stat": "speed"
+      }
+    ],
+    "base_experience": 60,
+    "base_height": 1,
+    "base_weight": 8,
+    "types": [ "grass" ],
+    "moves": [
+      {
+        "move": "Leaf Blade",
+        "move_learned_details": {
+          "level_learned_at": 0
+        }
+      },
+      {
+        "move": "Breeze",
+        "move_learned_details": {
+          "level_learned_at": 6
+        }
+      }
+    ],
+    "model": "http://192.168.1.104:5000/api/v1/model/Briseveine.glb",
+    "sprite": "http://192.168.1.104:5000/api/v1/sprite/landers/Briseveine.png"
+  },
+  {
+    "id": 8,
+    "name": "Aereflora",
+    "description": "Aereflora has evolved into an airy and graceful Pokémon. Its petals are now lightweight, and it uses air currents to fly. It can manipulate gusts of wind to knock down its enemies.",
+    "stats": [
+      {
+        "base_stat": 75,
+        "stat": "pv"
+      },
+      {
+        "base_stat": 60,
+        "stat": "attack"
+      },
+      {
+        "base_stat": 85,
+        "stat": "defense"
+      },
+      {
+        "base_stat": 75,
+        "stat": "special-attack"
+      },
+      {
+        "base_stat": 90,
+        "stat": "special-defense"
+      },
+      {
+        "base_stat": 100,
+        "stat": "speed"
+      }
+    ],
+    "base_experience": 130,
+    "base_height": 2,
+    "base_weight": 35,
+    "types": [ "grass", "flying" ],
+    "moves": [
+      {
+        "move": "Leaf Blade",
+        "move_learned_details": {
+          "level_learned_at": 0
+        }
+      },
+      {
+        "move": "Breeze",
+        "move_learned_details": {
+          "level_learned_at": 6
+        }
+      },
+      {
+        "move": "Gust",
+        "move_learned_details": {
+          "level_learned_at": 12
+        }
+      },
+      {
+        "move": "Feather Dance",
+        "move_learned_details": {
+          "level_learned_at": 18
+        }
+      }
+    ],
+    "model": "http://192.168.1.104:5000/api/v1/model/Aereflora.glb",
+    "sprite": "http://192.168.1.104:5000/api/v1/sprite/landers/Aereflora.png"
+  },
+  {
+    "id": 9,
+    "name": "Sylvacloud",
+    "description": "Sylvacloud is the ultimate evolution of Briseveine, mastering not only the winds but also storms and clouds. It floats in the sky, guided by the breeze, and can create devastating windstorms.",
+    "stats": [
+      {
+        "base_stat": 95,
+        "stat": "pv"
+      },
+      {
+        "base_stat": 80,
+        "stat": "attack"
+      },
+      {
+        "base_stat": 110,
+        "stat": "defense"
+      },
+      {
+        "base_stat": 90,
+        "stat": "special-attack"
+      },
+      {
+        "base_stat": 120,
+        "stat": "special-defense"
+      },
+      {
+        "base_stat": 115,
+        "stat": "speed"
+      }
+    ],
+    "base_experience": 230,
+    "base_height": 2,
+    "base_weight": 65,
+    "types": [ "grass", "flying" ],
+    "moves": [
+      {
+        "move": "Leaf Blade",
+        "move_learned_details": {
+          "level_learned_at": 0
+        }
+      },
+      {
+        "move": "Breeze",
+        "move_learned_details": {
+          "level_learned_at": 6
+        }
+      },
+      {
+        "move": "Gust",
+        "move_learned_details": {
+          "level_learned_at": 12
+        }
+      },
+      {
+        "move": "Feather Dance",
+        "move_learned_details": {
+          "level_learned_at": 18
+        }
+      },
+      {
+        "move": "Windstorm",
+        "move_learned_details": {
+          "level_learned_at": 30
+        }
+      },
+      {
+        "move": "Leaf Cyclone",
+        "move_learned_details": {
+          "level_learned_at": 45
+        }
+      }
+    ],
+    "model": "http://192.168.1.104:5000/api/v1/model/Sylvacloud.glb",
+    "sprite": "http://192.168.1.104:5000/api/v1/sprite/landers/Sylvacloud.png"
   }
 ]

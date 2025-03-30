@@ -1,6 +1,22 @@
 [
   {
-    "ContainingType": "LandAPI.Controllers.AilmentController",
+    "ContainingType": "Program\u002B\u003C\u003Ec",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_0",
+    "RelativePath": "",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LandAPI.API.Controllers.AilmentController",
     "Method": "GetAilements",
     "RelativePath": "api/v1/Ailment",
     "HttpMethod": "GET",
@@ -9,7 +25,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[LandAPI.Models.Ailment, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[LandAPI.API.Models.Ailment, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -20,7 +36,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.AilmentController",
+    "ContainingType": "LandAPI.API.Controllers.AilmentController",
     "Method": "GetAilementById",
     "RelativePath": "api/v1/Ailment/{id}",
     "HttpMethod": "GET",
@@ -35,7 +51,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "LandAPI.Models.Ailment",
+        "Type": "LandAPI.API.Models.Ailment",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -46,7 +62,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.BundleController",
+    "ContainingType": "LandAPI.API.Controllers.BundleController",
     "Method": "GetModel",
     "RelativePath": "api/v1/Bundle/{fileName}",
     "HttpMethod": "GET",
@@ -62,7 +78,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "LandAPI.Controllers.EvolutionChainController",
+    "ContainingType": "LandAPI.API.Controllers.EvolutionChainController",
     "Method": "GetEvolutionChains",
     "RelativePath": "api/v1/EvolutionChain",
     "HttpMethod": "GET",
@@ -71,7 +87,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[LandAPI.Models.EvolutionChain, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[LandAPI.API.Models.EvolutionChain, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -82,7 +98,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.EvolutionChainController",
+    "ContainingType": "LandAPI.API.Controllers.EvolutionChainController",
     "Method": "GetEvolutionChainById",
     "RelativePath": "api/v1/EvolutionChain/{id}",
     "HttpMethod": "GET",
@@ -97,7 +113,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "LandAPI.Models.EvolutionChain",
+        "Type": "LandAPI.API.Models.EvolutionChain",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -108,7 +124,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.LanderController",
+    "ContainingType": "LandAPI.API.Controllers.LanderController",
     "Method": "GetAllLanders",
     "RelativePath": "api/v1/Lander",
     "HttpMethod": "GET",
@@ -117,7 +133,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[LandAPI.Models.Lander, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[LandAPI.API.Models.Lander, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -128,7 +144,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.LanderController",
+    "ContainingType": "LandAPI.API.Controllers.LanderController",
     "Method": "GetLanderById",
     "RelativePath": "api/v1/Lander/{id}",
     "HttpMethod": "GET",
@@ -143,7 +159,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "LandAPI.Models.Lander",
+        "Type": "LandAPI.API.Models.Lander",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -154,7 +170,33 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.LanderController",
+    "ContainingType": "LandAPI.API.Controllers.LanderController",
+    "Method": "GetLanderByName",
+    "RelativePath": "api/v1/Lander/name/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "LandAPI.API.Models.Lander",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LandAPI.API.Controllers.LanderController",
     "Method": "GetLanderByType",
     "RelativePath": "api/v1/Lander/type/{type}",
     "HttpMethod": "GET",
@@ -169,7 +211,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[LandAPI.Models.Lander, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[LandAPI.API.Models.Lander, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -180,7 +222,23 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.MoveController",
+    "ContainingType": "LandAPI.API.Controllers.ModelController",
+    "Method": "GetModel",
+    "RelativePath": "api/v1/Model/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LandAPI.API.Controllers.MoveController",
     "Method": "GetMoves",
     "RelativePath": "api/v1/Move",
     "HttpMethod": "GET",
@@ -189,7 +247,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[LandAPI.Models.Move, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[LandAPI.API.Models.Move, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -200,7 +258,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.MoveController",
+    "ContainingType": "LandAPI.API.Controllers.MoveController",
     "Method": "GetMoveById",
     "RelativePath": "api/v1/Move/{id}",
     "HttpMethod": "GET",
@@ -215,7 +273,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "LandAPI.Models.Move",
+        "Type": "LandAPI.API.Models.Move",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -226,7 +284,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.NatureController",
+    "ContainingType": "LandAPI.API.Controllers.NatureController",
     "Method": "GetNatures",
     "RelativePath": "api/v1/Nature",
     "HttpMethod": "GET",
@@ -235,7 +293,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[LandAPI.Models.Nature, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[LandAPI.API.Models.Nature, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -246,7 +304,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.NatureController",
+    "ContainingType": "LandAPI.API.Controllers.NatureController",
     "Method": "GetNatureById",
     "RelativePath": "api/v1/Nature/{id}",
     "HttpMethod": "GET",
@@ -261,7 +319,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "LandAPI.Models.Nature",
+        "Type": "LandAPI.API.Models.Nature",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -272,7 +330,23 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.StatController",
+    "ContainingType": "LandAPI.API.Controllers.SpriteController",
+    "Method": "GetModel",
+    "RelativePath": "api/v1/Sprite/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LandAPI.API.Controllers.StatController",
     "Method": "GetStats",
     "RelativePath": "api/v1/Stat",
     "HttpMethod": "GET",
@@ -281,7 +355,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[LandAPI.Models.Stat, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[LandAPI.API.Models.Stat, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -292,7 +366,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.StatController",
+    "ContainingType": "LandAPI.API.Controllers.StatController",
     "Method": "GetStatById",
     "RelativePath": "api/v1/Stat/{id}",
     "HttpMethod": "GET",
@@ -307,7 +381,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "LandAPI.Models.Stat",
+        "Type": "LandAPI.API.Models.Stat",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -318,7 +392,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.StatController",
+    "ContainingType": "LandAPI.API.Controllers.StatController",
     "Method": "GetStatByStat",
     "RelativePath": "api/v1/Stat/name/{name}",
     "HttpMethod": "GET",
@@ -333,7 +407,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[LandAPI.Models.Stat, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[LandAPI.API.Models.Stat, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -344,7 +418,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.TypeController",
+    "ContainingType": "LandAPI.API.Controllers.TypeController",
     "Method": "GetTypes",
     "RelativePath": "api/v1/Type",
     "HttpMethod": "GET",
@@ -353,7 +427,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[LandAPI.Models.Type, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[LandAPI.API.Models.Type, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -364,7 +438,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.TypeController",
+    "ContainingType": "LandAPI.API.Controllers.TypeController",
     "Method": "GetTypeById",
     "RelativePath": "api/v1/Type/{id}",
     "HttpMethod": "GET",
@@ -379,7 +453,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "LandAPI.Models.Type",
+        "Type": "LandAPI.API.Models.Type",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -390,7 +464,7 @@
     ]
   },
   {
-    "ContainingType": "LandAPI.Controllers.TypeController",
+    "ContainingType": "LandAPI.API.Controllers.TypeController",
     "Method": "GetStatByType",
     "RelativePath": "api/v1/Type/name/{name}",
     "HttpMethod": "GET",
@@ -405,7 +479,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[LandAPI.Models.Type, LandAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "LandAPI.API.Models.Type",
         "MediaTypes": [
           "text/plain",
           "application/json",

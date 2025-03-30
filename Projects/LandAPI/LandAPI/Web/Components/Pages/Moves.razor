@@ -9,7 +9,7 @@
     <Body>
         @if (hasLander)
         {
-            <div class="container" style="width: 100%; height: 100%; position: relative; grid-template-columns: repeat(auto-fit, 400px); grid-gap: 20px; padding: 20px 0;">
+            <div class="moves-container scrollviewer" style="width: 100%; height: 100%; position: relative; grid-template-columns: repeat(auto-fit, 400px); grid-template-rows: max-content; grid-gap: 20px; padding: 20px 0;">
 
                 @foreach (var move in lander!.Moves)
                 {

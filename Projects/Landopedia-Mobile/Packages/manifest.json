@@ -1,5 +1,10 @@
 {
   "dependencies": {
+    "com.dgames.landers": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.landers",
+    "com.dgames.nearfieldcommunication": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.nearfieldcommunication",
+    "com.dgames.tasks": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.tasks",
+    "com.dgames.utils": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.utils",
+    "com.dgames.webservices": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.webservices",
     "com.unity.collab-proxy": "2.5.2",
     "com.unity.feature.2d": "2.0.1",
     "com.unity.ide.rider": "3.0.31",

@@ -709,6 +709,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6002848544748563814, guid: 1ea1461020f1084439ec0359fa72699e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6319954581409069223, guid: 1ea1461020f1084439ec0359fa72699e, type: 3}
       propertyPath: m_Name
       value: LoadingScreen

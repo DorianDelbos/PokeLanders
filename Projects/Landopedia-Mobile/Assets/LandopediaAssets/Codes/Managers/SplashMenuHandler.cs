@@ -1,4 +1,5 @@
-using Landers.API;
+using dgames.Tasks;
+using Landers;
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,36 +8,34 @@ namespace Landopedia
 {
     public class SplashMenuHandler : MonoBehaviour
     {
+        private TaskManager m_taskManager;
+
         private void Awake()
         {
-            InitializeLanderRepository();
+            m_taskManager ??= new TaskManager();
+            m_taskManager.EnqueueTask(new AilmentInitializeTask());
+            m_taskManager.EnqueueTask(new EvolutionChainInitializeTask());
+            m_taskManager.EnqueueTask(new LanderInitializeTask());
+            m_taskManager.EnqueueTask(new MoveInitializeTask());
+            m_taskManager.EnqueueTask(new NatureInitializeTask());
+            m_taskManager.EnqueueTask(new StatInitializeTask());
+            m_taskManager.EnqueueTask(new TypeInitializeTask());
+
+            LoadRepository();
         }
 
-        private void InitializeLanderRepository()
+        public async void LoadRepository()
         {
-            LanderRepository.Initialize().OnComplete += op =>
-            {
-                if (op.IsError) HandleError(op.Exception);
-                else InitializeTypeRepository();
-            };
-        }
+            await m_taskManager.StartProcessingAsync();
 
-        private void InitializeTypeRepository()
-        {
-            TypeRepository.Initialize().OnComplete += op =>
+            if (m_taskManager.GetTaskStackCount() > 0)
             {
-                if (op.IsError) HandleError(op.Exception);
-                else InitializeMoveRepository();
-            };
-        }
-
-        private void InitializeMoveRepository()
-        {
-            MoveRepository.Initialize().OnComplete += op =>
+                HandleError(new Exception("An error occurred while retrieving data from the API. Please try again later or contact support if the issue persists."));
+            }
+            else
             {
-                if (op.IsError) HandleError(op.Exception);
-                else SceneManager.LoadScene("Main");
-            };
+                SceneManager.LoadScene("Main");
+            }
         }
 
         private void HandleError(Exception e)
@@ -45,7 +44,7 @@ namespace Landopedia
             DataPanel.current.SetText($"{e.Message}");
             DataPanel.current.AddButton("Retry", () =>
             {
-                InitializeLanderRepository();
+                LoadRepository();
                 DataPanel.current.Active = false;
             });
             DataPanel.current.Active = true;

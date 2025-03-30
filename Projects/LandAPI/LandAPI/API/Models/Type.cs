@@ -28,5 +28,7 @@ namespace LandAPI.API.Models
         public string Color { get; set; }
         [JsonPropertyName("damage_relations")]
         public DamageRelations DamageRelations { get; set; }
+        [JsonPropertyName("sprite")]
+        public string Sprite { get; set; }
     }
 }

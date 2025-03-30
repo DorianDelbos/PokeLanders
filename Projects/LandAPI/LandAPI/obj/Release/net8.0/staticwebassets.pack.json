@@ -29,8 +29,24 @@
       "PackagePath": "staticwebassets\\Assets\\Data\\types.json"
     },
     {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aereflora.glb",
+      "PackagePath": "staticwebassets\\Assets\\Models\\Aereflora.glb"
+    },
+    {
       "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Aquapix.glb",
       "PackagePath": "staticwebassets\\Assets\\Models\\Aquapix.glb"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Briseveine.glb",
+      "PackagePath": "staticwebassets\\Assets\\Models\\Briseveine.glb"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Flamiflora.glb",
+      "PackagePath": "staticwebassets\\Assets\\Models\\Flamiflora.glb"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Flamivine.glb",
+      "PackagePath": "staticwebassets\\Assets\\Models\\Flamivine.glb"
     },
     {
       "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Luminorine.glb",
@@ -41,16 +57,72 @@
       "PackagePath": "staticwebassets\\Assets\\Models\\Ocealythe.glb"
     },
     {
-      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Aquapix.png",
-      "PackagePath": "staticwebassets\\Assets\\Sprites\\Aquapix.png"
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Pyroflora.glb",
+      "PackagePath": "staticwebassets\\Assets\\Models\\Pyroflora.glb"
     },
     {
-      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Luminorine.png",
-      "PackagePath": "staticwebassets\\Assets\\Sprites\\Luminorine.png"
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Models\\Sylvacloud.glb",
+      "PackagePath": "staticwebassets\\Assets\\Models\\Sylvacloud.glb"
     },
     {
-      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Ocealythe.png",
-      "PackagePath": "staticwebassets\\Assets\\Sprites\\Ocealythe.png"
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Landers\\Aereflora.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Landers\\Aereflora.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Landers\\Aquapix.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Landers\\Aquapix.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Landers\\Briseveine.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Landers\\Briseveine.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Landers\\Flamiflora.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Landers\\Flamiflora.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Landers\\Flamivine.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Landers\\Flamivine.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Landers\\Luminorine.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Landers\\Luminorine.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Landers\\Ocealythe.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Landers\\Ocealythe.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Landers\\Pyroflora.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Landers\\Pyroflora.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Landers\\Sylvacloud.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Landers\\Sylvacloud.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Types\\dark.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Types\\dark.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Types\\fire.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Types\\fire.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Types\\flying.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Types\\flying.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Types\\grass.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Types\\grass.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Types\\light.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Types\\light.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Assets\\Sprites\\Types\\water.png",
+      "PackagePath": "staticwebassets\\Assets\\Sprites\\Types\\water.png"
     },
     {
       "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\Assets\\Fonts\\NunitoSans.ttf",
@@ -65,12 +137,36 @@
       "PackagePath": "staticwebassets\\Web\\Assets\\Images\\Card-symbol.png"
     },
     {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\Assets\\Images\\FighterDemo.png",
+      "PackagePath": "staticwebassets\\Web\\Assets\\Images\\FighterDemo.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\Assets\\Images\\LandopediaMobile.png",
+      "PackagePath": "staticwebassets\\Web\\Assets\\Images\\LandopediaMobile.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\Assets\\Images\\LandopediaWeb.png",
+      "PackagePath": "staticwebassets\\Web\\Assets\\Images\\LandopediaWeb.png"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\about.css",
+      "PackagePath": "staticwebassets\\Web\\css\\about.css"
+    },
+    {
       "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\controls.css",
       "PackagePath": "staticwebassets\\Web\\css\\controls.css"
     },
     {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\landers.css",
+      "PackagePath": "staticwebassets\\Web\\css\\landers.css"
+    },
+    {
       "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\main.css",
       "PackagePath": "staticwebassets\\Web\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\css\\search.css",
+      "PackagePath": "staticwebassets\\Web\\css\\search.css"
     },
     {
       "Id": "C:\\Users\\Dorian\\Documents\\GitHub\\PokeLanders\\Projects\\LandAPI\\LandAPI\\wwwroot\\Web\\favicon.png",

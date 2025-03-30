@@ -1,7 +1,7 @@
 using dgames.http;
-using dgames.Utilities;
+using dgames.Utils;
 using Landers.API;
-using Landers.Utilities;
+using Landers.Utils;
 using System;
 using System.Linq;
 using TMPro;
@@ -37,7 +37,7 @@ namespace Landopedia
 
             private void OpenMenu()
             {
-                Color color = TypeRepository.GetByName(lander.types.First()).color.ToColor();
+                Color color = TypeRepository.Instance.GetByName(lander.types.First()).color.ToColor();
 
                 ApplyColor(color);
                 panel.SetActive(true);
@@ -119,13 +119,13 @@ namespace Landopedia
             speciesIdTextMesh.text = $"<sprite=0>\t{lander.name}\t#{lander.id.ToString("D3")}";
             InitializeTexture();
             for (int i = 0; i < lander.types.Count; i++)
-                SetType(typesGameObject[i], TypeRepository.GetByName(lander.types[i]));
+                SetType(typesGameObject[i], TypeRepository.Instance.GetByName(lander.types[i]));
         }
 
         private void InitializeAbout()
         {
             descriptionTextMesh.text = lander.description;
-            heightWeightTextMesh.text = $"Height<color=#000000>  \t{LanderUtilities.GetHeightInInches(lander.base_height)}    \t{LanderUtilities.GetHeightInMeters(lander.base_height)}</color>\r\nWeight<color=#000000> \t{LanderUtilities.GetWeightInPounds(lander.base_weight)}  \t{LanderUtilities.GetWeightInKilograms(lander.base_weight)}</color>";
+            heightWeightTextMesh.text = $"Height<color=#000000>  \t{LanderUtils.GetHeightInInches(lander.base_height)}    \t{LanderUtils.GetHeightInMeters(lander.base_height)}</color>\r\nWeight<color=#000000> \t{LanderUtils.GetWeightInPounds(lander.base_weight)}  \t{LanderUtils.GetWeightInKilograms(lander.base_weight)}</color>";
         }
 
         private void InitializeStats()
@@ -139,7 +139,7 @@ namespace Landopedia
                 if (minVal > stat.base_stat) minVal = stat.base_stat;
             }
 
-            for (int i = 0;i < lander.stats.Count; i++)
+            for (int i = 0; i < lander.stats.Count; i++)
             {
                 byte val = lander.stats[i].base_stat;
                 baseStatSlider[i].slider.value = RemapStatToRange(val, minVal, maxVal);
@@ -156,16 +156,16 @@ namespace Landopedia
             }
         }
 
-        private void InitializeTexture()
+        private async void InitializeTexture()
         {
             AsyncOperationWeb<Texture2D> op = WebService.AsyncRequestImage(lander.sprite);
-			op.OnComplete += op =>
-			{
-                if (op.Exception == null)
-                    landerTextureImage.texture = op.Result;
-                else
-                    Debug.LogError(op.Exception.Message, this);
-            };
+
+            await op.AwaitCompletion();
+
+            if (!op.IsError)
+                landerTextureImage.texture = op.Result;
+            else
+                Debug.LogError(op.Exception.Message, this);
         }
 
         private void SetType(GameObject typeObject, Landers.API.Type type)

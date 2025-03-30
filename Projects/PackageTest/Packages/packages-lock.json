@@ -1,5 +1,42 @@
 {
   "dependencies": {
+    "com.dgames.landers": {
+      "version": "file:com.dgames.landers",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.dgames.utils": "1.0.0",
+        "com.dgames.nearfieldcommunication": "1.0.0",
+        "com.dgames.webservices": "1.0.0",
+        "com.dgames.tasks": "1.0.0"
+      }
+    },
+    "com.dgames.nearfieldcommunication": {
+      "version": "file:com.dgames.nearfieldcommunication",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.dgames.tasks": {
+      "version": "file:com.dgames.tasks",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.dgames.utils": {
+      "version": "file:com.dgames.utils",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.dgames.webservices": {
+      "version": "file:com.dgames.webservices",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.dgames.utils": "1.0.0"
+      }
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.4",
       "depth": 0,

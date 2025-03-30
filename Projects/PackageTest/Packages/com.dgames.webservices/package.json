@@ -1,0 +1,20 @@
+{
+  "name": "com.dgames.webservices",
+  "version": "1.0.0",
+  "displayName": "2Dgames Web Services",
+  "description": "This package provides a simple yet powerful solution to integrate web services into your Unity project. Whether you're fetching data, sending requests, or handling API communication, WebService Connector makes it effortless.",
+  "unity": "6000.0",
+  "keywords": [
+    "API",
+    "web",
+    "communication"
+  ],
+  "author": {
+    "name": "2Dgames",
+    "url": "https://2dgames.fr"
+  },
+  "dependencies": {
+    "com.dgames.utils": "1.0.0"
+  },
+  "samples": []
+}

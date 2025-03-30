@@ -1,0 +1,17 @@
+{
+  "name": "com.dgames.tasks",
+  "version": "1.0.0",
+  "displayName": "2Dgames Tasks",
+  "description": "This package help for the multitasking.",
+  "unity": "6000.0",
+  "keywords": [
+    "task",
+    "multithreading"
+  ],
+  "author": {
+    "name": "2Dgames",
+    "url": "https://2dgames.fr"
+  },
+  "dependencies": {},
+  "samples": []
+}

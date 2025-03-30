@@ -10,7 +10,8 @@
 			"half_damage_to": [ "grass", "water" ],
 			"none_damage_from": [],
 			"none_damage_to": []
-		}
+		},
+		"sprite": "http://192.168.1.104:5000/api/v1/sprite/types/water.png"
 	},
 	{
 		"id": 2,
@@ -23,7 +24,8 @@
 			"half_damage_to": [ "water", "fire" ],
 			"none_damage_from": [],
 			"none_damage_to": []
-		}
+		},
+		"sprite": "http://192.168.1.104:5000/api/v1/sprite/types/fire.png"
 	},
 	{
 		"id": 3,
@@ -31,12 +33,13 @@
 		"color": "#4fce4f",
 		"damage_relations": {
 			"double_damage_from": [ "fire" ],
-			"double_damage_to": [ "grass" ],
-			"half_damage_from": [ "grass" ],
+			"double_damage_to": [ "water" ],
+			"half_damage_from": [ "water" ],
 			"half_damage_to": [ "fire", "grass" ],
 			"none_damage_from": [],
 			"none_damage_to": []
-		}
+		},
+		"sprite": "http://192.168.1.104:5000/api/v1/sprite/types/grass.png"
 	},
 	{
 		"id": 4,
@@ -49,7 +52,8 @@
 			"half_damage_to": [],
 			"none_damage_from": [],
 			"none_damage_to": []
-		}
+		},
+		"sprite": "http://192.168.1.104:5000/api/v1/sprite/types/light.png"
 	},
 	{
 		"id": 5,
@@ -62,6 +66,21 @@
 			"half_damage_to": [],
 			"none_damage_from": [],
 			"none_damage_to": []
-		}
+		},
+		"sprite": "http://192.168.1.104:5000/api/v1/sprite/types/dark.png"
+	},
+	{
+		"id": 6,
+		"name": "flying",
+		"color": "#add8e6",
+		"damage_relations": {
+			"double_damage_from": [ "electric" ],
+			"double_damage_to": [ "grass" ],
+			"half_damage_from": [ "grass" ],
+			"half_damage_to": [ "rock", "electric" ],
+			"none_damage_from": [],
+			"none_damage_to": []
+		},
+		"sprite": "http://192.168.1.104:5000/api/v1/sprite/types/flying.png"
 	}
 ]

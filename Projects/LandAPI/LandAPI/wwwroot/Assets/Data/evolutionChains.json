@@ -26,5 +26,61 @@
         }
       ]
     }
+  },
+  {
+    "id": 2,
+    "chain": {
+      "species": "Flamivine",
+      "evolution_details": null,
+      "evolves_to": [
+        {
+          "species": "Flamiflora",
+          "evolution_details": [
+            {
+              "min_level": 16
+            }
+          ],
+          "evolves_to": [
+            {
+              "species": "Pyroflora",
+              "evolution_details": [
+                {
+                  "min_level": 36
+                }
+              ],
+              "evolves_to": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "chain": {
+      "species": "Briseveine",
+      "evolution_details": null,
+      "evolves_to": [
+        {
+          "species": "Aereflora",
+          "evolution_details": [
+            {
+              "min_level": 16
+            }
+          ],
+          "evolves_to": [
+            {
+              "species": "Sylvacloud",
+              "evolution_details": [
+                {
+                  "min_level": 36
+                }
+              ],
+              "evolves_to": null
+            }
+          ]
+        }
+      ]
+    }
   }
 ]

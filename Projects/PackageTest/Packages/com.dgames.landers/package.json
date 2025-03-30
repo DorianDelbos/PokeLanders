@@ -1,0 +1,23 @@
+{
+  "name": "com.dgames.landers",
+  "version": "1.0.0",
+  "displayName": "2Dgames Landers",
+  "description": "All you need to make a lander game !",
+  "unity": "6000.0",
+  "keywords": [
+    "lander",
+    "franchise",
+    "utilities"
+  ],
+  "author": {
+    "name": "2Dgames",
+    "url": "https://2dgames.fr"
+  },
+  "dependencies": {
+    "com.dgames.utils": "1.0.0",
+    "com.dgames.nearfieldcommunication": "1.0.0",
+    "com.dgames.webservices": "1.0.0",
+    "com.dgames.tasks": "1.0.0"
+  },
+  "samples": []
+}

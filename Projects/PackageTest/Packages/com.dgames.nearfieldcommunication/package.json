@@ -1,0 +1,18 @@
+{
+  "name": "com.dgames.nearfieldcommunication",
+  "version": "1.0.0",
+  "displayName": "2Dgames Near Field Communication",
+  "description": "Easily integrate NFC (Near Field Communication) into your Unity projects with this powerful and flexible toolkit. Whether you're reading NFC tags, writing data, or enabling contactless interactions, this package provides everything you need for seamless NFC functionality.",
+  "unity": "6000.0",
+  "keywords": [
+    "NFC",
+    "android",
+    "windows"
+  ],
+  "author": {
+    "name": "2Dgames",
+    "url": "https://2dgames.fr"
+  },
+  "dependencies": {},
+  "samples": []
+}
