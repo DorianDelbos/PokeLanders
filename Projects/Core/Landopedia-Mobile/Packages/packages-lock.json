@@ -1,41 +1,18 @@
 {
   "dependencies": {
-    "com.dgames.landers": {
-      "version": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.landers",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.dgames.utils": "1.0.0",
-        "com.dgames.nearfieldcommunication": "1.0.0",
-        "com.dgames.webservices": "1.0.0",
-        "com.dgames.tasks": "1.0.0"
-      }
-    },
-    "com.dgames.nearfieldcommunication": {
-      "version": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.nearfieldcommunication",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
-    },
     "com.dgames.tasks": {
-      "version": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.tasks",
+      "version": "https://github.com/DorianDelbos/PokeLanders.git?path=Projects/Core/Packages/com.dgames.tasks",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "49a91e9baae201adc7940d6e2d5ac523b54198a0"
     },
     "com.dgames.utils": {
-      "version": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.utils",
+      "version": "https://github.com/DorianDelbos/PokeLanders.git?path=Projects/Core/Packages/com.dgames.utils",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
-    },
-    "com.dgames.webservices": {
-      "version": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.webservices",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.dgames.utils": "1.0.0"
-      }
+      "source": "git",
+      "dependencies": {},
+      "hash": "49a91e9baae201adc7940d6e2d5ac523b54198a0"
     },
     "com.unity.2d.animation": {
       "version": "10.1.3",
