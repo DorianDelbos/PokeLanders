@@ -38,7 +38,10 @@ namespace dgames.http
 		#region GLOBAL REQUESTS
 
 		public static AsyncOperationWeb<T> AsyncRequest<T>(string req, Func<HttpContent, Task<T>> processContent)
-			=> new AsyncOperationWeb<T>(new HttpClient().GetAsync(req, HttpCompletionOption.ResponseContentRead), processContent);
+		{
+			Debug.Log($"[WEB SERVICE] {req}");
+			return new AsyncOperationWeb<T>(new HttpClient().GetAsync(req, HttpCompletionOption.ResponseContentRead), processContent);
+        }
 
 		#endregion
 	}

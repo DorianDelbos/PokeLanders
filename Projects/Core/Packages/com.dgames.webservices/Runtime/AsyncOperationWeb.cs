@@ -64,11 +64,7 @@ namespace dgames.http
                 Exception = e;
                 IsDone = true;
                 completionSource.SetResult(false);
-                Debug.LogError($"[WEB SERVICE] An error has occurred.\n" +
-                    $"Request Method: {request.Method}\n" +
-                    $"Request URL: {request.RequestUri}\n" +
-                    $"Headers: {string.Join(", ", request.Headers)}\n" +
-                    $"{e}");
+                Debug.LogError($"[WEB SERVICE] An error has occurred.\n{e}");
             }
         }
 
