@@ -1,6 +1,7 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace dgames.http
 {
@@ -63,7 +64,7 @@ namespace dgames.http
                 Exception = e;
                 IsDone = true;
                 completionSource.SetResult(false);
-                Console.WriteLine($"[WEB SERVICE] An error has occurred. \n {e}");
+                Debug.LogError($"[WEB SERVICE] An error has occurred. \n {e}");
             }
         }
 

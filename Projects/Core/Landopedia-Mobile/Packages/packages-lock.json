@@ -10,7 +10,7 @@
         "com.dgames.webservices": "1.0.0",
         "com.dgames.tasks": "1.0.0"
       },
-      "hash": "41cd0b07d45b4845afc78ebe08b499fceadaa5b8"
+      "hash": "5de3a7cac9a80c32146eea06f9e4a76be0dd01f2"
     },
     "com.dgames.nearfieldcommunication": {
       "version": "https://github.com/DorianDelbos/PokeLanders.git?path=Projects/Core/Packages/com.dgames.nearfieldcommunication",
