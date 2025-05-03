@@ -1,7 +1,4 @@
-﻿using LandAPI.API.Data;
-using LandAPI.API.Models;
-
-namespace LandAPI.API.Services
+﻿namespace LandAPI.API
 {
     public class LanderService
     {
@@ -12,13 +9,13 @@ namespace LandAPI.API.Services
             _landerRepository = LanderRepository;
         }
 
-        public List<Lander> GetAllLanders()
+        public IEnumerable<Lander> GetAllLanders()
             => _landerRepository.Landers;
 
-        public Lander GetLanderById(int id)
+        public Lander? GetLanderById(int id)
             => _landerRepository.Landers.FirstOrDefault(p => p.ID == id);
 
-        public Lander GetLanderByName(string name)
+        public Lander? GetLanderByName(string name)
             => _landerRepository.Landers.FirstOrDefault(p => p.Name == name);
 
         public IEnumerable<Lander> GetLanderByType(string type)

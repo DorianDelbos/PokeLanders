@@ -1,7 +1,4 @@
-﻿using LandAPI.API.Data;
-using LandAPI.API.Models;
-
-namespace LandAPI.API.Services
+﻿namespace LandAPI.API
 {
     public class NatureService
     {
@@ -15,7 +12,7 @@ namespace LandAPI.API.Services
         public List<Nature> GetAllNatures()
             => _natureRepository.Nature;
 
-        public Nature GetNatureById(int id)
+        public Nature? GetNatureById(int id)
             => _natureRepository.Nature.FirstOrDefault(p => p.ID == id);
     }
 }

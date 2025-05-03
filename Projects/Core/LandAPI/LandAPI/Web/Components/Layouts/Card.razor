@@ -1,5 +1,5 @@
 ﻿@using LandAPI.Web.Components.Layouts
-@using LandAPI.API.Models
+@using LandAPI.API
 @using System.Text.Json
 @inject NavigationManager Navigation
 
@@ -19,11 +19,11 @@
     [Parameter] 
     public Lander Lander { get; set; }
 
-    private List<LandAPI.API.Models.Type>? types;
+    private List<LandAPI.API.Type>? types;
 
     protected override void OnInitialized()
     {
         string jsonData = File.ReadAllText("wwwroot/Assets/Data/types.json");
-        types = JsonSerializer.Deserialize<List<LandAPI.API.Models.Type>>(jsonData)!.Where(x => Lander.Types.Contains(x.Name)).ToList();
+        types = JsonSerializer.Deserialize<List<LandAPI.API.Type>>(jsonData)!.Where(x => Lander.Types.Contains(x.Name)).ToList();
     }
 }

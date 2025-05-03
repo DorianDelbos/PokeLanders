@@ -1,19 +1,15 @@
-using LandAPI.API.Data;
-using LandAPI.API.Services;
+using LandAPI.API;
 using LandAPI.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.ConfigureKestrel(options => { options.ListenAnyIP(5000); });
+
 // Add services to the container.
 builder.Services.AddControllers();
 
-// Add Swagger services
-//builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddSwaggerGen();
-
 // Add Razor Service
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 
 // Add services to the container.
 builder.Services.AddScoped<LanderRepository>();
@@ -31,11 +27,10 @@ builder.Services.AddScoped<MoveService>();
 builder.Services.AddScoped<NatureRepository>();
 builder.Services.AddScoped<NatureService>();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 app.MapGet("/", () => Results.Redirect("/landopedia"));
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 app.UseAuthorization();

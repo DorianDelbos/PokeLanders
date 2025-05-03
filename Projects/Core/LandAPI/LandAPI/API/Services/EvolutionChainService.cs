@@ -1,7 +1,4 @@
-﻿using LandAPI.API.Data;
-using LandAPI.API.Models;
-
-namespace LandAPI.API.Services
+﻿namespace LandAPI.API
 {
     public class EvolutionChainService
     {
@@ -15,7 +12,7 @@ namespace LandAPI.API.Services
         public List<EvolutionChain> GetAllEvolutionChains()
             => _evolutionChainRepository.EvolutionChain;
 
-        public EvolutionChain GetEvolutionChainById(int id)
+        public EvolutionChain? GetEvolutionChainById(int id)
             => _evolutionChainRepository.EvolutionChain.FirstOrDefault(p => p.ID == id);
     }
 }

@@ -1,8 +1,6 @@
-﻿using LandAPI.API.Models;
-using LandAPI.API.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace LandAPI.API.Controllers
+namespace LandAPI.API
 {
     [Route("api/v1/[controller]")]
     [ApiController]

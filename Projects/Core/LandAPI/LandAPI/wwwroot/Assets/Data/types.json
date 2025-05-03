@@ -11,7 +11,7 @@
 			"none_damage_from": [],
 			"none_damage_to": []
 		},
-		"sprite": "http://192.168.1.101:5000/api/v1/sprite/types/water.png"
+		"sprite": "http://192.168.1.105:5000/api/v1/sprite/types/water.png"
 	},
 	{
 		"id": 2,
@@ -25,7 +25,7 @@
 			"none_damage_from": [],
 			"none_damage_to": []
 		},
-		"sprite": "http://192.168.1.101:5000/api/v1/sprite/types/fire.png"
+		"sprite": "http://192.168.1.105:5000/api/v1/sprite/types/fire.png"
 	},
 	{
 		"id": 3,
@@ -39,7 +39,7 @@
 			"none_damage_from": [],
 			"none_damage_to": []
 		},
-		"sprite": "http://192.168.1.101:5000/api/v1/sprite/types/grass.png"
+		"sprite": "http://192.168.1.105:5000/api/v1/sprite/types/grass.png"
 	},
 	{
 		"id": 4,
@@ -53,7 +53,7 @@
 			"none_damage_from": [],
 			"none_damage_to": []
 		},
-		"sprite": "http://192.168.1.101:5000/api/v1/sprite/types/light.png"
+		"sprite": "http://192.168.1.105:5000/api/v1/sprite/types/light.png"
 	},
 	{
 		"id": 5,
@@ -67,7 +67,7 @@
 			"none_damage_from": [],
 			"none_damage_to": []
 		},
-		"sprite": "http://192.168.1.101:5000/api/v1/sprite/types/dark.png"
+		"sprite": "http://192.168.1.105:5000/api/v1/sprite/types/dark.png"
 	},
 	{
 		"id": 6,
@@ -81,6 +81,6 @@
 			"none_damage_from": [],
 			"none_damage_to": []
 		},
-		"sprite": "http://192.168.1.101:5000/api/v1/sprite/types/flying.png"
+		"sprite": "http://192.168.1.105:5000/api/v1/sprite/types/flying.png"
 	}
 ]

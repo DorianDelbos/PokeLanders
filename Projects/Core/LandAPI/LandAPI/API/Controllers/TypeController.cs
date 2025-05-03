@@ -1,7 +1,6 @@
-﻿using LandAPI.API.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace LandAPI.API.Controllers
+namespace LandAPI.API
 {
     [Route("api/v1/[controller]")]
     [ApiController]
@@ -15,14 +14,14 @@ namespace LandAPI.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Models.Type>> GetTypes()
+        public ActionResult<List<Type>> GetTypes()
         {
             var types = _typeService.GetAllTypes();
             return Ok(types);
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Models.Type> GetTypeById(int id)
+        public ActionResult<Type> GetTypeById(int id)
         {
             var Stat = _typeService.GetTypeById(id);
             if (Stat == null) return NotFound();
@@ -30,7 +29,7 @@ namespace LandAPI.API.Controllers
         }
 
         [HttpGet("name/{name}")]
-        public ActionResult<Models.Type> GetStatByType(string name)
+        public ActionResult<Type> GetStatByType(string name)
         {
             return Ok(_typeService.GetTypeByName(name));
         }

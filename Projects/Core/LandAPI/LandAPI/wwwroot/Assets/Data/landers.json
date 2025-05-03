@@ -65,8 +65,8 @@
         }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/aquapix.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/landers/aquapix.png"
+    "model": "http://192.168.1.105:5000/api/v1/model/aquapix.glb",
+    "sprite": "http://192.168.1.105:5000/api/v1/sprite/landers/aquapix.png"
   },
   {
     "id": 2,
@@ -134,8 +134,8 @@
         }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/Luminorine.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/landers/Luminorine.png"
+    "model": "http://192.168.1.105:5000/api/v1/model/Luminorine.glb",
+    "sprite": "http://192.168.1.105:5000/api/v1/sprite/landers/Luminorine.png"
   },
   {
     "id": 3,
@@ -209,8 +209,8 @@
         }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/Ocealythe.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/landers/Ocealythe.png"
+    "model": "http://192.168.1.105:5000/api/v1/model/Ocealythe.glb",
+    "sprite": "http://192.168.1.105:5000/api/v1/sprite/landers/Ocealythe.png"
   },
   {
     "id": 4,
@@ -278,8 +278,8 @@
         }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/Flamivine.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/landers/Flamivine.png"
+    "model": "http://192.168.1.105:5000/api/v1/model/Flamivine.glb",
+    "sprite": "http://192.168.1.105:5000/api/v1/sprite/landers/Flamivine.png"
   },
   {
     "id": 5,
@@ -347,8 +347,8 @@
         }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/Flamiflora.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/landers/Flamiflora.png"
+    "model": "http://192.168.1.105:5000/api/v1/model/Flamiflora.glb",
+    "sprite": "http://192.168.1.105:5000/api/v1/sprite/landers/Flamiflora.png"
   },
   {
     "id": 6,
@@ -422,8 +422,8 @@
         }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/Pyroflora.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/landers/Pyroflora.png"
+    "model": "http://192.168.1.105:5000/api/v1/model/Pyroflora.glb",
+    "sprite": "http://192.168.1.105:5000/api/v1/sprite/landers/Pyroflora.png"
   },
   {
     "id": 7,
@@ -473,8 +473,8 @@
         }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/Briseveine.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/landers/Briseveine.png"
+    "model": "http://192.168.1.105:5000/api/v1/model/Briseveine.glb",
+    "sprite": "http://192.168.1.105:5000/api/v1/sprite/landers/Briseveine.png"
   },
   {
     "id": 8,
@@ -536,8 +536,8 @@
         }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/Aereflora.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/landers/Aereflora.png"
+    "model": "http://192.168.1.105:5000/api/v1/model/Aereflora.glb",
+    "sprite": "http://192.168.1.105:5000/api/v1/sprite/landers/Aereflora.png"
   },
   {
     "id": 9,
@@ -611,7 +611,7 @@
         }
       }
     ],
-    "model": "http://192.168.1.101:5000/api/v1/model/Sylvacloud.glb",
-    "sprite": "http://192.168.1.101:5000/api/v1/sprite/landers/Sylvacloud.png"
+    "model": "http://192.168.1.105:5000/api/v1/model/Sylvacloud.glb",
+    "sprite": "http://192.168.1.105:5000/api/v1/sprite/landers/Sylvacloud.png"
   }
 ]

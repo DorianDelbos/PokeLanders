@@ -1,6 +1,4 @@
-﻿using LandAPI.API.Data;
-
-namespace LandAPI.API.Services
+﻿namespace LandAPI.API
 {
     public class TypeService
     {
@@ -11,14 +9,14 @@ namespace LandAPI.API.Services
             _typeRepository = typeRepository;
         }
 
-        public List<Models.Type> GetAllTypes()
+        public List<Type> GetAllTypes()
             => _typeRepository.Types;
 
-        public Models.Type GetTypeById(int id)
+        public Type? GetTypeById(int id)
             => _typeRepository.Types.FirstOrDefault(p => p.ID == id);
 
 
-        public Models.Type GetTypeByName(string name)
+        public Type? GetTypeByName(string name)
             => _typeRepository.Types.First(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
 
     }

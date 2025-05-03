@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace LandAPI.API.Controllers
+namespace LandAPI.API
 {
     [Route("api/v1/[controller]")]
     [ApiController]

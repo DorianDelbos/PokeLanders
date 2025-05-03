@@ -1,7 +1,4 @@
-﻿using LandAPI.API.Data;
-using LandAPI.API.Models;
-
-namespace LandAPI.API.Services
+﻿namespace LandAPI.API
 {
     public class MoveService
     {
@@ -15,7 +12,7 @@ namespace LandAPI.API.Services
         public List<Move> GetAllMoves()
             => _evolutionChainRepository.Move;
 
-        public Move GetMoveById(int id)
+        public Move? GetMoveById(int id)
             => _evolutionChainRepository.Move.FirstOrDefault(p => p.ID == id);
     }
 }

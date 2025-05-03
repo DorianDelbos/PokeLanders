@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace LandAPI.API.Models
+namespace LandAPI.API
 {
     public class Ailment
     {
