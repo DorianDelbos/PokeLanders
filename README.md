@@ -3,6 +3,8 @@ Welcome to my GitHub! 🚀
 
 This repository contains a series of projects and experiments based on NFC (Near Field Communication) technology. My work explores various applications of this technology, ranging from process automation to creating innovative solutions for wireless short-range interactions.
 
+You can find all the core projects [here](https://github.com/DorianDelbos/PokeLanders/tree/main/Projects/Core).
+
 ## Main Projects
 🔑 The goal is to use NFC technology to create interactive and immersive experiences around creature management, combining dynamic data stored on NFC cards and static information accessible via an API. The projects aim to explore the use of NFC in games and mobile applications, as well as virtual collection management. Here are some of the objectives:
 
