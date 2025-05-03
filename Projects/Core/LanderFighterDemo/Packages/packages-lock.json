@@ -10,28 +10,28 @@
         "com.dgames.webservices": "1.0.0",
         "com.dgames.tasks": "1.0.0"
       },
-      "hash": "49a91e9baae201adc7940d6e2d5ac523b54198a0"
+      "hash": "41cd0b07d45b4845afc78ebe08b499fceadaa5b8"
     },
     "com.dgames.nearfieldcommunication": {
       "version": "https://github.com/DorianDelbos/PokeLanders.git?path=Projects/Core/Packages/com.dgames.nearfieldcommunication",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "49a91e9baae201adc7940d6e2d5ac523b54198a0"
+      "hash": "41cd0b07d45b4845afc78ebe08b499fceadaa5b8"
     },
     "com.dgames.tasks": {
       "version": "https://github.com/DorianDelbos/PokeLanders.git?path=Projects/Core/Packages/com.dgames.tasks",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "49a91e9baae201adc7940d6e2d5ac523b54198a0"
+      "hash": "41cd0b07d45b4845afc78ebe08b499fceadaa5b8"
     },
     "com.dgames.utils": {
       "version": "https://github.com/DorianDelbos/PokeLanders.git?path=Projects/Core/Packages/com.dgames.utils",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "49a91e9baae201adc7940d6e2d5ac523b54198a0"
+      "hash": "41cd0b07d45b4845afc78ebe08b499fceadaa5b8"
     },
     "com.dgames.webservices": {
       "version": "https://github.com/DorianDelbos/PokeLanders.git?path=Projects/Core/Packages/com.dgames.webservices",
@@ -40,7 +40,7 @@
       "dependencies": {
         "com.dgames.utils": "1.0.0"
       },
-      "hash": "49a91e9baae201adc7940d6e2d5ac523b54198a0"
+      "hash": "41cd0b07d45b4845afc78ebe08b499fceadaa5b8"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
