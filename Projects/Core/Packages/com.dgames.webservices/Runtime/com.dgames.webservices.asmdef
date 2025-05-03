@@ -1,0 +1,16 @@
+{
+    "name": "com.dgames.webservices",
+    "rootNamespace": "dgames",
+    "references": [
+        "GUID:94e3a25a62af6da4fae35eb5bca905a8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

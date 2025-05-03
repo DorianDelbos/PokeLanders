@@ -1,0 +1,1 @@
+Main projects are in "Core".

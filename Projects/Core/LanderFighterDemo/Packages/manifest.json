@@ -1,10 +1,5 @@
 {
   "dependencies": {
-    "com.dgames.landers": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.landers",
-    "com.dgames.nearfieldcommunication": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.nearfieldcommunication",
-    "com.dgames.tasks": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.tasks",
-    "com.dgames.utils": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.utils",
-    "com.dgames.webservices": "file:C:/Users/Dorian/Documents/GitHub/PokeLanders/Projects/PackageTest/Packages/com.dgames.webservices",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "2.0.5",
     "com.unity.cinemachine": "3.1.3",

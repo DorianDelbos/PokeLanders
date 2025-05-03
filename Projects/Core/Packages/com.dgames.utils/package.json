@@ -1,0 +1,17 @@
+{
+  "name": "com.dgames.utils",
+  "version": "1.0.0",
+  "displayName": "2Dgames Utils",
+  "description": "This package provides a collection of essential utility methods to simplify common tasks in Unity development.",
+  "unity": "6000.0",
+  "keywords": [
+    "utils",
+    "helper"
+  ],
+  "author": {
+    "name": "2Dgames",
+    "url": "https://2dgames.fr"
+  },
+  "dependencies": {},
+  "samples": []
+}
