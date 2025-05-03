@@ -40,7 +40,7 @@
       "dependencies": {
         "com.dgames.utils": "1.0.0"
       },
-      "hash": "3a1d65e0e5bacd11c7a4a738a4131d79aefd45fe"
+      "hash": "3ca138b4d318e2d91cdf949727d361f3455a083b"
     },
     "com.unity.2d.animation": {
       "version": "10.1.3",
